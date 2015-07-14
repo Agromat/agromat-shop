@@ -1,0 +1,224 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
++font(pfdintextcomppro-regular, pfdintextcomppro-regular)  
+=reg
+	font-family: "pfdintextcomppro-regular", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+	
++font(pfdintextcomppro-medium, pfdintextcomppro-medium)  
+=med
+	font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+	
++font(pfdintextcomppro-bold, pfdintextcomppro-bold)  
+=bold
+	font-family: "pfdintextcomppro-bold", Arial, "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+	
+=arial
+	font-family: "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+=tr_c
+	+tr(color .3s)
+$blue: #268cb6
+$gray: #888
+$black: #050505
+$dark: #333
+body
+	font-size: 13px 
+	line-height: 1.5
+	color: $dark 
+	+arial
+	min-width: 1170px
+a
+	text-decoration: none 
+// common blocks      
+
+.tooper
+	background: #000
+	height: 30px
+	line-height: 30px
+	font-size: 11px
+	color: #fff 
+	overflow: hidden
+	+arial
+	a
+		display: inline-block
+		color: #fff 
+		+tr_c
+		&:hover
+			color: $gray
+	&__link
+		.fa
+			margin-right: 8px
+	&__nav
+		position: relative
+		padding-left: 3%
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -5px
+			left: 0
+			height: 10px
+			width: 1px
+			background: #1a1a1a   
+		li
+			display: inline-block
+			vertical-align: middle
+		a
+			padding: 0 10px 
+	&__login
+		text-align: center
+		+text-overflow
+		.fa
+			margin-right: 8px
+		a
+			display: block
+			background: #1a1a1a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
