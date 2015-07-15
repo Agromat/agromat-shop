@@ -197,6 +197,7 @@
 			position: absolute
 			left: 0
 			top: 50%
+			z-index: 3
 			margin-top: -3px
 			+svg(sep,6,6)
 		&:first-child
@@ -204,73 +205,123 @@
 				display: none
 		&.is-active
 			color: $blue 
-			> a
+			a
 				color: $blue 
-				span
-					&:after
-						content: ""
-						position: absolute
-						bottom: -1px
-						height: 3px
-						left: 0
-						right: 0
-						background: $blue  
+				> span
+					span
+						&:after
+							content: ""
+							position: absolute
+							bottom: -1px
+							height: 3px
+							left: 0
+							right: 0
+							background: $blue  
 		&.is-open
 			> a
 				position: relative
 				z-index: 6
-				background: #fff 
-				box-shadow: 0 0 15px rgba(21, 13, 2, 0.3)
+				box-shadow: 0 -7px 15px -5px rgba(21, 13, 2, 0.3)
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					bottom: 0
+					left: -1px
+					width: 10px
+					box-shadow: -5px 0 15px -4px rgba(21, 13, 2, 0.3)
 				&:after
 					content: ""
 					position: absolute
-					top: 100%
-					left: -10px
-					right: -10px
-					height: 15px 
-					background: #fff 
-				span
-					&:after
-						display: none
-		> a
+					top: 0
+					bottom: 0
+					right: -1px
+					width: 10px
+					box-shadow: 5px 0 15px -4px rgba(21, 13, 2, 0.3)
+				> span
+					span
+						&:after
+							display: none
+		a
 			display: inline-block
-			padding: 0 25px 
 			color: #000 
 			+tr_c
+			background: #fff 
 			&:hover
 				color: $blue
-			span
-				display: inline-block
+			> span
+				display: block
 				position: relative
-		> span
-			display: inline-block
-			padding: 0 25px 
-
+				z-index: 2
+				padding: 0 30px
+				background: #fff 
+				span
+					position: relative
+					display: inline-block
+					
 .subnav
 	position: absolute
+	opacity: 0
+	visibility: hidden
 	z-index: 5
 	left: 0
 	top: 100%
-	padding: 20px 30px 
-	width: 73.8%
-	background: #fff
 	box-shadow: 0 5px 15px rgba(21, 13, 2, 0.3)
-	+clr
-.subnav__main
-	float: left
-	width: 75%
-	.title-h2
+	+tr(opacity .2s)
+	&.is-visible
+		opacity: 1
+		visibility: visible 
+	&.is-right
+		left: auto
+		right: 0
+.subnav__in
+	display: table
+	table-layout: fixed
+.subnav__main	
+	position: relative 
+	padding: 20px 30px 
+	display: table-cell
+	vertical-align: top
+	width: 600px
+	background: #fff
+	// &:before
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	right: 0
+	// 	height: 15px 
+	// 	background: #fff 
+	// 	pointer-events: none
+	.title
 		margin: 5px 0 13px
 .subnav__banners
-	overflow: hidden
-
+	display: table-cell
+	vertical-align: top
+	width: 380px
+	padding: 20px 30px 
+	background: #f1f1f1 
+	.title
+		margin-bottom: 17px
+		> span
+			&:before,
+			&:after
+				background: #e5e5e5 
 .overlay
+	opacity: 0
+	visibility: hidden
 	position: fixed
 	top: 0
 	right: 0
 	bottom: 0
 	left: 0
+	z-index: 4
 	background: rgba(#000,.2)
+	+tr(opacity .2s)
+	+gpu
+	&.is-visible
+		opacity: 1
+		visibility: visible
 
 
 
