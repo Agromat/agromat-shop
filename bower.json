@@ -1,0 +1,19 @@
+{
+  "name": "frontend-gulp",
+  "version": "1.0.1",
+  "description": "gulp template for html js css site",
+  "homepage": "https://github.com/Splintex/gulp-sass",
+  "authors": [
+    "Eugene Godun"
+  ],
+  "description": "gulp template for html js css site",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "2.*"
+  },
+  "devDependencies": {
+  }
+}

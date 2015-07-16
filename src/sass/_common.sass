@@ -1,0 +1,272 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
++font(pfdintextcomppro-regular, pfdintextcomppro-regular)  
+=reg
+	font-family: "pfdintextcomppro-regular", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+	
++font(pfdintextcomppro-medium, pfdintextcomppro-medium)  
+=med
+	font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+	
++font(pfdintextcomppro-bold, pfdintextcomppro-bold)  
+=bold
+	font-family: "pfdintextcomppro-bold", Arial, "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+	
+=arial
+	font-family: "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif
+=tr_c
+	+tr(color .3s)
+$blue: #268cb6
+$blue-h: #1d769b
+$gray: #888
+$black: #050505
+$dark: #333
+$red: #ed1c24
+html
+	+selection
+		background: rgba($blue, .8)
+		color: #fff  
+body
+	font-size: 13px 
+	line-height: 1.5
+	color: $dark 
+	+arial
+	min-width: 1170px
+a
+	text-decoration: none 
+// common blocks      
+.wrap
+	font-size: 0
+	+clr
+.row
+	&_table
+		display: table
+		table-layout: fixed
+		> div
+			display: table-cell
+			vertical-align: middle
+			float: none
+
+.list-title
+	font-weight: bold
+	font-size: 14px
+	color: #000
+	a
+		color: #000
+		+tr(color .3s)
+		&:hover
+			color: $blue 
+.list
+	font-size: 12px
+	color: #000
+	line-height: 1.2
+	word-break: break-all
+	
+	a
+		display: inline-block
+		padding: 4px 0 
+		color: #000
+		+tr(color .3s)
+		&:hover
+			color: $blue 
+.list_small
+	font-size: 11px
+	&.list_gray
+		strong
+			color: #000 
+			&:hover
+				color: $blue 
+.list_gray
+	color: $gray
+	a
+		color: $gray 
+	
+.title
+	position: relative
+	overflow: hidden
+	text-align: center
+	font-weight: normal
+	font-size: 16px
+	text-transform: uppercase
+	+med
+	line-height: 1.5
+	letter-spacing: 1px 
+	> span
+		display: inline-block
+		position: relative
+		padding: 0 12px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			width: 600px
+			height: 1px
+			background: #ededed
+		&:before
+			left: -600px
+		&:after
+			right: -600px
+		span
+			display: inline-block
+			position: relative
+			padding: 0 23px 
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				margin-top: -3px
+				+svg(sep,6,6)
+			&:before
+				left: 0
+			&:after
+				right: 0
+
+.prod
+	display: inline-block
+	vertical-align: top
+	margin-left: 5%
+	width: 30%
+	font-size: 12px
+	line-height: 1.2
+	
+	&:first-child
+		margin-left: 0
+	&__img
+		overflow: hidden
+		margin-bottom: 6px
+		border: 1px solid #e4e1d9
+		height: 95px
+		width: 95px
+		text-align: center
+		img
+			max-width: 100%
+			max-height: 100%
+	&__title
+		margin-bottom: 5px
+		color: #000
+		a
+			color: #000
+			+tr_c
+			&:hover
+				color: $blue 
+		span
+			color: $gray 
+
+.price
+	font-size: 20px
+	+med
+	color: #000
+	sup
+		position: relative
+		top: -4px
+	sup, sub
+		font-size: 14px
+
+.text
+	font-size: 13px
+	line-height: 1.2
+	+arial
+	color: #000
+	a
+		color: $blue
+		+tr_c
+		&:hover
+			color: $blue-h 
+	&_gray
+		color: $gray
+		strong
+			color: #000 
+	&_small
+		font-size: 11px
+		p
+			margin-bottom: 7px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

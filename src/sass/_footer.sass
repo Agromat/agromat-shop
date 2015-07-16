@@ -1,0 +1,72 @@
+.footer
+	
+	&__in
+		border-top: 3px solid #000 
+		padding: 52px 0 15px 
+	.soc
+		margin-top: 33px
+.footer__top
+	padding: 0 0 28px 
+	.row
+		> div
+			position: relative
+			&:first-child
+				&:before
+					display: none
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: -15px
+				width: 1px
+				background: #f4f4f4  
+.footer__bottom
+	position: relative
+	border-top: 1px solid #dcecf2 
+	padding: 28px 0 0 
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 50% 
+	&:before
+		top: -2px
+		height: 4px
+		background: #fff
+		width: 30px
+		margin-left: -15px 
+.soc
+	&__title	
+		margin-bottom: 20px
+		color: $gray
+		font-size: 11px
+	&__link
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-right: 23px
+		width: 28px
+		height: 28px
+		text-align: center
+		line-height: 28px
+		&:hover
+			&:before
+				background: $blue 
+		&:before
+			content: "" 
+			position: absolute
+			left: 0
+			top: 0
+			width: 28px
+			height: 28px
+			background: #000
+			+rotate(45deg) 
+			+tr(background .3s)
+		.fa
+			position: relative
+			z-index: 2
+			color: #fff
+			font-size: 14px 
+			vertical-align: middle
