@@ -68,6 +68,7 @@ $gray: #888
 $black: #050505
 $dark: #333
 $red: #ed1c24
+$border: #f4f4f4
 html
 	+selection
 		background: rgba($blue, .8)
@@ -92,7 +93,98 @@ a
 			display: table-cell
 			vertical-align: middle
 			float: none
+.l-layout
+	display: table
+	width: 100%
+	table-layout: fixed
 
+.l-main
+	position: relative
+	display: table-cell
+	vertical-align: top
+	&__in
+		padding-left: 32px
+		border-left: 2px solid #000 
+.breadcrumbs
+	color: $gray
+	> li
+		display: inline-block
+		margin: 0 -6px 
+		position: relative
+		height: 33px
+		line-height: 33px
+		&:before
+			content: ""
+			position: absolute
+			left: 1px
+			top: 50%
+			margin-top: -3px
+			+svg(sep,6,6) 
+		&:first-child
+			&:before
+				display: none
+		&.has-drop
+			&:hover
+				z-index: 2
+				> a
+					background: #fff
+					position: relative
+					z-index: 3
+					box-shadow: 0 -4px 11px -5px rgba(21, 13, 2, 0.3)
+					&:before
+						bottom: -5px
+					&:before
+						content: ""
+						position: absolute
+						top: 0
+						left: -1px
+						width: 9px
+						box-shadow: -5px 0 15px -4px rgba(21, 13, 2, 0.3)
+					&:after
+						content: ""
+						position: absolute
+						top: 0
+						bottom: -2px
+						right: -1px
+						width: 9px
+						box-shadow: 5px 0 15px -4px rgba(21, 13, 2, 0.3)
+				.breadcrumbs__drop
+					opacity: 1
+					visibility: visible
+		> a
+			display: block
+			position: relative
+			padding: 0 15px
+			color: $blue  
+			+tr_c
+			&:hover
+				color: $blue-h 
+		> span
+			padding: 0 15px
+			display: block 
+	&__drop
+		position: absolute
+		top: 100%
+		opacity: 0
+		visibility: hidden
+		left: 0
+		z-index: 2
+		padding: 20px 30px 
+		background: #fff 
+		box-shadow: 0 5px 15px rgba(21, 13, 2, 0.3)
+		white-space: nowrap
+		font-size: 0
+		+tr(opacity .2s)
+		.list
+			display: inline-block
+			vertical-align: top
+			padding-left: 28px
+			width: 190px
+			border-right: 1px solid $border
+			&:first-child
+				padding-left: 0
+			&:last-child
+				border: 0
 .list-title
 	font-weight: bold
 	font-size: 14px
@@ -110,7 +202,7 @@ a
 	
 	a
 		display: inline-block
-		padding: 4px 0 
+		padding: 5px 0 
 		color: #000
 		+tr(color .3s)
 		&:hover
@@ -229,20 +321,69 @@ a
 		p
 			margin-bottom: 7px
 
+.checkbox
+	display: block
+	padding: 3px 0 
+	line-height: 1
+	font-size: 12px
+	+tr_c
+	input
+		position: absolute
+		opacity: 0
+		&:checked
+			+ .checkbox__text
+				&:after
+					opacity: 1
+	&__text
+		display: block
+		padding-left: 24px
+		position: relative
+		+nosel
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 12px
+			height: 12px
+			border: 1px solid #cdcdcd
+		&:after
+			content: "\f00c" 
+			position: absolute
+			left: 2px
+			top: 0
+			+fa-icon
+			+gpu
+			font-size: 10px
+			opacity: 0
+			+tr(opacity .2s)
+		span
+			color: $gray 
+	&:hover
+		color: $blue-h 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-more
+	display: inline-block
+	position: relative
+	padding: 10px 24px
+	background: none
+	color: $blue
+	+tr_c
+	font-size: 13px
+	+med
+	text-transform: uppercase
+	&:before
+		content: "\f067"
+		position: absolute
+		left: 3px
+		top: 12px
+		+fa-icon
+		font-size: 10px
+	&:hover
+		color: $blue-h 
+	&.is-active
+		&:before
+			content: "\f068" 
 
 
 

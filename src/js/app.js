@@ -1,4 +1,4 @@
-(function() {
+$(document).ready( function() {
 
     // $(document).on("click", function(){
     //  $(".js-popup").hide();
@@ -40,5 +40,26 @@
         $(this).removeClass("is-visible");
     });
 
+    $(".js-btn-more").on("click", function(){
+        var hiddenText = $(this).attr("data-text");
+        var visibleText = $(this).text();
+        $(this).text(hiddenText);
+        $(this).attr("data-text", visibleText);
+        $(this).toggleClass("is-active").parents(".js-accord").toggleClass("is-full-list");
+        return false;
+    });
+
+    $(".js-accord-title").on("click", function(){
+        var accord =  $(this).parents(".js-accord");
+        if (accord.hasClass("is-open")) {
+            accord.removeClass("is-open")
+            accord.find(".js-accord-body").slideUp(200);
+        }
+        else {
+            accord.addClass("is-open")
+            accord.find(".js-accord-body").slideDown(200);
+        }
+        return false;
+    });
 
 });

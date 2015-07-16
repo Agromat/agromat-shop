@@ -1,0 +1,72 @@
+.l-sidebar
+	position: relative
+	display: table-cell
+	vertical-align: top
+	padding: 40px 25px 0 0
+	width: 236px
+	&:after
+		content: ""
+		position: absolute
+		top: 40px
+		bottom: 0
+		right: -2px
+		width: 2px
+		background: #000
+
+.accord
+	margin-bottom: 18px
+	&.is-full-list
+		.accord__list
+			li
+				&:nth-child(n+11)
+					display: block
+	&.is-open
+		.accord__title
+			span
+				&:before
+					+rotate(-180deg)
+
+	&__title
+		padding: 3px 0 
+		font-size: 16px
+		+med
+		text-transform: uppercase
+		cursor: pointer
+		+nosel
+		color: #000
+		+tr_c 
+		&:hover
+			color: $blue-h 
+		
+		span
+			display: inline-block
+			position: relative
+			&:before
+				content: "\f107" 
+				+fa-icon
+				position: absolute
+				right: -15px
+				top: 5px
+				font-size: 12px
+				+gpu
+				+tr(transform .2s)
+
+	&__list
+		li
+			&:nth-child(n+11)
+				display: none
+	&__scroll
+		padding-right: 20px
+		max-height: 195px
+		overflow-x: hidden
+		overflow-y: auto 
+		+scrollbar
+			width: 5px
+			height: 5px
+			border-radius: 3px
+			border: 1px solid #eee
+		+scrollbar-thumb
+			background: #b6b6b6
+			width: 3px
+			height: 3px
+			border-radius: 3px
