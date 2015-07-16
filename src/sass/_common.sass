@@ -93,98 +93,18 @@ a
 			display: table-cell
 			vertical-align: middle
 			float: none
+	&_inline	
+		font-size: 0
+		> div
+			display: inline-block
+			vertical-align: top
+			float: none
 .l-layout
 	display: table
 	width: 100%
 	table-layout: fixed
 
-.l-main
-	position: relative
-	display: table-cell
-	vertical-align: top
-	&__in
-		padding-left: 32px
-		border-left: 2px solid #000 
-.breadcrumbs
-	color: $gray
-	> li
-		display: inline-block
-		margin: 0 -6px 
-		position: relative
-		height: 33px
-		line-height: 33px
-		&:before
-			content: ""
-			position: absolute
-			left: 1px
-			top: 50%
-			margin-top: -3px
-			+svg(sep,6,6) 
-		&:first-child
-			&:before
-				display: none
-		&.has-drop
-			&:hover
-				z-index: 2
-				> a
-					background: #fff
-					position: relative
-					z-index: 3
-					box-shadow: 0 -4px 11px -5px rgba(21, 13, 2, 0.3)
-					&:before
-						bottom: -5px
-					&:before
-						content: ""
-						position: absolute
-						top: 0
-						left: -1px
-						width: 9px
-						box-shadow: -5px 0 15px -4px rgba(21, 13, 2, 0.3)
-					&:after
-						content: ""
-						position: absolute
-						top: 0
-						bottom: -2px
-						right: -1px
-						width: 9px
-						box-shadow: 5px 0 15px -4px rgba(21, 13, 2, 0.3)
-				.breadcrumbs__drop
-					opacity: 1
-					visibility: visible
-		> a
-			display: block
-			position: relative
-			padding: 0 15px
-			color: $blue  
-			+tr_c
-			&:hover
-				color: $blue-h 
-		> span
-			padding: 0 15px
-			display: block 
-	&__drop
-		position: absolute
-		top: 100%
-		opacity: 0
-		visibility: hidden
-		left: 0
-		z-index: 2
-		padding: 20px 30px 
-		background: #fff 
-		box-shadow: 0 5px 15px rgba(21, 13, 2, 0.3)
-		white-space: nowrap
-		font-size: 0
-		+tr(opacity .2s)
-		.list
-			display: inline-block
-			vertical-align: top
-			padding-left: 28px
-			width: 190px
-			border-right: 1px solid $border
-			&:first-child
-				padding-left: 0
-			&:last-child
-				border: 0
+
 .list-title
 	font-weight: bold
 	font-size: 14px
@@ -229,10 +149,11 @@ a
 	+med
 	line-height: 1.5
 	letter-spacing: 1px 
+	color: #000 
 	> span
 		display: inline-block
 		position: relative
-		padding: 0 12px
+		padding: 0 6px
 		&:before,
 		&:after
 			content: ""
@@ -248,7 +169,7 @@ a
 		span
 			display: inline-block
 			position: relative
-			padding: 0 23px 
+			padding: 0 12px 
 			&:before,
 			&:after
 				content: ""
@@ -260,7 +181,21 @@ a
 				left: 0
 			&:after
 				right: 0
-
+	&_big
+		font-size: 18px
+		span
+			&:before,
+			&:after
+				top: 45%
+			span
+				&:before,
+				&:after
+					margin-top: -5px
+.title_width
+	> span
+		padding: 0 15px
+		span
+			padding: 0 12px 
 .prod
 	display: inline-block
 	vertical-align: top
@@ -380,34 +315,7 @@ a
 		+fa-icon
 		font-size: 10px
 	&:hover
-		color: $blue-h 
+		color: $blue-h
 	&.is-active
 		&:before
 			content: "\f068" 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
