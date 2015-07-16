@@ -316,16 +316,21 @@
 	position: relative
 	&__head
 		height: 65px
+		margin-bottom: 5px
 		overflow: hidden
+		color: #000
+		+vertical
+	&__title
+		display: inline-block
+		vertical-align: bottom
+		color: #000 
+		+tr_c
 		font-size: 20px
 		+med
 		line-height: 1
-		color: #000
-		a
-			color: #000 
-			+tr_c
-			&:hover
-				color: $blue 
+		text-align: left
+		&:hover
+			color: $blue 
 		span
 			color: $gray 
 	&__media
@@ -352,12 +357,14 @@
 	&__price
 		display: table-cell
 		vertical-align: middle
-		padding: 7px 10px 7px 0
+		padding: 7px 5px 7px 0
 		width: 50%
+		.btn
+			margin-bottom: 6px
 	&__links
 		display: table-cell
 		vertical-align: middle
-		padding: 7px 0 7px 10px
+		padding: 7px 0 7px 5px
 		text-align: right
 	&__descr
 		font-size: 12px
@@ -379,6 +386,12 @@
 				margin-left: 0
 				&:before
 					display: none
+	.price
+		display: inline-block
+		vertical-align: middle
+		margin-left: 13px
+		&:first-child
+			margin-left: 0
 .badge
 	position: absolute
 	left: -5px
@@ -395,10 +408,22 @@
 		bottom: -5px
 		+arr(5,5,#000,tr) 
 	&_white
-		
 		span
 			color: $blue
 			background: #fff 
+			&:before
+				+arr(8,11,#fff,tl)
+			&:after
+				+arr(11,8,#fff,bl)
+	&_blue
+		span
+			color: #fff
+			background: $blue
+			&:before
+				+arr(8,11,$blue,tl)
+			&:after
+				+arr(11,8,$blue,bl)
+			
 	span
 		display: block
 		padding: 0 9px 
@@ -410,10 +435,8 @@
 			position: absolute
 			top: 0
 			right: -8px
-			+arr(8,11,#fff,tl)
 		&:after
 			content: ""
 			position: absolute
 			bottom: 0
 			right: -8px
-			+arr(11,8,#fff,bl)
