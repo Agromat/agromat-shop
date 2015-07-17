@@ -1,3 +1,32 @@
+.has-fixed-header
+	.header
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 10
+		background: #fff 
+		height: 65px
+		border-bottom: 3px solid #000
+		box-shadow: 0 3px 6px rgba(#000, .3)
+		+tr(background .2s)
+		.contact,
+		.shedule,
+		.search
+			display: none
+		.row_table
+			> div
+				padding-top: 0
+				padding-bottom: 0
+		.logo
+			margin-top: 0
+		.header__in
+			border: 0
+		.compare
+			display: block
+	.nav-wrap
+		margin-top: 114px
+	
 .tooper
 	background: #000
 	height: 30px
@@ -54,6 +83,17 @@
 		float: right
 		max-width: 40%
 		margin-top: 7px
+	.compare
+		display: none
+		position: absolute
+		right: 33.3%
+		top: 0
+		bottom: 0
+		width: 33.3%
+		&__drop
+			box-shadow: 0 9px 9px rgba(#000,.3) 
+	.compare-btn
+		height: 62px
 .logo
 	display: block
 	margin: 13px 0 0 
@@ -106,7 +146,7 @@
 	margin: 15px 0 0 
 .search__input
 	display: block
-	border: 1px solid #eee
+	border: 1px solid $border-d
 	padding: 0 10px 0 40px 
 	width: 100%
 	height: 31px

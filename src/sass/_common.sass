@@ -69,6 +69,7 @@ $black: #050505
 $dark: #333
 $red: #ed1c24
 $border: #f4f4f4
+$border-d: #eee
 html
 	+selection
 		background: rgba($blue, .8)
@@ -227,22 +228,32 @@ a
 				color: $blue 
 		span
 			color: $gray 
+	.price
+		font-size: 20px
+		sup
+			font-size: 14px
 
 .price
 	display: inline-block
-	font-size: 20px
+	font-size: 22px
 	white-space: nowrap
 	+med
 	color: #000
 	sup
 		position: relative
 		top: -4px
-	sup, sub
+		font-size: 16px
+	sub
 		font-size: 14px
+	&_big
+		font-size: 30px
+		sup
+			font-size: 18px
 	&_old
 		position: relative
 		padding-left: 10px
 		color: $gray 
+		font-size: 18px
 		&:before
 			content: "" 
 			position: absolute
@@ -252,6 +263,16 @@ a
 			height: 1px
 			+rotate(12deg)
 			background: $gray 
+		sup
+			font-size: 14px
+		sub
+			font-size: 12px
+		&.price_big
+			font-size: 24px
+			sup
+				font-size: 14px
+			sub
+				font-size: 12px
 .text
 	font-size: 13px
 	line-height: 1.2

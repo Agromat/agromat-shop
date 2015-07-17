@@ -3,10 +3,10 @@
 	display: table-cell
 	vertical-align: top
 	&__in
-		padding-left: 32px
+		padding-left: 53px
 		border-left: 2px solid #000 
 .breadcrumbs
-	margin-bottom: 13px
+	margin: 0 0 13px 45px
 	color: $gray
 	> li
 		display: inline-block
@@ -103,9 +103,8 @@
 	font-size: 12px
 	font-weight: normal
 .compare
-	position: absolute
-	right: 0
-	bottom: 6px
+	position: relative
+	z-index: 2
 	&:hover
 		.compare__drop
 			opacity: 1
@@ -129,8 +128,9 @@
 	.btn-simple
 		margin-left: 16px
 .compare-btn
+	display: block 
 	height: 52px
-	width: 110px
+	width: 100%
 	line-height: 1
 	background: #f1f1f1 
 	+vertical
@@ -195,6 +195,7 @@
 	text-transform: uppercase
 	+med
 	color: #fff
+	text-align: center
 	letter-spacing: .75px 
 	background: $blue
 	+tr(background .2s)
@@ -279,7 +280,7 @@
 		height: 30px
 		line-height: 30px
 		text-align: center
-		border: 1px solid #eee
+		border: 1px solid $border-d
 		&:before
 			vertical-align: middle
 			+fa-icon
@@ -335,7 +336,8 @@
 	font-size: 13px
 	+arial
 	color: $gray 
-	
+	&_small
+		font-size: 11px
 .blocks-wrap
 	margin-top: 50px
 	margin-bottom: 55px
@@ -392,7 +394,7 @@
 			padding: 0 30px  
 			overflow: hidden
 		.badge
-			left: 25px
+			left: 26px
 	&__head
 		height: 65px
 		margin-bottom: 5px
@@ -417,18 +419,19 @@
 		
 	&__img
 		display: block
-		height: 180px
+		height: 182px
 		+vertical
 		font-size: 0
 		background: #fff 
 		overflow: hidden
-		box-shadow: inset 0 0 0 1px #eee 
+		border: 1px solid $border-d 
+		+gpu
 		img
 			display: inline-block
 			vertical-align: middle
 			max-width: 100%
 			max-height: 100%
-			+gpu
+			
 			+tr(opacity .2s)
 		&:hover
 			img
@@ -446,7 +449,7 @@
 	&__action
 		display: table
 		margin-bottom: 10px
-		border-bottom: 1px solid #eee
+		border-bottom: 1px solid $border-d
 		width: 100%
 		table-layout: fixed
 	&__price
@@ -487,9 +490,106 @@
 		margin-left: 13px
 		&:first-child
 			margin-left: 0
+.item_list
+	margin-bottom: 47px
+	.item__front
+		top: -30px
+		left: -30px
+		right: -30px
+		padding: 30px 30px 0
+	.item__head
+		height: auto
+		margin-bottom: 10px
+		text-align: left
+	.item__action
+		margin-top: 20px
+		padding-top: 14px
+		border-top: 1px solid $border-d
+		border-bottom: 0 
+		table-layout: auto
+	.item__price,
+	.item__links,
+	.item__cell
+		vertical-align: top
+		width: auto
+		padding-top: 0
+		padding-bottom: 0
+	.item__cell
+		display: inline-block
+		padding-left: 17px
+	.price
+		display: block
+		margin-left: 10px
+	.price_old
+		margin-left: 0
+		margin-bottom: -11px
+	.price_old
+		display: inline-block
+	.btn
+		min-width: 170px
+		+r(1200)
+			min-width: 100px
+	
+
+
+.number
+	position: relative
+	width: 72px
+	display: inline-block
+	vertical-align: top
+	&__input
+		display: block
+		width: 100%
+		height: 40px
+		border: 1px solid $border-d
+		padding: 0 28px 0 5px 
+		font-size: 20px
+		+med
+		color: #000 
+	&__plus,
+	&__minus
+		position: absolute
+		right: 0
+		width: 20px
+		height: 20px
+		background: #fff
+		border: 1px solid $border-d
+		text-align: center
+		&:before
+			+fa-icon
+			vertical-align: middle
+			font-size: 8px
+			color: $gray  
+			+tr_c
+		&:hover
+			&:before
+				color: $blue 
+	&__plus
+		top: 0
+		border-bottom: 0
+		&:before
+			content: "\f067" 
+	&__minus
+		bottom: 0
+		&:before
+			content: "\f068" 
+.number-info
+	display: inline-block
+	vertical-align: middle
+	padding-left: 4px
+	max-width: 70px
+	span
+		color: #000
+		font-size: 11px
+	.fa
+		color: $blue
+		font-size: 12px
+		cursor: pointer
+		&:hover
+			color: $blue-h
 .badge
 	position: absolute
-	left: -5px
+	left: -4px
 	top: 8px
 	height: 22px
 	padding-right: 8px
@@ -586,8 +686,16 @@
 	position: relative
 	font-size: 12px
 	+arial
+	+tr(color .2s)
 	&:before
 		content: "\f0e6"
 		+fa-icon
 		margin-right: 6px
+		color: #000 
+		+tr(color .2s)
 		vertical-align: middle
+a.link-comment
+	&:hover
+		color: $blue 
+		&:before
+			color: $blue 

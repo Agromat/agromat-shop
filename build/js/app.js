@@ -14,6 +14,20 @@ $(document).ready( function() {
     // $(window).scroll(function(){
     //     scrollFixedElements()
     // });
+    function fixHeader() {
+        var scroll = $(document).scrollTop();
+        var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();
+        if (scroll >= top) {
+            $("body").addClass("has-fixed-header");
+        }
+        else {
+             $("body").removeClass("has-fixed-header");
+        }
+    }
+    fixHeader();
+    $(window).scroll(function(){
+        fixHeader();
+    });
     $(".js-nav a").on("click", function(){
         var parent = $(this).parent();
         var index = +parent.index()+1;
@@ -71,6 +85,65 @@ $(document).ready( function() {
     $(".js-clear-filter").on("click", function(){
         $(this).parents(".js-filter").find("input").removeAttr("checked");
         $(this).parents(".js-filter-choice").remove();
+        return false;
+    });
+
+    function number() { 
+        var number = $(".js-number");
+        number.each(function(){
+            var max_number = +($(this).attr("data-max-number"));
+            var input = $(this).find("input");
+            var plus = $(this).find(".js-plus-number");
+            var minus = $(this).find(".js-minus-number");
+            plus.on("click", function(){
+                var val = +(input.val());
+                if (val >= max_number) {
+                    return false
+                }
+                else {
+                    val += 1;
+                    input.val(val);
+                }
+            });
+            minus.on("click", function(){
+                var val = +(input.val());
+                if (val > 1) {
+                    val -= 1;
+                    input.val(val);
+                }
+                return false;
+            });
+            input.on("change", function(){
+                var val = +$(this).val();
+                if (val > max_number) {
+                    val = max_number;
+                    $(this).val(val);
+                }
+                if (val == '') {
+                    val = 1;
+                    $(this).val(val);
+                }
+            });
+            input.on('keyup', function(){
+                var value = $(this).val();
+                var re = /[^0-9.]/;
+                if (re.test(value)) {
+                    value = value.replace(re, '');
+                    $(this).val(value);
+                }
+                    // set max and min value
+                // if($(this).val()*2 === "NaN") {
+                //     $(this).addClass('has-error');
+                // } else {
+                //     $(this).removeClass('has-error');
+                // }
+            });
+        });
+    }
+    number();
+
+    $(".js-del-parent").on("click", function(){
+        $(this).parents(".js-parent").remove();
         return false;
     });
 
