@@ -61,5 +61,17 @@ $(document).ready( function() {
         }
         return false;
     });
+    $(".js-item-slider").slick({
+        slideToShow: 1,
+        slideToScroll: 1,
+        dots: false,
+        arrows: true
+    });
+
+    $(".js-clear-filter").on("click", function(){
+        $(this).parents(".js-filter").find("input").removeAttr("checked");
+        $(this).parents(".js-filter-choice").remove();
+        return false;
+    });
 
 });
