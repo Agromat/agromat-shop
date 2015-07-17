@@ -225,16 +225,17 @@
 		color: $gray
 		pointer-events: none 
 .sort
+	position: relative
 	margin: 18px 0 26px
 	border-top: 1px solid #000 
 	height: 52px
 	line-height: 52px
 	border-bottom: 1px solid #000
 	color: $gray 
-	a, span
+	> a, > span
 		display: inline-block
 		vertical-align: middle
-	a
+	> a
 		position: relative
 		padding: 0 10px 
 		color: #444
@@ -259,8 +260,53 @@
 				left: 50%
 				margin-left: -9px
 				+arr(18,7,#fff,b)
-	span
+	> span
 		margin-right: 10px
+		
+.view
+	position: absolute
+	top: 10px
+	bottom: 10px
+	font-size: 0
+	right: 10px
+	.meta, 
+	a
+		display: inline-block
+		vertical-align: top
+	a
+		margin-right: -1px
+		width: 30px
+		height: 30px
+		line-height: 30px
+		text-align: center
+		border: 1px solid #eee
+		&:before
+			vertical-align: middle
+			+fa-icon
+			font-size: 14px
+			color: #000
+		&:hover
+			&:before
+				color: $blue 
+		&.is-active
+			background: #000 
+			border-color: #000 
+			&:before
+				color: #fff 
+	&__grid
+		&:before
+			content: "\f00a"
+			
+	&__list
+		&:before
+			content: "\f03a"
+
+	.meta
+		position: relative
+		top: 2px
+		margin-right: 10px
+		height: 30px
+		line-height: 30px
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
