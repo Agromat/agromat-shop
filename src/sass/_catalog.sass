@@ -365,6 +365,7 @@
 .item
 	position: relative
 	margin-bottom: 30px
+	+gpu
 	&:hover
 		.item__front
 			opacity: 1
@@ -382,7 +383,6 @@
 		z-index: 2 
 		opacity: 0
 		visibility: hidden
-		+gpu
 		+tr(opacity .2s)
 		box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
 		.item__img
@@ -414,7 +414,6 @@
 			color: $gray 
 	&__media
 		position: relative
-		
 	&__img
 		display: block
 		height: 182px
@@ -423,7 +422,6 @@
 		background: #fff 
 		overflow: hidden
 		border: 1px solid $border-d 
-		+gpu
 		img
 			display: inline-block
 			vertical-align: middle
@@ -490,11 +488,35 @@
 			margin-left: 0
 .item_list
 	margin-bottom: 47px
-	.item__front
+	&:hover
+		&:before
+			box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
+		.slick-prev,
+		.slick-next
+			opacity: 1
+			visibility: visible
+	&:before
+		content: ""
+		position: absolute 
 		top: -30px
 		left: -30px
 		right: -30px
-		padding: 30px 30px 0
+		bottom: 0
+		opacity: 1
+		visibility: visible
+		box-shadow: none 
+		+tr(box-shadow .2s)
+	.item__img
+		overflow: visible
+	.item__media
+		margin: 0 -30px
+		padding: 0 30px  
+		overflow: hidden
+	.slick-prev,
+	.slick-next
+		visibility: hidden
+		opacity: 0
+		+tr(opacity .2s)
 	.item__head
 		height: auto
 		margin-bottom: 10px
@@ -528,7 +550,8 @@
 		+r(1200)
 			min-width: 100px
 	
-
+	.badge
+		left: 26px
 
 .number
 	position: relative

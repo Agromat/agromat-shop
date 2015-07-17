@@ -28,12 +28,10 @@ $(document).ready( function() {
     $(window).scroll(function(){
         fixHeader();
     });
+
+    // banned link click
     $(".js-nav a").on("click", function(){
-        var parent = $(this).parent();
-        var index = +parent.index()+1;
-        $('[data-index="'+index+'"]').toggleClass("is-visible");
-        parent.toggleClass("is-open");
-        $(".js-overlay").toggleClass("is-visible");
+        return false;
     });
 
     $(".js-nav a").hover( function(){
@@ -48,6 +46,19 @@ $(document).ready( function() {
             var index = +parent.index()+1;
             $('[data-index="'+index+'"]').removeClass("is-visible");
             parent.removeClass("is-open");
+            $(".js-overlay").removeClass("is-visible");
+        }
+    );
+    $(".js-subnav").hover( function(){
+            var index = +$(this).index()-1;
+            $(this).addClass("is-visible");
+            $(".js-nav li").eq(index).addClass("is-open");
+            $(".js-overlay").addClass("is-visible");
+        },
+        function(){
+            var index = +$(this).index()-1;
+            $(this).removeClass("is-visible");
+            $(".js-nav li").eq(index).removeClass("is-open");
             $(".js-overlay").removeClass("is-visible");
         }
     );
