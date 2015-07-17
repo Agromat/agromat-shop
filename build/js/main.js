@@ -66,24 +66,40 @@ $(document).ready( function() {
         parent.toggleClass("is-open");
         $(".js-overlay").toggleClass("is-visible");
     });
-    var timeout;
-    $(".js-overlay").hover(
-        function() {    
-            var self = $(this);
-            timeout = setTimeout(function(){
-                $(".js-subnav").removeClass("is-visible");
-                $(".js-nav li").removeClass("is-open");
-                self.removeClass("is-visible");
-            }, 1000);           
-        }, function() {
-            clearTimeout(timeout);
+
+    $(".js-nav a").hover( function(){
+            var parent = $(this).parent();
+            var index = +parent.index()+1;
+            $('[data-index="'+index+'"]').addClass("is-visible");
+            parent.addClass("is-open");
+            $(".js-overlay").addClass("is-visible");
+        },
+        function(){
+            var parent = $(this).parent();
+            var index = +parent.index()+1;
+            $('[data-index="'+index+'"]').removeClass("is-visible");
+            parent.removeClass("is-open");
+            $(".js-overlay").removeClass("is-visible");
         }
     );
-    $(".js-overlay").on("click", function(){
-        $(".js-subnav").removeClass("is-visible");
-        $(".js-nav li").removeClass("is-open");
-        $(this).removeClass("is-visible");
-    });
+    // var timeout;
+    // $(".js-overlay").hover(
+    //     function() {    
+    //         var self = $(this);
+    //         timeout = setTimeout(function(){
+    //             $(".js-subnav").removeClass("is-visible");
+    //             $(".js-nav li").removeClass("is-open");
+    //             self.removeClass("is-visible");
+    //         }, 1000);           
+    //     }, function() {
+    //         clearTimeout(timeout);
+    //     }
+    // );
+    // $(".js-overlay").on("click", function(){
+    //     $(".js-subnav").removeClass("is-visible");
+    //     $(".js-nav li").removeClass("is-open");
+    //     $(this).removeClass("is-visible");
+    // });
 
     $(".js-btn-more").on("click", function(){
         var hiddenText = $(this).attr("data-text");
