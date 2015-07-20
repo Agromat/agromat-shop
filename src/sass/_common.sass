@@ -365,3 +365,25 @@ a
 			&:before
 				transform: translate3d(0,0,0) rotate(180deg)
 	
+.list-marker
+	color: $dark
+	font-size: 13px
+	+arial 
+	line-height: 1.2
+	li
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 6px
+			+svg(sep,6,6)
+			
+	a
+		display: inline-block
+		padding: 2px 0 2px 20px
+		color: $dark
+		+tr_c
+		&:hover
+			color: $blue 
+		

@@ -2,11 +2,21 @@
 	position: relative
 	display: table-cell
 	vertical-align: top
+	padding-left: 30px
 	&__in
+		position: relative
 		padding-left: 53px
-		border-left: 2px solid #000 
+		margin-left: -30px
+		&:before
+			content: ""
+			position: absolute
+			top: 52px
+			bottom: 0
+			left: 0
+			width: 2px
+			background: #000
 .breadcrumbs
-	margin: 0 0 13px 45px
+	margin: 0 0 13px -7px
 	color: $gray
 	> li
 		display: inline-block
@@ -367,6 +377,7 @@
 	margin-bottom: 30px
 	+gpu
 	&:hover
+		z-index: 2
 		.item__front
 			opacity: 1
 			visibility: visible
