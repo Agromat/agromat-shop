@@ -103,11 +103,12 @@ $(document).ready( function() {
         return false;
     });
     $(".js-item-slider").slick({
-        slideToShow: 1,
-        slideToScroll: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         dots: false,
         arrows: true
     });
+
 
     $(".js-clear-filter").on("click", function(){
         $(this).parents(".js-filter").find("input").removeAttr("checked");
@@ -174,4 +175,12 @@ $(document).ready( function() {
         return false;
     });
 
+    $(".js-post-slider").slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      dots: false,
+      arrows: true,
+      adaptiveHeight: true
+    });
 });

@@ -71,6 +71,7 @@ $red: #ed1c24
 $border: #f4f4f4
 $border-d: #eee
 html
+	min-width: 1200px
 	+selection
 		background: rgba($blue, .8)
 		color: #fff  
@@ -79,7 +80,8 @@ body
 	line-height: 1.5
 	color: $dark 
 	+arial
-	min-width: 1200px
+.container
+	min-width: 1200px !important
 a
 	text-decoration: none 
 // common blocks      
@@ -143,6 +145,7 @@ a
 	
 .title
 	position: relative
+	margin-bottom: 20px
 	overflow: hidden
 	text-align: center
 	font-weight: normal
@@ -344,6 +347,7 @@ a
 	+tr_c
 	font-size: 13px
 	+med
+	letter-spacing: 1px 
 	text-transform: uppercase
 	&:before
 		content: "\f067"
@@ -364,7 +368,11 @@ a
 		&:hover
 			&:before
 				transform: translate3d(0,0,0) rotate(180deg)
-	
+.btn-more_simple
+	padding: 10px 0 
+	color: $gray 
+	&:before
+		display: none
 .list-marker
 	color: $dark
 	font-size: 13px
@@ -387,3 +395,50 @@ a
 		&:hover
 			color: $blue 
 		
+.pager
+	position: relative
+	text-align: center
+	margin: 22px 0 58px
+	color: #000 
+	font-size: 0
+	white-space: nowrap
+	&__link
+		display: inline-block
+		vertical-align: middle
+		border: 2px solid transparent
+		width: 22px
+		height: 22px
+		line-height: 20px
+		font-size: 16px
+		+med
+		color: #000 
+		+tr(color .2s)
+		&:hover
+			color: $blue 
+		&.is-active
+			border-color: #000 
+	&__prev,
+	&__next
+		display: inline-block
+		vertical-align: middle
+		height: 22px
+		width: 15px
+		text-align: center
+		line-height: 20px
+		&:before
+			display: inline-block
+			content: "" 
+			vertical-align: middle
+
+	&__prev
+		&:before
+			+arr(4,8,$blue,l)
+		&:hover
+			&:before
+				+arr(4,8,$blue-h,l)
+	&__next
+		&:before
+			+arr(4,8,$blue,r)
+		&:hover
+			&:before
+				+arr(4,8,$blue-h,r)
