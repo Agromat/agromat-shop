@@ -21,10 +21,13 @@
 	&:after
 		content: ""
 		position: absolute
-		top: -7px
+		top: -6px
 		left: 50%
-		margin-left: -6px
-		+svg(sep-black,13,13)
+		margin-left: -5px
+		width: 10px
+		height: 10px
+		background: #000
+		+rotate(45deg) 
 	.row
 		> div
 			position: relative
@@ -53,7 +56,10 @@
 		margin-left: -15px 
 	&:after
 		top: -3px
-		+svg(sep,6,6)
+		width: 4px
+		height: 4px
+		+rotate(45deg)
+		background: $blue-l 
 		margin-left: -3px
 .soc
 	&__title	

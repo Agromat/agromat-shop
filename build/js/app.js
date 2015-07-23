@@ -192,6 +192,19 @@ $(document).ready( function() {
         arrows: true,
         adaptiveHeight: true
     });
+    $('.js-single-slider').on('init', function(slick) {
+          setTimeout(function(){
+            $('.js-single-slider').addClass("is-ready");
+          },200);
+    });
+    $(".js-single-slider").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        adaptiveHeight: true
+    });
 
     $(".js-scroll-top").on("click", function(){
         $('html, body').animate({
@@ -199,4 +212,6 @@ $(document).ready( function() {
         }, 100);
         return false;
     });
+
+    $('#countdown-1').countdown({until: new Date(2015, 6, 30, 0, 0, 0), format: 'DHM'});
 });

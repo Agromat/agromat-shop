@@ -29,8 +29,11 @@
 			position: absolute
 			left: 1px
 			top: 50%
-			margin-top: -3px
-			+svg(sep,6,6) 
+			margin-top: -2px
+			width: 4px
+			height: 4px
+			background: $blue-l
+			+rotate(45deg)
 		&:first-child
 			&:before
 				display: none
@@ -213,7 +216,13 @@
 	background: $blue
 	+tr(background .2s)
 	&:hover
-		background: $blue-h   
+		background: $blue-h 
+	&_normal
+		letter-spacing: 0   
+	&.is-width
+		display: block
+		width: 100%
+		padding: 9px 5px 7px 
 .btn-simple
 	display: inline-block
 	min-width: 255px
@@ -497,7 +506,10 @@
 				position: absolute
 				top: 6px
 				left: -9px
-				+svg(sep,6,6) 
+				width: 4px
+				height: 4px
+				+rotate(45deg)
+				background: $blue-l 
 			&:first-child
 				margin-left: 0
 				&:before
@@ -585,6 +597,38 @@
 		height: 170px
 	.btn
 		padding: 9px 18px 7px 
+.items-wrap
+	font-size: 0
+	padding: 0 3px 
+	margin: 0 -15px 0 0
+.item_smaller
+	display: inline-block
+	vertical-align: top
+	margin: 0 15px 10px
+	width: 95px
+	.item__head
+		height: 42px
+	.item__title
+		font-size: 12px
+		line-height: 1.2
+		+arial
+	.item__img
+		height: 95px
+	.btn
+		display: block
+		width: 100%
+		text-align: center
+	.price
+		margin-bottom: 5px
+		margin-left: 0
+		line-height: 1
+	.price_old
+		margin-bottom: 0
+		&:before
+			top: 10px
+			right: -5px
+	.item__action
+		border: 0
 .items-slider
 	overflow: hidden
 	margin: 55px 0 20px 
@@ -822,3 +866,4 @@ a.link-comment
 			color: #000 
 	p
 		margin-bottom: 20px
+		

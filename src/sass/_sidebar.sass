@@ -161,6 +161,33 @@
 			margin-top: 15px
 		&:last-child
 			margin-bottom: 15px
+
+.box_action
+	border-color: $red
+	text-align: center
+	&:before,
+	&:after
+		content: "" 
+		position: absolute
+		left: 20px
+		right: 20px
+		height: 4px
+		background: #fff
+	&:before
+		top: -2px
+	&:after
+		bottom: -2px
+	.box__more
+		z-index: 2
+		a
+			color: $red 
+
+.box__info	
+	margin: -7px 0 5px
+	font-size: 22px
+	color: #000
+	line-height: 1.2
+	+med 
 .post-item
 	margin-bottom: 32px
 	&__media
@@ -201,4 +228,59 @@
 		margin-bottom: 6px
 	.post-item__media
 		margin-bottom: 0
++keyframes(dots)
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+// +keyframes(hourglass)
+// 	0%
+// 		+rotate(0deg)
+// 	50%
+// 		+rotate(-180deg)
+// 	100%
+// 		+rotate(-360deg)
+.countdown
+	position: relative
+	text-align: center
+	display: inline-block
+	white-space: nowrap
+	padding: 5px 0 10px
+	line-height: 1
+	&:before
+		content: ""
+		position: absolute
+		left: -23px
+		top: 16px
+		+svg(hourglass,12,12) 
+		//animation: hourglass 2s infinite
+.countdown-section
+	display: inline-block
+	position: relative
+	vertical-align: middle
+	margin-right: 10px
+	&:first-child
+		margin-right: 14px
+	&:last-child
+		margin-right: 0
+		&:before
+			content: ":" 
+			position: absolute
+			left: -8px
+			top: 0
+			line-height: 1
+			+bold
+			font-size: 30px
+			+gpu
+			animation: dots 1s infinite
+	span
+		display: block
+.countdown-amount
+	font-size: 30px
+	+bold
+.countdown-period
+	position: absolute
+	top: 100%
+	color: $gray
+	font-size: 11px 
 	

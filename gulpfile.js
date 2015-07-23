@@ -87,7 +87,7 @@ gulp.task('sass:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/sass/'],
-            outputStyle: 'compressed',
+            outputStyle: 'expanded',
             sourceMap: true,
             errLogToConsole: true,
             indentedSyntax: true
