@@ -71,7 +71,7 @@ $dark: #333
 $red: #ed1c24
 $border: #f4f4f4
 $border-d: #eee
-
+$green: #248932
 html
 	min-width: 1200px
 	+selection
@@ -442,7 +442,6 @@ a
 			display: inline-block
 			content: "" 
 			vertical-align: middle
-
 	&__prev
 		&:before
 			+arr(4,8,$blue,l)
@@ -468,17 +467,37 @@ a
 	font-size: 13px
 	color: #000 
 	+placeholder-color(#999)
-
+	+tr(border .2s)
+	&:focus
+		border-color: $blue 
+.avatar
+	width: 70px
+	height: 70px
+	overflow: hidden
+	img
+		width: 100%
+		display: block
+		border-radius: 50% 
 .comment
-	border-bottom: 1px solid $border-d 
+	padding: 30px 0 0
+	margin-bottom: 30px
+	border-top: 1px solid $border-d 
 	&_add
 		border: 0
+	.comment
+		&:first-child
+			border-top: 0
+			padding-top: 0
 	.col-xs-2
 		width: 100px
 	.col-xs-10
 		float: none
 		overflow: hidden
 		width: auto
+	&__head
+		margin-bottom: 7px
+	&__body
+		margin-bottom: 15px
 	&__user
 		display: inline-block
 		margin-right: 30px
@@ -489,18 +508,59 @@ a
 		+arial
 		font-weight: bold
 		&:hover
-			color: $blue 
+			color: $blue
+	.meta
+		position: relative
+		display: inline-block
 		&:before
 			content: "" 
 			position: absolute
-			right: -10px
-			top: 0
+			left: -15px
+			top: 3px
 			height: 11px
 			width: 1px
-			background: $gray 
+			background: $border-d 
+	&__answer
+		display: inline-block
+		margin-right: 30px
+		position: relative
+		color: $blue
+		font-size: 13px 
+		&:before
+			content: "\f112" 
+			+fa-icon
+			display: inline-block
+			margin: 0 6px 0 2px 
+			font-size: 10px
+		&:hover
+			color: $blue-h 
+	&__footer
+		color: $gray 
+	.like,
+	.dislike
+		margin-left: 12px
+		
 .comment_add
 	.btn
 		margin-top: 35px
 	.col-xs-8
 		margin-right: -8.33333%
 		
+.like
+	display: inline-block
+	color: $green 
+	&:before
+		content: "\f087" 
+		+fa-icon
+		display: inline-block
+		margin-right: 5px
+		font-size: 14px
+.dislike
+	display: inline-block
+	color: $red 
+	&:before
+		content: "\f088" 
+		+fa-icon
+		display: inline-block
+		margin-right: 5px
+		font-size: 14px

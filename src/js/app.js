@@ -213,5 +213,9 @@ $(document).ready( function() {
         return false;
     });
 
-    $('#countdown-1').countdown({until: new Date(2015, 6, 30, 0, 0, 0), format: 'DHM'});
+    $('#countdown-1').countdown({
+        until: new Date(2015, 6, 30, 0, 0, 0), // insert your date
+        format: 'DHM',
+        padZeroes: true
+    });
 });
