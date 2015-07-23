@@ -82,6 +82,7 @@ body
 	+arial
 .container
 	min-width: 1200px !important
+	width: 1200px !important
 a
 	text-decoration: none 
 // common blocks      
@@ -186,23 +187,27 @@ a
 				left: 0
 			&:after
 				right: 0
-	&_big
-		font-size: 18px
+.title_big
+	font-size: 18px
+	span
+		&:before,
+		&:after
+			top: 45%
 		span
 			&:before,
 			&:after
-				top: 45%
-			span
-				&:before,
-				&:after
-					margin-top: -5px
+				margin-top: -5px
 .title_width
 	> span
 		padding: 0 15px
 		span
 			padding: 0 12px 
 
-
+.title_dark
+	span
+		&:before,
+		&:after
+			background: #000 
 .prod
 	display: inline-block
 	vertical-align: top

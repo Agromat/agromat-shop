@@ -176,11 +176,20 @@ $(document).ready( function() {
     });
 
     $(".js-post-slider").slick({
-      infinite: true,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      dots: false,
-      arrows: true,
-      adaptiveHeight: true
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
+    });
+
+    $(".js-slider").slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
     });
 });

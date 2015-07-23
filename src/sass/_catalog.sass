@@ -98,8 +98,10 @@
 				border: 0
 .page-head
 	position: relative
+	.compare
+		margin-top: 6px
 .page-title
-	margin: 3px 0 10px 
+	margin: 3px 0 20px 
 	font-size: 31px
 	line-height: 1
 	font-weight: normal
@@ -107,6 +109,7 @@
 	+med
 	color: #000
 .page-subtitle
+	margin-top: -10px
 	color: $gray
 	+arial 
 	line-height: 1.7
@@ -282,30 +285,31 @@
 	bottom: 10px
 	font-size: 0
 	right: 10px
-	.meta, 
-	a
+	.meta
 		display: inline-block
 		vertical-align: top
-	a
+	&__grid,
+	&__list
+		display: inline-block
+		vertical-align: top
 		margin-right: -1px
 		width: 30px
 		height: 30px
 		line-height: 30px
 		text-align: center
 		border: 1px solid $border-d
+		+tr_c
+		color: #000
 		&:before
 			vertical-align: middle
 			+fa-icon
 			font-size: 14px
-			color: #000
 		&:hover
-			&:before
-				color: $blue 
+			color: $blue 
 		&.is-active
 			background: #000 
-			border-color: #000 
-			&:before
-				color: #fff 
+			border-color: #000
+			color: #fff 
 	&__grid
 		&:before
 			content: "\f00a"
@@ -323,6 +327,9 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
+	&_border
+		border-top: 1px solid #000 
+		padding-top: 33px
 .banner
 	display: block
 
@@ -567,7 +574,43 @@
 	
 	.badge
 		left: 26px
-
+.item_small
+	width: 170px
+	.item__head
+		height: 55px
+	.item__title
+		font-size: 15px
+		line-height: 1.25
+	.item__img
+		height: 170px
+	.btn
+		padding: 9px 18px 7px 
+.items-slider
+	overflow: hidden
+	margin: 55px 0 20px 
+	+ .seo
+		margin-top: 20px
+	.item_small
+		width: 100%
+	.item__action
+		border-bottom: 0
+	.slick-slider
+		padding: 0 50px 
+	.slick-list
+		margin: 0 -15px 
+	.slick-slide
+		padding: 0 15px 
+	.slick-prev,
+	.slick-next
+		width: 30px
+		height: 30px
+		top: 125px
+		bottom: auto
+		border: 1px solid $border-d
+	.slick-prev
+		left: 0
+	.slick-next
+		right: 0
 .number
 	position: relative
 	width: 72px
