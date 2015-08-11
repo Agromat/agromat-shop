@@ -51,7 +51,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    //tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 9000,
     logPrefix: "Frontend_Devil"
@@ -87,7 +87,7 @@ gulp.task('sass:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/sass/'],
-            outputStyle: 'expanded',
+            outputStyle: 'compressed',
             sourceMap: true,
             errLogToConsole: true,
             indentedSyntax: true

@@ -3,7 +3,7 @@
 	display: table-cell
 	vertical-align: top
 	padding: 42px 0 0
-	width: 236px
+	width: 238px
 	&__in
 		position: relative
 		padding-right: 35px  
@@ -15,7 +15,8 @@
 			right: -2px
 			width: 2px
 			background: #000
-
+	&_width
+		width: 272px
 .accord
 	margin-bottom: 18px
 	&.is-full-list
@@ -30,7 +31,7 @@
 					+rotate(-180deg)
 
 	&__title
-		padding: 3px 0 
+		padding: 3px 0
 		font-size: 16px
 		+med
 		text-transform: uppercase
@@ -80,8 +81,27 @@
 	+med
 	color: #000
 	font-weight: normal
+	&_up
+		text-transform: uppercase
 .filter-choice
 	border-bottom: 1px solid $border-d 
+	&_nav
+		position: relative
+		margin-bottom: 53px
+		padding: 10px 10px 7px
+		border: 3px solid $blue
+		&:after
+			content: ""
+			position: absolute
+			bottom: -33px
+			left: 0
+			width: 170px
+			height: 1px
+			background: #eee 
+	&__title
+		font-size: 16px
+		+med
+		color: $blue 
 .tags
 	margin-bottom: 4px
 	.meta
@@ -112,6 +132,12 @@
 	&:hover
 		&:before
 			color: $red 
+	&_link
+		+tr(border .3s)
+		&:hover
+			border-color: $blue
+		&:before
+			display: none
 			
 .box
 	position: relative
