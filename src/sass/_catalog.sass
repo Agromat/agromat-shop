@@ -656,10 +656,13 @@
 .items-slider
 	overflow: hidden
 	margin: 55px 0 20px 
+
 	+ .seo
 		margin-top: 20px
 	.item_small
 		width: 100%
+		margin-bottom: 0
+		
 	.item__action
 		border-bottom: 0
 	.slick-slider
@@ -679,6 +682,19 @@
 		left: 0
 	.slick-next
 		right: 0
+	&_arr-top
+		.slick-slider
+			margin-top: -45px
+			padding: 45px 0 0
+		.slick-next,
+		.slick-prev
+			top: 14px
+			left: auto
+			border: 0
+		.slick-next
+			right: -10px
+		.slick-prev
+			right: 19px
 .number
 	position: relative
 	width: 72px
@@ -1008,3 +1024,4 @@ a.link-comment
 	.btn,
 	.btn-simple
 		margin: 15px 0 
+		

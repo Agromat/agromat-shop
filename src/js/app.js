@@ -194,6 +194,14 @@ $(document).ready( function() {
         arrows: true,
         adaptiveHeight: true
     });
+    $(".js-slider-six").slick({
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
+    });
     $('.js-single-slider').on('init', function(slick) {
           setTimeout(function(){
             $('.js-single-slider').addClass("is-ready");

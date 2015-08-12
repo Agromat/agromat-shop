@@ -296,6 +296,9 @@ a
 	line-height: 1.2
 	+arial
 	color: #000
+	&__cols
+		column-count: 2 
+		column-gap: 30px 
 	h3
 		margin-bottom: 8px
 		font-size: 22px
@@ -618,6 +621,8 @@ a
 			background: #000  
 		
 .product-col
+	+clr
+	margin-bottom: 55px
 	&__main
 		overflow: hidden
 		.text
@@ -670,6 +675,19 @@ a
 	padding: 12px 14px
 	font-size: 12px
 	border: 2px solid #d8d8d8
+	+clr
+	&_benefits
+		margin: 28px 0
+		padding: 25px  
+	&__table
+		display: table
+		width: 100%
+		table-layout: fixed
+	&__cell
+		display: table-cell
+		vertical-align: middle
+		i
+			vertical-align: middle
 .title-icon
 	font-size: 24px
 	+med
@@ -680,14 +698,30 @@ a
 		font-size: 18px
 		color: $blue 
 
+.prod-simple-wrap
+	font-size: 0
+	margin: 0 -15px 
+	.prod-simple
+		position: relative
+		padding: 13px 
+		display: inline-block
+		vertical-align: top
+		width: 33.3%
+		border: 2px solid transparent
+		+tr(border .3s)
+		&__img
+			margin-bottom: 0
+		&:hover
+			border-color: $blue 
 .prod-simple
+	display: block
 	margin-bottom: 10px
 	&__top
 		position: relative
-	.meta
-		position: absolute
-		left: 80px
-		bottom: 0
+		.meta
+			position: absolute
+			left: 80px
+			bottom: 0
 	&__img
 		margin-bottom: 6px
 		width: 70px
@@ -703,3 +737,8 @@ a
 	&__text
 		font-size: 13px
 		color: #000 
+	&__media
+		float: left
+		margin-right: 30px
+	&__main
+		overflow: hidden
