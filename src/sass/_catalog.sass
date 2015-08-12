@@ -223,6 +223,20 @@
 		display: block
 		width: 100%
 		padding: 9px 5px 7px 
+	&_large
+		display: block
+		position: relative
+		width: 100%
+		font-size: 18px
+		padding: 16px 30px 13px 
+		&:before
+			content: ""
+			position: absolute
+			left: 3px
+			top: 3px
+			right: 3px
+			bottom: 3px
+			border: 1px solid rgba(#fff, .5) 
 .btn-simple
 	display: inline-block
 	min-width: 255px
@@ -251,6 +265,8 @@
 		display: block
 		width: 100%
 		padding: 12px 10px 10px
+	&_blue
+		color: $blue 
 .sort
 	position: relative
 	margin: 18px 0 26px
@@ -366,6 +382,14 @@
 	color: $gray 
 	&_small
 		font-size: 11px
+	&__available
+		color: $blue 
+		float: right
+		font-weight: bold
+	&__not-available
+		color: $red 
+		float: right
+		font-weight: bold
 .blocks-wrap
 	margin-top: 50px
 	margin-bottom: 55px
@@ -701,6 +725,8 @@
 	vertical-align: middle
 	padding-left: 4px
 	max-width: 70px
+	&_width
+		max-width: 100%
 	span
 		color: #000
 		font-size: 11px
@@ -788,6 +814,25 @@
 		z-index: 1
 		bottom: 0
 		right: -8px
+
+.links-wrap
+	li
+		display: inline-block
+		position: relative
+		margin-left: 32px
+		&:before
+			content: ""
+			position: absolute
+			left: -20px 
+			top: 5px
+			width: 1px
+			height: 10px
+			background: $border_d 
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+			
 .link-compare
 	color: $blue
 	display: inline-block
@@ -822,7 +867,21 @@ a.link-comment
 		color: $blue 
 		&:before
 			color: $blue 
-			
+.link-credit
+	color: $blue
+	display: inline-block
+	position: relative
+	font-size: 12px
+	+arial
+	+tr_c
+	&:hover
+		color: $blue-h 
+	&:before
+		content: "\f1ec"
+		display: inline-block
+		margin-right: 6px
+		vertical-align: middle
+		+fa-icon
 .post-slider
 	position: relative
 	overflow: hidden
@@ -867,3 +926,85 @@ a.link-comment
 	p
 		margin-bottom: 20px
 		
+
+.carousel
+	&__main
+		position: relative
+		border: 1px solid $border_d
+		.slick-slider
+			height: 370px
+			opacity: 0
+			visibility: hidden
+			+tr(opacity .3s)
+			&.is-ready
+				opacity: 1
+				visibility: visible
+		.slick-slide
+			height: 370px
+			+vertical
+		img
+			display: inline-block
+			max-height: 100%
+			vertical-align: middle
+		.slick-prev,
+		.slick-next
+			top: -1px
+			width: 30px
+			height: 30px
+			left: auto
+			z-index: 2
+			border: 1px solid $border_d
+		.slick-prev
+			right: 28px
+		.slick-next
+			right: -1px
+		.btn-zoom
+			position: absolute
+			right: -1px
+			bottom: -1px
+			z-index: 2
+	&__nav
+		margin: 23px 0 35px
+		overflow: hidden
+		.slick-slider
+			margin-right: -28px 
+
+		img
+			border: 1px solid $border_d
+			max-width: 200%
+			height: 100%
+		.slick-slide
+			height: 70px
+			
+			
+		.slick-current
+			img
+				border-color: $blue
+				border-width: 3px
+				
+.btn-zoom
+	width: 40px
+	height: 40px
+	border: 1px solid $border_d
+	font-size: 18px
+	background: #fff 
+	+tr(color .3s)
+	&:hover
+		color: $blue 
+
+.product-action
+	.price
+		display: block
+		line-height: 1
+	.price_old
+		display: inline-block
+	.price_large
+		margin-bottom: 15px
+	.meta
+		margin-bottom: 14px
+	.number-info
+		.meta
+			margin-bottom: 0
+	.btn,
+	.btn-simple
+		margin: 15px 0 

@@ -1,8 +1,10 @@
 $(document).ready( function() {
 
-    // $(document).on("click", function(){
-    //  $(".js-popup").hide();
-    // });
+    $(document).on("click", function(){
+        if($(".js-tip").hasClass("is-active")) {
+            $(".js-tip").removeClass("is-active")
+        }
+    });
 
     // function scrollFixedElements() {
     //     var scroll_left = $(this).scrollLeft();
@@ -214,8 +216,47 @@ $(document).ready( function() {
     });
 
     $('#countdown-1').countdown({
-        until: new Date(2015, 6, 30, 0, 0, 0), // insert your date
+        until: new Date(2015, 7, 30, 0, 0, 0), // insert your date
         format: 'DHM',
         padZeroes: true
     });
+
+    $('.js-carousel-main').on('init', function(slick) {
+          setTimeout(function(){
+            $('.js-carousel-main').addClass("is-ready");
+          },200);
+    });
+    $('.js-carousel-main').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.js-carousel-nav'
+    });
+    $('.js-carousel-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.js-carousel-main',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true
+    });
+
+    $('.js-tip-trigger').on("click", function(event){
+        var top = $(this).offset().top;
+        var left = $(this).offset().left;
+        var text = $(this).data("text");
+        $(".js-tip").css({
+            top: top,
+            left: left,
+        }).toggleClass("is-active").children().text(text);
+        event.stopPropagation();
+        return false;
+    });
+    $(".js-tip").on("click", function(event){
+        event.stopPropagation();
+    });
+
+
 });

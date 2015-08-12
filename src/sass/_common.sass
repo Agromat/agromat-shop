@@ -287,11 +287,20 @@ a
 				font-size: 14px
 			sub
 				font-size: 12px
+	&_large
+		font-size: 40px
+		sup, sub
+			font-size: 22px
 .text
 	font-size: 13px
 	line-height: 1.2
 	+arial
 	color: #000
+	h3
+		margin-bottom: 8px
+		font-size: 22px
+		+med
+		font-weight: normal
 	a
 		color: $blue
 		+tr_c
@@ -305,7 +314,9 @@ a
 		font-size: 11px
 		p
 			margin-bottom: 7px
-
+	&_mod
+		line-height: 1.4
+	
 .checkbox
 	display: block
 	padding: 3px 0 
@@ -607,15 +618,88 @@ a
 			background: #000  
 		
 .product-col
+	&__main
+		overflow: hidden
+		.text
+			clear: both
 	&__left
 		float: left
-		width: 42.5%
+		width: 54.55%
 	&__middle
 		float: left
 		padding-left: 30px
-		width: 34.48%
+		width: 45.4%
+		.box
+			margin: 0 0 26px
 	&__right
-		float: left
+		float: right
 		padding-left: 30px
-		width: 34.05%
-		
+		width: 22.8%
+
+.tip
+	position: absolute
+	padding-top: 7px
+	top: 100px
+	right: 200px
+	z-index: 5
+	width: 270px
+	opacity: 0
+	visibility: hidden
+	+gpu
+	+tr(opacity .3s)
+	&.is-active
+		opacity: 1
+		visibility: visible
+	&__in
+		display: inline-block
+		position: relative
+		margin: 10px 0 0 -30px 
+		padding: 12px 14px
+		background: #191919
+		color: #fff   
+		font-size: 12px
+		line-height: 1.3
+		&:before
+			content: ""
+			position: absolute
+			left: 30px
+			top: -5px
+			+arr(11,5,#000,t) 
+.info-box
+	margin-bottom: 23px
+	padding: 12px 14px
+	font-size: 12px
+	border: 2px solid #d8d8d8
+.title-icon
+	font-size: 24px
+	+med
+	text-transform: uppercase
+	color: #000
+	.fa
+		margin-right: 14px
+		font-size: 18px
+		color: $blue 
+
+.prod-simple
+	margin-bottom: 10px
+	&__top
+		position: relative
+	.meta
+		position: absolute
+		left: 80px
+		bottom: 0
+	&__img
+		margin-bottom: 6px
+		width: 70px
+		height: 70px
+		border: 1px solid $border
+		+vertical
+		overflow: hidden
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			height: auto
+	&__text
+		font-size: 13px
+		color: #000 
