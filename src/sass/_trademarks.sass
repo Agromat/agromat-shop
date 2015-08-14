@@ -28,8 +28,37 @@
             a, span
                 color: #ccc
                 cursor: default 
+        &.is-active
+            position: relative
+            z-index: 2
+            &:hover
+                a
+                    background: #fff
+                    color: #000
+            a
+                &:before
+                    content: "" 
+                    position: absolute
+                    top: -5px
+                    left: -2px
+                    right: -2px
+                    bottom: -4px
+                    background: none
+                    border: 2px solid #000
+                &:after
+                    content: ""
+                    position: absolute
+                    top: -2px
+                    bottom: -1px
+                    left: 0
+                    right: 0
+                    z-index: -1
+                    background: #fff
+                    
+                    
         a
             display: block
+            position: relative
             color: #000
             transition: color, background, .3s
             &:hover

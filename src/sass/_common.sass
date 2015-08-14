@@ -145,7 +145,10 @@ a
 	color: $gray
 	a
 		color: $gray 
-	
+
+.row
+	+ .title
+		margin-top: 12px	
 .title
 	position: relative
 	margin-bottom: 20px
@@ -158,6 +161,8 @@ a
 	line-height: 1.5
 	letter-spacing: 1px 
 	color: #000 
+	+ .row
+		margin-top: 30px
 	> span
 		display: inline-block
 		position: relative
@@ -194,6 +199,7 @@ a
 				right: 0
 .title_big
 	font-size: 18px
+	+bold
 	span
 		&:before,
 		&:after
