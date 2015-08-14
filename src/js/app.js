@@ -280,5 +280,10 @@ $(document).ready( function() {
         event.stopPropagation();
     });
 
+    $('[type="tel"]').mask("380(99)999-99-99");
 
+    $(".js-select select").on("change", function() {
+        var text = $(this).val();
+        $(this).parents(".js-select").find(".input").val(text);
+    })
 });

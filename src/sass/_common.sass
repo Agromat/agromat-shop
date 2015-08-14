@@ -325,7 +325,7 @@ a
 			margin-bottom: 7px
 	&_mod
 		line-height: 1.4
-	
+
 .checkbox
 	display: block
 	padding: 3px 0 
@@ -333,6 +333,10 @@ a
 	font-size: 12px
 	+tr_c
 	cursor: pointer
+	+arial
+	&_small
+		font-size: 11px
+		line-height: 1.3
 	input
 		position: absolute
 		opacity: 0
@@ -363,10 +367,67 @@ a
 			font-size: 10px
 			opacity: 0
 			+tr(opacity .2s)
-		span
+		span, 
+		em
 			color: $gray 
 	&:hover
 		color: $blue-h 
+.radiobox
+	float: left
+	position: relative
+	padding: 15px 20px 15px 50px
+	+arial
+	width: 33.3%
+	&__label
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 2
+	&__border
+		display: none
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 1
+		border: 2px solid $blue
+	input
+		opacity: 0
+		position: absolute
+		&:checked
+			+ .radiobox__border
+				display: block
+				+ .radiobox__title
+					&:after
+						display: block
+	&__title
+		position: relative
+		font-size: 13px
+		font-weight: bold
+		&:before
+			content: ""
+			position: absolute
+			left: -21px
+			top: 1px
+			width: 13px
+			height: 13px
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			border: 1px solid #939393
+		&:after
+			display: none
+			content: ""
+			position: absolute
+			left: -17px
+			top: 5px
+			width: 5px
+			height: 5px
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			background: $blue 
 
 .btn-more
 	display: inline-block
@@ -589,8 +650,18 @@ a
 
 
 .tabs
-	margin: 20px -10px 20px 0
+	position: relative
+	margin: 20px -9px 20px 0
 	font-size: 0
+	height: 50px
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 9px
+		height: 2px
+		background: #000
 	li
 		position: relative
 		display: inline-block
@@ -602,6 +673,7 @@ a
 		text-align: center
 		margin-left: -2px
 		border: 2px solid #dedede
+		border-bottom: 0
 		+text-overflow
 		+med
 		text-transform: uppercase
@@ -613,7 +685,15 @@ a
 		&.is-active
 			border-color: #000 
 			z-index: 2
-			border-bottom: 0 
+			height: 50px
+			&:after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 2px
+				background: #fff
 			a
 				color: #000
 		&:hover
@@ -625,6 +705,7 @@ a
 		position: relative
 		color: #999 
 		+tr(color .3s)
+		
 .product-col
 	+clr
 	margin-bottom: 55px
@@ -747,3 +828,53 @@ a
 		margin-right: 30px
 	&__main
 		overflow: hidden
+		
+.field
+	display: block
+	margin-bottom: 11px
+	position: relative
+	&__title
+		display: block
+		margin-bottom: 2px
+		font-size: 13px
+		color: $gray 
+		+arial
+		min-height: 19px
+	&__body
+		display: block
+		position: relative
+.input
+	display: block
+	border: 2px solid #000
+	padding: 0 13px 
+	width: 100%
+	height: 33px
+	+tr(border .3s)
+	+arial
+	font-size: 13px
+	color: $dark 
+	&:focus
+		border-color: $blue 
+	&_textarea
+		padding: 13px 
+		height: 162px
+		resize: none
+.select
+	position: relative
+	&:after
+		content: "\f0d7"
+		+fa-icon 
+		position: absolute
+		top: 11px
+		font-size: 14px
+		right: 6px
+		pointer-events: none
+	select
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		opacity: 0
+		-webkit-appearance: none
+
