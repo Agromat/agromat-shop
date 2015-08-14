@@ -187,6 +187,39 @@
 			margin-top: 15px
 		&:last-child
 			margin-bottom: 15px
+	&__nav
+		color: #333 
+		font-size: 18px
+		+med
+		text-transform: uppercase
+		line-height: 1
+		li
+			border-top: 1px solid #cdcdcd
+			&:first-child
+				border: 0
+			&.is-active
+				color: $blue
+				a
+					color: $blue
+		a
+			display: block
+			position: relative
+			padding: 9px 20px 9px 44px 
+			color: #333 
+			+tr(color .3s)
+			&:before
+				content: ""
+				position: absolute
+				left: 20px
+				top: 50%
+				z-index: 3
+				margin-top: -2px
+				width: 4px
+				height: 4px
+				+rotate(45deg)
+				background: $blue-l 
+			&:hover
+				color: $blue 
 
 .box_action
 	border-color: $red

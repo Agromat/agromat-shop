@@ -64,6 +64,9 @@ $(document).ready( function() {
     $(document).on("click", function(){
         if($(".js-tip").hasClass("is-active")) {
             $(".js-tip").removeClass("is-active")
+        }  
+        if($(".js-select-list").hasClass("is-active")) {
+            $(".js-select-list").removeClass("is-active")
         }
     });
 
@@ -324,6 +327,17 @@ $(document).ready( function() {
         return false;
     });
     $(".js-tip").on("click", function(event){
+        event.stopPropagation();
+    });
+
+    $(".js-select-list-active").on("click", function(event){
+        $(this).parents(".js-select-list").toggleClass("is-active");
+        event.stopPropagation();
+    });
+
+    $(".js-select-list-drop a").on("click", function(event) {
+        var text = $(this).text();
+        $(this).parents(".js-select-list").removeClass("is-active").find(".js-select-list-active span").text(text);
         event.stopPropagation();
     });
 
