@@ -587,45 +587,44 @@ a
 		margin-right: 5px
 		font-size: 14px
 
-.tabs-wrap
-	margin: 20px 0 
-	border-bottom: 2px solid #000
+
 .tabs
-	display: table
-	width: 100%
-	table-layout: fixed
-	border-collapse: collapse 
+	margin: 20px -10px 20px 0
+	font-size: 0
 	li
 		position: relative
-		display: table-cell
+		display: inline-block
 		vertical-align: top
+		width: 20%
+		height: 48px
+		max-width: 178px
+		line-height: 48px
 		text-align: center
-		border: 2px solid #dedede 
-		border-bottom: 0
+		margin-left: -2px
+		border: 2px solid #dedede
 		+text-overflow
 		+med
 		text-transform: uppercase
 		font-size: 18px
 		color: #999
+		z-index: 1
+		&:first-child
+			margin-left: 0
 		&.is-active
+			border-color: #000 
 			z-index: 2
-			color: #000 
-			border-color: #000
+			border-bottom: 0 
+			a
+				color: #000
+		&:hover
+			a
+				&:hover
+					color: #000 
 	a
 		display: block
 		position: relative
 		color: #999 
-		height: 44px
-		line-height: 44px
-		&:after
-			content: ""
-			position: absolute
-			bottom: -2px
-			right: 0
-			left: 0
-			height: 2px
-			background: #000  
-		
+		+tr(color .3s)
 .product-col
 	+clr
 	margin-bottom: 55px

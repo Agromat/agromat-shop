@@ -65,18 +65,13 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('html:build', function () {
-    gulp.src(path.src.html) 
-        .pipe(rigger())
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
-});
+
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
         .pipe(rigger()) 
         //.pipe(sourcemaps.init()) 
-        //.pipe(uglify()) 
+        .pipe(uglify()) 
         //.pipe(sourcemaps.wborite()) 
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
@@ -97,7 +92,7 @@ gulp.task('sass:build', function () {
             cascade: false
         }))
         .pipe(cssmin())
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
@@ -141,7 +136,12 @@ gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
 });
-
+gulp.task('html:build', function () {
+    gulp.src(path.src.html) 
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
+});
 gulp.task('build', [
     'html:build',
     'js:build',
@@ -154,9 +154,6 @@ gulp.task('build', [
 
 
 gulp.task('watch', function(){
-    watch([path.watch.html], function(event, cb) {
-        gulp.start('html:build');
-    });
     watch([path.watch.sass], function(event, cb) {
         gulp.start('sass:build');
     });
@@ -174,6 +171,9 @@ gulp.task('watch', function(){
     }); 
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:build');
     });
 });
 
