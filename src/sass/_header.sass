@@ -9,7 +9,6 @@
 		height: 65px
 		border-bottom: 3px solid #000
 		box-shadow: 0 3px 6px rgba(#000, .3)
-		+tr(background .2s)
 		min-width: 1200px
 		.contact,
 		.shedule,
@@ -372,9 +371,19 @@
 		opacity: 1
 		visibility: visible
 
-
+.has-fixed-header
+	.header_order
+		.logo
+			margin-top: 10px
+		.order-box
+			margin-top: 5px
+		.shedule,
+		.contact
+			display: block
 .header_order
 	.logo
+		float: left
+		margin-right: 100px
 		width: 203px
 		margin-top: 0
 	.contact
