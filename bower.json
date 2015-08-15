@@ -15,6 +15,5 @@
     "slick-carousel": "~1.5.6"
   },
   "devDependencies": {
-    "jquery.maskedinput": "~1.4.1"
   }
 }

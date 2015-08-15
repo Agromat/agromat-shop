@@ -1,1 +1,19 @@
-!function(o){o.countdown.regionalOptions.ru={labels:["Лет","Месяцев","Недель","Дни","Часы","Минуты","Секунд"],labels1:["Год","Месяц","Неделя","День","Час","Минута","Секунда"],labels2:["Года","Месяца","Недели","Дни","Часы","Минуты","Секунды"],compactLabels:["л","м","н","д"],compactLabels1:["г","м","н","д"],whichLabels:function(o){var t=o%10,a=Math.floor(o%100/10);return 1==o?1:t>=2&&4>=t&&1!=a?2:1==t&&1!=a?1:0},digits:["0","1","2","3","4","5","6","7","8","9"],timeSeparator:":",isRTL:!1},o.countdown.setDefaults(o.countdown.regionalOptions.ru)}(jQuery);
+/* http://keith-wood.name/countdown.html
+ * Russian initialisation for the jQuery countdown extension
+ * Written by Sergey K. (xslade{at}gmail.com) June 2010. */
+(function($) {
+        $.countdown.regionalOptions['ru'] = {
+		labels: ['Лет', 'Месяцев', 'Недель', 'Дни', 'Часы', 'Минуты', 'Секунд'],
+		labels1: ['Год', 'Месяц', 'Неделя', 'День', 'Час', 'Минута', 'Секунда'],
+		labels2: ['Года', 'Месяца', 'Недели', 'Дни', 'Часы', 'Минуты', 'Секунды'],
+		compactLabels: ['л', 'м', 'н', 'д'], compactLabels1: ['г', 'м', 'н', 'д'],
+		whichLabels: function(amount) {
+			var units = amount % 10;
+			var tens = Math.floor((amount % 100) / 10);
+			return (amount == 1 ? 1 : (units >= 2 && units <= 4 && tens != 1 ? 2 :
+				(units == 1 && tens != 1 ? 1 : 0)));
+		},
+		digits: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+		timeSeparator: ':', isRTL: false};
+	$.countdown.setDefaults($.countdown.regionalOptions['ru']);
+})(jQuery);

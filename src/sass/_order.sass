@@ -1,0 +1,104 @@
+.order-group
+    margin: 45px 0 55px
+.table-wrap
+    border: 2px solid $blue
+    .btn-simple
+        margin: 28px 38px 38px 0 
+.table
+    color: $dark
+    font-size: 13px
+    +arial 
+    caption
+        padding: 4px 28px 0
+        color: $dark
+        font-size: 22px
+        +reg
+        text-align: left
+    thead
+        text-align: left
+        color: $gray 
+    th
+        font-weight: normal
+        padding: 0 28px 5px
+        vertical-align: middle
+    tbody
+        tr
+            +tr(background .3s)
+            &.is-active
+                background: $blue
+                color: #fff
+                .price
+                    color: #fff 
+    td
+        border-top: 1px solid #f6f6f6
+        padding: 15px 28px 
+        vertical-align: middle
+    .number
+        margin-right: 12px
+.table_order
+    td
+        padding: 0 28px
+        .radio
+            height: 70px
+            line-height: 70px
+    
+.order-wrap
+    padding: 45px 30px 30px
+    background: #f3f3f3  
+.order
+    padding-top: 20px
+    border-top: 1px solid #e6e6e6 
+    &:first-child
+        border-top: 0
+    &__title
+        margin-bottom: 20px
+        font-size: 22px
+        line-height: 1.2
+        +med
+        span
+            color: #888 
+        a
+            color: #050505
+            +tr(color .3s)
+            &:hover
+                color: $blue 
+    &__table
+        display: table
+        
+        width: 100%
+        table-layout: fixed
+    &__cell
+        display: table-cell
+        vertical-align: top
+        padding: 0 0 25px 5px
+        &:first-child
+            padding-left: 0
+    &__info
+        display: inline-block
+        text-transform: uppercase
+        font-size: 12px
+        +arial
+        font-weight: bold
+        span
+            text-transform: none
+            color: $gray
+            font-weight: normal
+            font-size: 11px
+    .prod-simple
+        &__img
+            background: #fff 
+            border: 1px solid #eaeaea
+.order_delivery
+    padding: 5px 0 
+    border-top-color: #000
+    text-align: right
+    
+    .price
+        font-weight: normal
+        text-transform: none
+.order_total
+    padding-top: 10px
+    border-top-width: 2px 
+   
+         
+        

@@ -280,10 +280,37 @@ $(document).ready( function() {
         event.stopPropagation();
     });
 
-    $('[type="tel"]').mask("380(99)999-99-99");
+    // $('[type="tel"]').mask("380(99)999-99-99");
 
     $(".js-select select").on("change", function() {
         var text = $(this).val();
         $(this).parents(".js-select").find(".input").val(text);
-    })
+    });
+
+    $(".js-radio-trigger").on("change", function() {
+        var parent = $(this).parents(".js-radio-parent");
+        var name = $(this).attr("name");
+
+        $('input[name="'+name+'"]').parents(".js-radio-parent").removeClass("is-active");
+
+        $(this).attr("checked", "checked");
+        parent.addClass("is-active");
+        // if ($(this).is(":checked")) {
+            
+        // }
+    });
+
+    $(".js-radiobox-tab input").on("change", function() {
+        var id = $(this).attr("id");
+
+        $('.js-radiobox-content').hide();
+        $('.js-radiobox-content[data-id="'+id+'"]').show();
+
+
+        // $(this).attr("checked", "checked");
+        // parent.addClass("is-active");
+        // if ($(this).is(":checked")) {
+            
+        // }
+    });
 });

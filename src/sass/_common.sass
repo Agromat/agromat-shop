@@ -265,6 +265,12 @@ a
 		font-size: 16px
 	sub
 		font-size: 14px
+	span
+		display: block
+		color: #888 
+		font-size: 11px
+		+arial
+		line-height: 1
 	&_big
 		font-size: 30px
 		sup
@@ -297,6 +303,8 @@ a
 		font-size: 40px
 		sup, sub
 			font-size: 22px
+		sup
+			top: -12px
 .text
 	font-size: 13px
 	line-height: 1.2
@@ -356,6 +364,7 @@ a
 			top: 0
 			width: 12px
 			height: 12px
+			background: #fff 
 			border: 1px solid #cdcdcd
 		&:after
 			content: "\f00c" 
@@ -372,12 +381,66 @@ a
 			color: $gray 
 	&:hover
 		color: $blue-h 
+.radio
+	display: block
+	padding: 3px 0 
+	line-height: 1
+	font-size: 13px
+	+tr_c
+	cursor: pointer
+	+arial
+	input
+		position: absolute
+		opacity: 0
+		&:checked
+			+ .radio__text
+				&:after
+					opacity: 1
+	&__text
+		display: block
+		padding-left: 24px
+		position: relative
+		+nosel
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -8px
+			width: 13px
+			height: 13px
+			border-radius: 50% 
+			background: #fff 
+			border: 1px solid #cdcdcd
+		&:after
+			content: "" 
+			position: absolute
+			left: 4px
+			top: 50%
+			margin-top: -4px
+			opacity: 0
+			width: 5px
+			height: 5px
+			border-radius: 50% 
+			background: $blue 
+			+tr(opacity .2s)
+		span, 
+		em
+			color: $gray 
+
 .radiobox
 	float: left
 	position: relative
 	padding: 15px 20px 15px 50px
 	+arial
-	width: 33.3%
+	color: #888
+	font-size: 11px 
+	width: 33%
+	&:first-child
+		width: 34%
+	&.is-inactive
+		.radiobox__label
+			cursor: default
 	&__label
 		position: absolute
 		top: 0
@@ -385,6 +448,7 @@ a
 		bottom: 0
 		left: 0
 		z-index: 2
+		cursor: pointer
 	&__border
 		display: none
 		position: absolute
@@ -393,6 +457,7 @@ a
 		bottom: 0
 		left: 0
 		z-index: 1
+		pointer-events: none
 		border: 2px solid $blue
 	input
 		opacity: 0
@@ -403,10 +468,15 @@ a
 				+ .radiobox__title
 					&:after
 						display: block
+		&[disabled]
+			+ .radiobox__border
+				+ .radiobox__title
+					color: #888 
 	&__title
 		position: relative
 		font-size: 13px
 		font-weight: bold
+		color: #333 
 		&:before
 			content: ""
 			position: absolute
@@ -428,7 +498,22 @@ a
 			-webkit-border-radius: 50% 
 			border-radius: 50% 
 			background: $blue 
-
+.radiobox_tab
+	min-height: 66px
+	margin-bottom: -2px
+	.radiobox__border
+		border-bottom: 0 
+	input
+		&:checked
+			+ .radiobox__border
+				&:after
+					content: ""
+					position: absolute
+					left: 0
+					right: 0
+					height: 2px
+					bottom: 0
+					background: #fff  
 .btn-more
 	display: inline-block
 	position: relative
@@ -654,6 +739,8 @@ a
 	margin: 20px -9px 20px 0
 	font-size: 0
 	height: 50px
+	&_mb
+		margin-bottom: 0
 	&:after
 		content: ""
 		position: absolute
@@ -828,7 +915,18 @@ a
 		margin-right: 30px
 	&__main
 		overflow: hidden
-		
+	&__del
+		display: inline-block
+		position: relative
+		color: #888 
+		font-size: 12px
+		.btn-del
+			right: -22px
+			top: -3px
+			color: $blue 
+		&:hover
+			.btn-del
+				color: $red 
 .field
 	display: block
 	margin-bottom: 11px
