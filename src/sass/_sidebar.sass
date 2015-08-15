@@ -240,7 +240,13 @@
 		z-index: 2
 		a
 			color: $red 
-
+.box_contacts
+	text-align: left
+	.box__in
+		padding: 20px 10px 20px 65px
+	.shedule
+		&:before
+			color: $red 
 .box__info	
 	margin: -7px 0 5px
 	font-size: 22px
@@ -345,3 +351,39 @@
 	color: $gray
 	font-size: 11px 
 	
+.contacts
+	margin-top: 14px
+	
+	&:first-child
+		margin-top: 0
+	&__title
+		position: relative
+		margin-bottom: 7px
+		line-height: 1
+		text-transform: uppercase
+		font-size: 16px
+		+med
+		color: #000 
+		.fa
+			position: absolute
+			left: -25px
+			top: 2px
+			font-size: 12px
+			color: $red 
+		+ .contacts__tel
+			margin-top: -7px
+	&__tel
+		font-size: 30px
+		line-height: 1
+		+bold
+		sub
+			font-size: 18px
+	&__text
+		a
+			color: #000
+			&:hover
+				color: $blue 
+	.shedule
+		line-height: 1.2
+		&:before
+			display: none

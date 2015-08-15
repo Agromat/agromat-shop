@@ -68,6 +68,9 @@ $(document).ready( function() {
         if($(".js-select-list").hasClass("is-active")) {
             $(".js-select-list").removeClass("is-active")
         }
+      
+        $(".js-overlay").fadeOut(200);
+        
     });
 
     // function scrollFixedElements() {
@@ -373,5 +376,12 @@ $(document).ready( function() {
         // if ($(this).is(":checked")) {
             
         // }
+    });
+
+    $(".js-overlay").on("click", function() {
+        $(this).fadeOut(200);
+    });
+    $(".js-overlay").children().on("click", function(event) {
+        event.stopPropagation();
     });
 });

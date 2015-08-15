@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="47" height="40" viewBox="0 0 47 40">
+  <defs>
+    <style>
+
+      .cls-2 {
+        stroke: #268cb6;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        font-size: 48px;
+      }
+
+      .cls-3 {
+        fill: none;
+        text-anchor: middle;
+        font-size: 48px;
+        font-family: "FontAwesome";
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" x="24px" y="39px"><tspan dy="NaNem" x="50%" class="cls-3"></tspan></text>
+</svg>

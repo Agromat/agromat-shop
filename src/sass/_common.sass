@@ -197,6 +197,11 @@ a
 				left: 0
 			&:after
 				right: 0
+	.fa
+		color: $blue
+		font-size: 48px 
+	.fa-check-square-o
+		margin-left: 7px
 .title_big
 	font-size: 18px
 	+bold
@@ -333,6 +338,8 @@ a
 			margin-bottom: 7px
 	&_mod
 		line-height: 1.4
+	&_mb
+		margin-bottom: 45px
 
 .checkbox
 	display: block
@@ -941,6 +948,8 @@ a
 	&__body
 		display: block
 		position: relative
+	&_holder
+		min-height: 54px
 .input
 	display: block
 	border: 2px solid #000
@@ -957,6 +966,8 @@ a
 		padding: 13px 
 		height: 162px
 		resize: none
+		&.input_small
+			height: 85px
 .select
 	position: relative
 	&:after
@@ -976,3 +987,35 @@ a
 		opacity: 0
 		-webkit-appearance: none
 
+
+.main-overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 11
+	background: rgba(#000,.7) 
+	+vertical
+	display: none
+.window
+	display: inline-block
+	vertical-align: middle
+	width: 373px
+	+arial
+	color: $dark
+	text-align: center
+	font-size: 13px
+	background: #fff 
+	&__in
+		padding: 28px 28px 43px
+	&__text
+		font-style: italic
+		
+
+.feedback-form
+	margin-bottom: 35px
+	+clr
+.map
+	margin-bottom: 45px
+	height: 270px

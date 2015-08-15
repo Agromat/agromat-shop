@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+	<title>agromat-shop-trademarks</title>
+	//= includes/head.html
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//= includes/header_3.html
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="l-layout">
+					<div class="l-sidebar l-sidebar_width">
+						<div class="box">
+							<ul class="box__nav">
+								<li><a href="#">О магазине</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li class="is-active"><a href="#">Контакты</a></li>
+								<li><a href="#">Гарантия</a></li>
+								<li><a href="#">Обратная связь</a></li>
+								<li><a href="#">Программа лояльности </a></li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="l-main">
+						<ul class="breadcrumbs">
+							<li>
+								<a href="#">Главная</a>
+							</li>
+							<li>
+								<span>Контакты </span>
+							</li>
+						</ul>
+						
+						
+						<div class="row">
+							<div class="col-xs-8">
+								<div class="page-head">
+									<div class="row">
+										<div class="col-xs-12">
+											<h1 class="page-title">Контакты</h1>
+											
+										</div>
+									</div>
+								</div>
+								<div class="text text_mb">Вы можете сделать заявку через форму обратной связи, или же просто заказать нужный товар через сайт и его корзину. Обработка заказов с 09:00 до 19:00. В понедельник наш менеджер свяжется с Вами и ответит на все вопросы</div>
+								
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="title title_big title_dark title_width"><span><span>обратная связь </span></span></div>
+									</div>
+									<div class="feedback-form">
+										<div class="col-xs-6">
+											<label class="field">
+												<span class="field__title">Email</span>
+												<span class="field__body">
+													<input class="input" type="email">
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-6">
+											<label class="field">
+												<span class="field__title">Ваше имя</span>
+												<span class="field__body">
+													<input class="input" type="text">
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-12">
+											<label class="field">
+												<span class="field__title">Ваше сообщение</span>
+												<span class="field__body">
+													<textarea class="input input_textarea input_small"></textarea>
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-6">
+											<div class="field">
+												<span class="field__title">Введите символы, что на картинке</span>
+												<div class="field__body">
+													<img src="img/captcha.png" width="100%" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="field">
+												<span class="field__title"></span>
+												<span class="field__body">
+													<button type="button" class="btn btn_large is-width">отправить</button>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12">
+										<div class="title title_big title_dark title_width"><span><span>карта проезда </span></span></div>
+										<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+											<div class="map" id="map"></div>
+											<script>
+												var map;
+												function initialize() {
+										    
+										        var image = new google.maps.MarkerImage('img/marker.png');
+										        var mapOptions = {
+										          zoom: 15,
+										          scrollwheel: true,
+										          center: new google.maps.LatLng(50.472035, 30.350617),
+										        };
+										        map = new google.maps.Map(document.getElementById('map'),mapOptions);
+
+										        var myLatLng1 = new google.maps.LatLng(50.472035, 30.350617);
+
+										        var locations = [myLatLng1];
+
+										        var markers = [];
+										        for(var i = 0; i < locations.length; i++) {
+										              var marker = new google.maps.Marker({
+										                position: locations[i],
+										                map: map,
+										                //title: i+1+"",
+										             	icon: image,
+										                id: i+1+""
+										              });
+										              markers.push(marker);
+										        }
+
+												}
+												google.maps.event.addDomListener(window, 'load', initialize);
+											</script>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="box box_action box_contacts">
+									<div class="box__in">
+										<div class="contacts">
+											<div class="contacts__title">
+												<i class="fa fa-phone"></i>Звоните! 
+											</div>
+											<div class="contacts__tel"><sub>(044)</sub> 392-29-48</div>
+										</div>
+										<div class="contacts">
+											<div class="contacts__title">
+												<i class="fa fa-clock-o"></i>режим работы
+											</div>
+											<div class="shedule">
+												<ul class="shedule__list">
+													<li><span>пн-пт</span>09:00-18:00</li>
+													<li><span>сб-вс</span>10:00-17:00</li>
+												</ul>
+												<p><strong>закрыты 1-2, 9.05 </strong> <br><strong>4 и 11.05 до 17:00</strong></p>
+											</div>
+										</div>
+										<div class="contacts">
+											<div class="contacts__title">
+												<i class="fa fa-map-marker"></i>Адрес офиса 
+											</div>
+											<div class="contacts__text">г. Киев, ул. Булаховского, 2/1</div>
+										</div>	
+										<div class="contacts">
+											<div class="contacts__title">
+												<i class="fa fa-envelope-o"></i>Email 
+											</div>
+											<div class="contacts__text"><a href="mailto:zakaz@agromat.ua">zakaz@agromat.ua</a></div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+										
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</div>
+<!-- END out-->
+//= includes/footer.html
+</body>
+</html>
