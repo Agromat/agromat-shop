@@ -79,11 +79,11 @@ gulp.task('js:build', function () {
 
 gulp.task('sass:build', function () {
     gulp.src(path.src.sass) 
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/sass/'],
-            outputStyle: 'compressed',
-            sourceMap: true,
+            outputStyle: 'extended',
+            //sourceMap: true,
             errLogToConsole: true,
             indentedSyntax: true
         }))
@@ -91,7 +91,7 @@ gulp.task('sass:build', function () {
             browsers: ['> 1%', 'last 3 versions', 'Opera 12.1', 'IE 9', 'IE 10'],
             cascade: false
         }))
-        .pipe(cssmin())
+        //.pipe(cssmin())
         //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));

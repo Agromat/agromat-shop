@@ -657,8 +657,9 @@ a
 	padding: 30px 0 0
 	margin-bottom: 30px
 	border-top: 1px solid $border-d 
-	&_add
+	&_no-border
 		border: 0
+		padding-top: 0
 	.comment
 		&:first-child
 			border-top: 0
@@ -714,10 +715,10 @@ a
 	.like,
 	.dislike
 		margin-left: 12px
-		
-.comment_add
 	.btn
 		margin-top: 35px
+.comment_add
+	border: 0
 	.col-xs-8
 		margin-right: -8.33333%
 		
@@ -799,7 +800,8 @@ a
 		position: relative
 		color: #999 
 		+tr(color .3s)
-		
+.tabs-content
+	display: none
 .product-col
 	+clr
 	margin-bottom: 55px
@@ -873,11 +875,12 @@ a
 	+med
 	text-transform: uppercase
 	color: #000
+	&_normal
+		text-transform: none
 	.fa
 		margin-right: 14px
 		font-size: 18px
-		color: $blue 
-
+		color: $blue
 .prod-simple-wrap
 	font-size: 0
 	margin: 0 -15px 
