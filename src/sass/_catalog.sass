@@ -1031,12 +1031,16 @@ a.link-comment
 				border-width: 3px
 				
 .btn-zoom
+	display: inline-block
 	width: 40px
 	height: 40px
+	line-height: 40px
+	text-align: center
 	border: 1px solid $border_d
 	font-size: 18px
 	background: #fff 
 	+tr(color .3s)
+	color: #000 
 	&:hover
 		color: $blue 
 
@@ -1057,3 +1061,63 @@ a.link-comment
 	.btn-simple
 		margin: 15px 0 
 		
+
+.card
+	border: 1px solid #eee
+	max-width: 270px
+	&__in
+		padding: 15px 
+	&__media
+		height: 155px
+		overflow: hidden
+		text-align: center
+	&__img
+		position: relative
+		display: inline-block
+		img
+			display: block
+			max-height: 100%
+			width: auto
+		.btn-zoom
+			position: absolute
+			bottom: 0
+			right: 0
+	&__name
+		margin: 8px 0 
+		font-size: 14px
+		text-align: center
+		+arial
+		line-height: 1.4
+		color: #000 
+	.meta
+		font-size: 10px
+	.meta_small
+		font-size: 11px
+	&__number
+		float: left
+		padding-top: 3px
+		width: 88px
+	&__action
+		overflow: hidden
+	.links-wrap 
+		margin-top: 12px
+		li
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+			&:before
+				left: -7px
+	.link-compare,
+	.link-credit
+		font-size: 11px
+.table-char
+	font-size: 12px
+	+arial
+	color: $dark 
+	tr
+		&:nth-child(2n+1)
+			background: #f1f1f1
+	td
+		padding: 5px 11px
+		&:first-child
+			color: $gray 
