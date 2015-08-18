@@ -73,6 +73,14 @@
         padding: 0 0 25px 5px
         &:first-child
             padding-left: 0
+    &__cell-number
+        width: 200px
+    &__cell-price  
+        position: relative
+        padding-right: 70px
+        .btn-del
+            right: 0
+            top: 20px
     &__info
         display: inline-block
         text-transform: uppercase
@@ -84,6 +92,18 @@
             color: $gray
             font-weight: normal
             font-size: 11px
+    &__prod
+        padding-right: 10px
+        font-size: 14px
+        line-height: 1.4
+        span
+            color: $gray 
+    &__label
+        display: block
+        margin-bottom: 12px
+        font-size: 11px
+        text-transform: uppercase
+        font-weight: bold
     .prod-simple
         &__img
             background: #fff 
@@ -99,7 +119,11 @@
 .order_total
     padding-top: 10px
     border-top-width: 2px 
-   
+.order_auto-width
+    .order__table
+        table-layout: auto
+    .prod-simple
+        padding-right: 25px
 .order-box
     float: left
     border-left: 1px solid #ebebeb 
@@ -115,4 +139,15 @@
         font-size: 12px
         vertical-align: middle  
 
-        
+.order-action
+    .btn-simple
+        margin-left: 25px
+        min-width: 172px
+        padding: 14px 30px 13px 
+    .btn
+        margin-left: 25px
+    .link-credit
+        vertical-align: middle
+    .btn-back
+        margin: 10px 0 0 10px
+        white-space: nowrap

@@ -283,6 +283,7 @@ a
 		font-size: 30px
 		sup
 			font-size: 18px
+			top: -8px
 	&_old
 		position: relative
 		padding-left: 10px
@@ -559,6 +560,32 @@ a
 	color: $gray 
 	&:before
 		display: none
+.btn-back
+	display: inline-block
+	position: relative
+	border: 2px solid #d1d1d1
+	padding: 5px 14px 4px 26px
+	font-size: 16px
+	+med
+	line-height: 1
+	text-transform: uppercase
+	color: #000  
+	+tr(color .3s)
+	&:hover
+		color: $blue 
+	&:before
+		content: ""
+		position: absolute
+		top: 5px
+		left: -7px
+		+arr(7,14,#fff,l) 
+		z-index: 2
+	&:after
+		content: ""
+		position: absolute
+		top: 4px
+		left: -10px
+		+arr(10,16,#d1d1d1,l) 
 .list-marker
 	color: $dark
 	font-size: 13px
@@ -831,7 +858,7 @@ a
 	padding-top: 7px
 	top: 100px
 	right: 200px
-	z-index: 5
+	z-index: 12
 	width: 270px
 	opacity: 0
 	visibility: hidden
@@ -1075,16 +1102,16 @@ a
 	&__body
 		padding: 15px 30px 
 	&__main
+		margin-right: -14px
+		padding-right: 15px
 		max-height: 350px
 		overflow-y: auto
 		overflow-x: hidden
 		+scrollbar
-			width: 5px
-			height: 5px
-			border-radius: 3px
-			border: 1px solid $border-d
+			width: 3px
+			height: 3px
+			background: #e5e5e5 
 		+scrollbar-thumb
 			background: #b6b6b6
 			width: 3px
 			height: 3px
-			border-radius: 3px
