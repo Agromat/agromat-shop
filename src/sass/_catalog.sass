@@ -418,13 +418,26 @@
 		background: #E2E1E1 
 	&__title
 		display: block
-		
+		overflow: hidden
 		font-weight: bold
 		em
 			font-style: normal
 			color: $gray 
 			font-weight: normal
-
+	&__info
+		float: right
+		width: 60px
+		padding-left: 5px
+		margin-right: -10px
+	&__main
+		overflow: hidden
+	.list-marker
+		margin-top: 10px
+.block_extend
+	margin-bottom: 5px
+	padding: 15px 23px 
+	&:hover
+		background: #f6f6f6 
 .item
 	position: relative
 	margin-bottom: 30px
@@ -1060,7 +1073,7 @@ a.link-comment
 			height: 100%
 		.slick-slide
 			height: 70px
-			
+			cursor: pointer
 			
 		.slick-current
 			img
@@ -1151,10 +1164,25 @@ a.link-comment
 	font-size: 12px
 	+arial
 	color: $dark 
-	tr
-		&:nth-child(2n+1)
-			background: #f1f1f1
+	thead
+		th
+			font-weight: normal
+			padding: 5px 11px
+			text-align: left
+			color: $gray 
+	tbody
+		tr
+			&:nth-child(2n+1)
+				background: #f1f1f1
 	td
 		padding: 5px 11px
 		&:first-child
 			color: $gray 
+	&_mod
+		td
+			&:first-child
+				color: $dark
+		td, th
+			&:last-child
+				text-align: right
+				padding-right: 30px

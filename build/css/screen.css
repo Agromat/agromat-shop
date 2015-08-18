@@ -3095,7 +3095,8 @@ a {
   .list-marker + .title-small {
     margin-top: 24px; }
   .list-marker li {
-    position: relative; }
+    position: relative;
+    padding: 2px 0 2px 20px; }
     .list-marker li:before {
       content: "";
       position: absolute;
@@ -3109,6 +3110,7 @@ a {
       background: #9ecbdc; }
   .list-marker a {
     display: inline-block;
+    margin: -2px 0 -2px -20px;
     padding: 2px 0 2px 20px;
     color: #333;
     -webkit-transition: color .3s;
@@ -3727,9 +3729,9 @@ a {
       display: table;
       clear: both; }
   .popup__main {
-    margin-right: -14px;
+    margin: 0 -14px 20px 0;
     padding-right: 15px;
-    max-height: 350px;
+    max-height: 250px;
     overflow-y: auto;
     overflow-x: hidden; }
     .popup__main::-webkit-scrollbar {
@@ -4397,7 +4399,7 @@ a {
   margin-top: 0; }
 
 .footer {
-  margin: 20px 0 0; }
+  margin: 50px 0 0; }
   .footer__in {
     position: relative;
     border-top: 3px solid #000; }
@@ -4547,6 +4549,8 @@ a {
       background: #000; }
   .l-sidebar_width {
     width: 272px; }
+  .l-sidebar .banner {
+    margin-bottom: 20px; }
 
 .accord {
   margin-bottom: 18px; }
@@ -4624,9 +4628,12 @@ a {
   border-bottom: 1px solid #eee; }
   .filter-choice_nav {
     position: relative;
+    display: block;
     margin-bottom: 53px;
     padding: 10px 10px 7px;
-    border: 3px solid #268cb6; }
+    border: 3px solid #268cb6;
+    -webkit-transition: border .3s;
+    transition: border .3s; }
     .filter-choice_nav:after {
       content: "";
       position: absolute;
@@ -4635,6 +4642,8 @@ a {
       width: 170px;
       height: 1px;
       background: #eee; }
+    .filter-choice_nav:hover {
+      border-color: #1d769b; }
   .filter-choice__title {
     font-size: 16px;
     font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
@@ -4688,6 +4697,8 @@ a {
       border-color: #268cb6; }
     .tag_link:before {
       display: none; }
+  .tag_simple:before {
+    display: none; }
 
 .box {
   position: relative;
@@ -4778,6 +4789,19 @@ a {
         background: #9ecbdc; }
       .box__nav a:hover {
         color: #268cb6; }
+  .box__text p {
+    margin-bottom: 15px; }
+    .box__text p:last-child {
+      margin-bottom: 0; }
+  .box__text a {
+    font-size: 16px;
+    font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #268cb6;
+    letter-spacing: 1px; }
+  .box__tel {
+    margin: -10px 0 5px;
+    font-size: 24px;
+    font-family: "pfdintextcomppro-bold", Arial, "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif; }
 
 .box_action {
   border-color: #ed1c24;
@@ -4797,6 +4821,11 @@ a {
     z-index: 2; }
     .box_action .box__more a {
       color: #ed1c24; }
+
+.box_blue {
+  border-color: #268cb6; }
+  .box_blue .box__in {
+    padding: 10px 18px; }
 
 .box_contacts {
   text-align: left; }
@@ -5478,11 +5507,27 @@ a {
     background: #E2E1E1; }
   .block__title {
     display: block;
+    overflow: hidden;
     font-weight: bold; }
     .block__title em {
       font-style: normal;
       color: #888;
       font-weight: normal; }
+  .block__info {
+    float: right;
+    width: 60px;
+    padding-left: 5px;
+    margin-right: -10px; }
+  .block__main {
+    overflow: hidden; }
+  .block .list-marker {
+    margin-top: 10px; }
+
+.block_extend {
+  margin-bottom: 5px;
+  padding: 15px 23px; }
+  .block_extend:hover {
+    background: #f6f6f6; }
 
 .item {
   position: relative;
@@ -6187,7 +6232,8 @@ a.link-comment:hover {
     max-width: 200%;
     height: 100%; }
   .carousel__nav .slick-slide {
-    height: 70px; }
+    height: 70px;
+    cursor: pointer; }
   .carousel__nav .slick-current img {
     border-color: #268cb6;
     border-width: 3px; }
@@ -6273,27 +6319,42 @@ a.link-comment:hover {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: #333; }
-  .table-char tr:nth-child(2n+1) {
+  .table-char thead th {
+    font-weight: normal;
+    padding: 5px 11px;
+    text-align: left;
+    color: #888; }
+  .table-char tbody tr:nth-child(2n+1) {
     background: #f1f1f1; }
   .table-char td {
     padding: 5px 11px; }
     .table-char td:first-child {
       color: #888; }
+  .table-char_mod td:first-child {
+    color: #333; }
+  .table-char_mod td:last-child, .table-char_mod th:last-child {
+    text-align: right;
+    padding-right: 30px; }
 
 .article {
   padding: 0 0 35px;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
+  .article + .title {
+    margin-top: 14px; }
   .article a {
     color: #268cb6; }
     .article a:hover {
       color: #1d769b; }
   .article p {
     margin-bottom: 20px; }
+    .article p:last-child {
+      margin-bottom: 0; }
   .article figure {
     overflow: hidden;
-    width: 270px;
-    height: 170px;
+    min-width: 270px;
+    min-height: 170px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 0;
     border: 1px solid #cdcdcd; }
@@ -6307,12 +6368,42 @@ a.link-comment:hover {
       float: right;
       margin-left: 25px; }
     .article figure[align="left"] {
-      float: right;
+      float: left;
       margin-right: 25px; }
     .article figure img {
       display: inline-block;
       max-width: 100%;
       vertical-align: middle; }
+  .article strong + ul {
+    margin-top: 10px; }
+  .article ul {
+    margin: 20px 0; }
+    .article ul li {
+      position: relative;
+      margin-bottom: 8px;
+      padding-left: 15px; }
+      .article ul li:before {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: 8px;
+        width: 4px;
+        height: 4px;
+        background: #9ecbdc;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+  .article h1, .article h2, .article h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif; }
+  .article h1 {
+    font-size: 30px; }
+  .article h2 {
+    font-size: 22px; }
+  .article h3 {
+    margin: 7px 0;
+    font-size: 16px; }
 
 .slider {
   margin: 0 0 20px;

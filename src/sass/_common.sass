@@ -595,6 +595,7 @@ a
 		margin-top: 24px
 	li
 		position: relative
+		padding: 2px 0 2px 20px
 		&:before
 			content: ""
 			position: absolute
@@ -607,12 +608,13 @@ a
 			
 	a
 		display: inline-block
+		margin: -2px 0 -2px -20px 
 		padding: 2px 0 2px 20px
 		color: $dark
 		+tr_c
 		&:hover
 			color: $blue 
-		
+	
 .pager
 	position: relative
 	text-align: center
@@ -1103,9 +1105,9 @@ a
 		padding: 15px 30px 
 		+clr
 	&__main
-		margin-right: -14px
+		margin: 0 -14px 20px 0
 		padding-right: 15px
-		max-height: 350px
+		max-height: 250px
 		overflow-y: auto
 		overflow-x: hidden
 		+scrollbar

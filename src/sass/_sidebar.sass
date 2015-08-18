@@ -17,6 +17,8 @@
 			background: #000
 	&_width
 		width: 272px
+	.banner
+		margin-bottom: 20px
 .accord
 	margin-bottom: 18px
 	&.is-full-list
@@ -87,9 +89,11 @@
 	border-bottom: 1px solid $border-d 
 	&_nav
 		position: relative
+		display: block
 		margin-bottom: 53px
 		padding: 10px 10px 7px
 		border: 3px solid $blue
+		+tr(border .3s)
 		&:after
 			content: ""
 			position: absolute
@@ -98,6 +102,8 @@
 			width: 170px
 			height: 1px
 			background: #eee 
+		&:hover
+			border-color: $blue-h
 	&__title
 		font-size: 16px
 		+med
@@ -138,7 +144,9 @@
 			border-color: $blue
 		&:before
 			display: none
-			
+	&_simple
+		&:before
+			display: none	
 .box
 	position: relative
 	margin: 10px 0 45px 
@@ -220,7 +228,20 @@
 				background: $blue-l 
 			&:hover
 				color: $blue 
-
+	&__text
+		p
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		a
+			font-size: 16px
+			+med
+			color: $blue
+			letter-spacing: 1px  
+	&__tel
+		margin: -10px 0 5px
+		font-size: 24px
+		+bold
 .box_action
 	border-color: $red
 	text-align: center
@@ -240,6 +261,10 @@
 		z-index: 2
 		a
 			color: $red 
+.box_blue
+	border-color: $blue 
+	.box__in
+		padding: 10px 18px 
 .box_contacts
 	text-align: left
 	.box__in
