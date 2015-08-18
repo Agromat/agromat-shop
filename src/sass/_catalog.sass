@@ -668,7 +668,8 @@
 .items-slider
 	overflow: hidden
 	margin: 55px 0 20px 
-
+	.post-item_small
+		margin: 0 auto 
 	+ .seo
 		margin-top: 20px
 	.item_small
@@ -707,6 +708,11 @@
 			right: -10px
 		.slick-prev
 			right: 19px
+	&_small
+		.slick-next,
+		.slick-prev
+			top: 35px
+			bottom: auto
 .number
 	position: relative
 	width: 72px

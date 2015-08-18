@@ -200,6 +200,14 @@ $(document).ready( function() {
         arrows: true,
         adaptiveHeight: true
     });
+    $(".js-slider-five").slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
+    });
     $(".js-slider-six").slick({
         infinite: true,
         slidesToShow: 6,
@@ -359,4 +367,9 @@ $(document).ready( function() {
             window.location.hash = this.hash;
             return false;
         });
+
+    $(".js-popup").on("click",function (event) {
+        event.stopPropagation();
+    });
+
 });
