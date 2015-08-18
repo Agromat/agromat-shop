@@ -177,6 +177,22 @@ $(document).ready( function() {
         dots: false,
         arrows: true
     });
+    $(".js-img-slider").on("init", function(){
+        setTimeout(function(){
+            $('.js-img-slider').parent().addClass("is-ready");
+        },200);
+        var counter = $(".js-img-slider").find(".slick-slide").last().attr("data-slick-index");
+        $(".js-slides-counter").text(counter);
+    });
+    $(".js-img-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true
+    });
+    $('.js-img-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $(".js-slide-index").text(nextSlide+1);
+    });
 
 
     $(".js-clear-filter").on("click", function(){

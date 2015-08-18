@@ -1054,7 +1054,7 @@ a
 	height: 270px
 	
 .popup-wrap
-	position: absolute
+	position: fixed
 	top: 0
 	right: 0
 	bottom: 0
@@ -1101,6 +1101,7 @@ a
 			vertical-align: middle 
 	&__body
 		padding: 15px 30px 
+		+clr
 	&__main
 		margin-right: -14px
 		padding-right: 15px
@@ -1115,3 +1116,56 @@ a
 			background: #b6b6b6
 			width: 3px
 			height: 3px
+	.img-slider
+		float: left
+		margin-bottom: 15px
+		width: 570px
+	&__prod
+		overflow: hidden
+		padding: 13px 0 0 30px
+		.price_old
+			margin-right: 15px
+		.btn,
+		.btn-simple
+			margin: 10px 0 
+.popup_big
+	width: 930px
+.img-slider
+	visibility: hidden
+	height: 470px
+	&.is-ready
+		visibility: visible
+	&__info
+		margin-bottom: 3px
+	.slick-slider
+		border: 1px solid #eee
+	.slick-slide
+		height: 468px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-height: 100%
+			max-width: none
+	.slick-prev,
+	.slick-next
+		z-index: 2
+		top: 50%
+		margin-top: -25px
+		width: 40px
+		height: 50px
+		border: 1px solid #e5e5e5
+		&:before
+			font-size: 30px
+	.slick-prev
+		left: -1px
+		&:before
+			content: "\f104" 
+	.slick-next
+		right: -1px
+		&:before
+			content: "\f105" 
+	&__info
+		font-size: 11px
+		color: $gray
+		text-align: center 
