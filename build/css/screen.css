@@ -4228,7 +4228,7 @@ a {
 
 .search {
   position: relative;
-  z-index: 7;
+  z-index: 4;
   margin: 15px 0 0; }
   .search.is-active .search__drop {
     opacity: 1;
@@ -4433,12 +4433,15 @@ a {
         box-shadow: 5px 0 15px -4px rgba(21, 13, 2, 0.3); }
       .nav li.is-open > a > span span:after {
         display: none; }
+    .nav li.no-dropdown a {
+      cursor: pointer; }
     .nav li a {
       display: inline-block;
       color: #000;
       -webkit-transition: color .3s;
       transition: color .3s;
-      background: #fff; }
+      background: #fff;
+      cursor: default; }
       .nav li a:hover {
         color: #268cb6; }
       .nav li a > span {

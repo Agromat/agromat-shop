@@ -69,7 +69,7 @@ $(document).ready( function() {
             $(".js-select-list").removeClass("is-active")
         }
       
-        $(".js-overlay").fadeOut(200);
+        $(".js-overlay-main").fadeOut(200);
         
     });
 
@@ -99,16 +99,19 @@ $(document).ready( function() {
     });
 
     // banned link click
-    $(".js-nav a").on("click", function(){
+    $(".js-nav li:not(.no-dropdown) a").on("click", function(){
         return false;
     });
 
     $(".js-nav a").hover( function(){
-            var parent = $(this).parent();
-            var index = +parent.index()+1;
-            $('[data-index="'+index+'"]').addClass("is-visible");
-            parent.addClass("is-open");
-            $(".js-overlay").addClass("is-visible");
+            if (!$(this).parent().hasClass("no-dropdown")) {
+                var parent = $(this).parent();
+                var index = +parent.index()+1;
+                $('[data-index="'+index+'"]').addClass("is-visible");
+                parent.addClass("is-open");
+                $(".js-overlay").addClass("is-visible");
+            }
+            
         },
         function(){
             var parent = $(this).parent();
@@ -415,10 +418,10 @@ $(document).ready( function() {
         // }
     });
 
-    $(".js-overlay").on("click", function() {
+    $(".js-overlay-main").on("click", function() {
         $(this).fadeOut(200);
     });
-    $(".js-overlay").children().on("click", function(event) {
+    $(".js-overlay-main").children().on("click", function(event) {
         event.stopPropagation();
     });
 
@@ -463,19 +466,19 @@ $(document).ready( function() {
     });
     $(".js-popup").on("click", function() {
         $(this).hide();
-        $(".js-overlay").hide();
+        $(".js-overlay-main").hide();
     });
 
     $(".js-close-popup").on("click",function (){
         $(this).parents(".js-popup").hide()
-        $(".js-overlay").hide()
+        $(".js-overlay-main").hide()
         return false;
     });
 
     $(".js-popup-trigger").on("click",function (){
         var popup = $(this).attr("data-popup");
         $("."+popup).toggle(200);
-        $(".js-overlay").toggle(200);
+        $(".js-overlay-main").toggle(200);
         return false;
     });
 
