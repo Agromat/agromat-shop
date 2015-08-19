@@ -315,8 +315,8 @@ a
 		sup
 			top: -12px
 .text
-	font-size: 13px
-	line-height: 1.2
+	font-size: 14px
+	line-height: 1.4
 	+arial
 	color: #000
 	&__cols
@@ -622,6 +622,18 @@ a
 	color: #000 
 	font-size: 0
 	white-space: nowrap
+	&:before,
+	&:after
+		content: "" 
+		position: absolute
+		top: 50%
+		height: 1px
+		width: 70px
+		background: #96c6d9 
+	&:before
+		left: -70px
+	&:after
+		right: -70px
 	&__link
 		display: inline-block
 		vertical-align: middle
@@ -1171,3 +1183,53 @@ a
 		font-size: 11px
 		color: $gray
 		text-align: center 
+		
+.post
+	margin-bottom: 35px
+	font-size: 13px
+	color: $gray
+	+arial 
+	line-height: 1.4
+	&__img
+		margin: 0 0 10px 
+		border: 1px solid #cdcdcd
+		position: relative
+		&:hover
+			img
+				opacity: 0.8
+		img
+			display: block
+			margin: 0 auto 
+			max-width: 100%
+			height: auto
+			+gpu
+			+tr(opacity .3s)
+	&__cat
+		position: absolute
+		left: -1px
+		bottom: -1px
+		padding: 7px 12px 6px 12px
+		background: #fff
+		color: #000
+		+tr(color .3s)
+		color: $gray
+		font-size: 12px
+		+med
+		line-height: 1
+		text-transform: uppercase 
+		&:hover
+			color: $blue 
+	&__title
+		margin: 10px 0 
+		font-size: 20px
+		+med
+		line-height: 1
+		color: #000
+		a
+			color: #000
+			+tr(color .3s)
+			&:hover
+				color: $blue 
+			 
+	&__text
+		margin: 10px 0 0 
