@@ -4433,17 +4433,12 @@ a {
         box-shadow: 5px 0 15px -4px rgba(21, 13, 2, 0.3); }
       .nav li.is-open > a > span span:after {
         display: none; }
-    .nav li.no-dropdown a {
-      cursor: pointer; }
     .nav li a {
       display: inline-block;
       color: #000;
       -webkit-transition: color .3s;
       transition: color .3s;
-      background: #fff;
-      cursor: default; }
-      .nav li a:hover {
-        color: #268cb6; }
+      background: #fff; }
       .nav li a > span {
         display: block;
         position: relative;
@@ -4453,6 +4448,8 @@ a {
         .nav li a > span span {
           position: relative;
           display: inline-block; }
+    .nav li.no-dropdown a:hover {
+      color: #268cb6; }
 
 .subnav {
   position: absolute;

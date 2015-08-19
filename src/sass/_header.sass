@@ -327,17 +327,13 @@
 					span
 						&:after
 							display: none
-		&.no-dropdown
-			a
-				cursor: pointer 
 		a
 			display: inline-block
 			color: #000 
 			+tr_c
 			background: #fff 
-			cursor: default
-			&:hover
-				color: $blue
+			// &:hover
+			// 	color: $blue
 			> span
 				display: block
 				position: relative
@@ -347,7 +343,10 @@
 				span
 					position: relative
 					display: inline-block
-					
+		&.no-dropdown
+			a
+				&:hover
+					color: $blue
 .subnav
 	position: absolute
 	opacity: 0
