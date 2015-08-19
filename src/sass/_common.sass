@@ -279,6 +279,11 @@ a
 		font-size: 11px
 		+arial
 		line-height: 1
+	&_small
+		font-size: 20px
+		sup,
+		sub
+			font-size: 14px
 	&_big
 		font-size: 30px
 		sup
@@ -953,7 +958,7 @@ a
 		margin-bottom: 6px
 		width: 70px
 		height: 70px
-		border: 1px solid $border
+		border: 1px solid #cdcdcd
 		+vertical
 		overflow: hidden
 		img
@@ -981,6 +986,24 @@ a
 		&:hover
 			.btn-del
 				color: $red 
+	&__name
+		display: inline-block
+		font-size: 16px
+		+med
+		line-height: 1
+		color: $dark
+		a
+			color: $dark
+			+tr(color .3s)
+			&:hover
+				color: $blue 
+	&_left-img
+		margin-bottom: 15px
+		+clr
+		.prod-simple__img
+			float: left
+			margin-right: 10px
+			margin-bottom: 0
 .field
 	display: block
 	margin-bottom: 11px
