@@ -4043,6 +4043,8 @@ a {
     padding-bottom: 0; }
   .has-fixed-header .header .logo {
     margin-top: 0; }
+  .has-fixed-header .header .logo_small {
+    margin: 10px auto; }
   .has-fixed-header .header .header__in {
     border: 0; }
   .has-fixed-header .header .compare {
@@ -4129,6 +4131,9 @@ a {
   .logo img {
     display: block;
     width: 100%; }
+  .logo_small {
+    margin: 28px auto;
+    width: 203px; }
 
 .contact {
   position: relative; }
@@ -6553,7 +6558,7 @@ a.link-comment:hover {
     color: #888; }
 
 .server-error {
-  margin: -13px 0 20px; }
+  margin: 0 0 20px; }
 
 .cat-nav-cols {
   -webkit-column-count: 6;
