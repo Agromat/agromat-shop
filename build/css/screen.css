@@ -6013,6 +6013,11 @@ a {
   .items-slider_small .slick-next_trigger {
     right: 0; }
 
+.items-slider__body {
+  visibility: hidden; }
+  .items-slider__body.is-ready {
+    visibility: visible; }
+
 .number {
   position: relative;
   width: 72px;

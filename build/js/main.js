@@ -274,6 +274,11 @@ $(document).ready( function() {
         adaptiveHeight: true
     });
 
+    $('.js-slider').on('init', function(slick) {
+        setTimeout(function(){
+           $('.js-slider').addClass("is-ready");
+        },200);
+    });
     $(".js-slider").slick({
         infinite: true,
         slidesToShow: 4,
