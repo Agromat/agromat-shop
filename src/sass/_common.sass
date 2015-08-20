@@ -1058,16 +1058,6 @@ a
 		-webkit-appearance: none
 
 
-.main-overlay
-	position: fixed
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	z-index: 11
-	background: rgba(#000,.7) 
-	+vertical
-	display: none
 .window
 	display: inline-block
 	vertical-align: middle
@@ -1090,7 +1080,8 @@ a
 	margin-bottom: 45px
 	height: 270px
 	
-.popup-wrap
+.popup
+	display: none
 	position: fixed
 	top: 0
 	right: 0
@@ -1099,15 +1090,25 @@ a
 	padding: 40px 
 	z-index: 11
 	overflow-y: auto
-	overflow-x: hidden	
+	overflow-x: hidden
 	+vertical
-.popup
-	position: relative
-	display: inline-block
-	vertical-align: middle
-	width: 830px
-	background: #fff 
-	text-align: left
+	&_big
+		.popup__window
+			width: 930px
+	&__overlay
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: rgba(#000,.7) 
+	&__window
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		width: 830px
+		background: #fff 
+		text-align: left
 	&__head
 		position: relative
 		padding: 0 30px 
@@ -1165,8 +1166,7 @@ a
 		.btn,
 		.btn-simple
 			margin: 10px 0 
-.popup_big
-	width: 930px
+
 .img-slider
 	visibility: hidden
 	height: 470px
