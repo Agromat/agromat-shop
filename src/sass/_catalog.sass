@@ -367,13 +367,18 @@
 	&_border
 		border-top: 1px solid #000 
 		padding-top: 33px
+	&_index
+		margin: 17px 0 20px
+	+ .box
+		margin-top: 50px
 .banner
 	display: block
-
 	text-align: center
 	&:hover
 		.banner__img
 			opacity: 0.8
+	&_mb
+		margin-bottom: 20px
 	&__img
 		height: 120px
 		margin-bottom: 5px
@@ -695,10 +700,14 @@
 	position: relative
 	overflow: hidden
 	margin: 55px 0 20px 
+	.btn-simple
+		min-width: 130px
 	.post-item_small
 		margin: 0 auto 
 	+ .seo
 		margin-top: 20px
+	+ .post-slider
+		margin-top: 45px
 	.item_small
 		width: 100%
 		margin-bottom: 0
@@ -722,6 +731,8 @@
 		left: 0
 	.slick-next
 		right: 0
+	&_first
+		margin-top: 30px
 	&_arr-top
 		.slick-slider
 			margin-top: -45px
