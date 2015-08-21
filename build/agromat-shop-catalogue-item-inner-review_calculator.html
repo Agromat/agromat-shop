@@ -1,0 +1,2951 @@
+<!doctype html>
+<html>
+<head>
+	<title>agromat-shop-calc</title>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=1200">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#268cb6"> 
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<div class="tooper">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="tooper__link">
+						<a href="#"><i class="fa fa-long-arrow-left"></i>Копоративный сайт</a>
+					</div>
+				</div>
+				<div class="col-xs-8">
+					<ul class="tooper__nav">
+						<li><a href="#">О магазине</a></li>
+						<li><a href="#">Доставка и оплата </a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Гарантия</a></li>
+						<li><a href="#">Обратная связь</a></li>
+						<li><a href="#">О магазине</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2">
+					<div class="tooper__login">
+						<a href="#"><i class="fa fa-sign-out"></i>Войти</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="container">
+			<div class="header__in">
+				<div class="row row_table">
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="col-xs-6">
+								<a class="logo" href="#">
+									<img src="img/logo.png" alt="agromat">
+								</a>
+							</div>
+							<div class="col-xs-6">
+								<div class="contact">
+									<div class="contact__tel">
+										<a href="tel:0443922945">0 (44) 392-29-45</a> 
+									</div> 
+									<button class="btn-action js-toggle-popup" data-popup="js-popup-feedback" type="button">Обратный звонoк</button>
+								</div>
+								<div class="shedule">
+									<ul class="shedule__list">
+										<li><span>пн-пт</span>09:00-18:00</li>
+										<li><span>сб-вс</span>10:00-17:00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="col-xs-8">
+								<div class="search">
+									<form>
+										<input class="search__input" type="text">
+										<button class="search__btn" type="submit"></button>
+									</form>
+								</div>
+							</div>
+							<!-- <div class="compare">
+								<button class="compare-btn" type="button">
+									<span class="compare-btn__in">
+										<span class="compare-btn__text">сравнения</span>
+										<span class="compare-btn__info">3 <sub>товара</sub></span>
+									</span>
+								</button>
+								<div class="compare__drop">
+									<div class="el js-parent">
+										<button class="btn-del js-del-parent" type="button"></button>
+										<div class="el__img">
+											<img src="http://placehold.it/80x80" alt="">
+										</div>
+									</div>
+									<div class="el js-parent">
+										<button class="btn-del js-del-parent" type="button"></button>
+										<div class="el__img">
+											<img src="http://placehold.it/30x40" alt="">
+										</div>
+									</div>
+									<div class="el js-parent">
+										<button class="btn-del js-del-parent" type="button"></button>
+										<div class="el__img">
+											<img src="http://placehold.it/28x28" alt="">
+										</div>
+									</div>
+									<div class="el js-parent">
+										<button class="btn-del js-del-parent" type="button"></button>
+										<div class="el__img">
+											<img src="http://placehold.it/80x80" alt="">
+										</div>
+									</div>
+									<a href="#" class="btn-simple btn-simple_small">Сравнить</a>
+								</div>
+							</div> -->
+							<div class="col-xs-4">
+								<a class="cart" href="#">
+									<span class="cart__in">
+										<span class="cart__details">
+											<i class="fa fa-shopping-cart"></i>нет товаров
+										</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="nav-wrap">
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+					<ul class="nav js-nav">
+						<li>
+							<a href="#">
+								<span>
+									<span>Плитка</span>
+								</span>
+							</a>
+						</li>
+						<li class="no-dropdown">
+							<a href="#">
+								<span>
+									<span>Мозаика</span>
+								</span>
+							</a>
+						</li>
+						<li class="is-active">
+							<a href="#">
+								<span>
+									<span>Сантехника</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									<span>Освещение</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									<span>Материалы</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="subnav js-subnav" data-index="1">
+				<div class="subnav__in">
+					<div class="subnav__main">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для ванной</a></div>
+								<ul class="list">
+									<li><a href="#">Матовая</a></li>
+									<li><a href="#">Глянцевая</a></li>
+									<li><a href="#">Полированная</a></li>
+									<li><a href="#">Рельефная</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Напольная плитка</a></div>
+								<ul class="list">
+									<li><a href="#">Подкатегория с очень длинным названием</a></li>
+									<li><a href="#">Под дерево</a></li>
+									<li><a href="#">Под камень</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для кухни</a></div>
+								<ul class="list">
+									<li><a href="#">Клинкер</a></li>
+									<li><a href="#">Керамогранит</a></li>
+									<li><a href="#">С цветочками</a></li>
+									<li><a href="#">С узорами</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="title title_width"><span><span>Торговые марки</span></span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Rako</a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Baldocer</a></li>
+									<li><a href="#">Almera Ceramica</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="subnav__banners">
+						<div class="title"><span><span>Акция</span></span></div>
+						<div class="wrap">
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Golden Tile Ocean <span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Tile Os<span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Opoczno Timber Cream -333*333 мм <span>М40051</span></a></div>
+									<div class="price">
+										35 619,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subnav js-subnav" data-index="2">
+				<div class="subnav__in">
+					<div class="subnav__main">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для ванной</a></div>
+								<ul class="list">
+									<li><a href="#">Матовая</a></li>
+									<li><a href="#">Глянцевая</a></li>
+									<li><a href="#">Полированная</a></li>
+									<li><a href="#">Рельефная</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Напольная плитка</a></div>
+								<ul class="list">
+									<li><a href="#">Подкатегория с очень длинным названием</a></li>
+									<li><a href="#">Под дерево</a></li>
+									<li><a href="#">Под камень</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для кухни</a></div>
+								<ul class="list">
+									<li><a href="#">Клинкер</a></li>
+									<li><a href="#">Керамогранит</a></li>
+									<li><a href="#">С цветочками</a></li>
+									<li><a href="#">С узорами</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="title"><span><span>Торговые марки</span></span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Rako</a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Baldocer</a></li>
+									<li><a href="#">Almera Ceramica</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+			<div class="subnav is-right js-subnav" data-index="3">
+				<div class="subnav__in">
+					<div class="subnav__main">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для ванной</a></div>
+								<ul class="list">
+									<li><a href="#">Матовая</a></li>
+									<li><a href="#">Глянцевая</a></li>
+									<li><a href="#">Полированная</a></li>
+									<li><a href="#">Рельефная</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Напольная плитка</a></div>
+								<ul class="list">
+									<li><a href="#">Подкатегория с очень длинным названием</a></li>
+									<li><a href="#">Под дерево</a></li>
+									<li><a href="#">Под камень</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для кухни</a></div>
+								<ul class="list">
+									<li><a href="#">Клинкер</a></li>
+									<li><a href="#">Керамогранит</a></li>
+									<li><a href="#">С цветочками</a></li>
+									<li><a href="#">С узорами</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="title"><span><span>Торговые марки</span></span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Rako</a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Baldocer</a></li>
+									<li><a href="#">Almera Ceramica</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="subnav__banners">
+						<div class="title"><span><span>Акция</span></span></div>
+						<div class="wrap">
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Golden Tile Ocean <span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Tile Os<span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Opoczno Timber Cream -333*333 мм <span>М40051</span></a></div>
+									<div class="price">
+										35 619,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subnav is-right js-subnav" data-index="4">
+				<div class="subnav__in">
+					<div class="subnav__main">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для ванной</a></div>
+								<ul class="list">
+									<li><a href="#">Матовая</a></li>
+									<li><a href="#">Глянцевая</a></li>
+									<li><a href="#">Полированная</a></li>
+									<li><a href="#">Рельефная</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Напольная плитка</a></div>
+								<ul class="list">
+									<li><a href="#">Подкатегория с очень длинным названием</a></li>
+									<li><a href="#">Под дерево</a></li>
+									<li><a href="#">Под камень</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для кухни</a></div>
+								<ul class="list">
+									<li><a href="#">Клинкер</a></li>
+									<li><a href="#">Керамогранит</a></li>
+									<li><a href="#">С цветочками</a></li>
+									<li><a href="#">С узорами</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="title"><span><span>Торговые марки</span></span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Rako</a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Baldocer</a></li>
+									<li><a href="#">Almera Ceramica</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="subnav__banners">
+						<div class="title"><span><span>Акция</span></span></div>
+						<div class="wrap">
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Golden Tile Ocean <span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Tile Os<span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Opoczno Timber Cream -333*333 мм <span>М40051</span></a></div>
+									<div class="price">
+										35 619,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subnav is-right js-subnav" data-index="5">
+				<div class="subnav__in">
+					<div class="subnav__main">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для ванной</a></div>
+								<ul class="list">
+									<li><a href="#">Матовая</a></li>
+									<li><a href="#">Глянцевая</a></li>
+									<li><a href="#">Полированная</a></li>
+									<li><a href="#">Рельефная</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Напольная плитка</a></div>
+								<ul class="list">
+									<li><a href="#">Подкатегория с очень длинным названием</a></li>
+									<li><a href="#">Под дерево</a></li>
+									<li><a href="#">Под камень</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для кухни</a></div>
+								<ul class="list">
+									<li><a href="#">Клинкер</a></li>
+									<li><a href="#">Керамогранит</a></li>
+									<li><a href="#">С цветочками</a></li>
+									<li><a href="#">С узорами</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="title"><span><span>Торговые марки</span></span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Rako</a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Baldocer</a></li>
+									<li><a href="#">Almera Ceramica</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="subnav__banners">
+						<div class="title"><span><span>Акция</span></span></div>
+						<div class="wrap">
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Golden Tile Ocean <span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Tile Os<span>М40051</span></a></div>
+									<div class="price">
+										17,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+							<div class="prod">
+								<div class="prod__img">
+									<a href="#">
+										<img src="img/prod1.jpg" alt="">
+									</a>
+								</div>
+								<div class="prod__info">
+									<div class="prod__title"><a href="#">Opoczno Timber Cream -333*333 мм <span>М40051</span></a></div>
+									<div class="price">
+										35 619,<sup>30</sup> <sub>грн</sub>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subnav is-right js-subnav" data-index="6">
+				<div class="subnav__in">
+					<div class="subnav__main">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для ванной</a></div>
+								<ul class="list">
+									<li><a href="#">Матовая</a></li>
+									<li><a href="#">Глянцевая</a></li>
+									<li><a href="#">Полированная</a></li>
+									<li><a href="#">Рельефная</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Напольная плитка</a></div>
+								<ul class="list">
+									<li><a href="#">Подкатегория с очень длинным названием</a></li>
+									<li><a href="#">Под дерево</a></li>
+									<li><a href="#">Под камень</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<div class="list-title"><a href="#">Плитка для кухни</a></div>
+								<ul class="list">
+									<li><a href="#">Клинкер</a></li>
+									<li><a href="#">Керамогранит</a></li>
+									<li><a href="#">С цветочками</a></li>
+									<li><a href="#">С узорами</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="title"><span><span>Торговые марки</span></span></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Rako</a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Baldocer</a></li>
+									<li><a href="#">Almera Ceramica</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<ul class="list list_gray">
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="overlay js-overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="l-layout">
+					<div class="l-sidebar">
+						<div class="l-sidebar__in">	
+							<a class="filter-choice filter-choice_nav" href="#">
+								<div class="filter-choice__title">Назад к списку:</div>
+								<div class="title-small title-small_up">Душевые кабины</div>
+								<div class="tags">
+									<div class="meta">Тип применения</div>
+									<span class="tag tag_simple">Кухня</span>
+									<span class="tag tag_simple">Наружное применение </span>
+								</div>
+								<div class="tags">
+									<div class="meta">Класс</div>
+									<span class="tag tag_simple">Категория 2</span>
+									<span class="tag tag_simple">Таб 3</span>
+								</div>
+							</a>
+							<div class="title-small title-small_up">Душевые кабины</div>
+							<ul class="list-marker">
+								<li><a href="#">Mapisa</a></li>
+								<li><a href="#">Appollo </a></li>
+								<li><a href="#">Cersanit </a></li>
+								<li><a href="#">Devit </a></li>
+								<li><a href="#">Huppe </a></li>
+							</ul>
+							<div class="title-small title-small_up">популярные бренды</div>
+							<ul class="list-marker">
+								<li><a href="#">Aparici</a></li>
+								<li><a href="#">Hansgrohe </a></li>
+								<li><a href="#">KLUDI </a></li>
+								<li><a href="#">Peronda </a></li>
+								<li><a href="#">APE </a></li>
+								<li><a href="#">MAPISA </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="l-main">
+						<div class="l-main__in">
+							<ul class="breadcrumbs">
+								<li>
+									<a href="#">Главная</a>
+								</li>
+								<li class="has-drop">
+									<a href="#">Сантехника </a>
+									<div class="breadcrumbs__drop">
+										<ul class="list">
+											<li><a href="#">Плитка для ванной</a></li>
+											<li><a href="#">Плитка для ванной</a></li>
+											<li><a href="#">Керамогранит</a></li>
+										</ul>
+										<ul class="list">
+											<li><a href="#">Напольная плитка </a></li>
+											<li><a href="#">Напольная плитка </a></li>
+											<li><a href="#">Керамогранит</a></li>
+										</ul>
+										<ul class="list">
+											<li><a href="#">Плитка для кухни</a></li>
+											<li><a href="#">Плитка для кухни</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="#">Душевые кабины </a>
+								</li>
+								<li>
+									<span>Душевые кабины Kludi GEO 6 GKPG90205003</span>
+								</li>
+							</ul>
+							
+							<div class="page-head">
+								<div class="row">
+									<div class="col-xs-8">
+										<h1 class="page-title">Душевая кабина Kludi GEO 6 GKPG90222003</h1>
+										<h2 class="page-subtitle">Артикул: 138996</h2>
+									</div>
+									<div class="col-xs-4">
+										<div class="row">
+											<div class="col-xs-8 col-xs-offset-4">
+												<div class="compare">
+													<button class="compare-btn" type="button">
+														<span class="compare-btn__in">
+															<span class="compare-btn__text">сравнение (0)</span>
+															<!-- <span class="compare-btn__info">3 <sub>товара</sub></span> -->
+														</span>
+													</button>
+													<!-- <div class="compare__drop">
+														<div class="el js-parent">
+															<button class="btn-del js-del-parent" type="button"></button>
+															<div class="el__img">
+																<img src="http://placehold.it/80x80" alt="">
+															</div>
+														</div>
+														<div class="el js-parent">
+															<button class="btn-del js-del-parent" type="button"></button>
+															<div class="el__img">
+																<img src="http://placehold.it/30x40" alt="">
+															</div>
+														</div>
+														<div class="el js-parent">
+															<button class="btn-del js-del-parent" type="button"></button>
+															<div class="el__img">
+																<img src="http://placehold.it/28x28" alt="">
+															</div>
+														</div>
+														<div class="el js-parent">
+															<button class="btn-del js-del-parent" type="button"></button>
+															<div class="el__img">
+																<img src="http://placehold.it/80x80" alt="">
+															</div>
+														</div>
+														<a href="#" class="btn-simple btn-simple_small">Сравнить</a>
+													</div> -->
+												</div>
+											</div>
+										</div>
+												
+									</div>
+								</div>
+							</div>
+							<div class="js-tabs-group">
+								<ul class="tabs js-tabs">
+									<li class="is-active"><a href="#js-tab-description">все о товаре</a></li>
+									<li><a href="#js-tab-character">Характеристики</a></li>
+									<li><a href="#js-tab-reviews">Отзывы</a></li>
+									<li><a href="#js-tab-video">видео</a></li>
+									<li><a href="#js-tab-same">сопутствующие товары</a></li>
+								</ul>
+
+								<!-- BEGIN tab1 -->
+								<div class="tabs-content js-tabs-content" data-id="#js-tab-description">
+									<div class="product-col">
+										<div class="product-col__right">
+											<div class="info-box">
+												<div class="title-icon"><i class="fa fa-car"></i>доставка</div>
+												<p>Бесплатная доставка при заказе от 3000 грн (по Киеву и окрестностям)</p>
+											</div>
+											<div class="info-box">
+												<div class="title-icon"><i class="fa fa-wrench"></i>Установка</div>
+												<p>Предлагаем услуги мастера для установки нашего оборудования по разумной цене</p>
+											</div>
+											<a class="prod-simple" href="#">
+												<div class="prod-simple__top">
+													<div class="prod-simple__img">
+														
+															<img src="https://unsplash.it/53/68?image=651" alt="">
+														
+													</div>
+													<div class="meta">10982</div>
+												</div>
+												<div class="prod-simple__text">
+													Размер 1200х1200
+												</div>
+											</a>
+											<a class="prod-simple" href="#">
+												<div class="prod-simple__top">
+													<div class="prod-simple__img">
+														
+															<img src="https://unsplash.it/53/68?image=651" alt="">
+														
+													</div>
+													<div class="meta">10982</div>
+												</div>
+												<div class="prod-simple__text">
+													Размер 1200х1200
+												</div>
+											</a>
+											<a class="prod-simple" href="#">
+												<div class="prod-simple__top">
+													<div class="prod-simple__img">
+														
+															<img src="https://unsplash.it/53/68?image=651" alt="">
+														
+													</div>
+													
+												</div>
+												<div class="prod-simple__text">
+													Размер 1200х1200
+												</div>
+											</a>
+										</div>
+										<div class="product-col__main">
+											<div class="product-col__left">
+												<div class="carousel">
+													<div class="carousel__main">
+														<div class="js-carousel-main">
+															<div>
+																<img src="https://unsplash.it/333/368?image=650" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/310/348?image=651" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/333/368?image=652" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/333/368?image=653" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/333/368?image=654" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/333/368?image=655" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/333/368?image=656" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/333/368?image=657" alt="">
+															</div>
+														</div>
+														<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
+													</div>
+													<div class="carousel__nav">
+														<div class="js-carousel-nav">
+															<div>
+																<img src="https://unsplash.it/68/68?image=650" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=651" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=652" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=653" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=654" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=655" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=656" alt="">
+															</div>
+															<div>
+																<img src="https://unsplash.it/68/68?image=657" alt="">
+															</div>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											<div class="product-col__middle">
+												<div class="box box_action">
+													<div class="box__in">
+														<div class="box__info">
+															Акция! Супер цена: душевые кабины IDO SHOWERAMA 
+														</div>
+														<div class="meta meta_small">До конца акции осталось:</div>
+														<div class="countdown is-countdown" id="countdown-1"><span class="countdown-row countdown-show3"><span class="countdown-section"><span class="countdown-amount">17</span><span class="countdown-period">Дни</span></span><span class="countdown-section"><span class="countdown-amount">12</span><span class="countdown-period">Часы</span></span><span class="countdown-section"><span class="countdown-amount">40</span><span class="countdown-period">Минуты</span></span></span></div>
+													</div>
+													<div class="box__more">
+														<a href="#">подробнее</a>
+													</div>
+												</div>
+												<div class="product-action">
+													<div class="meta meta_small">
+														Цена товара на 15 апр 2015  
+														<span class="meta__available">Есть в наличии</span>
+													</div>
+													
+													<div class="meta meta_small">
+														Цена товара на 15 апр 2015  
+														<span class="meta__not-available">Нет в наличии</span>
+													</div>
+													<div class="price price_old price_big">
+														26 674,<sup>03</sup> <sub>грн</sub>
+													</div>
+													<div class="price price_large">
+														25 674,<sup>03</sup> <sub>грн</sub>
+													</div>
+													<div class="number js-number" data-max-number="99">
+														<input type="text" class="number__input" value="17.5">
+														<button class="number__plus js-plus-number" type="button"></button>
+														<button class="number__minus js-minus-number" type="button"></button>
+													</div>
+													<div class="number-info number-info_width">
+														<span>М² </span>
+														<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+													</div>
+													<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">В корзину</button>
+													<button type="button" class="btn-simple btn-simple_blue is-width">в кредит</button>
+													<ul class="links-wrap">
+														<li><a href="#" class="link-credit">просчет кредита</a></li>
+														<li><a href="#" class="link-compare">сравнить</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="text text_mod">
+												<h3>Душевая кабина</h3>
+												<p>Душевой уголок с угловым входом SRV2 - S предназначен, в первую очередь, для установки в углу помещения. Каждое из этих изделий состоит из двух половин, которые раздельно упакованы, причем каждая из этих половин имеет свою цену. Это позволяет комбинировать (в зависимости от пожелания) квадратный или прямо-угольный варианты. Одну половину SRV2 - S всегда необходимо дополнить второй половиной SRV2 - S.</p>
+
+
+											</div>
+										</div>
+									</div>
+									<div class="title title_big title_dark title_width"><span><span>Товары этой коллекции</span></span></div>
+									<div class="prod-simple-wrap">
+										<a class="prod-simple" href="#">
+											<div class="prod-simple__media">
+												<div class="prod-simple__img">
+													<img src="https://unsplash.it/53/68?image=651" alt="">
+												</div>
+											</div>
+											<div class="prod-simple__main">
+												<div class="prod-simple__text">
+													Душевая кабина RADAWAY Carena KDJ 34402-01-08NL левосторонняя <span class="meta">10982</span>
+												</div>
+
+											</div>
+												
+										</a>
+										<a class="prod-simple" href="#">
+											<div class="prod-simple__media">
+												<div class="prod-simple__img">
+													<img src="https://unsplash.it/53/68?image=651" alt="">
+												</div>
+											</div>
+											<div class="prod-simple__main">
+												<div class="prod-simple__text">
+													Душевая кабина RADAWAY Carena KDJ 34402-01-08NL левосторонняя <span class="meta">10982</span>
+												</div>
+
+											</div>
+												
+										</a>
+										<a class="prod-simple" href="#">
+											<div class="prod-simple__media">
+												<div class="prod-simple__img">
+													<img src="https://unsplash.it/53/68?image=651" alt="">
+												</div>
+											</div>
+											<div class="prod-simple__main">
+												<div class="prod-simple__text">
+													Душевая кабина RADAWAY Carena KDJ 34402-01-08NL левосторонняя <span class="meta">10982</span>
+												</div>
+
+											</div>
+												
+										</a>
+										<a class="prod-simple" href="#">
+											<div class="prod-simple__media">
+												<div class="prod-simple__img">
+													<img src="https://unsplash.it/53/68?image=651" alt="">
+												</div>
+											</div>
+											<div class="prod-simple__main">
+												<div class="prod-simple__text">
+													Душевая кабина RADAWAY Carena KDJ 34402-01-08NL левосторонняя <span class="meta">10982</span>
+												</div>
+
+											</div>
+												
+										</a>
+										<a class="prod-simple" href="#">
+											<div class="prod-simple__media">
+												<div class="prod-simple__img">
+													<img src="https://unsplash.it/53/68?image=651" alt="">
+												</div>
+											</div>
+											<div class="prod-simple__main">
+												<div class="prod-simple__text">
+													Душевая кабина RADAWAY Carena KDJ 34402-01-08NL левосторонняя <span class="meta">10982</span>
+												</div>
+
+											</div>
+												
+										</a>
+										<a class="prod-simple" href="#">
+											<div class="prod-simple__media">
+												<div class="prod-simple__img">
+													<img src="https://unsplash.it/53/68?image=651" alt="">
+												</div>
+											</div>
+											<div class="prod-simple__main">
+												<div class="prod-simple__text">
+													Душевая кабина RADAWAY Carena KDJ 34402-01-08NL левосторонняя <span class="meta">10982</span>
+												</div>
+
+											</div>
+												
+										</a>
+									</div>
+								</div>
+								<!-- END tab1 -->
+								
+								<!-- BEGIN tab2 -->
+								<div class="tabs-content js-tabs-content" data-id="#js-tab-character">
+									<div class="row">
+										<div class="col-xs-4">
+											<div class="card">
+												<div class="card__in">
+													<div class="card__media">
+														<a href="#" class="card__img">
+															<img src="https://unsplash.it/125/155?image=651" alt="">
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
+														</a>
+													</div>
+													<div class="card__name">
+														Душевая кабина Kludi GEO 6 GKPG90222003
+													</div>
+													<div class="meta">Цена товара на 15 апр 2015  <span class="meta__available">Есть в наличии</span></div>
+													<div class="card__price">
+														<div class="price price_big">
+															38 721,<sup>03</sup> <sub>грн</sub>
+														</div>
+													</div>
+													<div class="wrap">
+														<div class="card__number">
+															<div class="number js-number" data-max-number="99">
+																<input type="text" class="number__input" value="17.5">
+																<button class="number__plus js-plus-number" type="button"></button>
+																<button class="number__minus js-minus-number" type="button"></button>
+															</div>
+															<div class="number-info">
+																<span>М² </span>
+																<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+															</div>
+														</div>
+														<div class="card__action">
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
+															<ul class="links-wrap">
+																<li><a href="#" class="link-credit">в кредит</a></li>
+																<li><a href="#" class="link-compare">сравнить</a></li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-4">
+											<table class="table-char">
+												<tbody>
+													<tr>
+														<td>Артикул</td>
+														<td>175708</td>
+													</tr>
+													<tr>
+														<td>Бренд</td>
+														<td>Kludi</td>
+													</tr>
+													<tr>
+														<td>Страна</td>
+														<td>Испания</td>
+													</tr>
+													<tr>
+														<td>Коллекция</td>
+														<td>Klea</td>
+													</tr>
+													<tr>
+														<td>Комплектация</td>
+														<td>ручки, тумба для раковины, радио, телефон, жисть то така штука</td>
+													</tr>
+													<tr>
+														<td>Установка</td>
+														<td>подвесная (настенная)</td>
+													</tr>
+													<tr>
+														<td>Поверхность</td>
+														<td>глянцевая</td>
+													</tr>
+													<tr>
+														<td>Ширина</td>
+														<td>780</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col-xs-4">
+											<table class="table-char">
+												<tbody>
+													<tr>
+														<td>Высота</td>
+														<td>500</td>
+													</tr>
+													<tr>
+														<td>Глубина</td>
+														<td>445</td>
+													</tr>
+													<tr>
+														<td>Количество ящиков</td>
+														<td>2х</td>
+													</tr>
+													<tr>
+														<td>Материал</td>
+														<td>ДСП, МДФ</td>
+													</tr>
+													<tr>
+														<td>Стиль</td>
+														<td>минимализм</td>
+													</tr>
+													<tr>
+														<td>Цвет</td>
+														<td>белый</td>
+													</tr>
+													<tr>
+														<td>Гарантия</td>
+														<td>2 года</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- END tab2 -->
+
+								<!-- BEGIN tab3 -->
+								<div class="tabs-content js-tabs-content" data-id="#js-tab-reviews">
+									<div class="row">
+										<div class="col-xs-4">
+											<div class="card">
+												<div class="card__in">
+													<div class="card__media">
+														<a href="#" class="card__img">
+															<img src="https://unsplash.it/125/155?image=651" alt="">
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
+														</a>
+													</div>
+													<div class="card__name">
+														Душевая кабина Kludi GEO 6 GKPG90222003
+													</div>
+													<div class="meta">Цена товара на 15 апр 2015  <span class="meta__available">Есть в наличии</span></div>
+													<div class="card__price">
+														<div class="price price_big">
+															38 721,<sup>03</sup> <sub>грн</sub>
+														</div>
+													</div>
+													<div class="wrap">
+														<div class="card__number">
+															<div class="number js-number" data-max-number="99">
+																<input type="text" class="number__input" value="17.5">
+																<button class="number__plus js-plus-number" type="button"></button>
+																<button class="number__minus js-minus-number" type="button"></button>
+															</div>
+															<div class="number-info">
+																<span>М² </span>
+																<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+															</div>
+														</div>
+														<div class="card__action">
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
+															<ul class="links-wrap">
+																<li><a href="#" class="link-credit">в кредит</a></li>
+																<li><a href="#" class="link-compare">сравнить</a></li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-8">	
+											
+											<div class="comment comment_no-border">
+												<div class="row">
+													<div class="col-xs-8">
+														<textarea class="textarea" placeholder="Ваш комментарий"></textarea>
+													</div>
+													<div class="col-xs-4">
+														<button type="button" class="btn btn_normal is-width">добавить комментарий</button>
+													</div>
+												</div>
+											</div>
+											<div class="comment">
+												<div class="row">
+													<div class="col-xs-12">
+														<div class="row">
+															<div class="col-xs-2">
+																<div class="avatar">
+																	<a href="#">
+																		<img src="img/avatar.jpg" alt="">
+																	</a>
+																</div>
+															</div>
+															<div class="col-xs-10">
+																<div class="comment__head">
+																	<a class="comment__user" href="#">Кириченко Сергей </a>
+																	<span class="meta">20 марта 2015</span>
+																</div>
+																<div class="comment__body">
+																	Я очень доволен и покупкой и консультацией .. да и жизнью в принципе :)
+																</div>
+																<div class="comment__footer">
+																	<a href="#" class="comment__answer">Ответить</a>
+																	<span class="meta">Отзыв полезен?</span>
+																	<a href="#" class="like">Да</a> (2)
+																	<a href="#" class="dislike">Нет</a> (0)
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comment">
+												<div class="row">
+													<div class="col-xs-12">
+														<div class="row">
+															<div class="col-xs-2">
+																<div class="avatar">
+																	<a href="#">
+																		<img src="img/avatar.jpg" alt="">
+																	</a>
+																</div>
+															</div>
+															<div class="col-xs-10">
+																<div class="comment__head">
+																	<a class="comment__user" href="#">Юрий   </a>
+																	<span class="meta">20 марта 2015</span>
+																</div>
+																<div class="comment__body">
+																	Рекомендую к покупке. Бойлер в пользовании пол-года, подключил, выставил температуру и пользуюсь. Выбрал модель на 50л, больше не нужно, семья из 4-х человек. Выставил температуру 38 градусов, хватает помыться двоим. Греет воду быстро. Ни разу не пожалел, что не взял больший по объему. Удобная форма, красивый, аккуратный - занимаем минимум места в туалете, а не как большинство цилиндрических. Надеюсь на долговечность.
+																</div>
+																<div class="comment__footer">
+																	<a href="#" class="comment__answer">Ответить</a>
+																	<span class="meta">Отзыв полезен?</span>
+																	<a href="#" class="like">Да</a> (2)
+																	<a href="#" class="dislike">Нет</a> (0)
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comment">
+												<div class="row">
+													<div class="col-xs-12">
+														<div class="row">
+															<div class="col-xs-2">
+																
+															</div>
+															<div class="col-xs-10">
+																<div class="comment">
+																	<div class="row">
+																		<div class="col-xs-12">
+																			<div class="row">
+																				<div class="col-xs-2">
+																					<div class="avatar">
+																						<a href="#">
+																							<img src="img/avatar-holder.png" alt="">
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-xs-10">
+																					<div class="comment__head">
+																						<a class="comment__user" href="#">Юрий   </a>
+																						<span class="meta">20 марта 2015</span>
+																					</div>
+																					<div class="comment__body">
+																						Я очень доволен и покупкой и консультацией .. да и жизнью в принципе :)
+																					</div>
+																					<div class="comment__footer">
+																						<a href="#" class="comment__answer">Ответить</a>
+																						<span class="meta">Отзыв полезен?</span>
+																						<a href="#" class="like">Да</a> (2)
+																						<a href="#" class="dislike">Нет</a> (0)
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="comment">
+																	<div class="row">
+																		<div class="col-xs-12">
+																			<div class="row">
+																				<div class="col-xs-2">
+																					<div class="avatar">
+																						<a href="#">
+																							<img src="img/avatar.jpg" alt="">
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-xs-10">
+																					<div class="comment__head">
+																						<a class="comment__user" href="#">Юрий   </a>
+																						<span class="meta">20 марта 2015</span>
+																					</div>
+																					<div class="comment__body">
+																						Рекомендую к покупке. Бойлер в пользовании пол-года, подключил, выставил температуру и пользуюсь. Выбрал модель на 50л, больше не нужно, семья из 4-х человек. Выставил температуру 38 градусов, хватает помыться двоим. Греет воду быстро. Ни разу не пожалел, что не взял больший по объему. Удобная форма, красивый, аккуратный - занимаем минимум места в туалете, а не как большинство цилиндрических. Надеюсь на долговечность.
+																					</div>
+																					<div class="comment__footer">
+																						<a href="#" class="comment__answer">Ответить</a>
+																						<span class="meta">Отзыв полезен?</span>
+																						<a href="#" class="like">Да</a> (2)
+																						<a href="#" class="dislike">Нет</a> (0)
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<!-- END tab3 -->
+
+								<!-- BEGIN tab4 -->
+								<div class="tabs-content js-tabs-content" data-id="#js-tab-video">
+									<div class="row">
+										<div class="col-xs-4">
+											<div class="card">
+												<div class="card__in">
+													<div class="card__media">
+														<a href="#" class="card__img">
+															<img src="https://unsplash.it/125/155?image=651" alt="">
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
+														</a>
+													</div>
+													<div class="card__name">
+														Душевая кабина Kludi GEO 6 GKPG90222003
+													</div>
+													<div class="meta">Цена товара на 15 апр 2015  <span class="meta__available">Есть в наличии</span></div>
+													<div class="card__price">
+														<div class="price price_big">
+															38 721,<sup>03</sup> <sub>грн</sub>
+														</div>
+													</div>
+													<div class="wrap">
+														<div class="card__number">
+															<div class="number js-number" data-max-number="99">
+																<input type="text" class="number__input" value="17.5">
+																<button class="number__plus js-plus-number" type="button"></button>
+																<button class="number__minus js-minus-number" type="button"></button>
+															</div>
+															<div class="number-info">
+																<span>М² </span>
+																<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+															</div>
+														</div>
+														<div class="card__action">
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
+															<ul class="links-wrap">
+																<li><a href="#" class="link-credit">в кредит</a></li>
+																<li><a href="#" class="link-compare">сравнить</a></li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-8">
+											<div class="video">
+												<a href="#"><img src="img/slide.jpg" alt=""></a>
+												<a href="#" class="btn-play"></a>
+											</div>
+											<div class="title title_normal">Название видео о душевые кабине Kolo GEO 6 GKPG90205003</div>
+										</div>
+									</div>
+								</div>
+								<!-- END tab4 -->
+									
+								<!-- BEGIN tab5 -->
+								<div class="tabs-content js-tabs-content" data-id="#js-tab-same">
+									<div class="row row_inline">
+										<div class="col-xs-4">
+											<div class="card">
+												<div class="card__in">
+													<div class="card__media">
+														<a href="#" class="card__img">
+															<img src="https://unsplash.it/125/155?image=651" alt="">
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
+														</a>
+													</div>
+													<div class="card__name">
+														Душевая кабина Kludi GEO 6 GKPG90222003
+													</div>
+													<div class="meta">Цена товара на 15 апр 2015  <span class="meta__available">Есть в наличии</span></div>
+													<div class="card__price">
+														<div class="price price_big">
+															38 721,<sup>03</sup> <sub>грн</sub>
+														</div>
+													</div>
+													<div class="wrap">
+														<div class="card__number">
+															<div class="number js-number" data-max-number="99">
+																<input type="text" class="number__input" value="17.5">
+																<button class="number__plus js-plus-number" type="button"></button>
+																<button class="number__minus js-minus-number" type="button"></button>
+															</div>
+															<div class="number-info">
+																<span>М² </span>
+																<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+															</div>
+														</div>
+														<div class="card__action">
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
+															<ul class="links-wrap">
+																<li><a href="#" class="link-credit">в кредит</a></li>
+																<li><a href="#" class="link-compare">сравнить</a></li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-8">
+											<div class="row">
+												<div class="col-xs-4">
+													<div class="item item_small item_no-border">
+														<div class="item__head">
+															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+														</div>
+														<div class="item__media">
+															<a href="#" class="item__img">
+																<img src="http://placehold.it/270x180" alt="">
+															</a>
+														</div>
+														<div class="item__action">
+															<div class="item__price">
+																<div class="price price_old">
+																	84,<sup>03</sup> <sub>грн</sub>
+																</div>
+																<div class="price">
+																	74,<sup>03</sup> <sub>грн</sub>
+																</div>
+																
+																<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-4">
+													<div class="item item_small item_no-border">
+														<div class="item__head">
+															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+														</div>
+														<div class="item__media">
+															<a href="#" class="item__img">
+																<img src="http://placehold.it/270x180" alt="">
+															</a>
+														</div>
+														<div class="item__action">
+															<div class="item__price">
+																
+																<div class="price">
+																	74,<sup>03</sup> <sub>грн</sub>
+																</div>
+																
+																<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-4">
+													<div class="item item_small item_no-border">
+														<div class="item__head">
+															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+														</div>
+														<div class="item__media">
+															<a href="#" class="item__img">
+																<img src="http://placehold.it/270x180" alt="">
+															</a>
+
+														</div>
+														<div class="item__action">
+															<div class="item__price">
+																<div class="price price_old">
+																	84,<sup>03</sup> <sub>грн</sub>
+																</div>
+																<div class="price">
+																	74,<sup>03</sup> <sub>грн</sub>
+																</div>
+																
+																<span class="btn-simple btn-simple_small is-inactive">нет на складе</span>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- END tab5 -->
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="info-box info-box_benefits">
+					<div class="info-box__table">
+						<div class="info-box__cell">
+							<i class="i-benefit1"></i> Оплата при получении
+						</div>
+						<div class="info-box__cell">
+							<i class="i-benefit2"></i> Доставка по всей Украине
+						</div>
+						<div class="info-box__cell">
+							<i class="i-benefit3"></i> Возврат товара в течении 14 дней
+						</div>
+						<div class="info-box__cell">
+							<i class="i-benefit4"></i> Проверка товара перед отправкой
+						</div>
+					</div>
+				</div>
+				<div class="items-slider items-slider_arr-top">
+					<div class="title title_big title_dark title_width"><span><span>похожие товары </span></span></div>
+					<div class="js-slider-six">
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Клинкер CERRAD Elewacja ELEWACJA GLADKA COUNTRY WISNIA PLUS 2880-ET37 <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Клинкер CERRAD Elewacja ELEWACJA GLADKA COUNTRY WISNIA PLUS 2880-ET37 <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div> 
+				</div>											
+				<div class="items-slider items-slider_arr-top">
+					<div class="title title_big title_dark title_width"><span><span>Другие товары </span></span></div>
+					<div class="js-slider-six">
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Клинкер CERRAD Elewacja ELEWACJA GLADKA COUNTRY WISNIA PLUS 2880-ET37 <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Клинкер CERRAD Elewacja ELEWACJA GLADKA COUNTRY WISNIA PLUS 2880-ET37 <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div>
+							<div class="item item_small">
+								<div class="item__head">
+									<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
+								</div>
+								<div class="item__media">
+									<a href="#" class="item__img">
+										<img src="http://placehold.it/270x180" alt="">
+									</a>
+									<a href="#" class="badge badge_blue">
+										<span>
+											Акция
+											<i class="badge__top"></i>
+											<i class="badge__bottom"></i>
+										</span>
+									</a>
+								</div>
+								<div class="item__action">
+									<div class="item__price">
+										<div class="price price_old">
+											84,<sup>03</sup> <sub>грн</sub>
+										</div>
+										<div class="price">
+											74,<sup>03</sup> <sub>грн</sub>
+										</div>
+										
+										<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
+										
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div> 
+				</div>	
+				<div class="seo">
+					<div class="text text_gray">
+						<div class="text__title">Душевые кабины от Kludi</div>
+						<div class="text__cols">
+							<p>Всемирно известная немецкая компания Kludi выпускает сантехнику с 1925 года, что само по себе достойно уважения. Но несмотря на столь солидный возраст, компания больше стремится ко всему новому, высокотехнологичному и актуальному. Накопленный опыт также важен, и в предлагаемых вашему вниманию смесителях технологам Kludi удалось успешно совместить оба эти значимых фактора.  </p>
+							<p>Приобретая смеситель Kludi, вы сможете применять его как в ванной комнате, так и на кухне. В этом – ещё один несомненный плюс продукции немецкой компании. Универсальность, способность к быстрой адаптации в новых условиях позволила компании Kludi стремительно выйти за пределы Германии, создав австрийские, венгерские и польские филиалы производства. </p>
+							<p>Технологическое совершенство смесителей Kludi высоко ценится и экспертами, и покупателями. «Им сносу нет» - сказали бы о таком качестве в старину, и были бы правы! </p>
+							<p>Запорные механизмы конструируются таким образом, что у керамических картриджей смесителей Kludi практически отсутствует срок годности! Ход рычага или вентиля отличается мягкостью, что позволяет регулировать напор воды в полном соответствии с вашими предпочтениями. </p>
+							<p>У душевых панелей Kludi также множество интересных свойств. Они могут быть собраны как в угловом, так и в обычном вариантах</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</div>
+<!-- END out-->
+<div class="tip js-tip">
+	<dib class="tip__in">
+		
+	</dib>
+</div>
+<div class="popup js-popup js-popup-cart">	
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__window">
+		<div class="popup__head">
+			<div class="title title_normal">Товар добавлен в корзину</div>
+			<button class="popup__close js-close-popup" type="button"></button>
+		</div>
+		<div class="popup__body">
+			<div class="popup__main">
+				<div class="order order_auto-width js-parent">
+					<div class="order__table">
+						<div class="order__cell">
+							<a class="prod-simple" href="#">
+								<div class="prod-simple__top">
+									<div class="prod-simple__img">
+										<img src="https://unsplash.it/53/68?image=651" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="order__cell">
+							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
+							<div class="price"> 
+								642,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+						<div class="order__cell order__cell-number">
+							<div class="order__label">Количество</div>
+							<div class="number js-number" data-max-number="99">
+								<input type="text" class="number__input" value="17.5">
+								<button class="number__plus js-plus-number" type="button"></button>
+								<button class="number__minus js-minus-number" type="button"></button>
+							</div>
+							<div class="number-info">
+								<span>М² </span>
+								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+							</div>
+						</div>
+						<div class="order__cell order__cell-price">
+							<div class="order__label">стоимость</div>
+							<div class="price price_big">
+								116 163,<sup>00</sup> <sub>грн</sub>
+							</div>
+							<button class="btn-del js-del-parent" type="button"></button>
+						</div>
+					</div>
+				</div>
+				<div class="order order_auto-width js-parent">
+					<div class="order__table">
+						<div class="order__cell">
+							<a class="prod-simple" href="#">
+								<div class="prod-simple__top">
+									<div class="prod-simple__img">
+										<img src="https://unsplash.it/53/68?image=651" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="order__cell">
+							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
+							<div class="price"> 
+								642,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+						<div class="order__cell order__cell-number">
+							<div class="order__label">Количество</div>
+							<div class="number js-number" data-max-number="99">
+								<input type="text" class="number__input" value="17.5">
+								<button class="number__plus js-plus-number" type="button"></button>
+								<button class="number__minus js-minus-number" type="button"></button>
+							</div>
+							<div class="number-info">
+								<span>М² </span>
+								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+							</div>
+						</div>
+						<div class="order__cell order__cell-price">
+							<div class="order__label">стоимость</div>
+							<div class="price price_big">
+								116 163,<sup>00</sup> <sub>грн</sub>
+							</div>
+							<button class="btn-del js-del-parent" type="button"></button>
+						</div>
+					</div>
+				</div>
+				<div class="order order_auto-width js-parent">
+					<div class="order__table">
+						<div class="order__cell">
+							<a class="prod-simple" href="#">
+								<div class="prod-simple__top">
+									<div class="prod-simple__img">
+										<img src="https://unsplash.it/53/68?image=651" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="order__cell">
+							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
+							<div class="price"> 
+								642,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+						<div class="order__cell order__cell-number">
+							<div class="order__label">Количество</div>
+							<div class="number js-number" data-max-number="99">
+								<input type="text" class="number__input" value="17.5">
+								<button class="number__plus js-plus-number" type="button"></button>
+								<button class="number__minus js-minus-number" type="button"></button>
+							</div>
+							<div class="number-info">
+								<span>М² </span>
+								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+							</div>
+						</div>
+						<div class="order__cell order__cell-price">
+							<div class="order__label">стоимость</div>
+							<div class="price price_big">
+								116 163,<sup>00</sup> <sub>грн</sub>
+							</div>
+							<button class="btn-del js-del-parent" type="button"></button>
+						</div>
+					</div>
+				</div>
+				<div class="order order_auto-width js-parent">
+					<div class="order__table">
+						<div class="order__cell">
+							<a class="prod-simple" href="#">
+								<div class="prod-simple__top">
+									<div class="prod-simple__img">
+										<img src="https://unsplash.it/53/68?image=651" alt="">
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="order__cell">
+							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
+							<div class="price"> 
+								642,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+						<div class="order__cell order__cell-number">
+							<div class="order__label">Количество</div>
+							<div class="number js-number" data-max-number="99">
+								<input type="text" class="number__input" value="17.5">
+								<button class="number__plus js-plus-number" type="button"></button>
+								<button class="number__minus js-minus-number" type="button"></button>
+							</div>
+							<div class="number-info">
+								<span>М² </span>
+								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+							</div>
+						</div>
+						<div class="order__cell order__cell-price">
+							<div class="order__label">стоимость</div>
+							<div class="price price_big">
+								116 163,<sup>00</sup> <sub>грн</sub>
+							</div>
+							<button class="btn-del js-del-parent" type="button"></button>
+						</div>
+					</div>
+				</div>
+				<div class="order order_delivery order_total">
+					<div class="order__delivery">
+						<span class="price price_large">
+							116 805, <sup>51</sup> <sub>грн</sub>
+						</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="order-action">
+				<div class="row">
+					<div class="col-xs-3">
+						<a href="#" class="btn-back">вернуться в магазин</a>
+						
+					</div>
+					<div class="col-xs-9 text-right">
+						<a href="#" class="link-credit">просчет кредита</a>
+						<button type="button" class="btn-simple btn-simple_blue">в кредит</button>
+						<button type="button" class="btn btn_large">оформить заказ</button>
+					</div>
+				</div>
+			</div>
+			<div class="items-slider items-slider_small">
+				<div class="title title_big title_dark title_width"><span><span>Добавьте к заказу </span></span></div>
+				<div class="js-slider-six">
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post-item post-item_small">
+							<div class="post-item__media">
+								<a href="#"><img src="img/post-item.jpg" alt=""></a>
+							</div>
+							<div class="post-item__info">
+								<div class="meta">Golden Tile Ocean <span>М40051</span></div>
+							</div>
+							<div class="price price_old">
+								25 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+							<div class="price price_big"> 
+								24 784,<sup>03</sup> <sub>грн</sub>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<button class="slick-prev slick-prev_trigger js-slick-prev-trigger" type="button"></button>
+				<button class="slick-next slick-next_trigger js-slick-next-trigger" type="button"></button>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="popup popup_big js-popup js-popup-item">
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__window">
+		<button class="popup__close js-close-popup" type="button"></button>
+		<div class="popup__body">
+		
+			<div class="img-slider">
+				<div class="img-slider__info">
+					Изображение <span class="js-slide-index">1</span> из <span class="js-slides-counter"></span>
+				</div>
+				<div class="js-img-slider">
+					<div>
+						<img src="img/preview.jpg" alt="img">
+					</div>
+					
+
+				</div>	
+			</div>
+			<div class="popup__prod">
+				<div class="page-title">Душевые кабины Kludi GEO 6 GKPG90222003</div>
+				<div class="meta meta_small">
+					Цена товара на 15 апр 2015 <span class="meta__available">Есть в наличии</span>
+				</div>
+				<div class="price price_old price_big">
+					26 674,<sup>03</sup> <sub>грн</sub>
+				</div>
+				<div class="price price_large">
+					25 674,<sup>03</sup> <sub>грн</sub>
+				</div>
+				<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
+				<button type="button" class="btn-simple btn-simple_blue is-width">в кредит</button>
+				<ul class="links-wrap">
+					<li><a href="#" class="link-credit">просчет кредита</a></li>
+					<li><a href="#" class="link-compare">сравнить</a></li>
+				</ul>
+			</div>	
+			
+		</div>
+	</div>
+</div>
+<div class="popup popup_small js-popup js-popup-calculator" style="display: block;">	
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__window">
+		<div class="total">
+			Кредит на сумму
+			<div class="price price_big">
+				116 805,<sup>00</sup> <sub>грн</sub>
+			</div>
+			<button class="popup__close js-close-popup" type="button"></button>
+		</div>
+		<table class="table table_order">
+			<caption>Выберите кредитный пакет</caption>
+			<thead>
+				<tr>
+					<th>Пакет</th>
+					<th>Первый взнос</th>
+					<th>Количество месяцев <br> и сумма платежа</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="js-radio-parent is-active">
+					<td>
+						<label class="radio radio_small">
+							<input class="js-radio-trigger" type="radio" name="bank" checked>
+							<span class="radio__text">Оплата частями <br> ПАО КБ «ПриватБанк»</span>
+						</label>
+					</td>
+					<td>
+						0 грн. (0%)
+					</td>
+					<td>
+						<div class="number number_small js-number" data-max-number="100">
+							<input type="text" class="number__input" value="10">
+							<button class="number__plus js-plus-number" type="button"></button>
+							<button class="number__minus js-minus-number" type="button"></button>
+						</div>
+						<div class="price"> <sub>по</sub>
+							117,<sup>51</sup> <sub>грн</sub>
+						</div>
+					</td>
+				</tr>
+				<tr class="js-radio-parent">
+					<td>
+						<label class="radio radio_small">
+							<input class="js-radio-trigger" type="radio" name="bank">
+							<span class="radio__text">Супер-рассрочка <br> АО «УкрсСибБанк»</span>
+						</label>
+					</td>
+					<td>
+						0 грн. (0%)
+					</td>
+					<td>
+						<div class="number number_small js-number" data-max-number="100">
+							<input type="text" class="number__input" value="10">
+							<button class="number__plus js-plus-number" type="button"></button>
+							<button class="number__minus js-minus-number" type="button"></button>
+						</div>
+						<div class="price"> <sub>по</sub>
+							117,<sup>51</sup> <sub>грн</sub>
+						</div>
+					</td>
+				</tr>
+				<tr class="js-radio-parent">
+					<td>
+						<label class="radio radio_small">
+							<input class="js-radio-trigger" type="radio" name="bank">
+							<span class="radio__text">Оплата частями <br> ПАО «ОТП Банк»</span>
+						</label>
+					</td>
+					<td>
+						0 грн. (0%)
+					</td>
+					<td>
+						<div class="number number_small js-number" data-max-number="100">
+							<input type="text" class="number__input" value="10">
+							<button class="number__plus js-plus-number" type="button"></button>
+							<button class="number__minus js-minus-number" type="button"></button>
+						</div>
+						<div class="price"> <sub>по</sub>
+							117,<sup>51</sup> <sub>грн</sub>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="popup__body">
+			<div class="text-right">
+				<button type="button" class="btn-simple btn-simple_big btn-simple_mb">продолжить</button>
+			</div>
+		</div>
+	
+		
+			
+		
+	</div>
+</div>
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="footer__in">
+					<div class="footer__top">
+						<div class="row">
+							<div class="col-xs-3">
+								<ul class="list list_small">
+									<li><a href="#"><strong>Акции</strong></a></li>
+									<li><a href="#"><strong>Распродажа</strong></a></li>
+									<li><a href="#"><strong>Новинки</strong></a></li>
+								</ul>
+								<div class="soc">
+									<div class="soc__title">Agromat в соц сетях</div>
+									<a href="#" class="soc__link"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="soc__link"><i class="fa fa-google-plus"></i></a>
+									<a href="#" class="soc__link"><i class="fa fa-pinterest-p"></i></a>
+								</div>
+							</div>
+							<div class="col-xs-3">
+								<ul class="list list_small list_gray">
+									<li><a href="#"><strong>Каталог товаров</strong></a></li>
+									<li><a href="#">Плитка</a></li>
+									<li><a href="#">Мозаика</a></li>
+									<li><a href="#">Сантехника</a></li>
+									<li><a href="#">Бассейны и сауны</a></li>
+									<li><a href="#">Мебель</a></li>
+									<li><a href="#">Освещение</a></li>
+									<li><a href="#">Теплый пол</a></li>
+									<li><a href="#">Паркет и ламинат</a></li>
+									<li><a href="#">Клеи, затирки, смеси</a></li>
+									<li><a href="#">Сопутствующие материалы</a></li>
+									<li><a href="#">Инструменты </a></li>
+								</ul>
+							</div>
+							<div class="col-xs-3">
+								<ul class="list list_small list_gray">
+									<li><a href="#"><strong>Торговые марки</strong></a></li>
+									<li><a href="#">Aparici</a></li>
+									<li><a href="#">Hansgrohe</a></li>
+									<li><a href="#">KLUDI</a></li>
+									<li><a href="#">Peronda</a></li>
+									<li><a href="#">APE</a></li>
+									<li><a href="#">MAPISA</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-3">
+								<ul class="list list_small list_gray">
+									<li><a href="#"><strong>Интернет-магазин</strong></a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Гарантия и возврат</a></li>
+									<li><a href="#">Программа лояльности</a></li>
+									<li><a href="#">Статьи</a></li>
+									<li><a href="#">Обзоры</a></li>
+									<li><a href="#">Вопросы и ответы</a></li>
+									<li><a href="#">О магазине</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Обратная связь</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="text text_small text_gray"><p>© Агромат, 2007–2015. Керамическая плитка и сантехника. <br>При копировании материалов ссылка на сайт обязательна.</div></p>
+							</div>
+							<div class="col-xs-6 col-xs-offset-2">
+								<div class="text text_small text_gray">
+									<p><strong>ТЦ "Керамік Сіті"</strong> Киев, ул. Булаховского 4  |  392-29-41, 423-00-03, 494-09-64  |  <a href="mailto:zakaz@agromat.ua">zakaz@agromat.ua</a>  |
+									пн-пт 09:00—19:00, сб-вс 10:00—17:00 </p>
+									<p><strong>ТЦ "Свiт Керамiки"</strong> Киев, ул. Булаховского 2/1  |  423-00-03  |  <a href="mailto:zakaz@agromat.ua">zakaz@agromat.ua</a>   |   пн-пт 09:00—19:00 сб-вс 10:00—17:00 </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<button class="scroll-top js-scroll-top" type="button"><span>наверх</span></button>
+<!-- load scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

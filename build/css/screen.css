@@ -2827,7 +2827,7 @@ a {
 .checkbox {
   display: block;
   padding: 3px 0;
-  line-height: 1;
+  line-height: 1.2;
   font-size: 12px;
   -webkit-transition: color .3s;
   transition: color .3s;
@@ -2909,8 +2909,7 @@ a {
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;
-      margin-top: -8px;
+      top: 1px;
       width: 13px;
       height: 13px;
       border-radius: 50%;
@@ -2920,8 +2919,7 @@ a {
       content: "";
       position: absolute;
       left: 4px;
-      top: 50%;
-      margin-top: -4px;
+      top: 5px;
       opacity: 0;
       width: 5px;
       height: 5px;
@@ -3692,6 +3690,8 @@ a {
     height: 100%; }
   .popup_big .popup__window {
     width: 930px; }
+  .popup_small .popup__window {
+    width: 770px; }
   .popup__overlay {
     position: fixed;
     top: 0;
@@ -3782,6 +3782,13 @@ a {
       margin-right: 15px; }
     .popup__prod .btn, .popup__prod .btn-simple {
       margin: 10px 0; }
+  .popup .total {
+    position: relative;
+    margin: 20px 30px 25px;
+    padding-bottom: 10px; }
+    .popup .total .popup__close {
+      right: -15px;
+      top: -10px; }
 
 .img-slider {
   visibility: hidden;
@@ -3880,6 +3887,12 @@ a {
         color: #268cb6; }
   .post__text {
     margin: 10px 0 0; }
+
+.total {
+  border-bottom: 2px solid #000;
+  font-size: 30px;
+  font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+  color: #000; }
 
 .slick-slider {
   position: relative;
@@ -5463,6 +5476,8 @@ a {
     color: #268cb6; }
   .btn-simple_mt {
     margin-top: 25px; }
+  .btn-simple_mb {
+    margin-bottom: 15px; }
 
 .sort {
   position: relative;
@@ -6830,6 +6845,7 @@ a.link-comment:hover {
   .table th {
     font-weight: normal;
     padding: 0 28px 5px;
+    line-height: 1.2;
     vertical-align: middle; }
   .table tbody tr {
     -webkit-transition: background .3s;
@@ -6851,6 +6867,10 @@ a.link-comment:hover {
   .table_order td .radio {
     height: 70px;
     line-height: 70px; }
+    .table_order td .radio__text {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.2; }
 
 .order-wrap {
   padding: 45px 30px 30px;
