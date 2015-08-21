@@ -1036,7 +1036,7 @@
 														<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
 													</div>
 													<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">В корзину</button>
-													<button type="button" class="btn-simple btn-simple_blue is-width">в кредит</button>
+													<button type="button" class="btn-simple btn-simple_blue is-width js-popup-trigger" data-popup="js-popup-credit">в кредит</button>
 													<ul class="links-wrap">
 														<li><a href="#" class="link-credit">просчет кредита</a></li>
 														<li><a href="#" class="link-compare">сравнить</a></li>
@@ -2763,6 +2763,102 @@
 			</div>	
 			
 		</div>
+	</div>
+</div>
+<div class="popup popup_small js-popup js-popup-credit">	
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__window">
+		<div class="total">
+			Кредит на сумму
+			<div class="price price_big">
+				116 805,<sup>00</sup> <sub>грн</sub>
+			</div>
+			<button class="popup__close js-close-popup" type="button"></button>
+		</div>
+		<table class="table table_order">
+			<caption>Выберите кредитный пакет</caption>
+			<thead>
+				<tr>
+					<th>Пакет</th>
+					<th>Первый взнос</th>
+					<th>Количество месяцев <br> и сумма платежа</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="js-radio-parent is-active">
+					<td>
+						<label class="radio radio_small">
+							<input class="js-radio-trigger" type="radio" name="bank" checked>
+							<span class="radio__text">Оплата частями <br> ПАО КБ «ПриватБанк»</span>
+						</label>
+					</td>
+					<td>
+						0 грн. (0%)
+					</td>
+					<td>
+						<div class="number number_small js-number" data-max-number="100">
+							<input type="text" class="number__input" value="10">
+							<button class="number__plus js-plus-number" type="button"></button>
+							<button class="number__minus js-minus-number" type="button"></button>
+						</div>
+						<div class="price"> <sub>по</sub>
+							117,<sup>51</sup> <sub>грн</sub>
+						</div>
+					</td>
+				</tr>
+				<tr class="js-radio-parent">
+					<td>
+						<label class="radio radio_small">
+							<input class="js-radio-trigger" type="radio" name="bank">
+							<span class="radio__text">Супер-рассрочка <br> АО «УкрсСибБанк»</span>
+						</label>
+					</td>
+					<td>
+						0 грн. (0%)
+					</td>
+					<td>
+						<div class="number number_small js-number" data-max-number="100">
+							<input type="text" class="number__input" value="10">
+							<button class="number__plus js-plus-number" type="button"></button>
+							<button class="number__minus js-minus-number" type="button"></button>
+						</div>
+						<div class="price"> <sub>по</sub>
+							117,<sup>51</sup> <sub>грн</sub>
+						</div>
+					</td>
+				</tr>
+				<tr class="js-radio-parent">
+					<td>
+						<label class="radio radio_small">
+							<input class="js-radio-trigger" type="radio" name="bank">
+							<span class="radio__text">Оплата частями <br> ПАО «ОТП Банк»</span>
+						</label>
+					</td>
+					<td>
+						0 грн. (0%)
+					</td>
+					<td>
+						<div class="number number_small js-number" data-max-number="100">
+							<input type="text" class="number__input" value="10">
+							<button class="number__plus js-plus-number" type="button"></button>
+							<button class="number__minus js-minus-number" type="button"></button>
+						</div>
+						<div class="price"> <sub>по</sub>
+							117,<sup>51</sup> <sub>грн</sub>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="popup__body">
+			<div class="text-right">
+				<button type="button" class="btn-simple btn-simple_big btn-simple_mb">продолжить</button>
+			</div>
+		</div>
+	
+		
+			
+		
 	</div>
 </div>
 <div class="footer">
