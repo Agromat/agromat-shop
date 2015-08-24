@@ -4562,15 +4562,18 @@ a {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
-  .footer__top .row > div {
-    position: relative;
-    border-left: 1px solid #f4f4f4; }
-    .footer__top .row > div:first-child {
-      border: 0; }
-      .footer__top .row > div:first-child .list {
-        padding-left: 0; }
-  .footer__top .list {
-    padding-left: 15px; }
+
+.catalog-list .row > div {
+  position: relative;
+  border-left: 1px solid #f4f4f4; }
+  .catalog-list .row > div:first-child {
+    border: 0; }
+    .catalog-list .row > div:first-child .list {
+      padding-left: 0; }
+.catalog-list .list {
+  padding-left: 15px; }
+  .catalog-list .list + .list {
+    margin-top: 22px; }
 
 .footer__bottom {
   position: relative;
