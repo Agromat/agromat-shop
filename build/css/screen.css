@@ -5938,8 +5938,13 @@ a {
   font-size: 0;
   padding: 0 3px;
   margin: 0 -15px 0 0; }
-  .items-wrap_mb {
+  .items-wrap_five-items {
     margin-bottom: 20px; }
+    .items-wrap_five-items .row > div {
+      width: 20%; }
+    .items-wrap_five-items .btn, .items-wrap_five-items .btn-simple {
+      display: block;
+      width: 100%; }
 
 .item_smaller {
   display: inline-block;
@@ -6700,6 +6705,9 @@ a.link-comment:hover {
     .cat-nav__list span {
       display: block;
       color: #999; }
+
+.col-xs-3 {
+  width: 20% !important; }
 
 .filter-wrap {
   margin-bottom: 34px;
