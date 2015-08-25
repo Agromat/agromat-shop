@@ -300,6 +300,7 @@
 		&:hover
 			color: $blue 
 		&.is-active
+			font-weight: bold
 			&:before
 				content: ""
 				position: absolute
@@ -317,7 +318,8 @@
 				+arr(18,8,#fff,b)
 	> span
 		margin-right: 10px
-		
+.sort_mod
+	border-top-color: transparent
 .view
 	position: absolute
 	top: 10px
@@ -658,6 +660,8 @@
 	font-size: 0
 	padding: 0 3px 
 	margin: 0 -15px 0 0
+	&_mb
+		margin-bottom: 20px
 .item_smaller
 	display: inline-block
 	vertical-align: top
