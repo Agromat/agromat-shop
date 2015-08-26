@@ -516,4 +516,10 @@ $(document).ready( function() {
         return false;
     });
 
+    $(".js-show-callback").on("click", function(){
+        $(".js-callback").toggleClass("is-active");
+        $(this).toggleClass("is-active");
+        return false;
+    });
+
 });
