@@ -5686,8 +5686,9 @@ a {
     margin-bottom: 10px; }
 
 .block {
-  display: block;
+  display: table;
   padding: 10px 23px;
+  width: 100%;
   background: #f6f6f6;
   color: #000;
   font-size: 12px;
@@ -5695,23 +5696,34 @@ a {
   transition: background .2s; }
   .block:hover {
     background: #E2E1E1; }
+  .block__row {
+    display: table-row; }
+  .block__cell {
+    display: table-cell;
+    vertical-align: top; }
+    .block__cell:last-child {
+      text-align: right; }
+    .block__cell:first-child {
+      text-align: left; }
   .block__title {
     display: block;
-    overflow: hidden;
     font-weight: bold; }
     .block__title em {
       font-style: normal;
       color: #888;
       font-weight: normal; }
   .block__info {
-    float: right;
-    width: 60px;
-    padding-left: 5px;
-    margin-right: -10px; }
+    padding-left: 5px; }
   .block__main {
     overflow: hidden; }
   .block .list-marker {
-    margin-top: 10px; }
+    margin-top: 10px;
+    text-align: left; }
+    .block .list-marker li {
+      display: table;
+      width: 100%; }
+    .block .list-marker .block__cell {
+      padding: 0; }
 
 .block_extend {
   margin-bottom: 5px;
