@@ -3404,15 +3404,14 @@ a {
     clear: both; }
   .product-col__main {
     overflow: hidden; }
-    .product-col__main .text {
-      clear: both; }
   .product-col__left {
     float: left;
+    margin-right: 4.5%;
     width: 54.55%; }
   .product-col__middle {
     float: left;
-    padding-left: 30px;
-    width: 45.4%; }
+    width: 40.5%;
+    padding-bottom: 10px; }
     .product-col__middle .box {
       margin: 0 0 26px; }
   .product-col__right {
