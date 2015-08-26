@@ -351,6 +351,22 @@ $(document).ready( function() {
         return false;
     });
 
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       if (st > lastScrollTop){
+            if (!$(".js-scroll-top").hasClass("is-visible")) {
+                $(".js-scroll-top").addClass("is-visible");
+            }
+           
+       } else {
+        if ($(".js-scroll-top").hasClass("is-visible")) {
+            $(".js-scroll-top").removeClass("is-visible");
+        }
+       }
+       lastScrollTop = st;
+    });
+
     $('#countdown-1').countdown({
         until: new Date(2015, 7, 30, 0, 0, 0), // insert your date
         format: 'DHM',

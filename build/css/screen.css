@@ -4676,7 +4676,10 @@ a {
   font-size: 11px;
   color: #fff;
   -webkit-transition: background .3s;
-  transition: background .3s; }
+  transition: background .3s;
+  display: none; }
+  .scroll-top.is-visible {
+    display: block; }
   .scroll-top:hover {
     background: #000; }
   .scroll-top span {
