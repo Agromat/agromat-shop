@@ -713,8 +713,24 @@
 		height: auto
 	.item_small
 		width: 100%
+		z-index: 1
+		padding-top: 10px
 		margin-bottom: 0
-		
+		&:hover
+			&:after
+				border-color: $blue 
+			.item__title
+				color: $blue 
+		&:after
+			content: ""
+			position: absolute
+			left: -10px
+			top: 0
+			right: -10px
+			bottom: 0
+			z-index: -1
+			+tr(border .3s)
+			border: 1px solid transparent 
 	.item__action
 		border-bottom: 0
 	.slick-slider

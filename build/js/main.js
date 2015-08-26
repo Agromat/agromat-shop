@@ -330,6 +330,20 @@ $(document).ready( function() {
         adaptiveHeight: true
     });
 
+    $('.js-slider-index').on('init', function(slick) {
+          setTimeout(function(){
+            $('.js-slider-index').addClass("is-ready");
+          },200);
+    });
+    $(".js-slider-index").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: false
+    });
+
     $(".js-scroll-top").on("click", function(){
         $('html, body').animate({
             scrollTop: 0

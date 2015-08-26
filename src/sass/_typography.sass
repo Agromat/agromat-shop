@@ -67,6 +67,7 @@
 	&.is-ready
 		opacity: 1
 		visibility: visible
+	
 	img
 		width: 100%
 		height: auto
@@ -90,6 +91,23 @@
 		right: 0
 		&:before
 			content: "\f105" 
+	&__title
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 7px 30px 
+		background: rgba(#000,.2)
+		color: #fff
+		+reg 
+		font-size: 30px
+	&_index
+		margin-top: 26px
+		img
+			width: auto
+			margin: 0 auto 
+			max-width: none
+			height: 100%
 .section
 	margin: 20px 0 47px 		
 .video
