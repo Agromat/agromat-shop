@@ -2693,6 +2693,9 @@ a {
   font-size: 24px;
   text-transform: none; }
 
+.title_no-border > span:before, .title_no-border > span:after {
+  display: none; }
+
 .prod {
   display: inline-block;
   vertical-align: top;
@@ -3648,6 +3651,8 @@ a {
   width: 373px;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
+  position: relative;
+  z-index: 2;
   text-align: center;
   font-size: 13px;
   background: #fff; }
@@ -3691,6 +3696,8 @@ a {
     width: 930px; }
   .popup_small .popup__window {
     width: 770px; }
+  .popup_smaller .popup__window {
+    width: 435px; }
   .popup__overlay {
     position: fixed;
     top: 0;
@@ -3756,6 +3763,17 @@ a {
       content: " ";
       display: table;
       clear: both; }
+  .popup__form {
+    padding: 30px 100px;
+    *zoom: 1; }
+    .popup__form:after {
+      content: " ";
+      display: table;
+      clear: both; }
+    .popup__form .field {
+      margin-bottom: 20px; }
+    .popup__form .btn {
+      margin-bottom: 7px; }
   .popup__main {
     margin: 0 -14px 20px 0;
     padding-right: 15px;
@@ -4203,6 +4221,27 @@ a {
     transition: color .3s; }
     .contact__tel a:hover {
       color: #268cb6; }
+
+.contact__popup {
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  padding: 20px 30px;
+  background: #fff;
+  width: 435px;
+  z-index: 5;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2); }
+  .contact__popup .meta {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1.2;
+    font-style: italic; }
+
+.contact__form .field {
+  float: left;
+  width: 232px; }
+.contact__form .btn {
+  float: right; }
 
 .shedule {
   position: relative;

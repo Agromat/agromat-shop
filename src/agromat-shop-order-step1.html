@@ -38,348 +38,390 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row js-tabs-group">
 						<div class="col-xs-12">
-							<ul class="tabs tabs_mb">
-								<li class="is-active"><a href="#">обычный заказ</a></li>
-								<li><a href="#">быстрый заказ</a></li>
+							<ul class="tabs tabs_mb js-tabs">
+								<li class="is-active"><a href="#js-tab-order">обычный заказ</a></li>
+								<li><a href="#js-tab-quick-order">быстрый заказ</a></li>
 							</ul>
 						</div>
-						
-						<div class="col-xs-8">
-							<div class="order-group">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="title title_big title_dark title_width"><span><span>Контактные данные </span></span></div>
-									</div>
-									<div class="col-xs-6">
-										<label class="field">
-											<span class="field__title">Телефон</span>
-											<span class="field__body">
-												<input class="input" type="tel" placeholder="+380 ( ___ ) ___-___-___">
-											</span>
-										</label>
-										<div class="field">
-											<span class="field__title">Город</span>
-											<div class="field__body">
-												<div class="select js-select">
-													<input class="input" type="text" readonly value="Киев и область">
-													<select>
-														<option value="Киев и область" selected>Киев и область</option>
-														<option value="Харьков">Харьков</option>
-														<option value="Одесса">Одесса</option>
-														<option value="Донецк">Донецк</option>
-														<option value="Львов">Львов</option>
-													</select>
+						<div class="tabs-content js-tabs-content" data-id="#js-tab-order">
+							<div class="col-xs-8">
+								<div class="order-group">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="title title_big title_dark title_width"><span><span>Контактные данные </span></span></div>
+										</div>
+										<div class="col-xs-6">
+											<label class="field">
+												<span class="field__title">Телефон</span>
+												<span class="field__body">
+													<input class="input" type="tel" placeholder="+380 ( ___ ) ___-___-___">
+												</span>
+											</label>
+											<div class="field">
+												<span class="field__title">Город</span>
+												<div class="field__body">
+													<div class="select js-select">
+														<input class="input" type="text" readonly value="Киев и область">
+														<select>
+															<option value="Киев и область" selected>Киев и область</option>
+															<option value="Харьков">Харьков</option>
+															<option value="Одесса">Одесса</option>
+															<option value="Донецк">Донецк</option>
+															<option value="Львов">Львов</option>
+														</select>
+													</div>
+													
 												</div>
-												
+											</div>
+											<label class="field">
+												<span class="field__title">Email</span>
+												<span class="field__body">
+													<input class="input" type="email">
+												</span>
+											</label>
+											<label class="field">
+												<span class="field__title">ФИО</span>
+												<span class="field__body">
+													<input class="input" type="text">
+												</span>
+											</label>
+											<label class="field">
+												<span class="field__title">Адрес</span>
+												<span class="field__body">
+													<input class="input" type="text">
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-6">
+											<label class="field">
+												<span class="field__title">Примечание к заказу </span>
+												<span class="field__body">
+													<textarea class="input input_textarea"></textarea>
+												</span>
+											</label>
+											<div class="field">
+												<div class="field__title"></div>
+												<label class="checkbox checkbox_small">
+													<input type="checkbox" checked>
+													<span class="checkbox__text"><em>Я хочу получать уведомления об акциях и распродажах, проводимых интернет- магазином, по электронной почте</em></span>
+												</label>
+											</div>
+											<div class="field">
+
+												<label class="checkbox checkbox_small">
+													<input type="checkbox">
+													<span class="checkbox__text"><em>Я даю свое согласие на обработку моих персональных данных в базе персональных данных клиентов с целью предоставления мне информации о статусе заказа и/или информации о проводимых акциях/распродажах</em></span>
+												</label>
 											</div>
 										</div>
-										<label class="field">
-											<span class="field__title">Email</span>
-											<span class="field__body">
-												<input class="input" type="email">
-											</span>
-										</label>
-										<label class="field">
-											<span class="field__title">ФИО</span>
-											<span class="field__body">
-												<input class="input" type="text">
-											</span>
-										</label>
-										<label class="field">
-											<span class="field__title">Адрес</span>
-											<span class="field__body">
-												<input class="input" type="text">
-											</span>
-										</label>
 									</div>
-									<div class="col-xs-6">
-										<label class="field">
-											<span class="field__title">Примечание к заказу </span>
-											<span class="field__body">
-												<textarea class="input input_textarea"></textarea>
-											</span>
-										</label>
-										<div class="field">
-											<div class="field__title"></div>
+								</div>
+								<div class="order-group">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="title title_big title_dark title_width"><span><span>Способ доставки  </span></span></div>
+											<div class="radiobox">
+												<label class="radiobox__label" for="delivery1"></label>
+												<input type="radio" id="delivery1" name="delivery">
+												<span class="radiobox__border"></span>
+												<span class="radiobox__title">Самовывоз</span>
+												<p>Киев, ул. Булаховского 2/1</p>
+												<p>
+													Время работы: <br>
+													пн-пт  09:00–21:00 <br>
+													сб-вс  10:00–18:00
+												</p>
+											</div>
+											<div class="radiobox">
+												<label class="radiobox__label" for="delivery2"></label>
+												<input type="radio" id="delivery2" name="delivery">
+												<span class="radiobox__border"></span>
+												<span class="radiobox__title">Доставка по Киеву и области</span>
+												<p>Адресная доставка по Киеву: стандартная доставка 70 грн. По Киевской области: 200 грн.</p>
+											</div>
+											<div class="radiobox is-inactive">
+												<label class="radiobox__label" for="delivery3"></label>
+												<input type="radio" id="delivery3" name="delivery" disabled>
+												<span class="radiobox__border"></span>
+												<span class="radiobox__title">Доставка по Украине</span>
+												<p>Доставка в отделение "Новой почты". В среднем доставка занимает 1 день, во время заказа наши менеджеры согласуют с вами дату доставки перед отправкой товара.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="order-group">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="title title_big title_dark title_width"><span><span>Способ оплаты   </span></span></div>
+											<div class="wrap">
+												<div class="radiobox radiobox_tab js-radiobox-tab">
+													<label class="radiobox__label" for="payment1"></label>
+													<input type="radio" id="payment1" name="payment">
+													<span class="radiobox__border"></span>
+													<span class="radiobox__title">Наличными, при получении</span>
+												</div>
+												<div class="radiobox radiobox_tab js-radiobox-tab">
+													<label class="radiobox__label" for="payment2"></label>
+													<input type="radio" id="payment2" name="payment">
+													<span class="radiobox__border"></span>
+													<span class="radiobox__title">Карточный счет</span>
+												</div>
+												<div class="radiobox radiobox_tab js-radiobox-tab">
+													<label class="radiobox__label" for="payment3"></label>
+													<input type="radio" id="payment3" name="payment" checked>
+													<span class="radiobox__border"></span>
+													<span class="radiobox__title">Кредит</span>
+												</div>
+											</div>
+											<div class="js-radiobox-content" data-id="payment1" style="display: none;">
+												<div class="table-wrap">
+													<table class="table table_order">
+														<caption>Оплата наличными куръеру, при получении</caption>
+														<!-- <thead>
+															<tr>
+																<th>Пакет</th>
+																<th>Первый взнос</th>
+																<th>Количество месяцев и сумма платежа</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="bank">
+																		<span class="radio__text">Оплата частями ПАО КБ «ПриватБанк»</span>
+																	</label>
+																</td>
+																<td>
+																	0 грн. (0%)
+																</td>
+																<td>
+																	<div class="number js-number" data-max-number="100">
+																		<input type="text" class="number__input" value="10">
+																		<button class="number__plus js-plus-number" type="button"></button>
+																		<button class="number__minus js-minus-number" type="button"></button>
+																	</div>
+																	<div class="price"> <sub>по</sub>
+																		117,<sup>51</sup> <sub>грн</sub>
+																	</div>
+																</td>
+															</tr>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="bank">
+																		<span class="radio__text">Супер-рассрочка АО «УкрсСибБанк»</span>
+																	</label>
+																</td>
+																<td>
+																	0 грн. (0%)
+																</td>
+																<td>
+																	<div class="number js-number" data-max-number="100">
+																		<input type="text" class="number__input" value="10">
+																		<button class="number__plus js-plus-number" type="button"></button>
+																		<button class="number__minus js-minus-number" type="button"></button>
+																	</div>
+																	<div class="price"> <sub>по</sub>
+																		117,<sup>51</sup> <sub>грн</sub>
+																	</div>
+																</td>
+															</tr>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="bank">
+																		<span class="radio__text">Оплата частями ПАО «ОТП Банк»</span>
+																	</label>
+																</td>
+																<td>
+																	0 грн. (0%)
+																</td>
+																<td>
+																	<div class="number js-number" data-max-number="100">
+																		<input type="text" class="number__input" value="10">
+																		<button class="number__plus js-plus-number" type="button"></button>
+																		<button class="number__minus js-minus-number" type="button"></button>
+																	</div>
+																	<div class="price"> <sub>по</sub>
+																		117,<sup>51</sup> <sub>грн</sub>
+																	</div>
+																</td>
+															</tr>
+														</tbody> -->
+													</table>
+													<div class="text-right">
+														<button type="button" class="btn-simple btn-simple_big">продолжить</button>
+													</div>
+												</div>
+											</div>
+											<div class="js-radiobox-content" data-id="payment2" style="display: none;">
+												<div class="table-wrap">
+													<table class="table table_order">
+														<caption>Карточный счет</caption>
+														<thead>
+															<tr>
+																<th>Банк</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="card">
+																		<span class="radio__text">Карточный счет ПАО КБ «ПриватБанк»</span>
+																	</label>
+																</td>
+																
+															</tr>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="card">
+																		<span class="radio__text">Карточный счет другого банка</span>
+																	</label>
+																</td>
+																
+															</tr>
+														</tbody>
+													</table>
+													<div class="text-right">
+														<button type="button" class="btn-simple btn-simple_big">продолжить</button>
+													</div>
+												</div>
+											</div>
+											<div class="js-radiobox-content" data-id="payment3">
+												<div class="table-wrap">
+													<table class="table table_order">
+														<caption>Выберите кредитный пакет</caption>
+														<thead>
+															<tr>
+																<th>Пакет</th>
+																<th>Первый взнос</th>
+																<th>Количество месяцев и сумма платежа</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="bank">
+																		<span class="radio__text">Оплата частями ПАО КБ «ПриватБанк»</span>
+																	</label>
+																</td>
+																<td>
+																	0 грн. (0%)
+																</td>
+																<td>
+																	<div class="number number_small js-number" data-max-number="100">
+																		<input type="text" class="number__input" value="10">
+																		<button class="number__plus js-plus-number" type="button"></button>
+																		<button class="number__minus js-minus-number" type="button"></button>
+																	</div>
+																	<div class="price"> <sub>по</sub>
+																		117,<sup>51</sup> <sub>грн</sub>
+																	</div>
+																</td>
+															</tr>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="bank">
+																		<span class="radio__text">Супер-рассрочка АО «УкрсСибБанк»</span>
+																	</label>
+																</td>
+																<td>
+																	0 грн. (0%)
+																</td>
+																<td>
+																	<div class="number number_small js-number" data-max-number="100">
+																		<input type="text" class="number__input" value="10">
+																		<button class="number__plus js-plus-number" type="button"></button>
+																		<button class="number__minus js-minus-number" type="button"></button>
+																	</div>
+																	<div class="price"> <sub>по</sub>
+																		117,<sup>51</sup> <sub>грн</sub>
+																	</div>
+																</td>
+															</tr>
+															<tr class="js-radio-parent">
+																<td>
+																	<label class="radio radio_small" >
+																		<input class="js-radio-trigger" type="radio" name="bank">
+																		<span class="radio__text">Оплата частями ПАО «ОТП Банк»</span>
+																	</label>
+																</td>
+																<td>
+																	0 грн. (0%)
+																</td>
+																<td>
+																	<div class="number number_small js-number" data-max-number="100">
+																		<input type="text" class="number__input" value="10">
+																		<button class="number__plus js-plus-number" type="button"></button>
+																		<button class="number__minus js-minus-number" type="button"></button>
+																	</div>
+																	<div class="price"> <sub>по</sub>
+																		117,<sup>51</sup> <sub>грн</sub>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<div class="text-right">
+														<button type="button" class="btn-simple btn-simple_big">продолжить</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="btn-send-wrap">
+									<button type="button" class="btn btn_large">отправить заказ</button>
+								</div>
+							</div>
+						</div>
+						<div class="tabs-content js-tabs-content" data-id="#js-tab-quick-order">
+							<div class="col-xs-8">
+								<div class="order-group">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="title title_big title_dark title_width"><span><span>Контактные данные </span></span></div>
+										</div>
+										<div class="col-xs-6">
+											<label class="field">
+												<span class="field__title">Мы вам перезвоним для оформления вашего заказа</span>
+												<span class="field__body">
+													<input class="input" type="tel" placeholder="+380 ( ___ ) ___-___-___">
+												</span>
+											</label>
 											<label class="checkbox checkbox_small">
 												<input type="checkbox" checked>
 												<span class="checkbox__text"><em>Я хочу получать уведомления об акциях и распродажах, проводимых интернет- магазином, по электронной почте</em></span>
 											</label>
 										</div>
-										<div class="field">
+										<div class="col-xs-6">
+											<div class="field field_holder">
+												
+											</div>
+											<div class="field">
 
-											<label class="checkbox checkbox_small">
-												<input type="checkbox">
-												<span class="checkbox__text"><em>Я даю свое согласие на обработку моих персональных данных в базе персональных данных клиентов с целью предоставления мне информации о статусе заказа и/или информации о проводимых акциях/распродажах</em></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="order-group">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="title title_big title_dark title_width"><span><span>Способ доставки  </span></span></div>
-										<div class="radiobox">
-											<label class="radiobox__label" for="delivery1"></label>
-											<input type="radio" id="delivery1" name="delivery">
-											<span class="radiobox__border"></span>
-											<span class="radiobox__title">Самовывоз</span>
-											<p>Киев, ул. Булаховского 2/1</p>
-											<p>
-												Время работы: <br>
-												пн-пт  09:00–21:00 <br>
-												сб-вс  10:00–18:00
-											</p>
-										</div>
-										<div class="radiobox">
-											<label class="radiobox__label" for="delivery2"></label>
-											<input type="radio" id="delivery2" name="delivery">
-											<span class="radiobox__border"></span>
-											<span class="radiobox__title">Доставка по Киеву и области</span>
-											<p>Адресная доставка по Киеву: стандартная доставка 70 грн. По Киевской области: 200 грн.</p>
-										</div>
-										<div class="radiobox is-inactive">
-											<label class="radiobox__label" for="delivery3"></label>
-											<input type="radio" id="delivery3" name="delivery" disabled>
-											<span class="radiobox__border"></span>
-											<span class="radiobox__title">Доставка по Украине</span>
-											<p>Доставка в отделение "Новой почты". В среднем доставка занимает 1 день, во время заказа наши менеджеры согласуют с вами дату доставки перед отправкой товара.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="order-group">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="title title_big title_dark title_width"><span><span>Способ оплаты   </span></span></div>
-										<div class="wrap">
-											<div class="radiobox radiobox_tab js-radiobox-tab">
-												<label class="radiobox__label" for="payment1"></label>
-												<input type="radio" id="payment1" name="payment">
-												<span class="radiobox__border"></span>
-												<span class="radiobox__title">Наличными, при получении</span>
-											</div>
-											<div class="radiobox radiobox_tab js-radiobox-tab">
-												<label class="radiobox__label" for="payment2"></label>
-												<input type="radio" id="payment2" name="payment">
-												<span class="radiobox__border"></span>
-												<span class="radiobox__title">Карточный счет</span>
-											</div>
-											<div class="radiobox radiobox_tab js-radiobox-tab">
-												<label class="radiobox__label" for="payment3"></label>
-												<input type="radio" id="payment3" name="payment" checked>
-												<span class="radiobox__border"></span>
-												<span class="radiobox__title">Кредит</span>
-											</div>
-										</div>
-										<div class="js-radiobox-content" data-id="payment1" style="display: none;">
-											<div class="table-wrap">
-												<table class="table table_order">
-													<caption>Оплата наличными куръеру, при получении</caption>
-													<!-- <thead>
-														<tr>
-															<th>Пакет</th>
-															<th>Первый взнос</th>
-															<th>Количество месяцев и сумма платежа</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="bank">
-																	<span class="radio__text">Оплата частями ПАО КБ «ПриватБанк»</span>
-																</label>
-															</td>
-															<td>
-																0 грн. (0%)
-															</td>
-															<td>
-																<div class="number js-number" data-max-number="100">
-																	<input type="text" class="number__input" value="10">
-																	<button class="number__plus js-plus-number" type="button"></button>
-																	<button class="number__minus js-minus-number" type="button"></button>
-																</div>
-																<div class="price"> <sub>по</sub>
-																	117,<sup>51</sup> <sub>грн</sub>
-																</div>
-															</td>
-														</tr>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="bank">
-																	<span class="radio__text">Супер-рассрочка АО «УкрсСибБанк»</span>
-																</label>
-															</td>
-															<td>
-																0 грн. (0%)
-															</td>
-															<td>
-																<div class="number js-number" data-max-number="100">
-																	<input type="text" class="number__input" value="10">
-																	<button class="number__plus js-plus-number" type="button"></button>
-																	<button class="number__minus js-minus-number" type="button"></button>
-																</div>
-																<div class="price"> <sub>по</sub>
-																	117,<sup>51</sup> <sub>грн</sub>
-																</div>
-															</td>
-														</tr>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="bank">
-																	<span class="radio__text">Оплата частями ПАО «ОТП Банк»</span>
-																</label>
-															</td>
-															<td>
-																0 грн. (0%)
-															</td>
-															<td>
-																<div class="number js-number" data-max-number="100">
-																	<input type="text" class="number__input" value="10">
-																	<button class="number__plus js-plus-number" type="button"></button>
-																	<button class="number__minus js-minus-number" type="button"></button>
-																</div>
-																<div class="price"> <sub>по</sub>
-																	117,<sup>51</sup> <sub>грн</sub>
-																</div>
-															</td>
-														</tr>
-													</tbody> -->
-												</table>
-												<div class="text-right">
-													<button type="button" class="btn-simple btn-simple_big">продолжить</button>
-												</div>
-											</div>
-										</div>
-										<div class="js-radiobox-content" data-id="payment2" style="display: none;">
-											<div class="table-wrap">
-												<table class="table table_order">
-													<caption>Карточный счет</caption>
-													<thead>
-														<tr>
-															<th>Банк</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="card">
-																	<span class="radio__text">Карточный счет ПАО КБ «ПриватБанк»</span>
-																</label>
-															</td>
-															
-														</tr>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="card">
-																	<span class="radio__text">Карточный счет другого банка</span>
-																</label>
-															</td>
-															
-														</tr>
-													</tbody>
-												</table>
-												<div class="text-right">
-													<button type="button" class="btn-simple btn-simple_big">продолжить</button>
-												</div>
-											</div>
-										</div>
-										<div class="js-radiobox-content" data-id="payment3">
-											<div class="table-wrap">
-												<table class="table table_order">
-													<caption>Выберите кредитный пакет</caption>
-													<thead>
-														<tr>
-															<th>Пакет</th>
-															<th>Первый взнос</th>
-															<th>Количество месяцев и сумма платежа</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="bank">
-																	<span class="radio__text">Оплата частями ПАО КБ «ПриватБанк»</span>
-																</label>
-															</td>
-															<td>
-																0 грн. (0%)
-															</td>
-															<td>
-																<div class="number number_small js-number" data-max-number="100">
-																	<input type="text" class="number__input" value="10">
-																	<button class="number__plus js-plus-number" type="button"></button>
-																	<button class="number__minus js-minus-number" type="button"></button>
-																</div>
-																<div class="price"> <sub>по</sub>
-																	117,<sup>51</sup> <sub>грн</sub>
-																</div>
-															</td>
-														</tr>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="bank">
-																	<span class="radio__text">Супер-рассрочка АО «УкрсСибБанк»</span>
-																</label>
-															</td>
-															<td>
-																0 грн. (0%)
-															</td>
-															<td>
-																<div class="number number_small js-number" data-max-number="100">
-																	<input type="text" class="number__input" value="10">
-																	<button class="number__plus js-plus-number" type="button"></button>
-																	<button class="number__minus js-minus-number" type="button"></button>
-																</div>
-																<div class="price"> <sub>по</sub>
-																	117,<sup>51</sup> <sub>грн</sub>
-																</div>
-															</td>
-														</tr>
-														<tr class="js-radio-parent">
-															<td>
-																<label class="radio radio_small" >
-																	<input class="js-radio-trigger" type="radio" name="bank">
-																	<span class="radio__text">Оплата частями ПАО «ОТП Банк»</span>
-																</label>
-															</td>
-															<td>
-																0 грн. (0%)
-															</td>
-															<td>
-																<div class="number number_small js-number" data-max-number="100">
-																	<input type="text" class="number__input" value="10">
-																	<button class="number__plus js-plus-number" type="button"></button>
-																	<button class="number__minus js-minus-number" type="button"></button>
-																</div>
-																<div class="price"> <sub>по</sub>
-																	117,<sup>51</sup> <sub>грн</sub>
-																</div>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												<div class="text-right">
-													<button type="button" class="btn-simple btn-simple_big">продолжить</button>
-												</div>
+												<label class="checkbox checkbox_small">
+													<input type="checkbox">
+													<span class="checkbox__text"><em>Я даю свое согласие на обработку моих персональных данных в базе персональных данных клиентов с целью предоставления мне информации о статусе заказа и/или информации о проводимых акциях/распродажах</em></span>
+												</label>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							
-							<div class="btn-send-wrap">
-								<button type="button" class="btn btn_large">отправить заказ</button>
+								
+								
+								<div class="btn-send-wrap">
+									<button type="button" class="btn btn_large">отправить заказ</button>
+								</div>
+								
 							</div>
 						</div>
 						<div class="col-xs-4">

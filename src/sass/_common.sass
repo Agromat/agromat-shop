@@ -227,6 +227,11 @@ a
 .title_normal
 	font-size: 24px
 	text-transform: none
+.title_no-border
+	> span
+		&:before,
+		&:after
+			display: none
 .prod
 	display: inline-block
 	vertical-align: top
@@ -1061,6 +1066,8 @@ a
 	width: 373px
 	+arial
 	color: $dark
+	position: relative
+	z-index: 2
 	text-align: center
 	font-size: 13px
 	background: #fff 
@@ -1095,6 +1102,9 @@ a
 	&_small
 		.popup__window
 			width: 770px
+	&_smaller
+		.popup__window
+			width: 435px
 	&__overlay
 		position: fixed
 		top: 0
@@ -1140,6 +1150,13 @@ a
 	&__body
 		padding: 15px 30px 
 		+clr
+	&__form
+		padding: 30px 100px
+		+clr
+		.field
+			margin-bottom: 20px
+		.btn
+			margin-bottom: 7px
 	&__main
 		margin: 0 -14px 20px 0
 		padding-right: 15px
