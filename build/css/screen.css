@@ -3770,9 +3770,8 @@ a {
       content: " ";
       display: table;
       clear: both; }
-    .popup__form .field {
-      margin-bottom: 20px; }
     .popup__form .btn {
+      margin-top: 20px;
       margin-bottom: 7px; }
   .popup__main {
     margin: 0 -14px 20px 0;
@@ -4737,9 +4736,8 @@ a {
 
 .scroll-top {
   position: fixed;
-  top: 50%;
-  margin-top: -25px;
-  right: 24px;
+  bottom: 25px;
+  right: 25px;
   width: 50px;
   height: 50px;
   background: rgba(0, 0, 0, 0.7);
