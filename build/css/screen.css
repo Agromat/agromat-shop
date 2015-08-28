@@ -6692,12 +6692,12 @@ a.link-comment:hover {
       margin-bottom: 0; }
   .article figure {
     overflow: hidden;
-    min-width: 270px;
-    min-height: 170px;
+    width: 270px;
+    height: 170px;
     margin-bottom: 10px;
+    border: 1px solid #cdcdcd;
     text-align: center;
-    font-size: 0;
-    border: 1px solid #cdcdcd; }
+    font-size: 0; }
     .article figure:before {
       content: "";
       display: inline-block;
@@ -6713,6 +6713,7 @@ a.link-comment:hover {
     .article figure img {
       display: inline-block;
       max-width: 100%;
+      max-height: 100%;
       vertical-align: middle; }
   .article strong + ul {
     margin-top: 10px; }
