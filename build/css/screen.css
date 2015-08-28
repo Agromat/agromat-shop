@@ -2549,7 +2549,8 @@ body {
   width: 1200px !important; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #268cb6; }
 
 .wrap {
   font-size: 0;
@@ -3646,10 +3647,11 @@ a {
     -webkit-appearance: none; }
 
 .window {
-  display: inline-block;
-  vertical-align: middle;
-  width: 373px;
+  display: block;
+  margin: 50px auto;
+  width: 740px;
   font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #ddd;
   color: #333;
   position: relative;
   z-index: 2;
@@ -5571,6 +5573,10 @@ a {
   .btn-simple.is-inactive {
     color: #888;
     pointer-events: none; }
+  .btn-simple.is-no-stock {
+    color: #268cb6;
+    pointer-events: none;
+    border-color: #d1e2ea; }
   .btn-simple.is-width {
     display: block;
     width: 100%;

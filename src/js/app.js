@@ -60,13 +60,13 @@ $(document).ready( function() {
         }
     );
     $(".js-subnav").hover( function(){
-            var index = +$(this).index()-1;
+            var index = +$(this).attr("data-index")-1;
             $(this).addClass("is-visible");
             $(".js-nav li").eq(index).addClass("is-open");
             $(".js-overlay").addClass("is-visible");
         },
         function(){
-            var index = +$(this).index()-1;
+            var index = +$(this).attr("data-index")-1;
             $(this).removeClass("is-visible");
             $(".js-nav li").eq(index).removeClass("is-open");
             $(".js-overlay").removeClass("is-visible");
