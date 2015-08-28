@@ -1191,6 +1191,17 @@ a
 		.popup__close
 			right: -15px
 			top: -10px
+	.meta
+		a
+			color: $gray
+			&:hover
+				color: $blue
+		+ .btn
+			margin-top: 5px
+	.link-action
+		margin-bottom: 13px
+	.soc-enter
+		margin-top: 10px
 .img-slider
 	visibility: hidden
 	height: 470px
@@ -1297,3 +1308,35 @@ a
 		top: 5px
 		right: 15px
 		bottom: auto 
+		
+
+.link-action
+	display: inline-block
+	border-bottom: 1px dashed 
+	font-size: 14px
+	+med
+	text-transform: uppercase
+	color: $blue 
+	line-height: 1.4
+	letter-spacing: 1px 
+
+.soc-enter
+	text-align: center
+	a
+		display: inline-block
+		margin-left: 13px
+		border: 2px solid #dedede
+		color: #000
+		font-size: 14px 
+		width: 40px
+		height: 40px
+		text-align: center
+		line-height: 38px
+		+tr(border .3s)
+		&:first-child
+			margin-left: 0
+		&:hover
+			border-color: $blue 
+	i
+		vertical-align: middle
+		

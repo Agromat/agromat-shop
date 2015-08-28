@@ -3807,6 +3807,16 @@ a {
     .popup .total .popup__close {
       right: -15px;
       top: -10px; }
+  .popup .meta a {
+    color: #888; }
+    .popup .meta a:hover {
+      color: #268cb6; }
+  .popup .meta + .btn {
+    margin-top: 5px; }
+  .popup .link-action {
+    margin-bottom: 13px; }
+  .popup .soc-enter {
+    margin-top: 10px; }
 
 .img-slider {
   visibility: hidden;
@@ -3921,6 +3931,37 @@ a {
     top: 5px;
     right: 15px;
     bottom: auto; }
+
+.link-action {
+  display: inline-block;
+  border-bottom: 1px dashed;
+  font-size: 14px;
+  font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #268cb6;
+  line-height: 1.4;
+  letter-spacing: 1px; }
+
+.soc-enter {
+  text-align: center; }
+  .soc-enter a {
+    display: inline-block;
+    margin-left: 13px;
+    border: 2px solid #dedede;
+    color: #000;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    -webkit-transition: border .3s;
+    transition: border .3s; }
+    .soc-enter a:first-child {
+      margin-left: 0; }
+    .soc-enter a:hover {
+      border-color: #268cb6; }
+  .soc-enter i {
+    vertical-align: middle; }
 
 .slick-slider {
   position: relative;
