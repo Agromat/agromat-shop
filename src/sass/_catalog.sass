@@ -1129,17 +1129,20 @@ a.link-comment
 		overflow: hidden
 		.slick-slider
 			margin-right: -28px 
-
-		img
-			border: 1px solid $border_d
-			max-width: 200%
-			height: 100%
 		.slick-slide
 			height: 70px
 			cursor: pointer
-			
-		.slick-current
+			> div
+				width: 70px
+				border: 1px solid $border_d
+				height: 70px
+				overflow: hidden
+				+vertical
 			img
+				display: inline-block
+				vertical-align: middle
+		.slick-current
+			div
 				border-color: $blue
 				border-width: 3px
 				

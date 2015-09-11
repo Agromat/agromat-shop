@@ -66,6 +66,10 @@ gulp.task('clean', function (cb) {
 });
 
 
+gulp.task('copycss', function() {
+    gulp.src(path.src.css)
+    .pipe(gulp.dest(path.build.css + 'css'));
+})
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
@@ -178,4 +182,4 @@ gulp.task('watch', function(){
 });
 
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['build', 'webserver', 'watch', 'copycss']);

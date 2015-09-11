@@ -10,33 +10,44 @@
   At the bottom of this section, we provide information about the spritesheet itself
   $spritesheet: width height image $spritesheet-sprites
   */
+$check-name: 'check'
+$check-x: 0px
+$check-y: 0px
+$check-offset-x: 0px
+$check-offset-y: 0px
+$check-width: 89px
+$check-height: 76px
+$check-total-width: 89px
+$check-total-height: 86px
+$check-image: 'sprite.png'
+$check: 0px 0px 0px 0px 89px 76px 89px 86px 'sprite.png' 'check'
 $codedby-name: 'codedby'
 $codedby-x: 0px
-$codedby-y: 5px
+$codedby-y: 81px
 $codedby-offset-x: 0px
-$codedby-offset-y: -5px
+$codedby-offset-y: -81px
 $codedby-width: 47px
 $codedby-height: 5px
-$codedby-total-width: 49px
-$codedby-total-height: 10px
+$codedby-total-width: 89px
+$codedby-total-height: 86px
 $codedby-image: 'sprite.png'
-$codedby: 0px 5px 0px -5px 47px 5px 49px 10px 'sprite.png' 'codedby'
+$codedby: 0px 81px 0px -81px 47px 5px 89px 86px 'sprite.png' 'codedby'
 $coderiver-name: 'coderiver'
 $coderiver-x: 0px
-$coderiver-y: 0px
+$coderiver-y: 76px
 $coderiver-offset-x: 0px
-$coderiver-offset-y: 0px
+$coderiver-offset-y: -76px
 $coderiver-width: 49px
 $coderiver-height: 5px
-$coderiver-total-width: 49px
-$coderiver-total-height: 10px
+$coderiver-total-width: 89px
+$coderiver-total-height: 86px
 $coderiver-image: 'sprite.png'
-$coderiver: 0px 0px 0px 0px 49px 5px 49px 10px 'sprite.png' 'coderiver'
-$spritesheet-width: 49px
-$spritesheet-height: 10px
+$coderiver: 0px 76px 0px -76px 49px 5px 89px 86px 'sprite.png' 'coderiver'
+$spritesheet-width: 89px
+$spritesheet-height: 86px
 $spritesheet-image: 'sprite.png'
-$spritesheet-sprites: $codedby $coderiver
-$spritesheet: 49px 10px 'sprite.png' $spritesheet-sprites
+$spritesheet-sprites: $check $codedby $coderiver
+$spritesheet: 89px 86px 'sprite.png' $spritesheet-sprites
 
 /*
   The provided mixins are intended to be used with the array-like variables

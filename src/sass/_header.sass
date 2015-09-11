@@ -1,4 +1,9 @@
 .has-fixed-header
+	&.page-error
+		.out
+			margin-top: 65px
+	.out
+		padding-top: 146px
 	.header
 		position: fixed
 		top: 0
@@ -27,7 +32,19 @@
 		.compare
 			display: block
 	.nav-wrap
-		margin-top: 114px
+		position: fixed
+		top: 65px
+		left: 0
+		right: 0
+		z-index: 10
+		background: #fff 
+		border-bottom: 1px solid #000
+		&__in
+			border: 0
+	.nav
+		font-size: 18px
+		line-height: 38px
+		height: 38px
 .tooper
 	background: #000
 	height: 30px
@@ -70,7 +87,7 @@
 		display: block
 		background: #1a1a1a 
 .header
-	+tr(background .3s)
+	//+tr(background .3s)
 	&__in
 		border-bottom: 3px solid #000 
 	.row_table
@@ -331,7 +348,9 @@
 .nav-wrap
 	position: relative
 	margin-bottom: 13px
-	border-bottom: 1px solid #000 
+	&__in
+		border-bottom: 1px solid #000 
+		position: relative
 .nav
 	display: table
 	width: 100%
