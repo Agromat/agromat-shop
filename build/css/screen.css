@@ -2649,6 +2649,11 @@ body {
   color: #333;
   font-family: Arial, Helvetica, sans-serif; }
 
+.container {
+  min-width: auto !important;
+  width: 100% !important;
+  max-width: 1200px !important; }
+
 a {
   text-decoration: none;
   color: #268cb6; }
