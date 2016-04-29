@@ -4435,9 +4435,6 @@ a {
   display: block;
   margin: 13px 0 0;
   width: 80%; }
-  @media screen and (max-width: 1200px) {
-    .logo {
-      margin: 0; } }
   .logo img {
     display: block;
     width: 100%; }
@@ -4893,15 +4890,24 @@ a {
 
 .footer {
   margin: 50px 0 0; }
+  @media screen and (max-width: 1024px) {
+    .footer {
+      margin: 0; } }
   .footer__in {
     position: relative;
     border-top: 3px solid #000; }
+    @media screen and (max-width: 1024px) {
+      .footer__in {
+        border-top: 0; } }
   .footer .soc {
     margin-top: 33px; }
 
 .footer__top {
   padding: 52px 0 28px;
   position: relative; }
+  @media screen and (max-width: 1024px) {
+    .footer__top {
+      padding-bottom: 0; } }
   .footer__top:before {
     content: "";
     position: absolute;
@@ -4911,6 +4917,9 @@ a {
     height: 5px;
     width: 30px;
     background: #fff; }
+    @media screen and (max-width: 1024px) {
+      .footer__top:before {
+        display: none; } }
   .footer__top:after {
     content: "";
     position: absolute;
@@ -4923,9 +4932,15 @@ a {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
+    @media screen and (max-width: 1024px) {
+      .footer__top:after {
+        display: none; } }
 
 .catalog-list + .seo {
   margin-top: 65px; }
+  @media screen and (max-width: 1024px) {
+    .catalog-list + .seo {
+      display: none; } }
 
 .catalog-list .row > div {
   position: relative;
@@ -4940,6 +4955,24 @@ a {
   .catalog-list .list + .list {
     margin-top: 22px; }
 
+.shop-info {
+  display: none;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  padding: 18px 0 18px; }
+  .shop-info p {
+    color: #6e6e6e;
+    font-size: 12px; }
+  @media screen and (max-width: 1024px) {
+    .shop-info {
+      display: block;
+      -webkit-column-gap: 30px;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
+
 .catalog-list_visible-tab {
   display: none; }
   .catalog-list_visible-tab a {
@@ -4948,15 +4981,56 @@ a {
     .catalog-list_visible-tab {
       display: block; } }
 
+.footer__middle {
+  display: none;
+  line-height: 1;
+  padding: 20px 0 23px; }
+  @media screen and (max-width: 1024px) {
+    .footer__middle {
+      display: block; } }
+
+.footer__nav {
+  text-align: right; }
+
+.footer__nav-link {
+  margin: 0 16px;
+  text-decoration: underline; }
+  .footer__nav-link:hover {
+    text-decoration: none; }
+
+.footer-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: underline; }
+
+.footer__schedule {
+  color: #000; }
+  .footer__schedule span {
+    color: #888;
+    padding-right: 6px; }
+  .footer__schedule li {
+    margin-bottom: 6px; }
+    .footer__schedule li:last-child {
+      margin-bottom: 0; }
+
 .footer__bottom {
   position: relative;
   border-top: 1px solid #dcecf2;
   padding: 28px 0 15px; }
+  @media screen and (max-width: 1024px) {
+    .footer__bottom {
+      border-top: 0;
+      border-bottom: 1px solid #fff;
+      background-color: #000;
+      padding: 22px 0; } }
   .footer__bottom:before, .footer__bottom:after {
     content: "";
     position: absolute;
     top: 0;
     left: 50%; }
+    @media screen and (max-width: 1024px) {
+      .footer__bottom:before, .footer__bottom:after {
+        display: none; } }
   .footer__bottom:before {
     top: -2px;
     height: 4px;
@@ -5008,6 +5082,11 @@ a {
     color: #fff;
     font-size: 14px;
     vertical-align: middle; }
+
+.copyright {
+  color: #fff;
+  font-size: 11px;
+  padding-top: 2px; }
 
 .scroll-top {
   position: fixed;
@@ -6378,6 +6457,12 @@ a {
       border: 1px solid transparent; }
   .items-slider .item__action {
     border-bottom: 0; }
+    @media screen and (max-width: 1024px) {
+      .items-slider .item__action .price {
+        margin-left: 0; } }
+    @media screen and (max-width: 1024px) {
+      .items-slider .item__action .price_old {
+        display: none; } }
   .items-slider .slick-slider {
     padding: 0 50px; }
   .items-slider .slick-list {
