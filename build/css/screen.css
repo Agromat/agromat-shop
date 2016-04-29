@@ -4408,8 +4408,10 @@ a {
 
 .header .contact {
   float: left;
-  margin-top: 7px;
-  max-width: 45%; }
+  margin-top: 7px; }
+  @media screen and (max-width: 1024px) {
+    .header .contact {
+      max-width: none; } }
 
 .header .shedule {
   float: right;
@@ -4433,6 +4435,9 @@ a {
   display: block;
   margin: 13px 0 0;
   width: 80%; }
+  @media screen and (max-width: 1200px) {
+    .logo {
+      margin: 0; } }
   .logo img {
     display: block;
     width: 100%; }
@@ -4934,6 +4939,14 @@ a {
   padding-left: 15px; }
   .catalog-list .list + .list {
     margin-top: 22px; }
+
+.catalog-list_visible-tab {
+  display: none; }
+  .catalog-list_visible-tab a {
+    width: 100%; }
+  @media screen and (max-width: 1024px) {
+    .catalog-list_visible-tab {
+      display: block; } }
 
 .footer__bottom {
   position: relative;
