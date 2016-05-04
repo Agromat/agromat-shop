@@ -1411,5 +1411,27 @@ a
 	z-index: 800
 	transform: rotateY(-180deg)
 
-
-		
+.category-mob
+	position: relative
+.category-mob__list
+	border: 1px solid #cdcdcd
+.category-mob__list-item
+	border-bottom: 1px solid #cdcdcd
+	&:last-child
+		border-bottom: 0
+.category-mob__link
+	display: block
+	color: #3a3a3a
+	padding: 10px 22px
+	background-color: #f6f6f6
+	position: relative
+	&.is-active
+		background-color: $blue 
+		color: #fff
+		.fa
+			transform: translateY(-50%) rotate(180deg)
+	.fa
+		position: absolute
+		right: 12px
+		top: 50%
+		transform: translateY(-50%) rotate(0deg)
