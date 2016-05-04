@@ -53,6 +53,8 @@
 	color: #fff 
 	overflow: hidden
 	+arial
+	+r(767)
+		display: none
 	a
 		display: inline-block
 		color: #fff 
@@ -88,6 +90,8 @@
 		background: #1a1a1a 
 .header
 	//+tr(background .3s)
+	+r(767)
+		display: none
 	&__in
 		border-bottom: 3px solid #000 
 	.row_table
@@ -99,7 +103,6 @@
 		margin-top: 7px
 		+r(1024)
 			max-width: none
-		
 	.shedule
 		float: right
 		max-width: 40%
@@ -115,6 +118,40 @@
 			box-shadow: 0 9px 9px rgba(#000,.3) 
 	.compare-btn
 		height: 62px
+.header-mob
+	position: relative
+	border-bottom: 1px solid #000
+	+rmin(768)
+		display: none
+	.btn-menu-mob
+		float: left
+		margin: 3px 0
+	.cart
+		float: right
+		max-width: 39px
+		height: 24px
+		padding: 0 4px
+	.cart__details 
+		.fa
+			margin-right: 5px
+	.logo-mob
+		overflow: hidden
+		text-align: center
+		padding-top: 4px
+		img
+			max-width: 100%
+			height: auto
+.header-mob__in
+	padding: 9px 0
+.tmobile
+	position: relative
+	text-align: center
+	+rmin(768)
+		display: none
+	&__in
+		padding: 10px 0
+.slider-mob
+	margin-top: 10px
 .logo
 	display: block
 	margin: 13px 0 0 
@@ -136,6 +173,14 @@
 		top: 6px
 		font-size: 12px
 		+fa-icon
+	&_mob
+		display: inline-block
+		&:before
+			top: 2px
+			font-size: 14px
+		.contact__tel
+			line-height: 1
+			margin: 0
 	.btn-action
 		position: relative
 		z-index: 6
@@ -222,7 +267,17 @@
 .search
 	position: relative
 	z-index: 4
-	margin: 15px 0 0 
+	margin: 15px 0 0
+	&_mob
+		margin: 6px 0 0
+		.search__btn
+			left: auto
+			right: 0
+			background-color: $blue
+			color: #fff
+		.search__input
+			height: 30px
+			padding: 0 40px 0 10px 
 	&.is-active
 		.search__drop
 			opacity: 1
@@ -241,7 +296,9 @@
 	&:focus
 		border-color: $blue 
 		+ .search__btn
-			color: $blue 
+			color: $blue
+			+r(768)
+				color: #FFF 
 .search__btn
 	position: absolute
 	left: 0
@@ -259,6 +316,10 @@
 		left: 15px
 		top: 8px
 		+fa-icon
+		+r(768)
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
 .search__drop
 	opacity: 0
 	visibility: hidden

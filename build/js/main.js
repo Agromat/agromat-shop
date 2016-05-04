@@ -84,7 +84,7 @@ $(document).ready( function() {
     // });
     function fixHeader() {
         var win = $(window).width();
-        
+
         if(win > 1024) {
             var scroll = $(document).scrollTop();
             var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();
@@ -346,6 +346,14 @@ $(document).ready( function() {
         dots: false,
         arrows: true,
         adaptiveHeight: false
+    });
+    $('.js-slider-mob').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        adaptiveHeight: true
     });
 
     $(".js-scroll-top").on("click", function(){
