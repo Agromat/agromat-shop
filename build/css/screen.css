@@ -5014,10 +5014,19 @@ a {
   .footer__nav-link:hover {
     text-decoration: none; }
 
+.footer-link__wrp {
+  text-align: right; }
+  @media screen and (max-width: 767px) {
+    .footer-link__wrp {
+      text-align: center; } }
+
 .footer-link {
   display: inline-block;
   color: #fff;
   text-decoration: underline; }
+  @media screen and (max-width: 767px) {
+    .footer-link {
+      margin-top: 10px; } }
 
 .footer__schedule {
   color: #000; }
@@ -5098,6 +5107,10 @@ a {
     color: #fff;
     font-size: 14px;
     vertical-align: middle; }
+
+@media screen and (max-width: 767px) {
+  .copyright-wrp {
+    text-align: center; } }
 
 .copyright {
   color: #fff;
