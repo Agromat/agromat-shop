@@ -22,13 +22,17 @@ $(document).ready( function() {
     //     scrollFixedElements()
     // });
     function fixHeader() {
-        var scroll = $(document).scrollTop();
-        var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();
-        if (scroll >= top) {
-            $("body").addClass("has-fixed-header");
-        }
-        else {
-             $("body").removeClass("has-fixed-header");
+        var win = $(window).width();
+        
+        if(win > 1024) {
+            var scroll = $(document).scrollTop();
+            var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();
+            if (scroll >= top) {
+                $("body").addClass("has-fixed-header");
+            }
+            else {
+                 $("body").removeClass("has-fixed-header");
+            }
         }
     }
     fixHeader();

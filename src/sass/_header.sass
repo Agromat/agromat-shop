@@ -119,6 +119,8 @@
 	display: block
 	margin: 13px 0 0 
 	width: 80%
+	+rmin(1025)
+		max-width: 216px
 	img
 		display: block
 		width: 100%
@@ -350,6 +352,7 @@
 .nav-wrap
 	position: relative
 	margin-bottom: 13px
+	font-size: 0
 	&__in
 		border-bottom: 1px solid #000 
 		position: relative
@@ -357,17 +360,29 @@
 	display: table
 	width: 100%
 	table-layout: fixed
-	font-size: 20px
+	font-size: 0
 	text-transform: uppercase
 	+med
 	height: 48px
 	line-height: 48px
 	color: #000
 	text-align: center
+	+r(1024)
+		display: block
+		height: auto
+		// line-height: 48px 
 	li
 		display: table-cell
 		position: relative
 		vertical-align: top
+		font-size: 20px
+		&.no-bulit-tablet
+			&:before
+				+r(1024)
+					display: none
+		+r(1024)
+			display: inline-block
+			width: 25%
 		&:before
 			content: ""
 			position: absolute
