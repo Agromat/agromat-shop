@@ -570,4 +570,13 @@ $(document).ready( function() {
         }
     });
 
+    //mobile-menu
+    $('.js-btn-menu-mob').click(function() {
+        var nav  = $('.navigation'),
+            that = $(this);
+
+        that.toggleClass('is-open');
+        nav.toggleClass('is-visible');
+    });
+
 });
