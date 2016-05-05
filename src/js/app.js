@@ -228,7 +228,17 @@ $(document).ready( function() {
         slidesToScroll: 4,
         dots: false,
         arrows: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                },
+            }
+        ],
     });
     $(".js-slider-five").slick({
         infinite: true,

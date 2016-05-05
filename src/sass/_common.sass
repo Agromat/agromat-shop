@@ -164,13 +164,16 @@ a
 	+med
 	line-height: 1.5
 	letter-spacing: 1px 
-	color: #000 
+	color: #000
 	+ .row
 		margin-top: 30px
 	> span
 		display: inline-block
 		position: relative
 		padding: 0 6px
+		+r(767)
+			display: block
+			text-align: left
 		&:before,
 		&:after
 			content: ""
@@ -179,6 +182,8 @@ a
 			width: 600px
 			height: 1px
 			background: #ededed
+			+r(767)
+				display: none
 		&:before
 			left: -600px
 		&:after
@@ -197,6 +202,8 @@ a
 				height: 4px
 				+rotate(45deg)
 				background: $blue-l 
+				+r(767)
+					display: none
 			&:before
 				left: 0
 			&:after
@@ -220,8 +227,12 @@ a
 .title_width
 	> span
 		padding: 0 15px
+		+r(767)
+			padding: 0
 		span
 			padding: 0 12px 
+			+r(767)
+				padding: 0
 
 .title_dark
 	span
@@ -1413,6 +1424,9 @@ a
 
 .category-mob
 	position: relative
+	display: none
+	+r(767)
+		display: block
 .category-mob__list
 	border-left: 1px solid #cdcdcd
 	border-right: 1px solid #cdcdcd
