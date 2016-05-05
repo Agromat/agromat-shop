@@ -570,6 +570,31 @@ $(document).ready( function() {
         }
     });
 
+    $('.js-clicker').click(function(e) {
+        e.preventDefault();
+
+        var that = $(this);
+        var el = that.parent('.navigation__item');
+        var trigger = $('.js-clicker');
+        var item = $('.navigation__item');
+        var inner = $('.navigation__i');
+
+        if(!el.hasClass('is-dropdown')) {
+            item.removeClass('is-dropdown');
+            trigger.removeClass('is-active');
+            el.addClass('is-dropdown');
+            that.addClass('is-active');
+        }
+        else if(el.hasClass('is-dropdown')) {
+            el.removeClass('is-dropdown');
+            that.removeClass('is-active');
+        }
+        else {
+            item.removeClass('is-dropdown');
+            trigger.removeClass('is-active');
+        }
+    });
+
     //mobile-menu
     $('.js-btn-menu-mob').click(function() {
         var nav  = $('.navigation'),

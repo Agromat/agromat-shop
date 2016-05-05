@@ -5120,20 +5120,15 @@ a {
     display: block; }
 
 .navigation__item {
-  border-bottom: 1px solid #cdcdcd;
   position: relative;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
-  .navigation__item.is-active, .navigation__item:hover {
+  border-bottom: 1px solid #cdcdcd; }
+  .navigation__item.is-active .navigation__link, .navigation__item:hover .navigation__link {
+    color: #fff;
     background-color: #268cb6; }
-    .navigation__item.is-active .navigation__link, .navigation__item:hover .navigation__link {
-      color: #fff; }
-    .navigation__item.is-active .fa, .navigation__item:hover .fa {
-      color: #fff; }
-  .navigation__item.is-active .fa {
-    -webkit-transform: translateY(-50%) rotate(90deg);
-    -ms-transform: translateY(-50%) rotate(90deg);
-    transform: translateY(-50%) rotate(90deg); }
+  .navigation__item.is-active .fa, .navigation__item:hover .fa {
+    color: #fff; }
+  .navigation__item.is-dropdown .navigation__i {
+    display: block; }
   .navigation__item .fa {
     position: absolute;
     top: 50%;
@@ -5154,8 +5149,26 @@ a {
   color: #3a3a3a;
   display: block;
   cursor: pointer;
+  position: relative;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
+  .navigation__link.is-active {
+    background-color: #268cb6;
+    color: #fff; }
+    .navigation__link.is-active .fa {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg); }
+
+.navigation__i {
+  display: none; }
+
+.navigation__i-item {
+  border-top: 1px solid #cdcdcd; }
+
+.navigation__i-link {
+  padding: 8px 30px 8px 47px;
+  display: block; }
 
 .footer {
   margin: 50px 0 0; }
@@ -5398,8 +5411,9 @@ a {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   display: none; }
-  .scroll-top.is-visible {
-    display: block; }
+  @media screen and (min-width: 768px) {
+    .scroll-top.is-visible {
+      display: block; } }
   .scroll-top:hover {
     background: #000; }
   .scroll-top span {
