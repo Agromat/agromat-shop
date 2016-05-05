@@ -5086,6 +5086,43 @@ a {
 .header_order .shedule {
   margin-top: 0; }
 
+.navigation {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 1px; }
+  @media screen and (max-width: 767px) {
+    .navigation {
+      display: block; } }
+
+.navigation__item {
+  border-bottom: 1px solid #cdcdcd;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+  .navigation__item.is-active, .navigation__item:hover {
+    background-color: #268cb6; }
+    .navigation__item.is-active .navigation__link, .navigation__item:hover .navigation__link {
+      color: #fff; }
+
+.navigation__title {
+  border-bottom: 1px solid #cdcdcd;
+  padding: 6px 18px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-color: #F6F6F6; }
+
+.navigation__link {
+  padding: 8px 30px;
+  color: #3a3a3a;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
 .footer {
   margin: 50px 0 0; }
   @media screen and (max-width: 1024px) {

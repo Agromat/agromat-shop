@@ -605,7 +605,36 @@
 	.shedule
 		margin-top: 0
 
-
-
+.navigation
+	display: none
+	position: absolute
+	background-color: #fff 
+	top: 100%
+	left: 0
+	right: 0
+	z-index: 10
+	margin-top: 1px
+	+r(767)
+		display: block
+.navigation__item
+	border-bottom: 1px solid #cdcdcd
+	+tr(background-color 0.2s)
+	&.is-active,
+	&:hover
+		background-color: $blue
+		.navigation__link
+			color: #fff
+.navigation__title
+	border-bottom: 1px solid #cdcdcd
+	padding: 6px 18px
+	text-transform: uppercase
+	font-size: 11px
+	background-color: #F6F6F6 
+.navigation__link
+	padding: 8px 30px
+	color: #3a3a3a
+	display: block
+	cursor: pointer
+	+tr(all 0.2s)
 
 
