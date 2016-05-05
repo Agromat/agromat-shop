@@ -1414,24 +1414,46 @@ a
 .category-mob
 	position: relative
 .category-mob__list
-	border: 1px solid #cdcdcd
-.category-mob__list-item
+	border-left: 1px solid #cdcdcd
+	border-right: 1px solid #cdcdcd
 	border-bottom: 1px solid #cdcdcd
-	&:last-child
-		border-bottom: 0
+	a
+		border-top: 1px solid #cdcdcd
+.category-mob__list-item
+	&.is-dropdown
+		.category-mob__i
+			display: block
 .category-mob__link
-	display: block
 	color: #3a3a3a
-	padding: 10px 22px
 	background-color: #f6f6f6
 	position: relative
+	display: block
+	padding: 10px 22px
 	&.is-active
 		background-color: $blue 
 		color: #fff
 		.fa
 			transform: translateY(-50%) rotate(180deg)
+			color: #fff
 	.fa
 		position: absolute
 		right: 12px
 		top: 50%
 		transform: translateY(-50%) rotate(0deg)
+		color: #3a3a3a
+		font-size: 9px
+.category-mob__i
+	display: none
+.category-mob__i-item
+	position: relative
+	.fa
+		position: absolute
+		left: 22px
+		top: 50%
+		transform: translateY(-50%)
+.category-mob__i-link
+	color: $blue
+	background-color: #FFF 
+	display: block
+	padding: 10px 22px 10px 37px
+

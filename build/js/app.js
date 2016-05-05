@@ -473,4 +473,30 @@ $(document).ready( function() {
         return false;
     });
 
+    //dropdown
+    $('.js-trigger').click(function(e) {
+        e.preventDefault();
+
+        var that = $(this);
+        var el = that.parent('.category-mob__list-item');
+        var trigger = $('.js-trigger');
+        var item = $('.category-mob__list-item');
+        var inner = $('.category-mob__i');
+
+        if(!el.hasClass('is-dropdown')) {
+            item.removeClass('is-dropdown');
+            trigger.removeClass('is-active');
+            el.addClass('is-dropdown');
+            that.addClass('is-active');
+        }
+        else if(el.hasClass('is-dropdown')) {
+            el.removeClass('is-dropdown');
+            that.removeClass('is-active');
+        }
+        else {
+            item.removeClass('is-dropdown');
+            trigger.removeClass('is-active');
+        }
+    });
+
 });
