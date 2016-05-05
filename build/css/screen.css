@@ -6679,6 +6679,9 @@ a {
   width: 170px; }
   .item_small .item__head {
     height: 55px; }
+    @media screen and (max-width: 767px) {
+      .item_small .item__head {
+        height: 36px; } }
   .item_small .item__title {
     font-size: 15px;
     line-height: 1.25; }
@@ -6751,6 +6754,9 @@ a {
     z-index: 1;
     padding-top: 10px;
     margin-bottom: 0; }
+    @media screen and (max-width: 767px) {
+      .items-slider .item_small {
+        padding-top: 0; } }
     .items-slider .item_small:hover:after {
       border-color: #268cb6; }
     .items-slider .item_small:hover .item__title {
