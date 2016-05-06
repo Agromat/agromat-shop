@@ -236,7 +236,34 @@
 		font-style: italic 
 	.btn
 		width: 100px
-	
+.contact__popup-inner
+	margin: auto
+	max-width: 233px
+.contact__popup_mobile
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 999
+	width: 100%
+	min-height: 493px
+	.btn
+		width: 100%
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			z-index: 1
+			border: 1px solid rgba(255, 255, 255, 0.5)
+			left: 6px
+			right: 6px
+			top: 4px
+			bottom: 4px
+	.logo-mob
+		margin-top: 22px
+	.title
+		margin-top: 67px
 .contact__form
 	.field
 		float: left

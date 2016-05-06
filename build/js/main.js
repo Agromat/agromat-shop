@@ -604,4 +604,13 @@ $(document).ready( function() {
         nav.toggleClass('is-visible');
     });
 
+    //popup 
+    $('.js-open-popup').click(function(e) {
+        e.preventDefault();
+        
+        var link  = $(this).data('link'),
+            popup = $('.js-mob-popup[data-popup="' + link + '"]');
+
+        popup.addClass('is-active');
+    });
 });
