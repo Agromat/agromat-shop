@@ -4710,7 +4710,8 @@ a {
   right: 0;
   z-index: 999;
   width: 100%;
-  min-height: 493px; }
+  min-height: 493px;
+  margin: auto; }
   .contact__popup_mobile .btn {
     width: 100%;
     position: relative; }
