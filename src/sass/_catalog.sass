@@ -3,6 +3,10 @@
 	display: table-cell
 	vertical-align: top
 	padding-left: 30px
+	+r(1270)
+		float: left
+		width: 79.65811965811966% 
+		display: block
 	&__in
 		position: relative
 		padding-left: 53px
@@ -544,11 +548,16 @@
 		border-bottom: 1px solid $border-d
 		width: 100%
 		table-layout: fixed
+		+r(1270)
+			display: block
 	&__price
 		display: table-cell
 		vertical-align: middle
 		padding: 7px 5px 7px 0
 		width: 50%
+		+r(1270)
+			display: inline-block
+			width: 33.3333% !important
 		.btn
 			margin-bottom: 6px
 	.badge
@@ -593,6 +602,8 @@
 	margin-bottom: 47px
 	min-height: 212px
 	height: auto
+	+r(1270)
+		padding: 30px 30px 0 0
 	&:hover
 		&:before
 			box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
@@ -610,6 +621,9 @@
 		visibility: visible
 		box-shadow: none 
 		//+tr(box-shadow .2s)
+		+r(1270)
+			top: 0
+			right: 0
 	.item__img
 		overflow: visible
 	.item__media
@@ -640,9 +654,21 @@
 		width: auto
 		padding-top: 0
 		padding-bottom: 0
+	.item__links
+		+r(1270)
+			width: 100%
+			display: block
+			text-align: right
+			li
+				display: inline-block
+				margin-right: 20px
+				&:last-child
+					margin-right: 0
 	.item__cell
 		display: inline-block
 		padding-left: 17px
+		+r(1270)
+			width: 33.3333%
 	.price
 		display: block
 		margin-left: 10px
@@ -653,8 +679,11 @@
 		display: inline-block
 	.btn
 		min-width: 170px
-		+r(1200)
-			min-width: 100px
+		// +r(1200)
+		// 	min-width: 100px
+		+r(1270)
+			min-width: auto
+			width: 100%
 	
 	.badge
 		left: 26px
@@ -677,7 +706,7 @@
 .items-wrap
 	font-size: 0
 	padding: 0 3px 
-	margin: 0 -15px 0 0
+	// margin: 0 -15px 0 0
 	&_five-items
 		margin-bottom: 20px
 		.row
@@ -721,7 +750,7 @@
 	margin: 55px 0 20px
 	+r(768)
 		margin-bottom: 0
-		margin-top: 0
+		margin-top: 27px
 	.btn-simple
 		min-width: 130px
 	.post-item_small
