@@ -6816,6 +6816,10 @@ a {
   position: relative;
   overflow: hidden;
   margin: 55px 0 20px; }
+  @media screen and (max-width: 768px) {
+    .items-slider {
+      margin-bottom: 0;
+      margin-top: 0; } }
   .items-slider .btn-simple {
     min-width: 130px; }
   .items-slider .post-item_small {
