@@ -237,17 +237,20 @@
 	.btn
 		width: 100px
 .contact__popup-inner
-	margin: auto
+	width: 100%
 	max-width: 233px
+	display: inline-block
+	vertical-align: middle
 .contact__popup_mobile
 	position: fixed
 	top: 0
 	left: 0
 	right: 0
+	bottom: 0
 	z-index: 999
+	+vertical
+	margin: 0
 	width: 100%
-	min-height: 493px
-	margin: auto
 	.btn
 		width: 100%
 		position: relative
@@ -269,8 +272,13 @@
 	.field
 		float: left
 		width: 232px
+		+r(768)
+			float: none
 	.btn
 		float: right
+		+r(768)
+			float: none
+			padding: 14px 10px
 .shedule
 	position: relative
 	font-size: 12px

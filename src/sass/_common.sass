@@ -91,7 +91,9 @@ body
 a
 	text-decoration: none 
 	color: $blue 
-// common blocks      
+// common blocks
+.out
+	min-width: 300px
 .wrap
 	font-size: 0
 	+clr
@@ -1148,8 +1150,8 @@ a
 	right: 0
 	bottom: 0
 	left: 0
-	padding: 40px 
-	z-index: 11
+	padding: 20px 
+	z-index: 999
 	overflow-y: auto
 	overflow-x: hidden
 	+vertical
@@ -1162,6 +1164,8 @@ a
 	&_smaller
 		.popup__window
 			width: 435px
+			+r(768)
+				width: 100%
 	&__overlay
 		position: fixed
 		top: 0
@@ -1169,6 +1173,8 @@ a
 		bottom: 0
 		left: 0
 		background: rgba(#000,.7) 
+		+r(768)
+			background-color: #FFF 
 	&__window
 		position: relative
 		display: inline-block
@@ -1196,8 +1202,11 @@ a
 		height: 30px
 		background: none
 		font-size: 14px
-		color: #999 
+		color: #999
+		z-index: 1
 		+tr(color .3s)
+		+r(768)
+			display: none
 		&:hover
 			color: #000
 		&:before
@@ -1210,9 +1219,25 @@ a
 	&__form
 		padding: 30px 100px
 		+clr
+		+r(768)
+			padding: 0
+			max-width: 233px
+			margin: auto 
 		.btn
 			margin-top: 20px
 			margin-bottom: 7px
+		.logo-mob
+			display: none
+		+r(768)
+			.logo-mob
+				display: block
+				text-align: center
+			.title
+				margin-top: 48px
+				text-align: center
+				span
+					display: inline-block
+
 	&__main
 		margin: 0 -14px 20px 0
 		padding-right: 15px

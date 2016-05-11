@@ -2658,6 +2658,9 @@ a {
   text-decoration: none;
   color: #268cb6; }
 
+.out {
+  min-width: 300px; }
+
 .wrap {
   font-size: 0;
   *zoom: 1; }
@@ -3859,8 +3862,8 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 40px;
-  z-index: 11;
+  padding: 20px;
+  z-index: 999;
   overflow-y: auto;
   overflow-x: hidden;
   text-align: center;
@@ -3877,6 +3880,9 @@ a {
     width: 770px; }
   .popup_smaller .popup__window {
     width: 435px; }
+    @media screen and (max-width: 768px) {
+      .popup_smaller .popup__window {
+        width: 100%; } }
   .popup__overlay {
     position: fixed;
     top: 0;
@@ -3884,6 +3890,9 @@ a {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.7); }
+    @media screen and (max-width: 768px) {
+      .popup__overlay {
+        background-color: #FFF; } }
   .popup__window {
     position: relative;
     display: inline-block;
@@ -3919,8 +3928,12 @@ a {
     background: none;
     font-size: 14px;
     color: #999;
+    z-index: 1;
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
+    @media screen and (max-width: 768px) {
+      .popup__close {
+        display: none; } }
     .popup__close:hover {
       color: #000; }
     .popup__close:before {
@@ -3949,9 +3962,25 @@ a {
       content: " ";
       display: table;
       clear: both; }
+    @media screen and (max-width: 768px) {
+      .popup__form {
+        padding: 0;
+        max-width: 233px;
+        margin: auto; } }
     .popup__form .btn {
       margin-top: 20px;
       margin-bottom: 7px; }
+    .popup__form .logo-mob {
+      display: none; }
+    @media screen and (max-width: 768px) {
+      .popup__form .logo-mob {
+        display: block;
+        text-align: center; }
+      .popup__form .title {
+        margin-top: 48px;
+        text-align: center; }
+        .popup__form .title span {
+          display: inline-block; } }
   .popup__main {
     margin: 0 -14px 20px 0;
     padding-right: 15px;
@@ -4700,18 +4729,28 @@ a {
     width: 100px; }
 
 .contact__popup-inner {
-  margin: auto;
-  max-width: 233px; }
+  width: 100%;
+  max-width: 233px;
+  display: inline-block;
+  vertical-align: middle; }
 
 .contact__popup_mobile {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: 999;
-  width: 100%;
-  min-height: 493px;
-  margin: auto; }
+  text-align: center;
+  font-size: 0;
+  margin: 0;
+  width: 100%; }
+  .contact__popup_mobile:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
   .contact__popup_mobile .btn {
     width: 100%;
     position: relative; }
@@ -4733,9 +4772,16 @@ a {
 .contact__form .field {
   float: left;
   width: 232px; }
+  @media screen and (max-width: 768px) {
+    .contact__form .field {
+      float: none; } }
 
 .contact__form .btn {
   float: right; }
+  @media screen and (max-width: 768px) {
+    .contact__form .btn {
+      float: none;
+      padding: 14px 10px; } }
 
 .shedule {
   position: relative;
@@ -5268,16 +5314,16 @@ a {
   .catalog-list .list + .list {
     margin-top: 22px; }
 
-.shop-info {
+.catalog-info {
   display: none;
   border-top: 1px solid #999999;
   border-bottom: 1px solid #999999;
   padding: 18px 0 18px; }
-  .shop-info p {
+  .catalog-info p {
     color: #6e6e6e;
     font-size: 12px; }
   @media screen and (max-width: 1024px) {
-    .shop-info {
+    .catalog-info {
       display: block;
       -webkit-column-gap: 30px;
       -moz-column-gap: 30px;
@@ -5286,7 +5332,7 @@ a {
       -moz-column-count: 2;
       column-count: 2; } }
   @media screen and (max-width: 767px) {
-    .shop-info {
+    .catalog-info {
       -webkit-column-gap: 0;
       -moz-column-gap: 0;
       column-gap: 0;
