@@ -8,19 +8,8 @@
 		float: left
 		width: 20.34188034188034%
 		display: block
-	&.l-sidebar_popup
-		+r(1024)
-			width: 100%
-			float: none
-			display: none
-			.l-sidebar__in
-				font-size: 0
-				padding: 14px 14px 0
-				border: 1px solid black
-				box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2)
-				&:after
-					display: none
-			
+	+r(1024)
+		display: none
 	&__in
 		position: relative
 		padding-right: 35px  
@@ -38,12 +27,6 @@
 		margin-bottom: 20px
 .accord
 	margin-bottom: 18px
-	+r(1024)
-		display: inline-block
-		width: 33.3333%
-		vertical-align: top
-		.btn-more 
-			display: none
 	&.is-full-list
 		.accord__list
 			li
@@ -89,9 +72,6 @@
 		max-height: 195px
 		overflow-x: hidden
 		overflow-y: auto
-		+r(1024)
-			overflow: visible
-			max-height: none
 		+scrollbar
 			width: 5px
 			height: 5px
@@ -113,8 +93,6 @@
 		text-transform: uppercase
 .filter-choice
 	border-bottom: 1px solid $border-d
-	+r(1024)
-		font-size: 0
 	&_nav
 		position: relative
 		display: block
@@ -138,11 +116,6 @@
 		color: $blue 
 .tags
 	margin-bottom: 4px
-	+r(1024)
-		display: inline-block
-		vertical-align: top
-		width: 50%
-		padding-right: 20px
 	.meta
 		margin-bottom: 2px
 .tag

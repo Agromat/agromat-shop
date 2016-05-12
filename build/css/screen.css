@@ -3276,6 +3276,20 @@ a {
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
 
+.btn-filter {
+  display: inline-block;
+  width: 100%;
+  height: 37px;
+  border: 1px solid #268cb6;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #fff;
+  color: #268cb6;
+  font-size: 12px;
+  padding: 10px; }
+  .btn-filter .name {
+    text-transform: uppercase; }
+
 .list-marker {
   color: #333;
   font-size: 13px;
@@ -5524,17 +5538,8 @@ a {
       width: 20.34188034188034%;
       display: block; } }
   @media screen and (max-width: 1024px) {
-    .l-sidebar.l-sidebar_popup {
-      width: 100%;
-      float: none;
-      display: none; }
-      .l-sidebar.l-sidebar_popup .l-sidebar__in {
-        font-size: 0;
-        padding: 14px 14px 0;
-        border: 1px solid black;
-        box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2); }
-        .l-sidebar.l-sidebar_popup .l-sidebar__in:after {
-          display: none; } }
+    .l-sidebar {
+      display: none; } }
   .l-sidebar__in {
     position: relative;
     padding-right: 35px; }
@@ -5553,13 +5558,6 @@ a {
 
 .accord {
   margin-bottom: 18px; }
-  @media screen and (max-width: 1024px) {
-    .accord {
-      display: inline-block;
-      width: 33.3333%;
-      vertical-align: top; }
-      .accord .btn-more {
-        display: none; } }
   .accord.is-full-list .accord__list li:nth-child(n+11) {
     display: block; }
   .accord.is-open .accord__title span:before {
@@ -5610,10 +5608,6 @@ a {
     max-height: 195px;
     overflow-x: hidden;
     overflow-y: auto; }
-    @media screen and (max-width: 1024px) {
-      .accord__scroll {
-        overflow: visible;
-        max-height: none; } }
     .accord__scroll::-webkit-scrollbar {
       width: 5px;
       height: 5px;
@@ -5636,9 +5630,6 @@ a {
 
 .filter-choice {
   border-bottom: 1px solid #eee; }
-  @media screen and (max-width: 1024px) {
-    .filter-choice {
-      font-size: 0; } }
   .filter-choice_nav {
     position: relative;
     display: block;
@@ -5664,12 +5655,6 @@ a {
 
 .tags {
   margin-bottom: 4px; }
-  @media screen and (max-width: 1024px) {
-    .tags {
-      display: inline-block;
-      vertical-align: top;
-      width: 50%;
-      padding-right: 20px; } }
   .tags .meta {
     margin-bottom: 2px; }
 
@@ -6164,6 +6149,9 @@ a {
   position: relative; }
   .page-head .compare {
     margin-top: 6px; }
+    @media screen and (max-width: 1024px) {
+      .page-head .compare {
+        display: none; } }
 
 .page-title {
   margin: 3px 0 20px;
@@ -6247,6 +6235,58 @@ a {
     font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif; }
     .compare-btn__info sub {
       font-size: 14px; }
+
+.filter {
+  position: relative;
+  display: none;
+  padding: 20px 0 15px; }
+  .filter.is-visible:after, .filter.is-visible:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: -8px auto 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 8px 10px;
+    border-color: transparent transparent #000 transparent; }
+  .filter.is-visible:after {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 8px 10px;
+    border-color: transparent transparent #fff transparent;
+    margin-top: -6px; }
+  @media screen and (max-width: 1024px) {
+    .filter {
+      display: block; } }
+
+.filter-popup {
+  width: 100%;
+  font-size: 0;
+  padding: 14px 14px 0;
+  border: 1px solid black;
+  box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2); }
+  .filter-popup .accord {
+    display: inline-block;
+    width: 33.3333%;
+    vertical-align: top; }
+    .filter-popup .accord .btn-more {
+      display: none; }
+  .filter-popup .accord__scroll {
+    overflow: visible;
+    max-height: none; }
+  .filter-popup .tags {
+    display: inline-block;
+    vertical-align: top; }
+  .filter-popup .tag {
+    margin: 0 20px 5px 0; }
+  .filter-popup .btn-more {
+    display: block;
+    margin: 10px 0 12px; }
 
 .el {
   display: inline-block;

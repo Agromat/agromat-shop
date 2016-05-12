@@ -116,6 +116,8 @@
 	position: relative
 	.compare
 		margin-top: 6px
+		+r(1024)
+			display: none
 .page-title
 	margin: 3px 0 20px 
 	font-size: 31px
@@ -183,6 +185,49 @@
 		+med
 		sub
 			font-size: 14px
+.filter
+	position: relative
+	display: none
+	padding: 20px 0 15px
+	&.is-visible
+		&:after, &:before
+			content: ''
+			display: block
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			margin: -8px auto 0
+			+arr(20, 8, #000, t)
+		&:after
+			+arr(20, 8, #fff, t)
+			margin-top: -6px
+	+r(1024)
+		display: block
+.filter-popup
+	width: 100%
+	font-size: 0
+	padding: 14px 14px 0
+	border: 1px solid black
+	box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2)
+	.accord
+		display: inline-block
+		width: 33.3333%
+		vertical-align: top
+		.btn-more 
+			display: none
+	.accord__scroll
+		overflow: visible
+		max-height: none
+	.tags
+		display: inline-block
+		vertical-align: top
+	.tag
+		margin: 0 20px 5px 0
+	.btn-more
+		display: block
+		margin: 10px 0 12px 
+		
 .el
 	display: inline-block
 	vertical-align: middle
