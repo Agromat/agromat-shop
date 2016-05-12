@@ -31,6 +31,8 @@
 .breadcrumbs
 	margin: 0 0 13px -7px
 	color: $gray
+	+r(768)
+		display: none
 	> li
 		display: inline-block
 		margin: 0 -6px 
@@ -680,7 +682,7 @@
 		.slick-next
 			visibility: visible
 		+r(1024)
-			z-index: 1
+			z-index: 0
 	&:before
 		content: ""
 		position: absolute 

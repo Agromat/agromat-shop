@@ -4636,7 +4636,8 @@ a {
 
 .header-mob__top {
   padding: 9px 0;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #000;
+  position: relative; }
 
 .header-mob__bottom {
   padding: 8px 0;
@@ -6065,6 +6066,9 @@ a {
 .breadcrumbs {
   margin: 0 0 13px -7px;
   color: #888; }
+  @media screen and (max-width: 768px) {
+    .breadcrumbs {
+      display: none; } }
   .breadcrumbs > li {
     display: inline-block;
     margin: 0 -6px;
@@ -6827,7 +6831,7 @@ a {
     visibility: visible; }
   @media screen and (max-width: 1024px) {
     .item_list:hover {
-      z-index: 1; } }
+      z-index: 0; } }
   .item_list:before {
     content: "";
     position: absolute;
