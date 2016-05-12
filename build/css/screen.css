@@ -2760,6 +2760,9 @@ a {
       width: 600px;
       height: 1px;
       background: #ededed; }
+      @media screen and (max-width: 1024px) {
+        .title > span:before, .title > span:after {
+          background: #000; } }
       @media screen and (max-width: 767px) {
         .title > span:before, .title > span:after {
           display: none; } }
@@ -5520,6 +5523,18 @@ a {
       float: left;
       width: 20.34188034188034%;
       display: block; } }
+  @media screen and (max-width: 1024px) {
+    .l-sidebar.l-sidebar_popup {
+      width: 100%;
+      float: none;
+      display: none; }
+      .l-sidebar.l-sidebar_popup .l-sidebar__in {
+        font-size: 0;
+        padding: 14px 14px 0;
+        border: 1px solid black;
+        box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2); }
+        .l-sidebar.l-sidebar_popup .l-sidebar__in:after {
+          display: none; } }
   .l-sidebar__in {
     position: relative;
     padding-right: 35px; }
@@ -5538,6 +5553,13 @@ a {
 
 .accord {
   margin-bottom: 18px; }
+  @media screen and (max-width: 1024px) {
+    .accord {
+      display: inline-block;
+      width: 33.3333%;
+      vertical-align: top; }
+      .accord .btn-more {
+        display: none; } }
   .accord.is-full-list .accord__list li:nth-child(n+11) {
     display: block; }
   .accord.is-open .accord__title span:before {
@@ -5588,6 +5610,10 @@ a {
     max-height: 195px;
     overflow-x: hidden;
     overflow-y: auto; }
+    @media screen and (max-width: 1024px) {
+      .accord__scroll {
+        overflow: visible;
+        max-height: none; } }
     .accord__scroll::-webkit-scrollbar {
       width: 5px;
       height: 5px;
@@ -5610,6 +5636,9 @@ a {
 
 .filter-choice {
   border-bottom: 1px solid #eee; }
+  @media screen and (max-width: 1024px) {
+    .filter-choice {
+      font-size: 0; } }
   .filter-choice_nav {
     position: relative;
     display: block;
@@ -5635,6 +5664,12 @@ a {
 
 .tags {
   margin-bottom: 4px; }
+  @media screen and (max-width: 1024px) {
+    .tags {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      padding-right: 20px; } }
   .tags .meta {
     margin-bottom: 2px; }
 
@@ -6013,10 +6048,19 @@ a {
       float: left;
       width: 79.65811965811966%;
       display: block; } }
+  @media screen and (max-width: 1024px) {
+    .l-main {
+      width: 100%;
+      float: none;
+      padding-left: 0; } }
   .l-main__in {
     position: relative;
     padding-left: 53px;
     margin-left: -30px; }
+    @media screen and (max-width: 1024px) {
+      .l-main__in {
+        padding-left: 0;
+        margin-left: 0; } }
     .l-main__in:before {
       content: "";
       position: absolute;
@@ -6025,6 +6069,9 @@ a {
       left: 0;
       width: 2px;
       background: #000; }
+      @media screen and (max-width: 1024px) {
+        .l-main__in:before {
+          display: none; } }
 
 .breadcrumbs {
   margin: 0 0 13px -7px;
@@ -6395,6 +6442,9 @@ a {
   bottom: 10px;
   font-size: 0;
   right: 10px; }
+  @media screen and (max-width: 1024px) {
+    .view {
+      display: none; } }
   .view .meta {
     display: inline-block;
     vertical-align: top; }
@@ -6442,6 +6492,9 @@ a {
 .banners-wrap {
   margin-top: 26px;
   margin-bottom: 26px; }
+  @media screen and (max-width: 1024px) {
+    .banners-wrap {
+      display: none; } }
   .banners-wrap_border {
     border-top: 1px solid #000;
     padding-top: 33px; }
@@ -6505,6 +6558,9 @@ a {
     content: " ";
     display: table;
     clear: both; }
+  @media screen and (max-width: 1270px) {
+    .blocks-wrap {
+      margin-bottom: 25px; } }
   .blocks-wrap .title {
     margin-bottom: 10px; }
 
@@ -6709,7 +6765,8 @@ a {
   height: auto; }
   @media screen and (max-width: 1270px) {
     .item_list {
-      padding: 30px 30px 0 0; } }
+      padding: 30px 30px 30px 0;
+      margin-bottom: 17px; } }
   .item_list:hover:before {
     box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2); }
   .item_list:hover .slick-prev,
@@ -6729,6 +6786,9 @@ a {
       .item_list:before {
         top: 0;
         right: 0; } }
+    @media screen and (max-width: 1024px) {
+      .item_list:before {
+        display: none; } }
   .item_list .item__img {
     overflow: visible; }
   .item_list .item__media {
@@ -7285,6 +7345,9 @@ a.link-comment:hover {
   margin: 30px 0 0;
   padding: 27px 0 18px;
   border-top: 1px solid #000; }
+  @media screen and (max-width: 1024px) {
+    .seo {
+      display: none; } }
   .seo .text {
     line-height: 1.5; }
     .seo .text__title {

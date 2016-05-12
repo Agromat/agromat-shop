@@ -7,10 +7,17 @@
 		float: left
 		width: 79.65811965811966% 
 		display: block
+	+r(1024)
+		width: 100%
+		float: none
+		padding-left: 0
 	&__in
 		position: relative
 		padding-left: 53px
 		margin-left: -30px
+		+r(1024)
+			padding-left: 0
+			margin-left: 0
 		&:before
 			content: ""
 			position: absolute
@@ -19,6 +26,8 @@
 			left: 0
 			width: 2px
 			background: #000
+			+r(1024)
+				display: none
 .breadcrumbs
 	margin: 0 0 13px -7px
 	color: $gray
@@ -334,6 +343,8 @@
 	bottom: 10px
 	font-size: 0
 	right: 10px
+	+r(1024)
+		display: none
 	.meta
 		display: inline-block
 		vertical-align: top
@@ -376,6 +387,8 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
+	+r(1024)
+		display: none
 	&_border
 		border-top: 1px solid #000 
 		padding-top: 33px
@@ -605,7 +618,7 @@
 	min-height: 212px
 	height: auto
 	+r(1270)
-		padding: 30px 30px 0 0
+		padding: 30px 30px 30px 0
 		margin-bottom: 17px
 	&:hover
 		&:before
@@ -627,6 +640,8 @@
 		+r(1270)
 			top: 0
 			right: 0
+		+r(1024)
+			display: none
 	.item__img
 		overflow: visible
 	.item__media
@@ -1128,6 +1143,8 @@ a.link-comment
 	margin: 30px 0 0 
 	padding: 27px 0 18px
 	border-top: 1px solid #000 
+	+r(1024)
+		display: none
 	.text
 		line-height: 1.5
 		&__title
