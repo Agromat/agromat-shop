@@ -4612,8 +4612,7 @@ a {
   height: 62px; }
 
 .header-mob {
-  position: relative;
-  border-bottom: 1px solid #000; }
+  position: relative; }
   @media screen and (min-width: 768px) {
     .header-mob {
       display: none; } }
@@ -4635,8 +4634,13 @@ a {
       max-width: 100%;
       height: auto; }
 
-.header-mob__in {
-  padding: 9px 0; }
+.header-mob__top {
+  padding: 9px 0;
+  border-bottom: 1px solid #000; }
+
+.header-mob__bottom {
+  padding: 8px 0;
+  text-align: center; }
 
 .top-mob {
   position: relative;
@@ -4645,7 +4649,7 @@ a {
     .top-mob {
       display: none; } }
   .top-mob__in {
-    padding: 10px 0; }
+    padding: 0 0 10px; }
 
 .slider-mob {
   margin-top: 10px; }
@@ -4837,7 +4841,7 @@ a {
   z-index: 4;
   margin: 15px 0 0; }
   .search_mob {
-    margin: 6px 0 0; }
+    margin: 0; }
     .search_mob .search__btn {
       left: auto;
       right: 0;

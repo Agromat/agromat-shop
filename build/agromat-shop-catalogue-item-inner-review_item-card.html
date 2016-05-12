@@ -15,12 +15,12 @@
 	<div class="tooper">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-2">
+				<div class="col-xs-2 col-xs-2 col-md-2 hidden-xs hidden-sm">
 					<div class="tooper__link">
 						<a href="#"><i class="fa fa-long-arrow-left"></i>Копоративный сайт</a>
 					</div>
 				</div>
-				<div class="col-xs-8">
+				<div class="col-xs-10 col-xs-10 col-sm-10 col-md-8">
 					<ul class="tooper__nav">
 						<li><a href="#">О магазине</a></li>
 						<li><a href="#">Доставка и оплата </a></li>
@@ -30,7 +30,7 @@
 						<li><a href="#">О магазине</a></li>
 					</ul>
 				</div>
-				<div class="col-xs-2">
+				<div class="col-xs-2 col-md-2">
 					<div class="tooper__login">
 						<a href="#"><i class="fa fa-sign-out"></i>Konstamtin Pavlovskiy</a>
 					</div>
@@ -42,7 +42,7 @@
 		<div class="container">
 			<div class="header__in">
 				<div class="row row_table">
-					<div class="col-xs-6">
+					<div class="col-xs-6 col-md-8 col-lg-6">
 						<div class="row">
 							<div class="col-xs-6">
 								<a class="logo" href="#">
@@ -70,7 +70,7 @@
 										</form>
 									</div>
 								</div>
-								<div class="shedule">
+								<div class="shedule hidden-xs hidden-sm">
 									<ul class="shedule__list">
 										<li><span>пн-пт</span>09:00-18:00</li>
 										<li><span>сб-вс</span>10:00-17:00</li>
@@ -81,9 +81,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-6">
+					<div class="col-xs-6 col-md-4 col-lg-6">
 						<div class="row">
-							<div class="col-xs-8">
+							<div class="col-xs-8 col-md-6 col-lg-8">
 								<div class="search">
 									<form>
 										<input class="search__input" type="text">
@@ -98,7 +98,7 @@
 									</span>
 								</button>
 							</div>
-							<div class="col-xs-4">
+							<div class="col-xs-4 col-md-6 col-lg-4">
 								<button class="cart is-full js-popup-trigger" type="button" data-popup="js-popup-cart">
 									<span class="cart__in">
 										<span class="cart__details">
@@ -114,13 +114,137 @@
 			</div>
 		</div>
 	</div>
+	<div class="header-mob">
+		<div class="header-mob__top">
+			<div class="container">
+				<button type="button" class="btn-menu-mob js-btn-menu-mob"><span></span></button>
+				<a class="cart is-full js-popup-trigger" href="#">
+					<span class="cart__in">
+						<span class="cart__details">
+							<i class="fa fa-shopping-cart"></i>12
+						</span>
+					</span>
+				</a>
+				<div class="logo-mob">
+					<img src="img/logo-sm.png" alt="agromat">
+				</div>
+			</div>
+		</div>
+		<div class="header-mob__bottom">
+			<div class="container">
+				<div class="contact contact_mob">
+					<div class="contact__tel">
+						<a href="#" class="js-open-popup" data-link="contact">0 (44) 392-29-45</a> 
+					</div>
+					<div class="contact__popup contact__popup_mobile js-mob-popup" data-popup="contact">
+						<div class="contact__popup-inner">
+							<div class="logo-mob">
+								<img src="img/logo-sm.png" alt="agromat">
+							</div>
+							<div class="title title_big">Обратный звонок</div>
+							<div class="meta">Укажите свой контактный номер и мы свяжемся  с Вами в ближайшнн время</div>
+							<form action="#">
+								<div class="contact__form">
+									<label class="field">
+										<span class="field__body">
+											<input class="input" type="tel" placeholder="+380 ( ___ ) ___-___-___" required>
+										</span>
+									</label>
+									<button class="btn btn_small" type="submit">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="container">
+				<div class="row">
+					<ul class="navigation__list">
+						<li class="navigation__item"><a href="#" class="navigation__link">Главная</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Новинки</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Акции</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Войти</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Обратная связь</a></li>
+					</ul>
+					<div class="navigation__title">КАТАЛОГ</div>
+					<ul class="navigation__list navigation__list_drop">
+						<li class="navigation__item">
+							<a href="#" class="navigation__link js-clicker">Плитка 	<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<ul class="navigation__i">
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 1</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 2</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 3</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 4</a></li>
+							</ul>
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link js-clicker">Сантехника 	<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<ul class="navigation__i">
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 1</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 2</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 3</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 4</a></li>
+							</ul>
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link js-clicker">Смесители 	<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<ul class="navigation__i">
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 1</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 2</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 3</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 4</a></li>
+							</ul>
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link js-clicker">Мебель 	<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<ul class="navigation__i">
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 1</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 2</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 3</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 4</a></li>
+							</ul>
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link js-clicker">Бассейны 	<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<ul class="navigation__i">
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 1</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 2</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 3</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 4</a></li>
+							</ul>
+						</li>
+						<li class="navigation__item">
+							<a href="#" class="navigation__link js-clicker">Стройхимия 	<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<ul class="navigation__i">
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 1</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 2</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 3</a></li>
+								<li class="navigation__i-item"><a href="#" class="navigation__i-link">lorem 4</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="navigation__title">О МАГАЗИНЕ</div>
+					<ul class="navigation__list navigation__list_drop">
+						<li class="navigation__item"><a href="#" class="navigation__link">О нас</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Доставка и оплата </a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Производители</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Гаранития</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Обратная связь</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="nav-wrap">
 		<div class="container">
 			<div class="nav-wrap__in">
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
+					<div class="col-xs-12 col-sm-12 col-md-10  col-md-offset-1 col-lg-offset-1">
 						<ul class="nav js-nav">
-							<li class="is-active">
+							<li>
 								<a href="#">
 									<span>
 										<span>Плитка</span>
@@ -134,7 +258,7 @@
 									</span>
 								</a>
 							</li>
-							<li>
+							<li class="is-active">
 								<a href="#">
 									<span>
 										<span>Сантехника</span>
@@ -148,10 +272,31 @@
 									</span>
 								</a>
 							</li>
-							<li>
+							<li class="no-bulit">
 								<a href="#">
 									<span>
 										<span>Материалы</span>
+									</span>
+								</a>
+							</li>
+							<li class="no-dropdown hidden-lg hidden-md">
+								<a href="#">
+									<span>
+										<span>Мозаика</span>
+									</span>
+								</a>
+							</li>
+							<li class="hidden-md hidden-lg">
+								<a href="#">
+									<span>
+										<span>Освещение</span>
+									</span>
+								</a>
+							</li>
+							<li class="hidden-lg hidden-md">
+								<a href="#">
+									<span>
+										<span>Освещение</span>
 									</span>
 								</a>
 							</li>
