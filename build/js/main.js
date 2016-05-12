@@ -613,4 +613,8 @@ $(document).ready( function() {
 
         popup.addClass('is-active');
     });
+    $(".js-close-popup").on("click",function (){
+        $(this).parents(".js-mob-popup").removeClass('is-active');
+        return false;
+    });
 });

@@ -6240,36 +6240,45 @@ a {
   position: relative;
   display: none;
   padding: 20px 0 15px; }
-  .filter.is-visible:after, .filter.is-visible:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin: -8px auto 0;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 10px 8px 10px;
-    border-color: transparent transparent #000 transparent; }
-  .filter.is-visible:after {
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 10px 8px 10px;
-    border-color: transparent transparent #fff transparent;
-    margin-top: -6px; }
   @media screen and (max-width: 1024px) {
     .filter {
       display: block; } }
+
+.filter-wrp {
+  position: relative; }
 
 .filter-popup {
   width: 100%;
   font-size: 0;
   padding: 14px 14px 0;
   border: 1px solid black;
-  box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2);
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #FFF;
+  position: absolute; }
+  .filter-popup.is-active {
+    display: block; }
+    .filter-popup.is-active:after, .filter-popup.is-active:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 100%;
+      right: 13.5%;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 10px 8px 10px;
+      border-color: transparent transparent #000 transparent; }
+    .filter-popup.is-active:after {
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 10px 8px 10px;
+      border-color: transparent transparent #fff transparent;
+      margin-bottom: -2px; }
   .filter-popup .accord {
     display: inline-block;
     width: 33.3333%;
@@ -6812,6 +6821,9 @@ a {
   .item_list:hover .slick-prev,
   .item_list:hover .slick-next {
     visibility: visible; }
+  @media screen and (max-width: 1024px) {
+    .item_list:hover {
+      z-index: 1; } }
   .item_list:before {
     content: "";
     position: absolute;

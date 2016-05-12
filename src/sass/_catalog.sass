@@ -189,27 +189,35 @@
 	position: relative
 	display: none
 	padding: 20px 0 15px
-	&.is-visible
-		&:after, &:before
-			content: ''
-			display: block
-			position: absolute
-			top: 100%
-			left: 0
-			right: 0
-			margin: -8px auto 0
-			+arr(20, 8, #000, t)
-		&:after
-			+arr(20, 8, #fff, t)
-			margin-top: -6px
 	+r(1024)
 		display: block
+.filter-wrp
+	position: relative
 .filter-popup
 	width: 100%
 	font-size: 0
 	padding: 14px 14px 0
 	border: 1px solid black
 	box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2)
+	display: none
+	top: 0
+	left: 0
+	z-index: 1
+	background-color: #FFF
+	position: absolute
+	&.is-active
+		display: block
+		&:after, &:before
+			content: ''
+			display: block
+			position: absolute
+			bottom: 100%
+			right: 13.5%
+			+arr(20, 8, #000, t)
+		&:after
+			+arr(20, 8, #fff, t)
+			margin-bottom: -2px
+		
 	.accord
 		display: inline-block
 		width: 33.3333%
@@ -671,6 +679,8 @@
 		.slick-prev,
 		.slick-next
 			visibility: visible
+		+r(1024)
+			z-index: 1
 	&:before
 		content: ""
 		position: absolute 
