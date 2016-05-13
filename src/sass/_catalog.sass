@@ -31,7 +31,7 @@
 .breadcrumbs
 	margin: 0 0 13px -7px
 	color: $gray
-	+r(768)
+	+r(767)
 		display: none
 	> li
 		display: inline-block
@@ -359,6 +359,8 @@
 	line-height: 50px
 	border-bottom: 1px solid #000
 	color: $gray 
+	+r(767)
+		display: none
 	+ .items-wrap
 		margin-top: 60px
 	> a, > span
@@ -596,7 +598,7 @@
 		height: 182px
 		background: #fff 
 		border: 1px solid $border-d
-		+r(768)
+		+r(767)
 			height: auto
 		.slick-prev,
 		.slick-next
@@ -610,7 +612,7 @@
 		width: 100%
 		font-size: 0
 		+vertical
-		+r(768)
+		+r(767)
 			height: auto
 		a
 			display: inline-block
@@ -681,9 +683,13 @@
 	+r(1270)
 		padding: 30px 30px 30px 0
 		margin-bottom: 17px
-	+r(768)
-		padding: 0
-		margin-bottom: 47px
+	+r(767)
+		padding: 0 0 30px
+		margin-bottom: 0
+		min-height: auto
+		border-bottom: 1px solid #cdcdcd
+		&:not(:last-child)
+			margin-bottom: 30px
 	&:hover
 		&:before
 			box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
@@ -723,12 +729,12 @@
 		text-align: left
 	.item__descr
 		height: auto
-		+r(768)
+		+r(767)
 			.meta__available
 				float: none
 				color: #268cb6
 	.item__descr-wrp
-		+r(768)
+		+r(767)
 			display: none
 	.item__action
 		margin-top: 20px
@@ -782,7 +788,7 @@
 	.price_old
 		margin-left: 0
 		margin-bottom: -11px
-		+r(768)
+		+r(767)
 			margin-bottom: -5px
 	.price_old
 		display: inline-block
@@ -857,7 +863,7 @@
 	position: relative
 	overflow: hidden
 	margin: 55px 0 20px
-	+r(768)
+	+r(767)
 		margin-bottom: 0
 		margin-top: 27px
 	.btn-simple
