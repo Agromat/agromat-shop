@@ -2887,7 +2887,7 @@ a {
       font-size: 14px; }
   .price_big {
     font-size: 30px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .price_big {
         font-size: 25px; } }
     .price_big sup {
@@ -2915,7 +2915,7 @@ a {
       font-size: 12px; }
     .price_old.price_big {
       font-size: 24px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .price_old.price_big {
           font-size: 18px; } }
       .price_old.price_big sup {
@@ -3336,6 +3336,9 @@ a {
   color: #000;
   font-size: 0;
   white-space: nowrap; }
+  @media screen and (max-width: 767px) {
+    .pager {
+      margin: 30px 0 0; } }
   .pager:before, .pager:after {
     content: "";
     position: absolute;
@@ -3343,7 +3346,7 @@ a {
     height: 1px;
     width: 70px;
     background: #96c6d9; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .pager:before, .pager:after {
         display: none; } }
   .pager:before {
@@ -3362,7 +3365,7 @@ a {
     color: #000;
     -webkit-transition: color 0.2s;
     transition: color 0.2s; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .pager__link {
         width: 33px;
         height: 33px;
@@ -3383,7 +3386,7 @@ a {
       display: inline-block;
       content: "";
       vertical-align: middle; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .pager__prev, .pager__next {
         width: 28px;
         height: 33px;
@@ -3394,14 +3397,14 @@ a {
     border-style: solid;
     border-width: 4px 4px 4px 0;
     border-color: transparent #268cb6 transparent transparent; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .pager__prev:before {
         width: 0px;
         height: 0px;
         border-style: solid;
         border-width: 9px 10px 9px 0;
         border-color: transparent #268cb6 transparent transparent; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .pager__prev:hover:before {
       width: 0px;
       height: 0px;
@@ -3414,7 +3417,7 @@ a {
     border-style: solid;
     border-width: 4px 0 4px 4px;
     border-color: transparent transparent transparent #268cb6; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .pager__next:before {
         width: 0px;
         height: 0px;
@@ -3427,7 +3430,7 @@ a {
     border-style: solid;
     border-width: 4px 0 4px 4px;
     border-color: transparent transparent transparent #268cb6; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .pager__next:hover:before {
         width: 0px;
         height: 0px;
@@ -3942,7 +3945,7 @@ a {
     width: 770px; }
   .popup_smaller .popup__window {
     width: 435px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .popup_smaller .popup__window {
         width: 100%; } }
   .popup__overlay {
@@ -3952,7 +3955,7 @@ a {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.7); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .popup__overlay {
         background-color: #FFF; } }
   .popup__window {
@@ -3993,7 +3996,7 @@ a {
     z-index: 1;
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .popup__close {
         display: none; } }
     .popup__close:hover {
@@ -4024,7 +4027,7 @@ a {
       content: " ";
       display: table;
       clear: both; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .popup__form {
         padding: 0;
         max-width: 233px;
@@ -4034,7 +4037,7 @@ a {
       margin-bottom: 7px; }
     .popup__form .logo-mob {
       display: none; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .popup__form .logo-mob {
         display: block;
         text-align: center; }

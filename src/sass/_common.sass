@@ -309,7 +309,7 @@ a
 			font-size: 14px
 	&_big
 		font-size: 30px
-		+r(768)
+		+r(767)
 			font-size: 25px
 		sup
 			font-size: 18px
@@ -334,7 +334,7 @@ a
 			font-size: 12px
 		&.price_big
 			font-size: 24px
-			+r(768)
+			+r(767)
 				font-size: 18px
 			sup
 				font-size: 14px
@@ -708,6 +708,8 @@ a
 	color: #000 
 	font-size: 0
 	white-space: nowrap
+	+r(767)
+		margin: 30px 0 0
 	&:before,
 	&:after
 		content: "" 
@@ -716,7 +718,7 @@ a
 		height: 1px
 		width: 70px
 		background: #96c6d9
-		+r(768)
+		+r(767)
 			display: none
 	&:before
 		left: -70px
@@ -733,7 +735,7 @@ a
 		+med
 		color: #000 
 		+tr(color .2s)
-		+r(768)
+		+r(767)
 			width: 33px
 			height: 33px
 			line-height: 33px
@@ -754,28 +756,28 @@ a
 			display: inline-block
 			content: "" 
 			vertical-align: middle
-		+r(768)
+		+r(767)
 			width: 28px
 			height: 33px
 			line-height: 33px
 	&__prev
 		&:before
 			+arr(4,8,$blue,l)
-			+r(768)
+			+r(767)
 				+arr(10,18,$blue,l)
 		&:hover
 			&:before
-				+r(768)
+				+r(767)
 					+arr(10,18,$blue-h,l)
 	&__next
 		&:before
 			+arr(4,8,$blue,r)
-			+r(768)
+			+r(767)
 				+arr(10,18,$blue,r)
 		&:hover
 			&:before
 				+arr(4,8,$blue,r)
-				+r(768)
+				+r(767)
 					+arr(10,18,$blue-h,r)
 
 
@@ -1202,7 +1204,7 @@ a
 	&_smaller
 		.popup__window
 			width: 435px
-			+r(768)
+			+r(767)
 				width: 100%
 	&__overlay
 		position: fixed
@@ -1211,7 +1213,7 @@ a
 		bottom: 0
 		left: 0
 		background: rgba(#000,.7) 
-		+r(768)
+		+r(767)
 			background-color: #FFF 
 	&__window
 		position: relative
@@ -1243,7 +1245,7 @@ a
 		color: #999
 		z-index: 1
 		+tr(color .3s)
-		+r(768)
+		+r(767)
 			display: none
 		&:hover
 			color: #000
@@ -1257,7 +1259,7 @@ a
 	&__form
 		padding: 30px 100px
 		+clr
-		+r(768)
+		+r(767)
 			padding: 0
 			max-width: 233px
 			margin: auto 
@@ -1266,7 +1268,7 @@ a
 			margin-bottom: 7px
 		.logo-mob
 			display: none
-		+r(768)
+		+r(767)
 			.logo-mob
 				display: block
 				text-align: center
