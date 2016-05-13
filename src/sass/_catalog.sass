@@ -554,6 +554,8 @@
 		.slick-prev,
 		.slick-next
 			visibility: visible
+			+r(767)
+				visibility: hidden !important
 	&__back
 		z-index: 1
 		position: absolute
@@ -593,7 +595,9 @@
 		display: block
 		height: 182px
 		background: #fff 
-		border: 1px solid $border-d 
+		border: 1px solid $border-d
+		+r(768)
+			height: auto
 		.slick-prev,
 		.slick-next
 			visibility: hidden
@@ -606,6 +610,8 @@
 		width: 100%
 		font-size: 0
 		+vertical
+		+r(768)
+			height: auto
 		a
 			display: inline-block
 			width: 100%
@@ -675,6 +681,9 @@
 	+r(1270)
 		padding: 30px 30px 30px 0
 		margin-bottom: 17px
+	+r(768)
+		padding: 0
+		margin-bottom: 47px
 	&:hover
 		&:before
 			box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
@@ -714,6 +723,13 @@
 		text-align: left
 	.item__descr
 		height: auto
+		+r(768)
+			.meta__available
+				float: none
+				color: #268cb6
+	.item__descr-wrp
+		+r(768)
+			display: none
 	.item__action
 		margin-top: 20px
 		margin-bottom: 0
@@ -721,6 +737,22 @@
 		border-top: 1px solid $border-d
 		border-bottom: 0 
 		table-layout: auto
+		+r(767)
+			display: none
+	.item__action_mob
+		display: none
+		border-top: 0
+		padding-top: 0
+		margin-top: 10px
+		+r(767)
+			display: block
+			.item__cell
+				width: 100%
+				padding: 0
+			.item__links
+				padding-bottom: 9px
+		td
+			vertical-align: bottom
 		
 	.item__price,
 	.item__links,
@@ -750,6 +782,8 @@
 	.price_old
 		margin-left: 0
 		margin-bottom: -11px
+		+r(768)
+			margin-bottom: -5px
 	.price_old
 		display: inline-block
 	.btn

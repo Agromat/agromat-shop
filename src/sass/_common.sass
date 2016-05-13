@@ -309,6 +309,8 @@ a
 			font-size: 14px
 	&_big
 		font-size: 30px
+		+r(768)
+			font-size: 25px
 		sup
 			font-size: 18px
 			top: -8px
@@ -332,6 +334,8 @@ a
 			font-size: 12px
 		&.price_big
 			font-size: 24px
+			+r(768)
+				font-size: 18px
 			sup
 				font-size: 14px
 			sub
@@ -342,6 +346,8 @@ a
 			font-size: 22px
 		sup
 			top: -12px
+	&_hot
+		color: #ed1c24
 .text
 	font-size: 14px
 	line-height: 1.4
@@ -709,7 +715,9 @@ a
 		top: 50%
 		height: 1px
 		width: 70px
-		background: #96c6d9 
+		background: #96c6d9
+		+r(768)
+			display: none
 	&:before
 		left: -70px
 	&:after
@@ -725,6 +733,11 @@ a
 		+med
 		color: #000 
 		+tr(color .2s)
+		+r(768)
+			width: 33px
+			height: 33px
+			line-height: 33px
+			font-size: 22px
 		&:hover
 			color: $blue 
 		&.is-active
@@ -741,18 +754,29 @@ a
 			display: inline-block
 			content: "" 
 			vertical-align: middle
+		+r(768)
+			width: 28px
+			height: 33px
+			line-height: 33px
 	&__prev
 		&:before
 			+arr(4,8,$blue,l)
+			+r(768)
+				+arr(10,18,$blue,l)
 		&:hover
 			&:before
-				+arr(4,8,$blue-h,l)
+				+r(768)
+					+arr(10,18,$blue-h,l)
 	&__next
 		&:before
 			+arr(4,8,$blue,r)
+			+r(768)
+				+arr(10,18,$blue,r)
 		&:hover
 			&:before
-				+arr(4,8,$blue-h,r)
+				+arr(4,8,$blue,r)
+				+r(768)
+					+arr(10,18,$blue-h,r)
 
 
 .textarea

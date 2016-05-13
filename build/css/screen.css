@@ -2887,6 +2887,9 @@ a {
       font-size: 14px; }
   .price_big {
     font-size: 30px; }
+    @media screen and (max-width: 768px) {
+      .price_big {
+        font-size: 25px; } }
     .price_big sup {
       font-size: 18px;
       top: -8px; }
@@ -2912,6 +2915,9 @@ a {
       font-size: 12px; }
     .price_old.price_big {
       font-size: 24px; }
+      @media screen and (max-width: 768px) {
+        .price_old.price_big {
+          font-size: 18px; } }
       .price_old.price_big sup {
         font-size: 14px; }
       .price_old.price_big sub {
@@ -2922,6 +2928,8 @@ a {
       font-size: 22px; }
     .price_large sup {
       top: -12px; }
+  .price_hot {
+    color: #ed1c24; }
 
 .text {
   font-size: 14px;
@@ -3335,6 +3343,9 @@ a {
     height: 1px;
     width: 70px;
     background: #96c6d9; }
+    @media screen and (max-width: 768px) {
+      .pager:before, .pager:after {
+        display: none; } }
   .pager:before {
     left: -70px; }
   .pager:after {
@@ -3351,6 +3362,12 @@ a {
     color: #000;
     -webkit-transition: color 0.2s;
     transition: color 0.2s; }
+    @media screen and (max-width: 768px) {
+      .pager__link {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 22px; } }
     .pager__link:hover {
       color: #268cb6; }
     .pager__link.is-active {
@@ -3366,30 +3383,57 @@ a {
       display: inline-block;
       content: "";
       vertical-align: middle; }
+    @media screen and (max-width: 768px) {
+      .pager__prev, .pager__next {
+        width: 28px;
+        height: 33px;
+        line-height: 33px; } }
   .pager__prev:before {
     width: 0px;
     height: 0px;
     border-style: solid;
     border-width: 4px 4px 4px 0;
     border-color: transparent #268cb6 transparent transparent; }
-  .pager__prev:hover:before {
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 4px 4px 4px 0;
-    border-color: transparent #1d769b transparent transparent; }
+    @media screen and (max-width: 768px) {
+      .pager__prev:before {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 9px 10px 9px 0;
+        border-color: transparent #268cb6 transparent transparent; } }
+  @media screen and (max-width: 768px) {
+    .pager__prev:hover:before {
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 9px 10px 9px 0;
+      border-color: transparent #1d769b transparent transparent; } }
   .pager__next:before {
     width: 0px;
     height: 0px;
     border-style: solid;
     border-width: 4px 0 4px 4px;
     border-color: transparent transparent transparent #268cb6; }
+    @media screen and (max-width: 768px) {
+      .pager__next:before {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 9px 0 9px 10px;
+        border-color: transparent transparent transparent #268cb6; } }
   .pager__next:hover:before {
     width: 0px;
     height: 0px;
     border-style: solid;
     border-width: 4px 0 4px 4px;
-    border-color: transparent transparent transparent #1d769b; }
+    border-color: transparent transparent transparent #268cb6; }
+    @media screen and (max-width: 768px) {
+      .pager__next:hover:before {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 9px 0 9px 10px;
+        border-color: transparent transparent transparent #1d769b; } }
 
 .textarea {
   display: block;
@@ -6682,6 +6726,10 @@ a {
     .item:hover .slick-prev,
     .item:hover .slick-next {
       visibility: visible; }
+      @media screen and (max-width: 767px) {
+        .item:hover .slick-prev,
+        .item:hover .slick-next {
+          visibility: hidden !important; } }
   .item__back {
     z-index: 1;
     position: absolute;
@@ -6730,6 +6778,9 @@ a {
     height: 182px;
     background: #fff;
     border: 1px solid #eee; }
+    @media screen and (max-width: 768px) {
+      .item__slider {
+        height: auto; } }
     .item__slider .slick-prev,
     .item__slider .slick-next {
       visibility: hidden; }
@@ -6749,6 +6800,9 @@ a {
       vertical-align: middle;
       width: 0;
       height: 100%; }
+    @media screen and (max-width: 768px) {
+      .item__slide {
+        height: auto; } }
     .item__slide a {
       display: inline-block;
       width: 100%;
@@ -6824,6 +6878,10 @@ a {
     .item_list {
       padding: 30px 30px 30px 0;
       margin-bottom: 17px; } }
+  @media screen and (max-width: 768px) {
+    .item_list {
+      padding: 0;
+      margin-bottom: 47px; } }
   .item_list:hover:before {
     box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2); }
   .item_list:hover .slick-prev,
@@ -6864,6 +6922,13 @@ a {
     text-align: left; }
   .item_list .item__descr {
     height: auto; }
+    @media screen and (max-width: 768px) {
+      .item_list .item__descr .meta__available {
+        float: none;
+        color: #268cb6; } }
+  @media screen and (max-width: 768px) {
+    .item_list .item__descr-wrp {
+      display: none; } }
   .item_list .item__action {
     margin-top: 20px;
     margin-bottom: 0;
@@ -6871,6 +6936,24 @@ a {
     border-top: 1px solid #eee;
     border-bottom: 0;
     table-layout: auto; }
+    @media screen and (max-width: 767px) {
+      .item_list .item__action {
+        display: none; } }
+  .item_list .item__action_mob {
+    display: none;
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 10px; }
+    @media screen and (max-width: 767px) {
+      .item_list .item__action_mob {
+        display: block; }
+        .item_list .item__action_mob .item__cell {
+          width: 100%;
+          padding: 0; }
+        .item_list .item__action_mob .item__links {
+          padding-bottom: 9px; } }
+    .item_list .item__action_mob td {
+      vertical-align: bottom; }
   .item_list .item__price,
   .item_list .item__links,
   .item_list .item__cell {
@@ -6900,6 +6983,9 @@ a {
   .item_list .price_old {
     margin-left: 0;
     margin-bottom: -11px; }
+    @media screen and (max-width: 768px) {
+      .item_list .price_old {
+        margin-bottom: -5px; } }
   .item_list .price_old {
     display: inline-block; }
   .item_list .btn {
