@@ -2654,6 +2654,17 @@ body {
   width: 100% !important;
   max-width: 1200px !important; }
 
+@media screen and (max-width: 767px) {
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .row {
+    margin-left: -10px;
+    margin-right: -10px; }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
 a {
   text-decoration: none;
   color: #268cb6; }
@@ -4358,6 +4369,9 @@ a {
   display: block;
   padding: 10px 22px 10px 37px; }
 
+.js-item.is-dropdown .js-inner {
+  display: block; }
+
 .slick-slider {
   position: relative;
   display: block;
@@ -5274,8 +5288,6 @@ a {
     background-color: #268cb6; }
   .navigation__item.is-active .fa, .navigation__item:hover .fa {
     color: #fff; }
-  .navigation__item.is-dropdown .navigation__i {
-    display: block; }
   .navigation__item .fa {
     position: absolute;
     top: 50%;
@@ -6202,11 +6214,54 @@ a {
 
 .page-head {
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .page-head {
+      display: none; } }
   .page-head .compare {
     margin-top: 6px; }
     @media screen and (max-width: 1024px) {
       .page-head .compare {
         display: none; } }
+
+.page-head-mob {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .page-head-mob {
+      display: block; } }
+  .page-head-mob .title {
+    font-size: 24px;
+    margin-bottom: 9px; }
+    .page-head-mob .title span {
+      text-align: inherit; }
+      .page-head-mob .title span:before, .page-head-mob .title span:after {
+        display: block;
+        margin-top: -3px; }
+      .page-head-mob .title span > span {
+        padding: 0 20px; }
+  .page-head-mob .filter {
+    padding: 0;
+    margin-bottom: 10px; }
+
+.catalog {
+  position: relative;
+  border-bottom: 1px solid #CDCDCD; }
+  .catalog a {
+    display: block;
+    border-top: 1px solid #CDCDCD;
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+    line-height: 1; }
+
+.catalog__link {
+  font-size: 15px;
+  color: #3a3a3a;
+  padding: 12px 14px; }
+
+.catalog__inner {
+  display: none; }
+
+.catalog__inner-link {
+  padding: 13px 32px; }
 
 .page-title {
   margin: 3px 0 20px;
@@ -6665,7 +6720,7 @@ a {
     content: " ";
     display: table;
     clear: both; }
-  @media screen and (max-width: 1270px) {
+  @media only screen and (min-width: 1025px) and (max-width: 1270px) {
     .blocks-wrap {
       margin-bottom: 25px; } }
   .blocks-wrap .title {
@@ -6880,7 +6935,7 @@ a {
   margin-bottom: 47px;
   min-height: 212px;
   height: auto; }
-  @media screen and (max-width: 1270px) {
+  @media only screen and (min-width: 1025px) and (max-width: 1270px) {
     .item_list {
       padding: 30px 30px 30px 0;
       margin-bottom: 17px; } }
@@ -6891,12 +6946,20 @@ a {
       min-height: auto;
       border-bottom: 1px solid #cdcdcd; }
       .item_list:not(:last-child) {
-        margin-bottom: 30px; } }
+        margin-bottom: 30px; }
+      .item_list > .row > .col-xs-4 {
+        padding-right: 0; }
+      .item_list > .row > .col-xs-8 {
+        padding-left: 10px; } }
   .item_list:hover:before {
     box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2); }
   .item_list:hover .slick-prev,
   .item_list:hover .slick-next {
     visibility: visible; }
+    @media screen and (max-width: 1024px) {
+      .item_list:hover .slick-prev,
+      .item_list:hover .slick-next {
+        visibility: hidden; } }
   @media screen and (max-width: 1024px) {
     .item_list:hover {
       z-index: 0; } }
@@ -6910,7 +6973,7 @@ a {
     opacity: 1;
     visibility: visible;
     box-shadow: none; }
-    @media screen and (max-width: 1270px) {
+    @media only screen and (min-width: 1025px) and (max-width: 1270px) {
       .item_list:before {
         top: 0;
         right: 0; } }
@@ -6923,6 +6986,10 @@ a {
     margin: 0 -30px;
     padding: 0 30px;
     overflow: hidden; }
+    @media screen and (max-width: 767px) {
+      .item_list .item__media {
+        padding: 0 10px;
+        margin: 0 -10px; } }
   .item_list .slick-prev,
   .item_list .slick-next {
     visibility: hidden; }
@@ -7413,6 +7480,13 @@ a {
     width: 15px;
     height: 11px;
     display: inline-block; }
+    @media screen and (max-width: 767px) {
+      .link-compare:before {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        margin: auto; } }
 
 .link-comment {
   color: #888;

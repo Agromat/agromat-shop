@@ -88,6 +88,17 @@ body
 	min-width: auto !important
 	width: 100% !important
 	max-width: 1200px !important
+
++r(767)
+	[class*="col-"]
+		padding-left: 10px
+		padding-right: 10px
+	.row
+		margin-left: - 10px
+		margin-right: -10px
+	.container
+		padding-left: 10px
+		padding-right: 10px
 a
 	text-decoration: none 
 	color: $blue 
@@ -1548,3 +1559,8 @@ a
 	display: block
 	padding: 10px 22px 10px 37px
 
+//drop-down
+.js-item
+	&.is-dropdown
+		.js-inner
+			display: block

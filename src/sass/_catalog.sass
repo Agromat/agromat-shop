@@ -116,10 +116,46 @@
 				border: 0
 .page-head
 	position: relative
+	+r(768)
+		display: none
 	.compare
 		margin-top: 6px
 		+r(1024)
 			display: none
+.page-head-mob
+	display: none
+	+r(768)
+		display: block
+	.title
+		font-size: 24px
+		margin-bottom: 9px
+		span
+			text-align: inherit
+			&:before, &:after
+				display: block
+				margin-top: -3px
+			> span
+				padding: 0 20px
+	.filter
+		padding: 0
+		margin-bottom: 10px
+.catalog
+	position: relative
+	border-bottom: 1px solid #CDCDCD 
+	a
+		display: block
+		border-top: 1px solid #CDCDCD
+		border-left: 1px solid #CDCDCD
+		border-right: 1px solid #CDCDCD
+		line-height: 1
+.catalog__link
+		font-size: 15px
+		color: #3a3a3a
+		padding: 12px 14px
+.catalog__inner
+	display: none
+.catalog__inner-link
+	padding: 13px 32px
 .page-title
 	margin: 3px 0 20px 
 	font-size: 31px
@@ -495,7 +531,7 @@
 	border-bottom: 1px solid #000
 	padding: 0 0 30px 
 	+clr
-	+r(1270)
+	@media only screen and (min-width: 1025px) and (max-width : 1270px)
 		margin-bottom: 25px
 	.title
 		margin-bottom: 10px
@@ -680,7 +716,7 @@
 	margin-bottom: 47px
 	min-height: 212px
 	height: auto
-	+r(1270)
+	@media only screen and (min-width: 1025px) and (max-width : 1270px)
 		padding: 30px 30px 30px 0
 		margin-bottom: 17px
 	+r(767)
@@ -690,12 +726,22 @@
 		border-bottom: 1px solid #cdcdcd
 		&:not(:last-child)
 			margin-bottom: 30px
+		> .row
+			> .col-xs-4
+				padding-right: 0
+				// .item__media
+				// 	margin: 0 0 0 -30px
+				// 	padding: 0 0 0 30px
+			> .col-xs-8
+				padding-left: 10px
 	&:hover
 		&:before
 			box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
 		.slick-prev,
 		.slick-next
 			visibility: visible
+			+r(1024)
+				visibility: hidden
 		+r(1024)
 			z-index: 0
 	&:before
@@ -709,7 +755,7 @@
 		visibility: visible
 		box-shadow: none 
 		//+tr(box-shadow .2s)
-		+r(1270)
+		@media only screen and (min-width: 1025px) and (max-width : 1270px)
 			top: 0
 			right: 0
 		+r(1024)
@@ -720,6 +766,9 @@
 		margin: 0 -30px
 		padding: 0 30px  
 		overflow: hidden
+		+r(767)
+			padding: 0 10px
+			margin: 0 -10px
 	.slick-prev,
 	.slick-next
 		visibility: hidden
@@ -1172,7 +1221,13 @@
 		display: inline-block
 		margin-right: 6px
 		vertical-align: middle
-		+svg(weight-blue,15,11) 
+		+svg(weight-blue,15,11)
+		+r(767)
+			position: absolute
+			bottom: 100%
+			left: 0
+			right: 0
+			margin: auto
 .link-comment
 	color: $gray
 	display: inline-block
