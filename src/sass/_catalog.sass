@@ -116,10 +116,46 @@
 				border: 0
 .page-head
 	position: relative
+	+r(768)
+		display: none
 	.compare
 		margin-top: 6px
 		+r(1024)
 			display: none
+.page-head-mob
+	display: none
+	+r(768)
+		display: block
+	.title
+		font-size: 24px
+		margin-bottom: 9px
+		span
+			text-align: inherit
+			&:before, &:after
+				display: block
+				margin-top: -3px
+			> span
+				padding: 0 20px
+	.filter
+		padding: 0
+		margin-bottom: 10px
+.catalog
+	position: relative
+	border-bottom: 1px solid #CDCDCD 
+	a
+		display: block
+		border-top: 1px solid #CDCDCD
+		border-left: 1px solid #CDCDCD
+		border-right: 1px solid #CDCDCD
+		line-height: 1
+.catalog__link
+		font-size: 15px
+		color: #3a3a3a
+		padding: 12px 14px
+.catalog__inner
+	display: none
+.catalog__inner-link
+	padding: 13px 32px
 .page-title
 	margin: 3px 0 20px 
 	font-size: 31px

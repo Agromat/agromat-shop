@@ -4369,6 +4369,9 @@ a {
   display: block;
   padding: 10px 22px 10px 37px; }
 
+.js-item.is-dropdown .js-inner {
+  display: block; }
+
 .slick-slider {
   position: relative;
   display: block;
@@ -5285,8 +5288,6 @@ a {
     background-color: #268cb6; }
   .navigation__item.is-active .fa, .navigation__item:hover .fa {
     color: #fff; }
-  .navigation__item.is-dropdown .navigation__i {
-    display: block; }
   .navigation__item .fa {
     position: absolute;
     top: 50%;
@@ -6213,11 +6214,54 @@ a {
 
 .page-head {
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .page-head {
+      display: none; } }
   .page-head .compare {
     margin-top: 6px; }
     @media screen and (max-width: 1024px) {
       .page-head .compare {
         display: none; } }
+
+.page-head-mob {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .page-head-mob {
+      display: block; } }
+  .page-head-mob .title {
+    font-size: 24px;
+    margin-bottom: 9px; }
+    .page-head-mob .title span {
+      text-align: inherit; }
+      .page-head-mob .title span:before, .page-head-mob .title span:after {
+        display: block;
+        margin-top: -3px; }
+      .page-head-mob .title span > span {
+        padding: 0 20px; }
+  .page-head-mob .filter {
+    padding: 0;
+    margin-bottom: 10px; }
+
+.catalog {
+  position: relative;
+  border-bottom: 1px solid #CDCDCD; }
+  .catalog a {
+    display: block;
+    border-top: 1px solid #CDCDCD;
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+    line-height: 1; }
+
+.catalog__link {
+  font-size: 15px;
+  color: #3a3a3a;
+  padding: 12px 14px; }
+
+.catalog__inner {
+  display: none; }
+
+.catalog__inner-link {
+  padding: 13px 32px; }
 
 .page-title {
   margin: 3px 0 20px;
