@@ -4240,15 +4240,14 @@
 <button class="scroll-top js-scroll-top" type="button"><span>наверх</span></button>
 <!-- load scripts -->
 <script src="js/main.js"></script>
-<div class="popup popup_smaller js-popup" style="display: block;">
+<div class="popup popup__filter popup_no-vertical js-popup" style="display: block;">
 	<div class="popup__overlay js-popup-overlay"></div>
-	<div class="popup__window">
+	<div class="popup__inner">
 		<h2 class="popup__titile title title_big">выберите фильтры</h2>
-		<div class="popup__content">
+		<div class="popup__filter">
 			<ul class="accordion">
-				<li class="accordion__item is-checked">
+				<li class="accordion__item is-selected">
 					<a href="#" class="accordion__link">
-						<i class="fa fa-check" aria-hidden="true"></i>
 						Тип применения 
 						<div class="accordion__select is-active">4</div>
 					</a>
@@ -4257,7 +4256,7 @@
 					<a href="#" class="accordion__link">Класс</a>
 				</li>
 				<li class="accordion__item is-active">
-					<a href="#" class="accordion__link">Применение</a>
+					<a href="#" class="accordion__link js-trigger">Применение</a>
 					<ul class="accordion__inner">
 						<li class="accordion___inner-item">
 							<label class="checkbox checkbox_med">
@@ -4288,9 +4287,8 @@
 				<li class="accordion__item">
 					<a href="#" class="accordion__link">Имитация</a>
 				</li>
-				<li class="accordion__item is-active is-checked">
-					<a href="#" class="accordion__link">
-						<i class="fa fa-check" aria-hidden="true"></i>
+				<li class="accordion__item is-selected is-active">
+					<a href="#" class="accordion__link js-trigger">
 						Бренд
 					</a>
 					<ul class="accordion__inner">
@@ -4313,6 +4311,10 @@
 					</ul>
 				</li>
 			</ul>
+			<div class="popup__filter-bottom">
+				<button type="button" class="btn-more btn-more_reset js-clear-filter" data-text="Свернуть">Сбросить фильтры</button>
+				<button class="btn btn_large" type="submit">Применить</button>
+			</div>
 		</div>
 	</div>
 </div>

@@ -509,6 +509,30 @@ $(document).ready( function() {
         }
     });
 
+    //accordion
+    $('.js-trigger').on('click', function(e) {
+        e.preventDefault();
+
+        var that         = $(this),
+            item         = that.parent('.accordion__item'),
+            list         = that.parent('.accordion'),
+            items        = list.find('.accordion__item'),
+            content      = item.find('.accordion___inner'),
+            otherContent = list.find('accordion___inner'),
+            duration     = 300;
+
+        if(!item.hasClass('is-active')) {
+            items.removeClass("is-active");
+            item.addClass('is-active');
+
+            otherContent.stop(true, true).slideUp(duration);
+            content.stop(true, true).slideDown(duration);
+        } else {
+            content.stop(true, true).slideUp(duration);
+            item.stop(true, true).removeClass("is-active");
+        }
+
+    });
     //mobile-menu
     $('.js-btn-menu-mob').click(function() {
         var nav  = $('.navigation'),

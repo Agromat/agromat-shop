@@ -1232,6 +1232,9 @@ a
 	overflow-y: auto
 	overflow-x: hidden
 	+vertical
+	.btn_large
+		padding: 14px 23px
+		font-size: 16px
 	&_big
 		.popup__window
 			width: 930px
@@ -1314,7 +1317,6 @@ a
 				text-align: center
 				span
 					display: inline-block
-
 	&__main
 		margin: 0 -14px 20px 0
 		padding-right: 15px
@@ -1359,6 +1361,24 @@ a
 		margin-bottom: 13px
 	.soc-enter
 		margin-top: 10px
+.popup_no-vertical
+	&:before
+		display: none
+.popup__filter
+	text-align: left
+	.btn-more
+		font-size: 11px
+.popup__filter-bottom
+	margin-top: 8px
+	+clr
+	.btn-more
+		float: left
+		margin-top: 7px
+		padding: 10px 10px 10px 22px
+		&:before
+			top: 10px
+	.btn_large
+		float: right
 .img-slider
 	visibility: hidden
 	height: 470px
@@ -1605,8 +1625,23 @@ a
 		.accordion__inner
 			border: 1px solid #cdcdcd
 			border-top: 0
+			display: block
 		.fa
 			color: #fff
+	&.is-selected
+		.accordion__link
+			&:before
+				content: "\f00c"
+				display: block
+				position: absolute
+				+fa-icon
+				top: 9px
+				left: 8px
+				color: #2782A8
+	&.is-selected.is-active
+		.accordion__link
+			&:before
+				color: #fff
 	a
 		color: #000
 .accordion__link
@@ -1619,6 +1654,8 @@ a
 		position: absolute
 		left: 8px
 		top: 10px
+.accordion__inner
+	display: none
 .accordion__select
 	font-size: 11px
 	color: #000
