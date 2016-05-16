@@ -128,7 +128,7 @@
 		display: block
 	.title
 		font-size: 24px
-		margin-bottom: 9px
+		margin: 12px 0 9px
 		span
 			text-align: inherit
 			&:before, &:after
@@ -139,6 +139,10 @@
 	.filter
 		padding: 0
 		margin-bottom: 10px
+.catalog-wrp
+	display: none
+	+r(768)
+		display: block
 .catalog
 	position: relative
 	border-bottom: 1px solid #CDCDCD 
@@ -148,14 +152,31 @@
 		border-left: 1px solid #CDCDCD
 		border-right: 1px solid #CDCDCD
 		line-height: 1
+.catalog__item
+	position: relative
 .catalog__link
 		font-size: 15px
 		color: #3a3a3a
 		padding: 12px 14px
+		&.is-active
+			.fa
+				+rotate(-180deg)
+		.fa
+			position: relative
+			top: 1px
 .catalog__inner
 	display: none
+	box-shadow: -0.9px 1.8px 4px rgba(0, 0, 0, 0.39)
+	position: absolute
+	top: 100%
+	left: 0
+	width: 100%
+	z-index: 5
+	background-color: #FFF 
 .catalog__inner-link
-	padding: 13px 32px
+	padding: 13px 20px
+	.fa
+		margin-right: 5px
 .page-title
 	margin: 3px 0 20px 
 	font-size: 31px
