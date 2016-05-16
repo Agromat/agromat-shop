@@ -436,7 +436,21 @@ a
 		em
 			color: $gray 
 	&:hover
-		color: $blue-h 
+		color: $blue-h
+.checkbox_med
+	font-size: 13px
+	padding: 9px 24px
+	.checkbox__text
+		span
+			padding-left: 4px
+		&:before
+			width: 15px
+			height: 15px
+		&:after
+			top: 2px
+			left: 2px
+	input:checked + .checkbox__text:after
+		top: 2px
 .radio
 	display: block
 	padding: 3px 0 
@@ -1168,7 +1182,6 @@ a
 		opacity: 0
 		-webkit-appearance: none
 .select_2
-	max-width: 124px
 	&:after
 		content: "\f107"
 		top: 9px
@@ -1577,3 +1590,44 @@ a
 	&.is-dropdown
 		.js-inner
 			display: block
+//accordion
+.accordion
+	position: relative
+	font-size: 13px
+.accordion__item
+	background-color: #f6f6f6
+	margin-bottom: 4px
+	&.is-active
+		.accordion__link
+			color: #fff
+			background-color: #2782A8
+			border-color: #2782A8
+		.accordion__inner
+			border: 1px solid #cdcdcd
+			border-top: 0
+		.fa
+			color: #fff
+	a
+		color: #000
+.accordion__link
+	padding: 7px 26px
+	display: block
+	border: 1px solid #cdcdcd
+	position: relative
+	.fa
+		color: #2782a8
+		position: absolute
+		left: 8px
+		top: 10px
+.accordion__select
+	font-size: 11px
+	color: #000
+	display: inline-block
+	padding: 1px 6px
+	margin-left: 10px
+	background-color: 
+	border: 1px solid #cdcdcd 
+	&.is-active
+		background-color: #2782a8
+		border-color: #2782a8
+		color: #fff

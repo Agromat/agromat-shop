@@ -1311,5 +1311,81 @@
 </div>
 <!-- END out-->
 //= includes/footer.html
+<div class="popup popup_smaller js-popup" style="display: block;">
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__window">
+		<h2 class="popup__titile title title_big">выберите фильтры</h2>
+		<div class="popup__content">
+			<ul class="accordion">
+				<li class="accordion__item is-checked">
+					<a href="#" class="accordion__link">
+						<i class="fa fa-check" aria-hidden="true"></i>
+						Тип применения 
+						<div class="accordion__select is-active">4</div>
+					</a>
+				</li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">Класс</a>
+				</li>
+				<li class="accordion__item is-active">
+					<a href="#" class="accordion__link">Применение</a>
+					<ul class="accordion__inner">
+						<li class="accordion___inner-item">
+							<label class="checkbox checkbox_med">
+								<input type="checkbox">
+								<span class="checkbox__text">
+									Кухня<span>(476)</span>
+								</span>
+							</label>
+						</li>
+						<li class="accordion___inner-item">
+							<label class="checkbox checkbox_med">
+								<input type="checkbox">
+								<span class="checkbox__text">
+									Ванна<span>(476)</span>
+								</span>
+							</label>
+						</li>
+						<li class="accordion___inner-item">
+							<label class="checkbox checkbox_med">
+								<input type="checkbox">
+								<span class="checkbox__text">
+									Холл<span>(34)</span>
+								</span>
+							</label>
+						</li>
+					</ul>
+				</li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">Имитация</a>
+				</li>
+				<li class="accordion__item is-active is-checked">
+					<a href="#" class="accordion__link">
+						<i class="fa fa-check" aria-hidden="true"></i>
+						Бренд
+					</a>
+					<ul class="accordion__inner">
+						<li class="accordion___inner-item">
+							<label class="checkbox checkbox_med">
+								<input type="checkbox" checked>
+								<span class="checkbox__text">
+									Ceresit<span>(87)</span>
+								</span>
+							</label>
+						</li>
+						<li class="accordion___inner-item">
+							<label class="checkbox checkbox_med">
+								<input type="checkbox">
+								<span class="checkbox__text">
+									Napoole<span>(476)</span>
+								</span>
+							</label>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
 </body>
 </html>

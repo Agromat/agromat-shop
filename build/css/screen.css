@@ -3038,6 +3038,20 @@ a {
   .checkbox:hover {
     color: #1d769b; }
 
+.checkbox_med {
+  font-size: 13px;
+  padding: 9px 24px; }
+  .checkbox_med .checkbox__text span {
+    padding-left: 4px; }
+  .checkbox_med .checkbox__text:before {
+    width: 15px;
+    height: 15px; }
+  .checkbox_med .checkbox__text:after {
+    top: 2px;
+    left: 2px; }
+  .checkbox_med input:checked + .checkbox__text:after {
+    top: 2px; }
+
 .radio {
   display: block;
   padding: 3px 0;
@@ -3902,19 +3916,19 @@ a {
     opacity: 0;
     -webkit-appearance: none; }
 
-.select_2 {
-  max-width: 124px; }
-  .select_2:after {
-    content: "\f107";
-    top: 9px;
-    right: 12px;
-    font-size: 16px; }
-  .select_2 .input {
-    border: 1px solid #cdcdcd;
-    padding: 0 10px;
-    height: 34px; }
-  .select_2 select {
-    padding: 0 10px; }
+.select_2:after {
+  content: "\f107";
+  top: 9px;
+  right: 12px;
+  font-size: 16px; }
+
+.select_2 .input {
+  border: 1px solid #cdcdcd;
+  padding: 0 10px;
+  height: 34px; }
+
+.select_2 select {
+  padding: 0 10px; }
 
 .window {
   display: block;
@@ -4385,6 +4399,48 @@ a {
 
 .js-item.is-dropdown .js-inner {
   display: block; }
+
+.accordion {
+  position: relative;
+  font-size: 13px; }
+
+.accordion__item {
+  background-color: #f6f6f6;
+  margin-bottom: 4px; }
+  .accordion__item.is-active .accordion__link {
+    color: #fff;
+    background-color: #2782A8;
+    border-color: #2782A8; }
+  .accordion__item.is-active .accordion__inner {
+    border: 1px solid #cdcdcd;
+    border-top: 0; }
+  .accordion__item.is-active .fa {
+    color: #fff; }
+  .accordion__item a {
+    color: #000; }
+
+.accordion__link {
+  padding: 7px 26px;
+  display: block;
+  border: 1px solid #cdcdcd;
+  position: relative; }
+  .accordion__link .fa {
+    color: #2782a8;
+    position: absolute;
+    left: 8px;
+    top: 10px; }
+
+.accordion__select {
+  font-size: 11px;
+  color: #000;
+  display: inline-block;
+  padding: 1px 6px;
+  margin-left: 10px;
+  border: 1px solid #cdcdcd; }
+  .accordion__select.is-active {
+    background-color: #2782a8;
+    border-color: #2782a8;
+    color: #fff; }
 
 .slick-slider {
   position: relative;
@@ -6257,11 +6313,15 @@ a {
     padding: 0;
     margin-bottom: 10px; }
   .page-head-mob .select {
-    float: right; }
+    float: right;
+    width: 50%;
+    max-width: 44%; }
   .page-head-mob .page-subtitle {
     float: left;
     margin: 0;
-    padding: 7px 0; }
+    padding: 7px 0;
+    width: 50%;
+    max-width: 48%; }
 
 .catalog-wrp {
   display: none; }
