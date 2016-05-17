@@ -231,6 +231,8 @@ a
 	font-size: 18px
 	+bold
 	span
+		+r(767)
+			text-align: center
 		&:before,
 		&:after
 			top: 45%
@@ -1701,3 +1703,39 @@ a
 		background-color: #2782a8
 		border-color: #2782a8
 		color: #fff
+//go
+.go
+	position: relative
+.go-item
+	background-color: #F6F6F6
+	border: 1px solid #cdcdcd
+	margin-bottom: 10px
+.go-link
+	font-size: 15px
+	color: #3a3a3a
+	padding: 8px 30px
+	text-align: center
+	display: block
+	position: relative
+.go-link_back
+	&:before
+		+fa-icon
+		content: "\f104"
+		position: absolute
+		top: 50%
+		left: 14px
+		font-size: 20px
+		transform: translateY(-50%)
+.go-link_next
+	font-size: 13px
+	text-align: left
+	padding: 10px 20px
+	&:before
+		+fa-icon
+		content: "\f105"
+		position: absolute
+		top: 50%
+		right: 14px
+		font-size: 15px
+		transform: translateY(-50%)
+		
