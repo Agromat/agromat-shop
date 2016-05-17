@@ -1232,6 +1232,8 @@ a
 	overflow-y: auto
 	overflow-x: hidden
 	+vertical
+	&.is-active
+		display: block
 	.btn_large
 		padding: 14px 23px
 		font-size: 16px
@@ -1364,11 +1366,16 @@ a
 .popup_no-vertical
 	&:before
 		display: none
-.popup__filter
+.popup_mobile
+	padding: 0
+.popup-filter
 	text-align: left
+	box-shadow: -1.4px 2.6px 4px rgba(0, 0, 1, 0.4)
+	padding: 10px
+	background-color: #FFF 
 	.btn-more
 		font-size: 11px
-.popup__filter-bottom
+.popup-filter__bottom
 	margin-top: 8px
 	+clr
 	.btn-more
@@ -1379,6 +1386,32 @@ a
 			top: 10px
 	.btn_large
 		float: right
+.popup_btn-close-mobile
+	font-size: 20px
+	color: #000
+	top: 2px
+	right: 3px
+	display: block
+	&:before
+		+vcenter
+	// &:before,
+	// &:after
+	// 	+hide-text
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 0
+	// 	right: 0
+	// 	top: 0
+	// 	height: 3px
+	// 	background-color: #000
+	// &:before
+	// 	+rotate(45deg)
+	// 	transform-origin: 0px 8px
+	// &:after
+	// 	bottom: 0
+	// 	top: auto
+	// 	+rotate(-45deg)
+	// 	transform-origin: 0px -8px
 .img-slider
 	visibility: hidden
 	height: 470px

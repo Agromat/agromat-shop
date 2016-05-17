@@ -139,7 +139,7 @@
 									</div>
 									<div class="col-xs-12">
 										<div class="filter">
-											<button type="button" class="btn-filter js-open-popup" data-link="popup-filter">
+											<button type="button" class="btn-filter js-open-popup" data-link="popup-filter-mobile">
 												<span class="name">фильтр:</span>
 												<span class="value">выбрано 40</span>
 											</button>
@@ -180,7 +180,7 @@
 							</div>
 
 							<!-- BEGIN banners -->
-							<div class="banners-wrap">
+							<div class="banners-wrap hidden-sm hidden-xs">
 								<div class="row">
 									<div class="col-xs-4">
 										<a class="banner" href="#">
@@ -1311,11 +1311,11 @@
 </div>
 <!-- END out-->
 //= includes/footer.html
-<div class="popup popup__filter popup_no-vertical js-popup" style="display: block;">
-	<div class="popup__overlay js-popup-overlay"></div>
+<div class="popup popup_mobile popup_no-vertical js-mob-popup" data-popup="popup-filter-mobile">
 	<div class="popup__inner">
-		<h2 class="popup__titile title title_big">выберите фильтры</h2>
-		<div class="popup__filter">
+		<div class="popup-filter">
+			<h2 class="title title_big">выберите фильтры</h2>
+			<button class="popup__close popup_btn-close-mobile js-close-popup" type="button"></button>
 			<ul class="accordion">
 				<li class="accordion__item is-selected">
 					<a href="#" class="accordion__link">
@@ -1382,8 +1382,8 @@
 					</ul>
 				</li>
 			</ul>
-			<div class="popup__filter-bottom">
-				<button type="button" class="btn-more btn-more_reset js-clear-filter" data-text="Свернуть">Сбросить фильтры</button>
+			<div class="popup-filter__bottom">
+				<button type="button" class="btn-more btn-more_reset js-clear-filter-mob">Сбросить фильтры</button>
 				<button class="btn btn_large" type="submit">Применить</button>
 			</div>
 		</div>

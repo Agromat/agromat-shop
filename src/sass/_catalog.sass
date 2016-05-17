@@ -116,7 +116,7 @@
 				border: 0
 .page-head
 	position: relative
-	+r(768)
+	+r(767)
 		display: none
 	.compare
 		margin-top: 6px
@@ -125,7 +125,7 @@
 .page-head-mob
 	display: none
 	margin-bottom: 30px
-	+r(768)
+	+r(767)
 		display: block
 	.title
 		font-size: 24px
@@ -152,7 +152,7 @@
 		max-width: 48%
 .catalog-wrp
 	display: none
-	+r(768)
+	+r(767)
 		display: block
 .catalog
 	position: relative
@@ -512,8 +512,6 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
-	+r(1024)
-		display: none
 	&_border
 		border-top: 1px solid #000 
 		padding-top: 33px
@@ -917,6 +915,7 @@
 	vertical-align: top
 	margin: 0 15px 10px
 	width: 95px
+	height: auto
 	.item__head
 		height: 42px
 	.item__title
@@ -940,6 +939,8 @@
 			right: -5px
 	.item__action
 		border: 0
+	.item__price
+		width: 100% !important
 .items-slider
 	position: relative
 	overflow: hidden
