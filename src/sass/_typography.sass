@@ -141,8 +141,14 @@
 	line-height: 1.3
 	li
 		margin-bottom: 3px
+		+r(1024)
+			border: 1px solid #cdcdcd
+			margin-bottom: 9px
 	a
 		color: #000
+		+r(1024)
+			padding: 5px 10px
+			display: block 
 		+tr_c
 		&:hover
 			color: $blue 
