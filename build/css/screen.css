@@ -7362,11 +7362,12 @@ a {
 
 @media screen and (max-width: 1024px) {
   .items-wrap_negative-space {
-    margin: 0 -18px; } }
+    margin: 0 -15px;
+    padding: 0; } }
 
 @media screen and (max-width: 767px) {
   .items-wrap_negative-space {
-    margin: 0 -13px; } }
+    margin: 0 -20px; } }
 
 .item_smaller {
   display: inline-block;
