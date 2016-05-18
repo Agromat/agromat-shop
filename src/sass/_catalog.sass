@@ -927,12 +927,22 @@
 	margin: 0 15px 10px
 	width: 95px
 	height: auto
+	+r(767)
+		margin: 0 20px 10px
+		width: 120px
 	.item__head
 		height: 42px
+		+r(767)
+			text-align: left
 	.item__title
 		font-size: 12px
 		line-height: 1.2
 		+arial
+		+r(767)
+			+med
+			font-size: 16px
+			span
+				display: none
 	.item__img
 		height: 95px
 	.btn
@@ -945,6 +955,8 @@
 		line-height: 1
 	.price_old
 		margin-bottom: 0
+		+r(767)
+			display: none
 		&:before
 			top: 10px
 			right: -5px
@@ -952,8 +964,17 @@
 		border: 0
 	.item__price
 		width: 100% !important
-	+r(767)
-		margin: 0 20px 10px
+		+r(767)
+			padding-right: 22px
+	.item__media
+		+r(767)
+			margin: 0 -20px
+			padding: 0 20px
+			img
+				width: 100%
+			.item__img
+				height: 120px
+				display: block
 .items-slider
 	position: relative
 	overflow: hidden
