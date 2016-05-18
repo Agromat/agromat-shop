@@ -555,4 +555,17 @@ $(document).ready( function() {
         $(this).parents(".js-mob-popup").removeClass('is-active');
         return false;
     });
+    $('.js-show-text').click(function(e) {
+        e.preventDefault();
+
+        var that   = $(this),
+            content = that.parent('.article__text');
+
+        that.css({
+            "display" : "none",
+        });
+
+        content.removeClass("is-hidden-mob");
+
+    })
 });
