@@ -135,12 +135,26 @@
     +r(1024)
         margin-bottom: 5px
         height: 143px
+    +r(767)
+        height: 91px
+        position: relative
+        &:before
+            display: none
     &:hover
         border-color: $blue 
     img
         display: inline-block
         vertical-align: middle
         max-width: 100%
+        +r(767)
+            display: block
+            height: auto
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: auto
 .figcaption
     font-size: 20px
     text-align: center
@@ -148,6 +162,8 @@
     margin-bottom: 33px
     +r(1024)
         display: block
+    +r(767)
+        letter-spacing: -0.05em
 .a-category
     position: relative
     border-top: 1px solid #000

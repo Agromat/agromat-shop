@@ -3366,7 +3366,9 @@ a {
   white-space: nowrap; }
   @media screen and (max-width: 767px) {
     .pager {
-      margin: 30px 0 0; } }
+      margin: 30px 0 0; }
+      .pager_no-marg {
+        margin: 0; } }
   .pager:before, .pager:after {
     content: "";
     position: absolute;
@@ -4915,6 +4917,9 @@ a {
 .header-mob__bottom {
   padding: 8px 0;
   text-align: center; }
+
+.header-mob__bottom_border {
+  border-bottom: 1px solid #000; }
 
 .top-mob {
   position: relative;
@@ -6472,6 +6477,10 @@ a {
     float: right;
     width: 50%;
     max-width: 44%; }
+    .page-head-mob .select_width {
+      max-width: none;
+      width: 100%;
+      float: none; }
   .page-head-mob .page-subtitle {
     float: left;
     margin: 0;
@@ -8494,12 +8503,28 @@ a.link-comment:hover {
     .figure {
       margin-bottom: 5px;
       height: 143px; } }
+  @media screen and (max-width: 767px) {
+    .figure {
+      height: 91px;
+      position: relative; }
+      .figure:before {
+        display: none; } }
   .figure:hover {
     border-color: #268cb6; }
   .figure img {
     display: inline-block;
     vertical-align: middle;
     max-width: 100%; }
+    @media screen and (max-width: 767px) {
+      .figure img {
+        display: block;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; } }
 
 .figcaption {
   font-size: 20px;
@@ -8509,6 +8534,9 @@ a.link-comment:hover {
   @media screen and (max-width: 1024px) {
     .figcaption {
       display: block; } }
+  @media screen and (max-width: 767px) {
+    .figcaption {
+      letter-spacing: -0.05em; } }
 
 .a-category {
   position: relative;
