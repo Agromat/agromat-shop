@@ -4014,6 +4014,10 @@ a {
     width: 830px;
     background: #fff;
     text-align: left; }
+    @media screen and (max-width: 1024px) {
+      .popup__window {
+        width: 100%;
+        max-width: 830px; } }
   .popup__head {
     position: relative;
     padding: 0 30px;
@@ -7638,12 +7642,19 @@ a {
   vertical-align: middle;
   padding-left: 4px;
   max-width: 70px; }
+  @media screen and (max-width: 1024px) {
+    .number-info {
+      max-width: 105px;
+      line-height: 1.3; } }
   .number-info_width {
     max-width: 100%; }
   .number-info span {
     display: none;
     color: #000;
     font-size: 11px; }
+    @media screen and (max-width: 1024px) {
+      .number-info span {
+        display: block; } }
   .number-info .fa {
     color: #268cb6;
     font-size: 12px;

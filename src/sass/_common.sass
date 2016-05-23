@@ -1198,7 +1198,6 @@ a
 	select
 		padding: 0 10px
 
-
 .window
 	display: block
 	margin: 50px auto 
@@ -1215,15 +1214,14 @@ a
 		padding: 28px 28px 43px
 	&__text
 		font-style: italic
-		
 
 .feedback-form
 	margin-bottom: 35px
 	+clr
+
 .map
 	margin-bottom: 45px
 	height: 270px
-	
 .popup
 	display: none
 	position: fixed
@@ -1268,6 +1266,9 @@ a
 		width: 830px
 		background: #fff 
 		text-align: left
+		+r(1024)
+			width: 100%
+			max-width: 830px
 	&__head
 		position: relative
 		padding: 0 30px 
