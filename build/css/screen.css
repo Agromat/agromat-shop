@@ -5649,7 +5649,8 @@ a {
   line-height: 1;
   padding: 20px 0 23px;
   border-top: 1px solid #999999;
-  margin: 18px 0 0; }
+  margin: 18px 0 0;
+  font-size: 12px; }
   @media screen and (max-width: 1024px) {
     .footer__middle {
       display: block; } }
@@ -5688,9 +5689,11 @@ a {
   float: left; }
   .footer__schedule span {
     color: #888;
-    padding-right: 6px; }
+    padding-right: 6px;
+    font-weight: 400; }
   .footer__schedule li {
-    margin-bottom: 6px; }
+    margin-bottom: 6px;
+    font-weight: 600; }
     .footer__schedule li:last-child {
       margin-bottom: 0; }
 
@@ -7367,7 +7370,7 @@ a {
 
 @media screen and (max-width: 767px) {
   .items-wrap_negative-space {
-    margin: 0 -20px; } }
+    margin: 0 -10px; } }
 
 .item_smaller {
   display: inline-block;
