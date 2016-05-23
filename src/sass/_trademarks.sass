@@ -3,10 +3,12 @@
     border: 2px solid #000
     +clr
 .abc
-
     display: table
     width: 100%
     table-layout: fixed
+    +r(1024)
+        display: block
+        font-size: 0
     li
         display: table-cell
         vertical-align: top
@@ -19,11 +21,15 @@
         line-height: 48px
         text-transform: uppercase
         color: #000 
-        
+        +r(1024)
+            display: inline-block
+            width: 7.142857142857143% 
         &:last-child
             width: 60px
             border-right: 0
             background: #f0f0f1 
+            +r(1024)
+                width: 7.142857142857143%*2 
         &.is-inactive
             a, span
                 color: #ccc
@@ -54,8 +60,6 @@
                     right: 0
                     z-index: -1
                     background: #fff
-                    
-                    
         a
             display: block
             position: relative
@@ -128,9 +132,48 @@
     +vertical
     overflow: hidden
     +tr(border .3s)
+    +r(1024)
+        margin-bottom: 5px
+        height: 143px
     &:hover
         border-color: $blue 
     img
         display: inline-block
         vertical-align: middle
         max-width: 100%
+.figcaption
+    font-size: 20px
+    text-align: center
+    display: none
+    margin-bottom: 33px
+    +r(1024)
+        display: block
+.a-category
+    position: relative
+    border-top: 1px solid #000
+    margin-bottom: 19px
+    display: none
+    +r(1024)
+        display: block
+.a-category__item
+    display: block
+    border: 1px solid #000
+    border-top: 0
+.a-category__trigger
+    display: block
+    font-size: 18px
+    text-transform: uppercase
+    +med
+    padding: 13px 21px
+    color: #000
+    line-height: 1
+    position: relative
+    &:after
+        content: "\f0d7"
+        +fa-icon
+        position: absolute
+        right: 16px
+        top: 50%
+        transform: translateY(-50%)
+        color: #2d8db4
+        font-size: 16px

@@ -8340,6 +8340,10 @@ a.link-comment:hover {
   display: table;
   width: 100%;
   table-layout: fixed; }
+  @media screen and (max-width: 1024px) {
+    .abc {
+      display: block;
+      font-size: 0; } }
   .abc li {
     display: table-cell;
     vertical-align: top;
@@ -8352,10 +8356,17 @@ a.link-comment:hover {
     line-height: 48px;
     text-transform: uppercase;
     color: #000; }
+    @media screen and (max-width: 1024px) {
+      .abc li {
+        display: inline-block;
+        width: 7.142857142857143%; } }
     .abc li:last-child {
       width: 60px;
       border-right: 0;
       background: #f0f0f1; }
+      @media screen and (max-width: 1024px) {
+        .abc li:last-child {
+          width: 14.28571%; } }
     .abc li.is-inactive a, .abc li.is-inactive span {
       color: #ccc;
       cursor: default; }
@@ -8479,12 +8490,68 @@ a.link-comment:hover {
     vertical-align: middle;
     width: 0;
     height: 100%; }
+  @media screen and (max-width: 1024px) {
+    .figure {
+      margin-bottom: 5px;
+      height: 143px; } }
   .figure:hover {
     border-color: #268cb6; }
   .figure img {
     display: inline-block;
     vertical-align: middle;
     max-width: 100%; }
+
+.figcaption {
+  font-size: 20px;
+  text-align: center;
+  display: none;
+  margin-bottom: 33px; }
+  @media screen and (max-width: 1024px) {
+    .figcaption {
+      display: block; } }
+
+.a-category {
+  position: relative;
+  border-top: 1px solid #000;
+  margin-bottom: 19px;
+  display: none; }
+  @media screen and (max-width: 1024px) {
+    .a-category {
+      display: block; } }
+
+.a-category__item {
+  display: block;
+  border: 1px solid #000;
+  border-top: 0; }
+
+.a-category__trigger {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+  padding: 13px 21px;
+  color: #000;
+  line-height: 1;
+  position: relative; }
+  .a-category__trigger:after {
+    content: "\f0d7";
+    display: inline-block;
+    font: normal normal normal 13px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #2d8db4;
+    font-size: 16px; }
 
 .order-group {
   margin: 45px 0 55px; }
