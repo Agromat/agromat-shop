@@ -46,15 +46,18 @@
                 display: inline-block
                 vertical-align: middle
                 line-height: 1.2
-    
 .order-wrap
     padding: 45px 30px 30px
-    background: #f3f3f3  
+    background: #f3f3f3
 .order
     padding-top: 20px
-    border-top: 1px solid #e6e6e6 
+    border-top: 1px solid #e6e6e6
+    +r(1024)
+        padding-top: 30px
     &:first-child
         border-top: 0
+        +r(1024)
+            padding-top: 0
     &__title
         margin-bottom: 20px
         font-size: 22px
@@ -69,7 +72,6 @@
                 color: $blue 
     &__table
         display: table
-        
         width: 100%
         table-layout: fixed
     &__cell
@@ -83,6 +85,8 @@
     &__cell-price  
         position: relative
         padding-right: 70px
+        +r(1024)
+            padding-right: 57px
         .btn-del
             right: 0
             top: 20px
@@ -117,10 +121,19 @@
     padding: 5px 0 
     border-top-color: #000
     text-align: right
-    
     .price
         font-weight: normal
         text-transform: none
+        +r(1024)
+            +bold
+    .price__top
+        display: none
+        +r(1024)
+            display: block
+            text-align: left
+            color: #000
+            margin: 0 0 -4px 3px
+            font-weight: 600
 .order_total
     padding-top: 10px
     border-top-width: 2px 
@@ -148,11 +161,21 @@
     .btn-simple
         margin-left: 25px
         min-width: 172px
-        padding: 14px 30px 13px 
+        padding: 14px 30px 13px
+        float: right
+        +r(1024)
+           font-size: 18px
+           padding: 13px 30px 13px 
     .btn
         margin-left: 25px
+        float: right
+        +r(1024)
+            font-size: 18px
+            padding: 15px 23px 
     .link-credit
-        vertical-align: middle
+        margin: 16px 0 0
+        +r(1024)
+            margin: 10px 215px 0 0 
     .btn-back
         margin: 10px 0 0 10px
         white-space: nowrap

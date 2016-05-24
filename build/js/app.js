@@ -7,8 +7,6 @@ $(document).ready( function() {
         if($(".js-select-list").hasClass("is-active")) {
             $(".js-select-list").removeClass("is-active")
         }
-    
-        
     });
 
     // function scrollFixedElements() {
@@ -259,7 +257,16 @@ $(document).ready( function() {
         slidesToScroll: 6,
         dots: false,
         arrows: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                }
+            }
+        ]
     });
     $(".js-slick-prev-trigger").on('click', function() {
         $(this).parent().find(".slick-slider .slick-prev").trigger("click");
