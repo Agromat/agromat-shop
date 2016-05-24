@@ -76,11 +76,11 @@ html
 	// min-width: 1200px
 	+selection
 		background: rgba($blue, .8)
-		color: #fff  
+		color: #fff
 body
-	font-size: 13px 
+	font-size: 13px
 	line-height: 1.5
-	color: $dark 
+	color: $dark
 	+arial
 .container
 	// min-width: 1200px !important
@@ -100,8 +100,8 @@ body
 		padding-left: 10px
 		padding-right: 10px
 a
-	text-decoration: none 
-	color: $blue 
+	text-decoration: none
+	color: $blue
 // common blocks
 .out
 	min-width: 300px
@@ -117,7 +117,7 @@ a
 			display: table-cell
 			vertical-align: middle
 			float: none
-	&_inline	
+	&_inline
 		font-size: 0
 		> div
 			display: inline-block
@@ -136,13 +136,12 @@ a
 		color: #000
 		+tr(color .3s)
 		&:hover
-			color: $blue 
+			color: $blue
 .list
 	font-size: 12px
 	color: #000
 	line-height: 1.2
 	word-break: break-all
-	
 	a
 		display: inline-block
 		padding: 5px 0 
@@ -164,7 +163,7 @@ a
 
 .row
 	+ .title
-		margin-top: 12px	
+		margin-top: 12px
 .title
 	position: relative
 	margin-bottom: 20px
@@ -175,7 +174,7 @@ a
 	text-transform: uppercase
 	+med
 	line-height: 1.5
-	letter-spacing: 1px 
+	letter-spacing: 1px
 	color: #000
 	+ .row
 		margin-top: 30px
@@ -1242,6 +1241,8 @@ a
 	&_big
 		.popup__window
 			width: 930px
+			+r(1024)
+				width: 100%
 	&_small
 		.popup__window
 			width: 770px
@@ -1269,7 +1270,7 @@ a
 		+r(1024)
 			width: 100%
 			max-width: 730px
-			min-height: 920px
+			// min-height: 920px
 	&__head
 		position: relative
 		padding: 0 30px 
@@ -1347,14 +1348,43 @@ a
 		float: left
 		margin-bottom: 15px
 		width: 570px
+		+r(1024)
+			float: none
+			height: 552px
+			margin: 0 auto 15px
+			.page-title
+				margin: 3px 0 32px
+				text-align: center
 	&__prod
 		overflow: hidden
 		padding: 13px 0 0 30px
+		+r(1024)
+			overflow: visible
+			padding: 0
+			+clr
+			max-width: 570px
+			margin: auto
+			.meta__available
+				float: none
+				display: block
+			.price_large
+				display: block
+			.price
+				margin: 15px 0 0
+				line-height: 1
+			.btn_large
+				margin-top: 0 !important
 		.price_old
 			margin-right: 15px
 		.btn,
 		.btn-simple
 			margin: 10px 0 
+	&__prod-col1,
+	&__prod-col2
+		+r(1024)
+			display: inline-block
+			vertical-align: top
+			width: 50%
 	.total
 		position: relative
 		margin: 20px 30px 25px
@@ -1508,17 +1538,14 @@ a
 			+tr(color .3s)
 			&:hover
 				color: $blue 
-			 
 	&__text
 		margin: 10px 0 0 
-		
 
 .total
 	border-bottom: 2px solid #000
 	font-size: 30px
 	+med
-	color: #000  
-	
+	color: #000
 .search-form
 	position: relative
 	margin: 10px 0 25px
@@ -1527,8 +1554,7 @@ a
 	.view
 		top: 5px
 		right: 15px
-		bottom: auto 
-		
+		bottom: auto
 
 .link-action
 	display: inline-block
@@ -1749,4 +1775,3 @@ a
 		right: 14px
 		font-size: 15px
 		transform: translateY(-50%)
-		

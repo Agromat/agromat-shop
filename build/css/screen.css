@@ -3990,6 +3990,9 @@ a {
     font-size: 16px; }
   .popup_big .popup__window {
     width: 930px; }
+    @media screen and (max-width: 1024px) {
+      .popup_big .popup__window {
+        width: 100%; } }
   .popup_small .popup__window {
     width: 770px; }
   .popup_smaller .popup__window {
@@ -4017,8 +4020,7 @@ a {
     @media screen and (max-width: 1024px) {
       .popup__window {
         width: 100%;
-        max-width: 730px;
-        min-height: 920px; } }
+        max-width: 730px; } }
   .popup__head {
     position: relative;
     padding: 0 30px;
@@ -4124,14 +4126,48 @@ a {
     float: left;
     margin-bottom: 15px;
     width: 570px; }
+    @media screen and (max-width: 1024px) {
+      .popup .img-slider {
+        float: none;
+        height: 552px;
+        margin: 0 auto 15px; }
+        .popup .img-slider .page-title {
+          margin: 3px 0 32px;
+          text-align: center; } }
   .popup__prod {
     overflow: hidden;
     padding: 13px 0 0 30px; }
+    @media screen and (max-width: 1024px) {
+      .popup__prod {
+        overflow: visible;
+        padding: 0;
+        *zoom: 1;
+        max-width: 570px;
+        margin: auto; }
+        .popup__prod:after {
+          content: " ";
+          display: table;
+          clear: both; }
+        .popup__prod .meta__available {
+          float: none;
+          display: block; }
+        .popup__prod .price_large {
+          display: block; }
+        .popup__prod .price {
+          margin: 15px 0 0;
+          line-height: 1; }
+        .popup__prod .btn_large {
+          margin-top: 0 !important; } }
     .popup__prod .price_old {
       margin-right: 15px; }
     .popup__prod .btn,
     .popup__prod .btn-simple {
       margin: 10px 0; }
+  @media screen and (max-width: 1024px) {
+    .popup__prod-col1, .popup__prod-col2 {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%; } }
   .popup .total {
     position: relative;
     margin: 20px 30px 25px;
@@ -6321,6 +6357,14 @@ a {
     line-height: 1.2; }
     .contacts .shedule:before {
       display: none; }
+
+@media screen and (max-width: 1270px) {
+  .l-layout {
+    *zoom: 1; }
+    .l-layout:after {
+      content: " ";
+      display: table;
+      clear: both; } }
 
 .l-main {
   position: relative;
