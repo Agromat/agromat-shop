@@ -323,12 +323,35 @@ $(document).ready( function() {
             {
                 breakpoint: 1025,
                 settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }
+        ]
+    });
+     $('.js-slider-six_small').on('init', function(slick) {
+          setTimeout(function(){
+            $('.js-slider-six_small').addClass("is-ready");
+          },200);
+    });
+    $(".js-slider-six_small").slick({
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
                     slidesToShow: 5,
                     slidesToScroll: 5,
                 }
             }
         ]
     });
+
     $(".js-slick-prev-trigger").on('click', function() {
         $(this).parent().find(".slick-slider .slick-prev").trigger("click");
         return false;

@@ -354,6 +354,7 @@ a
 				font-size: 12px
 	&_large
 		font-size: 40px
+		+bold
 		sup, sub
 			font-size: 22px
 		sup
@@ -390,6 +391,8 @@ a
 		line-height: 1.4
 	&_mb
 		margin-bottom: 45px
+	+ .table-characteristics
+		margin-top: 26px
 
 .checkbox
 	display: block
@@ -925,6 +928,8 @@ a
 	margin: 20px -9px 35px 0
 	font-size: 0
 	height: 50px
+	+r(1024)
+		margin: 20px -6px 35px 0
 	&_mb
 		margin-bottom: 0
 	&:after
@@ -935,6 +940,8 @@ a
 		right: 9px
 		height: 2px
 		background: #000
+		+r(1024)
+			right: 6px
 	li
 		position: relative
 		display: inline-block
@@ -953,6 +960,11 @@ a
 		font-size: 18px
 		color: #999
 		z-index: 1
+		+r(1024)
+			max-width: none
+			width: 22%
+			&:last-child
+				width: 34%
 		&:first-child
 			margin-left: 0
 		&.is-active
@@ -995,10 +1007,18 @@ a
 		padding-bottom: 10px
 		.box
 			margin: 0 0 26px
+		+r(1024)
+			.price_old
+				padding-left: 0
+				&:before
+					right: 0
+					left: -10px
 	&__right
 		float: right
 		padding-left: 30px
 		width: 22.8%
+		+r(1024)
+			display: none
 
 .tip
 	position: absolute
@@ -1045,8 +1065,15 @@ a
 	&__cell
 		display: table-cell
 		vertical-align: middle
+		+r(1024)
+			vertical-align: top
+			padding: 0 28px
+			text-align: center
 		i
 			vertical-align: middle
+			+r(1024)
+				display: block
+				margin: auto
 .title-icon
 	font-size: 24px
 	+med
