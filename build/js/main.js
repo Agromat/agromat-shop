@@ -453,7 +453,7 @@ $(document).ready( function() {
         var text = $(this).data("text");
         $(".js-tip").css({
             top: top,
-            left: left,
+            left: left - 175,
         }).toggleClass("is-active").children().text(text);
         event.stopPropagation();
         return false;

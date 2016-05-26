@@ -1445,10 +1445,17 @@ a.link-comment
 			img
 				display: inline-block
 				vertical-align: middle
+				+r(1024)
+					&:active
+						outline: 3px solid #2d8db4
 		.slick-current
 			div
 				border-color: $blue
 				border-width: 3px
+		.slick-list
+			+r(1024)
+				padding: 3px 0
+
 				
 .btn-zoom
 	display: inline-block
@@ -1560,3 +1567,25 @@ a.link-comment
 	display: none
 	+r(1024)
 		display: block
+.back-to
+	display: block
+	position: relative
+	height: 54px
+	background-color: #FFF
+	border: 1px solid #268cb6
+	padding: 8px 30px
+	font-size: 12px
+	color: #000
+	margin: 10px 0 26px
+	&:before
+		content: "\f104"
+		+fa-icon
+		position: absolute
+		left: 8px
+		top: 50%
+		transform: translateY(-50%)
+		color: #268cb6
+		font-size: 40px
+	.title-med
+		+ .title-med
+			margin-left: 5px
