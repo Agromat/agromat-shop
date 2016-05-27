@@ -88,7 +88,16 @@ body
 	min-width: auto !important
 	width: 100% !important
 	max-width: 1200px !important
-
++r(1024)
+	.container
+		padding-left: 20px
+		padding-right: 20px
+	.row
+		margin-left: -20px
+		margin-right: -20px
+	[class*="col-"]
+		padding-left: 20px
+		padding-right: 20px
 +r(767)
 	[class*="col-"]
 		padding-left: 10px
@@ -1000,6 +1009,20 @@ a
 		+tr(color .3s)
 .tabs-content
 	display: none
+	+r(1024)
+		.item_small
+			width: 100%
+			height: auto
+			img
+				display: block
+				width: 100%
+			.item__price
+				width: auto !important
+			.price_old
+				display: none
+			.item__media
+				padding: 0
+				margin: 0
 .product-col
 	+clr
 	margin-bottom: 55px
