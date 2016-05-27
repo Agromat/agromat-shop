@@ -3642,7 +3642,8 @@ a {
   height: 50px; }
   @media screen and (max-width: 1024px) {
     .tabs {
-      margin: 20px -6px 35px 0; } }
+      margin: 20px -6px 35px 0;
+      white-space: nowrap; } }
   .tabs_mb {
     margin-bottom: 0; }
   .tabs:after {
@@ -7564,6 +7565,10 @@ a {
         height: 120px;
         display: block; } }
 
+@media screen and (max-width: 1024px) {
+  .item_no-goods .price {
+    display: none; } }
+
 .items-slider {
   position: relative;
   overflow: hidden;
@@ -8447,6 +8452,9 @@ a.link-comment:hover {
     transition: opacity 0.2s; }
   .video:hover img {
     opacity: 1; }
+  @media screen and (max-width: 1024px) {
+    .video + .title {
+      text-align: left; } }
 
 .btn-play {
   position: absolute;
