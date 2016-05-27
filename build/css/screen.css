@@ -4064,6 +4064,9 @@ a {
         width: 100%; } }
   .popup_small .popup__window {
     width: 770px; }
+    @media screen and (max-width: 1024px) {
+      .popup_small .popup__window {
+        width: 100%; } }
   .popup_smaller .popup__window {
     width: 435px; }
     @media screen and (max-width: 767px) {
