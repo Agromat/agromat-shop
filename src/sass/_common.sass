@@ -525,6 +525,11 @@ a
 	color: #888
 	font-size: 11px 
 	width: 33%
+	+r(1024)
+		p
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
 	&:first-child
 		width: 34%
 	&.is-inactive
@@ -565,7 +570,10 @@ a
 		position: relative
 		font-size: 13px
 		font-weight: bold
-		color: #333 
+		color: #333
+		+r(1024)
+			display: block
+			margin-bottom: 12px
 		&:before
 			content: ""
 			position: absolute
@@ -590,6 +598,8 @@ a
 .radiobox_tab
 	min-height: 66px
 	margin-bottom: -2px
+	+r(1024)
+		padding: 15px 20px 0 50px
 	.radiobox__border
 		border-bottom: 0 
 	input

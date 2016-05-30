@@ -3135,6 +3135,11 @@ a {
   color: #888;
   font-size: 11px;
   width: 33%; }
+  @media screen and (max-width: 1024px) {
+    .radiobox p {
+      margin-bottom: 10px; }
+      .radiobox p:last-child {
+        margin-bottom: 0; } }
   .radiobox:first-child {
     width: 34%; }
   .radiobox.is-inactive .radiobox__label {
@@ -3171,6 +3176,10 @@ a {
     font-size: 13px;
     font-weight: bold;
     color: #333; }
+    @media screen and (max-width: 1024px) {
+      .radiobox__title {
+        display: block;
+        margin-bottom: 12px; } }
     .radiobox__title:before {
       content: "";
       position: absolute;
@@ -3194,6 +3203,9 @@ a {
 .radiobox_tab {
   min-height: 66px;
   margin-bottom: -2px; }
+  @media screen and (max-width: 1024px) {
+    .radiobox_tab {
+      padding: 15px 20px 0 50px; } }
   .radiobox_tab .radiobox__border {
     border-bottom: 0; }
   .radiobox_tab input:checked + .radiobox__border:after {
@@ -8795,6 +8807,11 @@ a.link-comment:hover {
 
 .order-group {
   margin: 45px 0 55px; }
+  @media screen and (max-width: 1024px) {
+    .order-group .radiobox_tab {
+      width: 26%; }
+      .order-group .radiobox_tab:last-of-type {
+        width: 48%; } }
 
 .table-wrap {
   border: 2px solid #268cb6; }
@@ -8843,6 +8860,23 @@ a.link-comment:hover {
       display: inline-block;
       vertical-align: middle;
       line-height: 1.2; }
+
+@media screen and (max-width: 1024px) {
+  .table_order caption {
+    padding: 15px 20px 0; }
+  .table_order td {
+    padding: 0 20px; }
+  .table_order th {
+    padding: 0 20px 7px;
+    vertical-align: bottom; }
+  .table_order .paсkage {
+    width: 270px; }
+  .table_order .d-payment {
+    padding-left: 0; }
+  .table_order .sum {
+    width: 227px;
+    padding: 0 48px 7px 0;
+    line-height: 1; } }
 
 .order-wrap {
   padding: 45px 30px 30px;
