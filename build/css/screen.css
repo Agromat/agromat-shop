@@ -8916,6 +8916,27 @@ a.link-comment:hover {
     padding: 0 0 25px 5px; }
     .order__cell:first-child {
       padding-left: 0; }
+    @media screen and (max-width: 1024px) {
+      .order__cell {
+        vertical-align: middle;
+        padding: 0; }
+        .order__cell .number-info_width {
+          max-width: 56%; }
+        .order__cell .price {
+          vertical-align: middle; } }
+  @media screen and (max-width: 1024px) {
+    .order__cell_first {
+      width: 100px; } }
+  @media screen and (max-width: 1024px) {
+    .order__cell_second {
+      width: 225px; } }
+  @media screen and (max-width: 1024px) {
+    .order__cell_b-space {
+      padding: 0 0 8px; } }
+  @media screen and (max-width: 1024px) {
+    .order__cell_last {
+      padding: 0 22px 20px 0;
+      text-align: right; } }
   .order__cell-number {
     width: 200px; }
   .order__cell-price {

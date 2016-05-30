@@ -101,6 +101,26 @@
         padding: 0 0 25px 5px
         &:first-child
             padding-left: 0
+        +r(1024)
+            vertical-align: middle
+            padding: 0
+            .number-info_width
+                max-width: 56%
+            .price
+                vertical-align: middle
+    &__cell_first
+        +r(1024)
+            width: 100px
+    &__cell_second
+        +r(1024)
+            width: 225px
+    &__cell_b-space
+        +r(1024)
+            padding: 0 0 8px
+    &__cell_last
+        +r(1024)
+            padding: 0 22px 20px 0
+            text-align: right
     &__cell-number
         width: 200px
     &__cell-price  
