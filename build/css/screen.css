@@ -4069,6 +4069,8 @@ a {
   .popup .btn_large {
     padding: 14px 23px;
     font-size: 16px; }
+  .popup_success .popup__window {
+    width: 373px; }
   .popup_big .popup__window {
     width: 930px; }
     @media screen and (max-width: 1024px) {
@@ -4172,6 +4174,11 @@ a {
     @media screen and (max-width: 767px) {
       .popup__body {
         padding: 0; } }
+  .popup__text {
+    font-style: italic;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 41px; }
   .popup__form {
     padding: 30px 100px;
     *zoom: 1; }
