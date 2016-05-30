@@ -1356,18 +1356,22 @@ a
 		z-index: 1
 		+tr(color .3s)
 		+r(767)
-			display: none
+			+s($close)
 		&:hover
 			color: #000
 		&:before
 			content: "\f00d"
 			+fa-icon
 			vertical-align: middle 
+			+r(767)
+				display: none
 	&__body
 		padding: 15px 30px 
 		+clr
 		+r(1024)
 			padding: 30px
+		+r(767)
+			padding: 0
 	&__form
 		padding: 30px 100px
 		+clr
@@ -1416,6 +1420,17 @@ a
 			.page-title
 				margin: 3px 0 32px
 				text-align: center
+		+r(767)
+			width: 100%
+			height: auto
+			margin: auto
+			.page-title
+				max-width: 170px
+				margin: 0 auto 46px
+				font-size: 20px
+			.slick-slide
+				height: auto
+				padding: 0 41px
 	&__prod
 		overflow: hidden
 		padding: 13px 0 0 30px
@@ -1439,7 +1454,9 @@ a
 			margin-right: 15px
 		.btn,
 		.btn-simple
-			margin: 10px 0 
+			margin: 10px 0
+		+r(767)
+			display: none
 	&__prod-col1,
 	&__prod-col2
 		+r(1024)
