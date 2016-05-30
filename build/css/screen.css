@@ -6896,6 +6896,9 @@ a {
   margin: 40px 0 60px; }
   .btn-send-wrap .btn_large {
     min-width: 270px; }
+  @media screen and (max-width: 1024px) {
+    .btn-send-wrap_b-space {
+      margin: 30px 0 8px; } }
 
 .btn {
   display: inline-block;
@@ -8959,6 +8962,9 @@ a.link-comment:hover {
       color: #888;
       font-weight: normal;
       font-size: 11px; }
+  @media screen and (max-width: 1024px) {
+    .order__info_t-space {
+      padding: 28px 0 0; } }
   .order__prod {
     padding-right: 10px;
     font-size: 14px;
