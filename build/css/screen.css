@@ -7625,7 +7625,11 @@ a {
   @media screen and (max-width: 767px) {
     .items-slider {
       margin-bottom: 0;
-      margin-top: 27px; } }
+      margin-top: 27px; }
+      .items-slider .title {
+        margin-bottom: 10px; }
+        .items-slider .title span {
+          text-align: left; } }
   .items-slider .btn-simple {
     min-width: 130px; }
   .items-slider .post-item_small {
@@ -7670,6 +7674,9 @@ a {
     @media screen and (max-width: 1024px) {
       .items-slider .item__action .price_old {
         display: none; } }
+  @media screen and (max-width: 1270px) {
+    .items-slider .item__price {
+      min-width: 120px; } }
   @media screen and (max-width: 1024px) {
     .items-slider .item__price {
       width: auto !important; } }

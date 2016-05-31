@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>agromat-shop-order-1-quick</title>
+	<title>agromat-shop-order-1</title>
 	//= includes/head.html
 </head>
 <body>
@@ -41,8 +41,8 @@
 					<div class="row js-tabs-group">
 						<div class="col-xs-12">
 							<ul class="tabs tabs_mb js-tabs">
-								<li><a href="#js-tab-order">обычный заказ</a></li>
-								<li class="is-active"><a href="#js-tab-quick-order">быстрый заказ</a></li>
+								<li class="is-active"><a href="#js-tab-order">обычный заказ</a></li>
+								<li><a href="#js-tab-quick-order">быстрый заказ</a></li>
 							</ul>
 						</div>
 						<div class="tabs-content js-tabs-content" data-id="#js-tab-order">
@@ -418,7 +418,7 @@
 								</div>
 								
 								
-								<div class="btn-send-wrap hidden-sm">
+								<div class="btn-send-wrap">
 									<button type="button" class="btn btn_large">отправить заказ</button>
 								</div>
 								
@@ -552,13 +552,31 @@
 									</div>
 								</div>
 								<div class="order order_delivery order_total">
-									<div class="order__delivery">
+									<div class="order__delivery hidden-sm hidden-xs">
 										<div class="order__info">
 											ВСЕГО: <span>3 товара на общую сумму с доставкой</span>
 										</div>
 										<span class="price price_large">
 											116 805, <sup>51</sup> <sub>грн</sub>
 										</span>
+									</div>
+									<div class="order__delivery hidden-lg hidden-md">
+										<div class="container">
+											<div class="row">
+												<div class="col-xs-8">
+													<div class="order__info order__info_t-space">
+														ВСЕГО: <span>3 товара на общую сумму с доставкой</span>
+													</div>
+												</div>
+												<div class="col-xs-4">
+													<div class="row">
+														<span class="price price_large">
+															116 805, <sup>51</sup> <sub>грн</sub>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -583,5 +601,20 @@
 	</dib>
 </div>
 //= includes/footer.html
+<!-- BEGIN popup -->
+<div class="popup popup_success js-popup" style="display: block;">
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__window">
+		<div class="popup__body">
+			<div class="title title_width"><span><span><i class="fa fa-check-square-o"></i></span></span></div>
+			<div class="popup__text">
+				Спасибо за ваш заказ, мы свяжемся с вами в <br> ближайшее время
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END popup -->
 </body>
 </html>
+
+
