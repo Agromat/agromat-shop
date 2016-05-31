@@ -8358,6 +8358,10 @@ a.link-comment:hover {
       vertical-align: middle;
       width: 0;
       height: 100%; }
+    @media screen and (max-width: 767px) {
+      .article figure {
+        width: 100%;
+        height: 188px; } }
     .article figure[align="right"] {
       float: right;
       margin-left: 25px; }
