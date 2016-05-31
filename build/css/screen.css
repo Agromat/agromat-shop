@@ -2831,6 +2831,10 @@ a {
   .title_big span span:before, .title_big span span:after {
     margin-top: -3px; }
 
+@media screen and (max-width: 767px) {
+  .title_space {
+    margin-bottom: 4px; } }
+
 .title_width > span {
   padding: 0 15px; }
   @media screen and (max-width: 767px) {
@@ -3004,6 +3008,10 @@ a {
     margin-bottom: 45px; }
   .text + .table-characteristics {
     margin-top: 26px; }
+
+.text_mob {
+  font-size: 13px;
+  margin-bottom: 12px; }
 
 .checkbox {
   display: block;
@@ -4040,6 +4048,9 @@ a {
     content: " ";
     display: table;
     clear: both; }
+  @media screen and (max-width: 767px) {
+    .feedback-form {
+      clear: both; } }
 
 .map {
   margin-bottom: 45px;
@@ -6296,6 +6307,17 @@ a {
   .box_contacts .shedule:before {
     color: #ed1c24; }
 
+.box__list {
+  *zoom: 1; }
+  .box__list:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+.box__item {
+  float: left;
+  width: 33.33333%; }
+
 .box__info {
   margin: -7px 0 5px;
   font-size: 22px;
@@ -6639,7 +6661,9 @@ a {
   margin-bottom: 30px; }
   @media screen and (max-width: 767px) {
     .page-head-mob {
-      display: block; } }
+      display: block; }
+      .page-head-mob .text {
+        font-size: 13px; } }
   .page-head-mob .title {
     font-size: 24px;
     margin: 12px 0 9px; }
@@ -6669,6 +6693,31 @@ a {
     max-width: 48%; }
   .page-head-mob_no-space {
     margin-bottom: 0; }
+
+.contact-mob {
+  position: relative; }
+  .contact-mob__table {
+    width: 100%;
+    table-layout: fixed;
+    text-align: left; }
+  .contact-mob th {
+    color: #888888;
+    text-transform: uppercase;
+    font-family: "pfdintextcomppro-bold", Arial, "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+    width: 70px;
+    font-size: 16px;
+    padding-right: 14px; }
+  .contact-mob th, .contact-mob td {
+    padding-bottom: 14px; }
+  .contact-mob strong {
+    font-family: "pfdintextcomppro-bold", Arial, "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 16px; }
+  .contact-mob .shedule {
+    font-size: 13px; }
+    .contact-mob .shedule:before {
+      display: none; }
+    .contact-mob .shedule p strong {
+      font-size: 13px; }
 
 .catalog-wrp {
   display: none; }

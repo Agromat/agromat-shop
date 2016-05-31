@@ -136,6 +136,8 @@
 	margin-bottom: 30px
 	+r(767)
 		display: block
+		.text
+			font-size: 13px
 	.title
 		font-size: 24px
 		margin: 12px 0 9px
@@ -165,6 +167,33 @@
 		max-width: 48%
 	&_no-space
 		margin-bottom: 0
+.contact-mob
+	position: relative
+	&__table
+		width: 100%
+		table-layout: fixed
+		text-align: left
+	th
+		color: #888888
+		text-transform: uppercase
+		+bold
+		width: 70px
+		font-size: 16px
+		padding-right: 14px
+	th, td
+		padding-bottom: 14px
+	strong
+		+bold
+		font-size: 16px
+	.shedule
+		font-size: 13px
+		&:before
+			display: none
+		p
+			br
+				// display: none
+			strong
+				font-size: 13px
 .catalog-wrp
 	display: none
 	+r(767)
