@@ -4686,6 +4686,8 @@ a {
   @media screen and (max-width: 767px) {
     .go {
       display: block; } }
+  .go_space {
+    margin-bottom: 20px; }
 
 .go-item {
   background-color: #F6F6F6;
@@ -6313,6 +6315,9 @@ a {
     margin: 0 15px 0 0;
     width: 95px;
     overflow: hidden; }
+    @media screen and (max-width: 767px) {
+      .post-item__media {
+        float: none; } }
     .post-item__media img {
       display: block;
       width: 100%;
@@ -6337,6 +6342,11 @@ a {
         color: #268cb6; }
   .post-item__main {
     overflow: hidden; }
+    @media screen and (max-width: 767px) {
+      .post-item__main {
+        width: 95px; }
+        .post-item__main .post-item__title {
+          padding: 13px 0 4px; } }
   .post-item__info {
     clear: both; }
     .post-item__info .meta {
@@ -6657,6 +6667,8 @@ a {
     padding: 7px 0;
     width: 50%;
     max-width: 48%; }
+  .page-head-mob_no-space {
+    margin-bottom: 0; }
 
 .catalog-wrp {
   display: none; }
@@ -7000,6 +7012,9 @@ a {
       display: none; } }
   .sort + .items-wrap {
     margin-top: 60px; }
+  @media screen and (max-width: 1024px) {
+    .sort + .banners-wrap + .blocks-wrap {
+      margin-top: 0; } }
   .sort > a, .sort > span {
     display: inline-block;
     vertical-align: middle; }
@@ -7380,6 +7395,9 @@ a {
     .item_list {
       padding: 30px 30px 30px 0;
       margin-bottom: 17px; } }
+  @media screen and (max-width: 1024px) {
+    .item_list .number-info {
+      max-width: 70px; } }
   @media screen and (max-width: 767px) {
     .item_list {
       padding: 0 0 30px;
@@ -8343,6 +8361,10 @@ a.link-comment:hover {
     .article figure[align="right"] {
       float: right;
       margin-left: 25px; }
+      @media screen and (max-width: 767px) {
+        .article figure[align="right"] {
+          float: none;
+          margin-left: 0; } }
     .article figure[align="left"] {
       float: left;
       margin-right: 25px; }

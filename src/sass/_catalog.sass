@@ -163,6 +163,8 @@
 		padding: 7px 0
 		width: 50%
 		max-width: 48%
+	&_no-space
+		margin-bottom: 0
 .catalog-wrp
 	display: none
 	+r(767)
@@ -447,6 +449,9 @@
 		display: none
 	+ .items-wrap
 		margin-top: 60px
+	+ .banners-wrap + .blocks-wrap
+		+r(1024)
+			margin-top: 0
 	> a, > span
 		display: inline-block
 		vertical-align: middle
@@ -765,6 +770,9 @@
 	@media only screen and (min-width: 1025px) and (max-width : 1270px)
 		padding: 30px 30px 30px 0
 		margin-bottom: 17px
+	+r(1024)
+		.number-info
+			max-width: 70px
 	+r(767)
 		padding: 0 0 30px
 		margin-bottom: 0

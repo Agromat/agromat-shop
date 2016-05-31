@@ -8,7 +8,6 @@
 		color: $blue
 		&:hover
 			color: $blue-h
-	
 	p
 		margin-bottom: 20px
 		&:last-child
@@ -23,6 +22,9 @@
 		&[align="right"]
 			float: right
 			margin-left: 25px
+			+r(767)
+				float: none
+				margin-left: 0
 		&[align="left"]
 			float: left
 			margin-right: 25px
@@ -58,7 +60,7 @@
 	h2
 		font-size: 22px
 	h3
-		margin: 7px 0 
+		margin: 7px 0
 		font-size: 16px
 .article__text
 	a
@@ -66,7 +68,6 @@
 	+r(767)
 		p
 			margin-bottom: 0
-		
 		a
 			display: inline-block
 			border-bottom: 1px dashed
@@ -109,7 +110,6 @@
 	&.is-ready
 		opacity: 1
 		visibility: visible
-	
 	img
 		width: 100%
 		height: auto
