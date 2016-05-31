@@ -4055,6 +4055,9 @@ a {
 .map {
   margin-bottom: 45px;
   height: 270px; }
+  @media screen and (max-width: 767px) {
+    .map {
+      margin-bottom: 0; } }
 
 .popup {
   display: none;
