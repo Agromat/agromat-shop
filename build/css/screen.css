@@ -3962,6 +3962,9 @@ a {
     position: relative; }
   .field_holder {
     min-height: 54px; }
+    @media screen and (max-width: 767px) {
+      .field_holder {
+        display: none; } }
 
 .input {
   display: block;
@@ -7639,6 +7642,9 @@ a {
     margin-bottom: 20px; }
     .items-wrap_five-items .row > div {
       width: 20%; }
+      @media screen and (max-width: 1270px) {
+        .items-wrap_five-items .row > div {
+          width: 33.33333%; } }
     .items-wrap_five-items .btn,
     .items-wrap_five-items .btn-simple {
       display: block;
@@ -8555,7 +8561,7 @@ a.link-comment:hover {
 
 @media screen and (max-width: 767px) {
   .article__text.is-hidden-mob p {
-    height: 65px;
+    height: 56px;
     overflow: hidden; } }
 
 .slider {
