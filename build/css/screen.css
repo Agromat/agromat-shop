@@ -4764,6 +4764,11 @@ a {
     .delivery-wrp {
       display: block;
       clear: both; } }
+  @media screen and (max-width: 767px) {
+    .delivery-wrp .delivery-wrp__item .title {
+      margin: 22px 0 4px; }
+      .delivery-wrp .delivery-wrp__item .title span {
+        text-align: left; } }
   .delivery-wrp__item {
     *zoom: 1; }
     .delivery-wrp__item:after {
@@ -8410,6 +8415,13 @@ a.link-comment:hover {
   padding: 0 0 35px;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
+  @media screen and (max-width: 767px) {
+    .article {
+      font-size: 13px;
+      padding: 0; }
+      .article strong {
+        font-size: 16px;
+        letter-spacing: -0.02em; } }
   .article + .title {
     margin-top: 14px; }
   .article a {
@@ -8452,6 +8464,10 @@ a.link-comment:hover {
     .article figure[align="left"] {
       float: left;
       margin-right: 25px; }
+      @media screen and (max-width: 767px) {
+        .article figure[align="left"] {
+          float: none;
+          margin-right: 0; } }
     .article figure img {
       display: inline-block;
       max-width: 100%;
