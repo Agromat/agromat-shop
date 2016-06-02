@@ -132,6 +132,10 @@ a
 			display: inline-block
 			vertical-align: top
 			float: none
+	&.js-tabs-group
+		.tabs
+			li
+				width: 50%
 .l-layout
 	+rmin(1271)
 		display: table
@@ -559,6 +563,8 @@ a
 		z-index: 1
 		pointer-events: none
 		border: 2px solid $blue
+		+r(767)
+			z-index: -1
 	input
 		opacity: 0
 		position: absolute
@@ -568,6 +574,18 @@ a
 				+ .radiobox__title
 					&:after
 						display: block
+						background-color: $blue 
+					&:before
+						background-color: #FFF 
+			+r(767)
+				+ .radiobox__border
+					background-color: $blue 
+					&:after
+						display: none
+					+ .radiobox__title
+						color: #fff
+					~ p
+							color: #fff
 		&[disabled]
 			+ .radiobox__border
 				+ .radiobox__title
@@ -1040,6 +1058,10 @@ a
 			.item__media
 				padding: 0
 				margin: 0
+	&.js-tabs-content
+		+ [class^='col-xs-4']
+			+r(767)
+				width: 100%
 .product-col
 	+clr
 	margin-bottom: 55px

@@ -2,9 +2,14 @@
     margin: 45px 0 55px
     +r(1024)    
         .radiobox_tab
-            width: 26%
-            &:last-of-type
-                width: 48%
+            width: 33.3333%
+    +r(767)
+        .input_textarea
+            height: 64px
+        .radiobox
+            width: 100%
+        .js-radiobox-content
+            display: none !important
 .table-wrap
     border: 2px solid $blue
     .btn-simple
@@ -108,6 +113,11 @@
                 max-width: 56%
             .price
                 vertical-align: middle
+        +r(767)
+            .prod-simple
+                .prod-simple__top
+                    + .prod-simple__text
+                        display: none
     &__cell_first
         +r(1024)
             width: 100px
@@ -178,6 +188,12 @@
             color: #000
             margin: 0 0 -4px 3px
             font-weight: 600
+    +r(767)
+        .container
+            .row
+                [class^="col-xs-8"],
+                [class^="col-xs-4"]
+                    width: 100%
 .order_total
     padding-top: 10px
     border-top-width: 2px 
