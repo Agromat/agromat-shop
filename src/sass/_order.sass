@@ -75,6 +75,8 @@
 .order-wrap
     padding: 45px 30px 30px
     background: #f3f3f3
+    +r(767)
+        padding: 10px
 .order
     padding-top: 20px
     border-top: 1px solid #e6e6e6
@@ -96,10 +98,14 @@
             +tr(color .3s)
             &:hover
                 color: $blue 
+        +r(572)
+            font-size: 18px
     &__table
         display: table
         width: 100%
         table-layout: fixed
+        +r(610)
+            display: block
     &__cell
         display: table-cell
         vertical-align: top
@@ -118,12 +124,28 @@
                 .prod-simple__top
                     + .prod-simple__text
                         display: none
+            .number__plus,
+            .number__minus
+                display: none
+            .number
+                width: 60px
+            .number__input
+                padding: 0 5px
+                text-align: center
+            .number-info
+                .meta
+                    display: none
+        +r(610)
+            display: inline-block
+            width: 100px !important
     &__cell_first
         +r(1024)
             width: 100px
     &__cell_second
         +r(1024)
             width: 225px
+        +r(767)
+            width: auto
     &__cell_b-space
         +r(1024)
             padding: 0 0 8px
@@ -131,6 +153,8 @@
         +r(1024)
             padding: 0 22px 20px 0
             text-align: right
+        +r(572)
+            text-align: left
     &__cell-number
         width: 200px
     &__cell-price  
@@ -194,6 +218,11 @@
                 [class^="col-xs-8"],
                 [class^="col-xs-4"]
                     width: 100%
+        .price_large
+            font-size: 30px
+            sup
+                top: -10px
+
 .order_total
     padding-top: 10px
     border-top-width: 2px 

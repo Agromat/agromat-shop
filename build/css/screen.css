@@ -7889,6 +7889,10 @@ a {
   .number_small .number__minus {
     height: 13px;
     width: 13px; }
+    @media screen and (max-width: 767px) {
+      .number_small .number__plus,
+      .number_small .number__minus {
+        display: none; } }
     .number_small .number__plus:before,
     .number_small .number__minus:before {
       font-size: 8px; }
@@ -9055,6 +9059,9 @@ a.link-comment:hover {
 .order-wrap {
   padding: 45px 30px 30px;
   background: #f3f3f3; }
+  @media screen and (max-width: 767px) {
+    .order-wrap {
+      padding: 10px; } }
 
 .order {
   padding-top: 20px;
@@ -9080,10 +9087,16 @@ a.link-comment:hover {
       transition: color 0.3s; }
       .order__title a:hover {
         color: #268cb6; }
+    @media screen and (max-width: 572px) {
+      .order__title {
+        font-size: 18px; } }
   .order__table {
     display: table;
     width: 100%;
     table-layout: fixed; }
+    @media screen and (max-width: 610px) {
+      .order__table {
+        display: block; } }
   .order__cell {
     display: table-cell;
     vertical-align: top;
@@ -9100,13 +9113,30 @@ a.link-comment:hover {
           vertical-align: middle; } }
     @media screen and (max-width: 767px) {
       .order__cell .prod-simple .prod-simple__top + .prod-simple__text {
+        display: none; }
+      .order__cell .number__plus,
+      .order__cell .number__minus {
+        display: none; }
+      .order__cell .number {
+        width: 60px; }
+      .order__cell .number__input {
+        padding: 0 5px;
+        text-align: center; }
+      .order__cell .number-info .meta {
         display: none; } }
+    @media screen and (max-width: 610px) {
+      .order__cell {
+        display: inline-block;
+        width: 100px !important; } }
   @media screen and (max-width: 1024px) {
     .order__cell_first {
       width: 100px; } }
   @media screen and (max-width: 1024px) {
     .order__cell_second {
       width: 225px; } }
+  @media screen and (max-width: 767px) {
+    .order__cell_second {
+      width: auto; } }
   @media screen and (max-width: 1024px) {
     .order__cell_b-space {
       padding: 0 0 8px; } }
@@ -9114,6 +9144,9 @@ a.link-comment:hover {
     .order__cell_last {
       padding: 0 22px 20px 0;
       text-align: right; } }
+  @media screen and (max-width: 572px) {
+    .order__cell_last {
+      text-align: left; } }
   .order__cell-number {
     width: 200px; }
   .order__cell-price {
@@ -9177,7 +9210,11 @@ a.link-comment:hover {
   @media screen and (max-width: 767px) {
     .order_delivery .container .row [class^="col-xs-8"],
     .order_delivery .container .row [class^="col-xs-4"] {
-      width: 100%; } }
+      width: 100%; }
+    .order_delivery .price_large {
+      font-size: 30px; }
+      .order_delivery .price_large sup {
+        top: -10px; } }
 
 .order_total {
   padding-top: 10px;
