@@ -9172,6 +9172,10 @@ a.link-comment:hover {
   @media screen and (max-width: 1024px) {
     .order__info_t-space {
       padding: 28px 0 0; } }
+  @media screen and (max-width: 767px) {
+    .order__info_t-space {
+      padding: 0;
+      margin: 0 -10px; } }
   .order__prod {
     padding-right: 10px;
     font-size: 14px;
@@ -9214,7 +9218,10 @@ a.link-comment:hover {
     .order_delivery .price_large {
       font-size: 30px; }
       .order_delivery .price_large sup {
-        top: -10px; } }
+        top: -10px; }
+      .order_delivery .price_large sup,
+      .order_delivery .price_large sub {
+        font-size: 16px; } }
 
 .order_total {
   padding-top: 10px;
