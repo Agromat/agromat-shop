@@ -3763,8 +3763,79 @@ a {
         padding: 0;
         margin: 0; } }
   @media screen and (max-width: 767px) {
+    .tabs-content .col-xs-4.hidden-sm {
+      width: 100%; }
+      .tabs-content .col-xs-4.hidden-sm .card {
+        max-width: none;
+        border: 0; }
+      .tabs-content .col-xs-4.hidden-sm .card__in > div {
+        display: none; }
+      .tabs-content .col-xs-4.hidden-sm .card__name {
+        font-size: 20px;
+        font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+        display: block !important;
+        text-transform: uppercase;
+        max-width: 180px;
+        margin: 8px auto; }
+    .tabs-content .row [class^="col-xs-8"] {
+      width: 100%; }
+      .tabs-content .row [class^="col-xs-8"] .col-xs-4 {
+        width: 100%; }
+        .tabs-content .row [class^="col-xs-8"] .col-xs-4 .btn {
+          margin-top: 10px; }
+    .tabs-content .comment .avatar {
+      display: none; }
+    .tabs-content .comment .col-xs-12 .row > .col-xs-2 {
+      display: none; }
+    .tabs-content .comment .col-xs-12 .row > .col-xs-10 {
+      width: 100%; }
+      .tabs-content .comment .col-xs-12 .row > .col-xs-10 .col-xs-2 {
+        display: block;
+        width: 16.66667%; }
+      .tabs-content .comment .col-xs-12 .row > .col-xs-10 .col-xs-10 {
+        width: 83.33333%; }
+    .tabs-content .comment__head {
+      *zoom: 1; }
+      .tabs-content .comment__head:after {
+        content: " ";
+        display: table;
+        clear: both; }
+      .tabs-content .comment__head .comment__user {
+        float: left; }
+      .tabs-content .comment__head .meta {
+        float: right; }
+        .tabs-content .comment__head .meta:before {
+          display: none; }
+    .tabs-content .comment__footer {
+      text-align: right; }
+      .tabs-content .comment__footer .meta {
+        display: none; }
+    .tabs-content .comment__answer {
+      float: left; }
+    .tabs-content[data-id^="#js-tab-same"] [class^="col-xs-8"] .col-xs-4 {
+      width: 33.33333%; } }
+  @media screen and (max-width: 767px) {
     .tabs-content.js-tabs-content + [class^='col-xs-4'] {
       width: 100%; } }
+
+@media screen and (max-width: 767px) {
+  .js-tabs-group .tabs {
+    white-space: normal;
+    margin: 0 0 20px;
+    height: auto; }
+    .js-tabs-group .tabs:after {
+      display: none; }
+    .js-tabs-group .tabs li {
+      width: 50%;
+      margin: 0px 0 -2px -2px;
+      border: 2px solid #dedede; }
+      .js-tabs-group .tabs li.is-active {
+        height: 48px;
+        border-color: #000; } }
+
+@media screen and (max-width: 460px) {
+  .js-tabs-group .tabs li {
+    width: 100%; } }
 
 .product-col {
   *zoom: 1;

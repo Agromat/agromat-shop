@@ -1058,9 +1058,84 @@ a
 			.item__media
 				padding: 0
 				margin: 0
+	+r(767)
+		.col-xs-4.hidden-sm
+			width: 100%
+			.card
+				max-width: none
+				border: 0
+			.card__in
+				> div
+					display: none
+			.card__name
+				font-size: 20px
+				+med
+				display: block !important
+				text-transform: uppercase
+				max-width: 180px
+				margin: 8px auto
+		.row
+			[class^="col-xs-8"]
+				width: 100%
+				.col-xs-4
+					width: 100%
+					.btn
+						margin-top: 10px
+		.comment
+			.avatar
+				display: none
+			.col-xs-12
+				.row
+					> .col-xs-2
+						display: none
+					> .col-xs-10
+						width: 100%
+						.col-xs-2
+							display: block
+							width: 16.66667% 
+						.col-xs-10
+							width: 83.33333% 
+		.comment__head
+			+clr
+			.comment__user
+				float: left
+			.meta
+				float: right
+				&:before
+					display: none
+		.comment__footer
+			text-align: right
+			.meta
+				display: none
+		.comment__answer
+			float: left
+		&[data-id^="#js-tab-same"]
+			[class^="col-xs-8"]
+				.col-xs-4
+					width: 33.33333% 
+
 	&.js-tabs-content
 		+ [class^='col-xs-4']
 			+r(767)
+				width: 100%
+.js-tabs-group
+	+r(767)
+		.tabs
+			white-space: normal
+			margin: 0 0 20px
+			height: auto
+			&:after
+				display: none
+			li
+				width: 50%
+				margin: 0px 0 -2px -2px
+				border: 2px solid #dedede
+				&.is-active
+					height: 48px
+					border-color: #000
+	+r(460)
+		.tabs
+			li
 				width: 100%
 .product-col
 	+clr
