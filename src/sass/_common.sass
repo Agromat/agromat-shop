@@ -1142,6 +1142,10 @@ a
 	margin-bottom: 55px
 	&__main
 		overflow: hidden
+		+r(767)
+			.text_mod
+				h3
+					text-align: center
 	&__left
 		float: left
 		margin-right: 4.5%
@@ -1150,6 +1154,10 @@ a
 			width: 100%
 			float: none
 			margin: 0
+			.carousel
+				margin-bottom: 10px
+				button
+					display: none !important
 	&__middle
 		float: left
 		width: 40.5%
@@ -1173,12 +1181,20 @@ a
 					border: 0
 				.box__more
 					display: none
+				.box__info
+					// font-size: 13px
+					color: $red
+					// +arial
+					text-decoration: underline
 			.product-action
 				text-align: center
 				.number-info,
 				.number
 					display: none
-					
+				.meta
+					+hidetext
+				.meta__available
+					font: bold 11px Arial, sans-serif
 	&__right
 		float: right
 		padding-left: 30px
@@ -1795,6 +1811,21 @@ a
 		top: 5px
 		right: 15px
 		bottom: auto
+	+r(767)
+		.col-xs-9
+			width: 100%
+		.search_big
+
+			.search__input
+				padding: 0
+			.search__btn
+				display: none
+			button[type=submit]
+				font-size: 0
+				width: 40px
+				&:before
+					content: "\f002"
+					+fa-icon
 
 .link-action
 	display: inline-block

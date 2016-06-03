@@ -460,6 +460,8 @@
 		display: block
 		width: 100%
 		padding: 12px 10px 10px
+		+r(767)
+			display: none
 	&_blue
 		color: $blue 
 	&_mt
@@ -960,7 +962,35 @@
 			> div
 				width: 20%
 				+r(1270)
-					width: 33.33333%
+					width: 25%
+					.item__back
+						left: -10px
+						right: -10px
+						padding: 10px 10px 0px
+					.item__media
+						margin: 0 -10px
+						padding: 0 10px
+					.item
+						&__price
+							width: 50% !important
+						.badge
+							left: 6px
+						.price_old
+							display: none
+				+r(1024)
+					width: 33.3333%
+					// .item__back
+					// 	&:hover
+					// 		box-shadow: none
+					// 		left: auto
+					// 		right: auto
+					// 		.item__descr
+					// 			height: 52px
+
+				+r(767)
+					width: 50%
+				+r(480)
+					width: 100%
 		.btn,
 		.btn-simple
 			display: block
@@ -1514,7 +1544,6 @@ a.link-comment
 			+r(1024)
 				padding: 3px 0
 
-				
 .btn-zoom
 	display: inline-block
 	width: 40px
