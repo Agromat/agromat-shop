@@ -1146,6 +1146,10 @@ a
 		float: left
 		margin-right: 4.5%
 		width: 54.55%
+		+r(767)
+			width: 100%
+			float: none
+			margin: 0
 	&__middle
 		float: left
 		width: 40.5%
@@ -1158,6 +1162,23 @@ a
 				&:before
 					right: 0
 					left: -10px
+		+r(767)
+			float: none
+			width: 100%
+			.box_action
+				&:before,
+				&:after
+					display: none
+				> .box_action
+					border: 0
+				.box__more
+					display: none
+			.product-action
+				text-align: center
+				.number-info,
+				.number
+					display: none
+					
 	&__right
 		float: right
 		padding-left: 30px
@@ -1202,7 +1223,11 @@ a
 	+clr
 	&_benefits
 		margin: 28px 0
-		padding: 25px  
+		padding: 25px
+		+r(767)
+			display: none
+			~ .items-slider_arr-top
+				display: none
 	&__table
 		display: table
 		width: 100%
@@ -1233,6 +1258,8 @@ a
 .prod-simple-wrap
 	font-size: 0
 	margin: 0 -15px 
+	+r(767)
+		margin: 0
 	.prod-simple
 		position: relative
 		padding: 13px 
@@ -1241,10 +1268,18 @@ a
 		width: 33.3%
 		border: 2px solid transparent
 		+tr(border .3s)
+		+r(767)
+			width: 50%
+			border: 0
+			padding-left: 0
+		+r(560)
+			width: 100%
 		&__img
 			margin-bottom: 0
 		&:hover
 			border-color: $blue 
+			+r(767)
+				border-color: transparent
 .prod-simple
 	display: block
 	margin-bottom: 10px

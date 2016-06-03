@@ -1123,6 +1123,12 @@
 			right: -10px
 		.slick-prev
 			right: 19px
+		+r(1024)
+			+ .seo
+				display: block
+		+r(767)
+			+ .seo
+				display: none
 	&_small
 		.title
 			+ div
@@ -1170,8 +1176,6 @@
 		.number__minus
 			height: 13px
 			width: 13px
-			+r(767)
-				display: none
 			&:before
 				font-size: 8px
 		.number__plus
@@ -1443,7 +1447,6 @@ a.link-comment
 			color: #000 
 	p
 		margin-bottom: 20px
-		
 
 .carousel
 	&__main
@@ -1484,6 +1487,8 @@ a.link-comment
 	&__nav
 		margin: 23px 0 35px
 		overflow: hidden
+		+r(767)
+			display: none
 		.slick-slider
 			margin-right: -28px 
 		.slick-slide
