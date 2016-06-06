@@ -3141,6 +3141,27 @@ a {
     .radio__text span,
     .radio__text em {
       color: #888; }
+  .radio__info-text {
+    padding: 14px 0 0 34px; }
+  .radio__deposit {
+    margin-bottom: 7px; }
+  .radio__payments {
+    font-family: "pfdintextcomppro-regular", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 14px; }
+    .radio__payments .number_small {
+      display: inline-block;
+      width: auto;
+      margin: 0 10px 0 0; }
+      .radio__payments .number_small .number__plus,
+      .radio__payments .number_small .number__minus {
+        display: none; }
+      .radio__payments .number_small .number__input {
+        position: relative;
+        opacity: 1;
+        width: 34px;
+        height: 26px;
+        padding: 5px;
+        text-align: center; }
 
 .radiobox {
   float: left;
@@ -4277,6 +4298,14 @@ a {
       .popup__window {
         width: 100%;
         max-width: 730px; } }
+  @media screen and (max-width: 767px) {
+    .popup_no-pad-mob {
+      padding: 10px 0 10px; }
+      .popup_no-pad-mob .popup__body {
+        padding: 0 10px; }
+        .popup_no-pad-mob .popup__body .btn-simple {
+          width: 100%;
+          margin: 20px 0 0; } }
   .popup__head {
     position: relative;
     padding: 0 30px;
@@ -4457,6 +4486,12 @@ a {
     position: relative;
     margin: 20px 30px 25px;
     padding-bottom: 10px; }
+    @media screen and (max-width: 767px) {
+      .popup .total {
+        margin: 20px 20px 5px;
+        font-size: 24px;
+        border: 0;
+        padding: 0; } }
     .popup .total .popup__close {
       right: -15px;
       top: -10px; }
@@ -9286,6 +9321,16 @@ a.link-comment:hover {
     width: 227px;
     padding: 0 48px 7px 0;
     line-height: 1; } }
+
+.table_order-mobile {
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .table_order-mobile {
+      display: table; }
+      .table_order-mobile td .radio {
+        height: 113px;
+        line-height: normal;
+        padding: 20px 0 15px; } }
 
 .order-wrap {
   padding: 45px 30px 30px;

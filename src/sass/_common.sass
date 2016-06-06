@@ -532,6 +532,28 @@ a
 		span, 
 		em
 			color: $gray 
+	&__info-text
+		padding: 14px 0 0 34px
+	&__deposit
+		margin-bottom: 7px
+	&__payments
+		+reg
+		font-size: 14px
+		.number_small
+			display: inline-block
+			width: auto
+			margin: 0 10px 0 0 
+			.number__plus,
+			.number__minus
+				display: none
+			.number__input
+				position: relative
+				opacity: 1
+				width: 34px
+				height: 26px
+				padding: 5px
+				text-align: center
+			
 
 .radiobox
 	float: left
@@ -1511,6 +1533,14 @@ a
 			width: 100%
 			max-width: 730px
 			// min-height: 920px
+	&_no-pad-mob
+		+r(767)
+			padding: 10px 0 10px
+			.popup__body
+				padding: 0 10px
+				.btn-simple
+					width: 100%
+					margin: 20px 0 0
 	&__head
 		position: relative
 		padding: 0 30px 
@@ -1651,6 +1681,11 @@ a
 		position: relative
 		margin: 20px 30px 25px
 		padding-bottom: 10px 
+		+r(767)
+			margin: 20px 20px 5px
+			font-size: 24px
+			border: 0
+			padding: 0
 		.popup__close
 			right: -15px
 			top: -10px
