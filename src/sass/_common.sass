@@ -252,6 +252,12 @@ a
 			&:before,
 			&:after
 				margin-top: -3px
+.title_no-decor
+	+r(767)
+		span
+			&:before,
+			&:after
+				display: none !important
 .title_space
 	+r(767)
 		margin-bottom: 4px
@@ -1811,22 +1817,34 @@ a
 		top: 5px
 		right: 15px
 		bottom: auto
+	+r(1024)
+		> .row
+			.col-xs-9
+				width: 100%
 	+r(767)
+		margin: 0
 		.col-xs-9
 			width: 100%
 		.search_big
-
 			.search__input
-				padding: 0
+				padding: 0 50px 0 10px
+				height: 30px
+				border: 1px solid #cdcdcd
 			.search__btn
 				display: none
 			button[type=submit]
 				font-size: 0
 				width: 40px
+				height: 30px
+				padding: 0
 				&:before
 					content: "\f002"
 					+fa-icon
-
+					font-size: 18px
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
 .link-action
 	display: inline-block
 	border-bottom: 1px dashed 

@@ -676,6 +676,11 @@
 			visibility: visible
 			+r(767)
 				visibility: hidden !important
+		+r(767)
+			.item__descr
+				height: 52px
+			.item__back
+				box-shadow: none
 	&__back
 		z-index: 1
 		position: absolute
@@ -829,6 +834,9 @@
 				visibility: hidden
 		+r(1024)
 			z-index: 0
+		+r(767)
+			.item__descr
+				height: inherit
 	&:before
 		content: ""
 		position: absolute 
@@ -989,12 +997,22 @@
 
 				+r(767)
 					width: 50%
+					.item__back
+						padding: 0
+						top: auto
+						right: auto
+						bottom: auto
+						left: auto
+						position: static
 				+r(480)
 					width: 100%
 		.btn,
 		.btn-simple
 			display: block
 			width: 100%
+	&.items-wrap_no-space
+		+r(767)
+			margin: 0
 .items-wrap_negative-space
 	+r(1024)
 		margin: 0 -15px

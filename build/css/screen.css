@@ -2835,6 +2835,10 @@ a {
     margin-top: -3px; }
 
 @media screen and (max-width: 767px) {
+  .title_no-decor span:before, .title_no-decor span:after {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
   .title_space {
     margin-bottom: 4px; } }
 
@@ -4626,27 +4630,43 @@ a {
     top: 5px;
     right: 15px;
     bottom: auto; }
+  @media screen and (max-width: 1024px) {
+    .search-form > .row .col-xs-9 {
+      width: 100%; } }
   @media screen and (max-width: 767px) {
-    .search-form .col-xs-9 {
-      width: 100%; }
-    .search-form .search_big .search__input {
-      padding: 0; }
-    .search-form .search_big .search__btn {
-      display: none; }
-    .search-form .search_big button[type=submit] {
-      font-size: 0;
-      width: 40px; }
-      .search-form .search_big button[type=submit]:before {
-        content: "\f002";
-        display: inline-block;
-        font: normal normal normal 13px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        transform: translate(0, 0); } }
+    .search-form {
+      margin: 0; }
+      .search-form .col-xs-9 {
+        width: 100%; }
+      .search-form .search_big .search__input {
+        padding: 0 50px 0 10px;
+        height: 30px;
+        border: 1px solid #cdcdcd; }
+      .search-form .search_big .search__btn {
+        display: none; }
+      .search-form .search_big button[type=submit] {
+        font-size: 0;
+        width: 40px;
+        height: 30px;
+        padding: 0; }
+        .search-form .search_big button[type=submit]:before {
+          content: "\f002";
+          display: inline-block;
+          font: normal normal normal 13px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-transform: translate(0, 0);
+          -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+          font-size: 18px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); } }
 
 .link-action {
   display: inline-block;
@@ -5577,6 +5597,11 @@ a {
   transition: opacity 0.3s;
   padding: 18px 30px 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  @media screen and (max-width: 1200px) {
+    .search__drop {
+      width: 290px;
+      right: auto;
+      padding: 20px; } }
 
 .search__all {
   font-size: 14px;
@@ -7504,6 +7529,11 @@ a {
         .item:hover .slick-prev,
         .item:hover .slick-next {
           visibility: hidden !important; } }
+    @media screen and (max-width: 767px) {
+      .item:hover .item__descr {
+        height: 52px; }
+      .item:hover .item__back {
+        box-shadow: none; } }
   .item__back {
     z-index: 1;
     position: absolute;
@@ -7679,6 +7709,9 @@ a {
   @media screen and (max-width: 1024px) {
     .item_list:hover {
       z-index: 0; } }
+  @media screen and (max-width: 767px) {
+    .item_list:hover .item__descr {
+      height: inherit; } }
   .item_list:before {
     content: "";
     position: absolute;
@@ -7836,7 +7869,14 @@ a {
           width: 33.3333%; } }
       @media screen and (max-width: 767px) {
         .items-wrap_five-items .row > div {
-          width: 50%; } }
+          width: 50%; }
+          .items-wrap_five-items .row > div .item__back {
+            padding: 0;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            position: static; } }
       @media screen and (max-width: 480px) {
         .items-wrap_five-items .row > div {
           width: 100%; } }
@@ -7844,6 +7884,9 @@ a {
     .items-wrap_five-items .btn-simple {
       display: block;
       width: 100%; }
+  @media screen and (max-width: 767px) {
+    .items-wrap.items-wrap_no-space {
+      margin: 0; } }
 
 @media screen and (max-width: 1024px) {
   .items-wrap_negative-space {
