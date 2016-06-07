@@ -4488,13 +4488,13 @@ a {
     padding-bottom: 10px; }
     @media screen and (max-width: 767px) {
       .popup .total {
-        margin: 20px 20px 5px;
+        margin: 20px 10px 5px;
         font-size: 24px;
         border: 0;
         padding: 0; } }
     .popup .total .popup__close {
-      right: -15px;
-      top: -10px; }
+      right: 0px;
+      top: -20px; }
   .popup .meta a {
     color: #888; }
     .popup .meta a:hover {
@@ -9385,10 +9385,14 @@ a.link-comment:hover {
   @media screen and (max-width: 767px) {
     .table_order-mobile {
       display: table; }
-      .table_order-mobile td .radio {
-        height: 113px;
-        line-height: normal;
-        padding: 20px 0 15px; } }
+      .table_order-mobile caption {
+        padding: 15px 10px 0; }
+      .table_order-mobile td {
+        padding: 0 10px; }
+        .table_order-mobile td .radio {
+          height: 113px;
+          line-height: normal;
+          padding: 20px 0 15px; } }
 
 .order-wrap {
   padding: 45px 30px 30px;
