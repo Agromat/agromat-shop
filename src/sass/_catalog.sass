@@ -21,6 +21,9 @@
 		+r(1024)
 			padding-left: 0
 			margin-left: 0
+			+ .row 
+				+ .title
+					display: none
 		&:before
 			content: ""
 			position: absolute
@@ -834,6 +837,13 @@
 				// 	padding: 0 0 0 30px
 			> .col-xs-8
 				padding-left: 10px
+		.link-compare
+			&:before
+				position: absolute
+				bottom: 100%
+				left: 0
+				right: 0
+				margin: auto
 	&:hover
 		&:before
 			box-shadow: 0 0 22px 3px rgba(28, 16, 8, 0.2)
@@ -1002,14 +1012,6 @@
 							display: none
 				+r(1024)
 					width: 33.3333%
-					// .item__back
-					// 	&:hover
-					// 		box-shadow: none
-					// 		left: auto
-					// 		right: auto
-					// 		.item__descr
-					// 			height: 52px
-
 				+r(767)
 					width: 50%
 					.item__back
@@ -1028,6 +1030,12 @@
 	&.items-wrap_no-space
 		+r(767)
 			margin: 0
+	> .row_inline
+		> .col-xs-4
+			+r(767)
+				width: 50%
+			+r(480)
+				width: 100%
 .items-wrap_negative-space
 	+r(1024)
 		margin: 0 -15px
@@ -1425,12 +1433,6 @@
 		margin-right: 6px
 		vertical-align: middle
 		+svg(weight-blue,15,11)
-		+r(767)
-			position: absolute
-			bottom: 100%
-			left: 0
-			right: 0
-			margin: auto
 .link-comment
 	color: $gray
 	display: inline-block
