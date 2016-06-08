@@ -564,6 +564,8 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
+	+r(767)
+		display: none
 	&_border
 		border-top: 1px solid #000 
 		padding-top: 33px
@@ -571,6 +573,11 @@
 		margin: 17px 0 20px
 	+ .box
 		margin-top: 50px
+.banners-wrap_index
+	+r(1024)
+		.row
+			.col-xs-3
+				width: 33.3333%
 .banner
 	display: block
 	text-align: center
@@ -666,21 +673,17 @@
 	+gpu
 	height: 385px
 	&:hover
-		z-index: 2
-		.item__descr
-			height: auto
-		.item__back
-			box-shadow: 0 0 16px 2px rgba(28, 16, 8, 0.2)
-		.slick-prev,
-		.slick-next
-			visibility: visible
-			+r(767)
-				visibility: hidden !important
-		+r(767)
+		+rmin(1025)
+			z-index: 2
 			.item__descr
-				height: 52px
+				height: auto
 			.item__back
-				box-shadow: none
+				box-shadow: 0 0 16px 2px rgba(28, 16, 8, 0.2)
+			.slick-prev,
+			.slick-next
+				visibility: visible
+				+r(767)
+					visibility: hidden !important
 	&__back
 		z-index: 1
 		position: absolute
@@ -689,7 +692,16 @@
 		right: -30px
 		padding: 10px 30px 20px
 		background: #fff
-		z-index: 2 
+		z-index: 2
+		+r(1250)
+			top: -10px
+			left: -10px
+			right: -10px
+			padding: 10px 10px 20px
+			.badge
+				left: 6px !important
+			.item__price
+				white-space: nowrap
 	&__head
 		height: 65px
 		margin-bottom: 5px
@@ -714,6 +726,9 @@
 		margin: 0 -30px
 		padding: 0 30px  
 		overflow: hidden
+		+r(1250)
+			padding: 0 10px
+			margin: 0 -10px
 	&__holder
 		background: #f6f6f6 
 	&__slider
@@ -749,16 +764,11 @@
 		border-bottom: 1px solid $border-d
 		width: 100%
 		table-layout: fixed
-		+r(1270)
-			display: block
 	&__price
 		display: table-cell
 		vertical-align: middle
 		padding: 7px 5px 7px 0
 		width: 50%
-		+r(1270)
-			display: inline-block
-			width: 33.3333% !important
 		.btn
 			margin-bottom: 6px
 	.badge
@@ -885,6 +895,8 @@
 		border-top: 1px solid $border-d
 		border-bottom: 0 
 		table-layout: auto
+		+r(1270)
+			display: block
 		+r(767)
 			display: none
 	.item__action_mob
@@ -901,7 +913,10 @@
 				padding-bottom: 9px
 		td
 			vertical-align: bottom
-		
+	.item__price
+		+r(1270)
+			display: inline-block
+			width: 33.3333% !important		
 	.item__price,
 	.item__links,
 	.item__cell
@@ -1453,6 +1468,8 @@ a.link-comment
 .post-slider
 	position: relative
 	overflow: hidden
+	+r(1024)
+		display: none
 	.slick-slider
 		padding-bottom: 40px
 	.slick-slide
