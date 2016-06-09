@@ -7493,6 +7493,9 @@ a {
 .banners-wrap {
   margin-top: 26px;
   margin-bottom: 26px; }
+  @media screen and (max-width: 1024px) {
+    .banners-wrap {
+      display: none; } }
   @media screen and (max-width: 767px) {
     .banners-wrap {
       display: none; } }
@@ -7501,6 +7504,12 @@ a {
     padding-top: 33px; }
   .banners-wrap_index {
     margin: 17px 0 20px; }
+    @media screen and (max-width: 1024px) {
+      .banners-wrap_index {
+        display: block; } }
+    @media screen and (max-width: 767px) {
+      .banners-wrap_index {
+        display: none; } }
   .banners-wrap + .box {
     margin-top: 50px; }
 
@@ -7743,6 +7752,9 @@ a {
       margin-bottom: 6px; }
   .item .badge {
     left: 25px; }
+    @media screen and (max-width: 1250px) {
+      .item .badge {
+        left: 6px !important; } }
   .item__links {
     display: table-cell;
     vertical-align: middle;
@@ -8099,7 +8111,9 @@ a {
       .items-slider .title {
         margin-bottom: 10px; }
         .items-slider .title span {
-          text-align: left; } }
+          text-align: left; }
+      .items-slider .btn-simple.btn-simple_small.btn-simple_blue {
+        display: none; } }
   .items-slider .btn-simple {
     min-width: 130px; }
   .items-slider .post-item_small {
@@ -8791,6 +8805,9 @@ a.link-comment:hover {
   padding: 0 0 35px;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
+  @media screen and (max-width: 1024px) {
+    .article .slider {
+      display: block; } }
   @media screen and (max-width: 767px) {
     .article {
       font-size: 13px;
@@ -8940,6 +8957,9 @@ a.link-comment:hover {
   visibility: hidden;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s; }
+  @media screen and (max-width: 1024px) {
+    .slider {
+      display: none; } }
   .slider.is-ready {
     opacity: 1;
     visibility: visible; }
@@ -9287,7 +9307,7 @@ a.link-comment:hover {
       display: block; } }
   @media screen and (max-width: 767px) {
     .figcaption {
-      letter-spacing: -0.05em; } }
+      letter-spacing: -0.06em; } }
 
 .a-category {
   position: relative;

@@ -567,6 +567,8 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
+	+r(1024)
+		display: none
 	+r(767)
 		display: none
 	&_border
@@ -574,6 +576,11 @@
 		padding-top: 33px
 	&_index
 		margin: 17px 0 20px
+		+r(1024)
+			display: block
+		+r(767)
+			display: none
+		
 	+ .box
 		margin-top: 50px
 .banners-wrap_index
@@ -776,6 +783,8 @@
 			margin-bottom: 6px
 	.badge
 		left: 25px
+		+r(1250)
+			left: 6px !important
 	&__links
 		display: table-cell
 		vertical-align: middle
@@ -1111,6 +1120,8 @@
 			margin-bottom: 10px
 			span
 				text-align: left
+		.btn-simple.btn-simple_small.btn-simple_blue
+			display: none
 	.btn-simple
 		min-width: 130px
 	.post-item_small

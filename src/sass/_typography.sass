@@ -2,6 +2,9 @@
 	padding: 0 0 35px 
 	font-size: 14px
 	+arial
+	+r(1024)
+		.slider
+			display: block
 	+r(767)
 		font-size: 13px
 		др
@@ -126,6 +129,8 @@
 	opacity: 0
 	visibility: hidden
 	+tr(opacity .2s)
+	+r(1024)
+		display: none
 	&.is-ready
 		opacity: 1
 		visibility: visible
