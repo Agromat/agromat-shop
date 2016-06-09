@@ -2707,9 +2707,6 @@ a {
     vertical-align: top;
     float: none; }
 
-.row.js-tabs-group .tabs li {
-  width: 50%; }
-
 @media screen and (min-width: 1271px) {
   .l-layout {
     display: table;
@@ -3740,6 +3737,12 @@ a {
     font-size: 18px;
     color: #999;
     z-index: 1; }
+    @media screen and (max-width: 1250px) {
+      .tabs li {
+        width: 18%;
+        max-width: none; }
+        .tabs li:last-child {
+          width: 28%; } }
     @media screen and (max-width: 1024px) {
       .tabs li {
         max-width: none;

@@ -132,10 +132,10 @@ a
 			display: inline-block
 			vertical-align: top
 			float: none
-	&.js-tabs-group
-		.tabs
-			li
-				width: 50%
+	// &.js-tabs-group
+	// 	.tabs
+	// 		li
+	// 			width: 50%
 .l-layout
 	+rmin(1271)
 		display: table
@@ -1040,6 +1040,11 @@ a
 		font-size: 18px
 		color: #999
 		z-index: 1
+		+r(1250)
+			width: 18%
+			max-width: none
+			&:last-child
+				width: 28%
 		+r(1024)
 			max-width: none
 			width: 22%
