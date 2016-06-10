@@ -5419,6 +5419,8 @@ a {
 
 .slider-mob {
   margin-top: 10px; }
+  .slider-mob .slick-slide {
+    padding: 0 5px; }
 
 .logo {
   display: block;

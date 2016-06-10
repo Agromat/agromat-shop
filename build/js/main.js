@@ -293,6 +293,16 @@ $(document).ready( function() {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false,
+                },
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
                     slidesToScroll: 1,
                     arrows: false,
                 },
@@ -405,6 +415,7 @@ $(document).ready( function() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        centerMode: true,
         dots: false,
         arrows: false,
         adaptiveHeight: true
