@@ -231,14 +231,23 @@ $(document).ready( function() {
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     centerMode: true,
-                    slidesToScroll: 1,
+                    slidesToScroll: 3,
                     arrows: false,
                 },
             },
             {
-                breakpoint: 420,
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                    slidesToScroll: 2,
+                    arrows: false,
+                },
+            },
+            {
+                breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                     centerMode: true,
