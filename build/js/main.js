@@ -84,21 +84,27 @@ $(document).ready( function() {
         var win = $(window).width();
 
         if(win > 1024) {
+
             var scroll = $(document).scrollTop();
             var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();
+
             if (scroll >= top) {
                 $("body").addClass("has-fixed-header");
             }
             else {
                  $("body").removeClass("has-fixed-header");
             }
+        } else { 
+            $("body").removeClass("has-fixed-header");
         }
     }
-    fixHeader();
+    // fixHeader();
     $(window).scroll(function(){
         fixHeader();
     });
-
+    $(window).on('resize', function() {
+        fixHeader();
+    })
     // banned link click
     $(".js-nav li:not(.no-dropdown) a").on("click", function(){
         return false;
