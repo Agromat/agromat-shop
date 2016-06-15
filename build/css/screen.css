@@ -5374,7 +5374,8 @@ a {
     text-align: center; } }
 
 .header-mob {
-  position: relative; }
+  position: relative;
+  padding-top: 43px; }
   @media screen and (min-width: 641px) {
     .header-mob {
       display: none; } }
@@ -5399,7 +5400,12 @@ a {
 .header-mob__top {
   padding: 9px 0;
   border-bottom: 1px solid #000;
-  position: relative; }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #FFF; }
 
 .header-mob__bottom {
   padding: 8px 0;
@@ -5991,13 +5997,15 @@ a {
 
 .navigation {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
-  top: 100%;
+  top: 43px;
   left: 0;
   right: 0;
-  z-index: 10;
-  margin-top: 1px; }
+  bottom: 0;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden; }
   .navigation.is-visible {
     display: block; }
 

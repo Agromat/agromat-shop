@@ -126,6 +126,7 @@
 			text-align: center
 .header-mob
 	position: relative
+	padding-top: 43px
 	+rmin(641)
 		display: none
 	.btn-menu-mob
@@ -149,7 +150,12 @@
 .header-mob__top
 	padding: 9px 0
 	border-bottom: 1px solid #000
-	position: relative
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	z-index: 100
+	background-color: #FFF 
 .header-mob__bottom
 	padding: 8px 0
 	text-align: center
@@ -669,13 +675,15 @@
 
 .navigation
 	display: none
-	position: absolute
+	position: fixed
 	background-color: #fff 
-	top: 100%
+	top: 43px
 	left: 0
 	right: 0
-	z-index: 10
-	margin-top: 1px
+	bottom: 0
+	z-index: 100
+	overflow-y: auto
+	overflow-x: hidden
 	&.is-visible
 		display: block
 .navigation__item
