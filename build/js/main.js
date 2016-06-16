@@ -699,4 +699,8 @@ $(document).ready( function() {
         content.removeClass("is-hidden-mob");
 
     })
+
+    $('.a-category').click(function() {
+        $(this).toggleClass('is-active');
+    });
 });

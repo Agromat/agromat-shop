@@ -195,7 +195,7 @@ a
 		display: inline-block
 		position: relative
 		padding: 0 6px
-		+r(767)
+		+r(640)
 			display: block
 			text-align: left
 		&:before,
@@ -208,7 +208,7 @@ a
 			background: #ededed
 			+r(1024)
 				background: #000 
-			+r(767)
+			+r(640)
 				display: none
 		&:before
 			left: -600px
@@ -228,7 +228,7 @@ a
 				height: 4px
 				+rotate(45deg)
 				background: $blue-l 
-				+r(767)
+				+r(640)
 					display: none
 			&:before
 				left: 0
@@ -243,7 +243,7 @@ a
 	font-size: 18px
 	+bold
 	span
-		+r(767)
+		+r(640)
 			text-align: center
 		&:before,
 		&:after
@@ -253,22 +253,22 @@ a
 			&:after
 				margin-top: -3px
 .title_no-decor
-	+r(767)
+	+r(640)
 		span
 			&:before,
 			&:after
 				display: none !important
 .title_space
-	+r(767)
+	+r(640)
 		margin-bottom: 4px
 .title_width
 	> span
 		padding: 0 15px
-		+r(767)
+		+r(640)
 			padding: 0
 		span
 			padding: 0 12px 
-			+r(767)
+			+r(640)
 				padding: 0
 
 .title_dark
@@ -351,7 +351,7 @@ a
 			font-size: 14px
 	&_big
 		font-size: 30px
-		+r(767)
+		+r(640)
 			font-size: 25px
 		sup
 			font-size: 18px
@@ -376,7 +376,7 @@ a
 			font-size: 12px
 		&.price_big
 			font-size: 24px
-			+r(767)
+			+r(640)
 				font-size: 18px
 			sup
 				font-size: 14px
@@ -591,7 +591,7 @@ a
 		z-index: 1
 		pointer-events: none
 		border: 2px solid $blue
-		+r(767)
+		+r(640)
 			z-index: -1
 	input
 		opacity: 0
@@ -605,7 +605,7 @@ a
 						background-color: $blue 
 					&:before
 						background-color: #FFF 
-			+r(767)
+			+r(640)
 				+ .radiobox__border
 					background-color: $blue 
 					&:after
@@ -816,7 +816,7 @@ a
 	color: #000 
 	font-size: 0
 	white-space: nowrap
-	+r(767)
+	+r(640)
 		margin: 30px 0 0
 		&_no-marg
 			margin: 0
@@ -828,7 +828,7 @@ a
 		height: 1px
 		width: 70px
 		background: #96c6d9
-		+r(767)
+		+r(640)
 			display: none
 	&:before
 		left: -70px
@@ -845,7 +845,7 @@ a
 		+med
 		color: #000 
 		+tr(color .2s)
-		+r(767)
+		+r(640)
 			width: 33px
 			height: 33px
 			line-height: 33px
@@ -866,28 +866,28 @@ a
 			display: inline-block
 			content: "" 
 			vertical-align: middle
-		+r(767)
+		+r(640)
 			width: 28px
 			height: 33px
 			line-height: 33px
 	&__prev
 		&:before
 			+arr(4,8,$blue,l)
-			+r(767)
+			+r(640)
 				+arr(10,18,$blue,l)
 		&:hover
 			&:before
-				+r(767)
+				+r(640)
 					+arr(10,18,$blue-h,l)
 	&__next
 		&:before
 			+arr(4,8,$blue,r)
-			+r(767)
+			+r(640)
 				+arr(10,18,$blue,r)
 		&:hover
 			&:before
 				+arr(4,8,$blue,r)
-				+r(767)
+				+r(640)
 					+arr(10,18,$blue-h,r)
 
 
@@ -981,6 +981,16 @@ a
 	border: 0
 	.col-xs-8
 		margin-right: -8.33333%
+	+r(1024)
+		> .row
+			> .col-xs-3
+				padding-left: 0
+	+r(720)
+		> .row
+			> .col-xs-9
+				width: 66.66666666666667%
+			> .col-xs-3
+				width: 33.333333333333336% 
 		
 .like
 	display: inline-block
@@ -1091,7 +1101,7 @@ a
 			.item__media
 				padding: 0
 				margin: 0
-	+r(767)
+	+r(640)
 		.col-xs-4.hidden-sm
 			width: 100%
 			.card
@@ -1149,10 +1159,10 @@ a
 
 	&.js-tabs-content
 		+ [class^='col-xs-4']
-			+r(767)
+			+r(640)
 				width: 100%
 .js-tabs-group
-	+r(767)
+	+r(640)
 		.tabs
 			white-space: normal
 			margin: 0 0 20px
@@ -1175,7 +1185,7 @@ a
 	margin-bottom: 55px
 	&__main
 		overflow: hidden
-		+r(767)
+		+r(640)
 			.text_mod
 				h3
 					text-align: center
@@ -1183,7 +1193,7 @@ a
 		float: left
 		margin-right: 4.5%
 		width: 54.55%
-		+r(767)
+		+r(640)
 			width: 100%
 			float: none
 			margin: 0
@@ -1203,7 +1213,7 @@ a
 				&:before
 					right: 0
 					left: -10px
-		+r(767)
+		+r(640)
 			float: none
 			width: 100%
 			.box_action
@@ -1273,7 +1283,7 @@ a
 	&_benefits
 		margin: 28px 0
 		padding: 25px
-		+r(767)
+		+r(640)
 			display: none
 			~ .items-slider_arr-top
 				display: none
@@ -1307,7 +1317,7 @@ a
 .prod-simple-wrap
 	font-size: 0
 	margin: 0 -15px 
-	+r(767)
+	+r(640)
 		margin: 0
 	.prod-simple
 		position: relative
@@ -1317,7 +1327,7 @@ a
 		width: 33.3%
 		border: 2px solid transparent
 		+tr(border .3s)
-		+r(767)
+		+r(640)
 			width: 50%
 			border: 0
 			padding-left: 0
@@ -1327,7 +1337,7 @@ a
 			margin-bottom: 0
 		&:hover
 			border-color: $blue 
-			+r(767)
+			+r(640)
 				border-color: transparent
 .prod-simple
 	display: block
@@ -1404,7 +1414,7 @@ a
 		position: relative
 	&_holder
 		min-height: 54px
-		+r(767)
+		+r(640)
 			display: none
 .input
 	display: block
@@ -1475,13 +1485,13 @@ a
 .feedback-form
 	margin-bottom: 35px
 	+clr
-	+r(767)
+	+r(640)
 		clear: both
 
 .map
 	margin-bottom: 45px
 	height: 270px
-	+r(767)
+	+r(640)
 		margin-bottom: 0
 .popup
 	display: none
@@ -1516,7 +1526,7 @@ a
 	&_smaller
 		.popup__window
 			width: 435px
-			+r(767)
+			+r(640)
 				width: 100%
 	&__overlay
 		position: fixed
@@ -1525,7 +1535,7 @@ a
 		bottom: 0
 		left: 0
 		background: rgba(#000,.7) 
-		+r(767)
+		+r(640)
 			background-color: #FFF 
 	&__window
 		position: relative
@@ -1539,7 +1549,7 @@ a
 			max-width: 730px
 			// min-height: 920px
 	&_no-pad-mob
-		+r(767)
+		+r(640)
 			padding: 10px 0 10px
 			.popup__body
 				padding: 0 10px
@@ -1584,7 +1594,7 @@ a
 		+clr
 		+r(1024)
 			padding: 30px
-		+r(767)
+		+r(640)
 			padding: 0
 	&__text
 		font-style: italic
@@ -1594,7 +1604,7 @@ a
 	&__form
 		padding: 30px 100px
 		+clr
-		+r(767)
+		+r(640)
 			padding: 0
 			max-width: 233px
 			margin: auto 
@@ -1603,7 +1613,7 @@ a
 			margin-bottom: 7px
 		.logo-mob
 			display: none
-		+r(767)
+		+r(640)
 			.logo-mob
 				display: block
 				text-align: center
@@ -1639,7 +1649,7 @@ a
 			.page-title
 				margin: 3px 0 32px
 				text-align: center
-		+r(767)
+		+r(640)
 			width: 100%
 			height: auto
 			margin: auto
@@ -1674,7 +1684,7 @@ a
 		.btn,
 		.btn-simple
 			margin: 10px 0
-		+r(767)
+		+r(640)
 			display: none
 	&__prod-col1,
 	&__prod-col2
@@ -1686,7 +1696,7 @@ a
 		position: relative
 		margin: 20px 30px 25px
 		padding-bottom: 10px 
-		+r(767)
+		+r(640)
 			margin: 20px 10px 5px
 			font-size: 24px
 			border: 0
@@ -1706,7 +1716,7 @@ a
 	.soc-enter
 		margin-top: 10px
 .popup_cart
-	+r(767)
+	+r(640)
 		padding: 10px
 		.popup__close
 			top: 10px
@@ -1920,7 +1930,7 @@ a
 		> .row
 			.col-xs-9
 				width: 100%
-	+r(767)
+	+r(640)
 		margin: 0
 		.col-xs-9
 			width: 100%
@@ -2129,7 +2139,7 @@ a
 .go
 	position: relative
 	display: none
-	+r(767)
+	+r(640)
 		display: block
 	&_space
 		margin-bottom: 20px
@@ -2170,7 +2180,7 @@ a
 	+r(1024)
 		display: block
 		clear: both
-	+r(767)
+	+r(640)
 		.delivery-wrp__item
 			.title
 				margin: 22px 0 4px
