@@ -3714,6 +3714,10 @@ a {
       white-space: nowrap; } }
   .tabs_mb {
     margin-bottom: 0; }
+    @media screen and (max-width: 1024px) {
+      .tabs_mb li {
+        max-width: 172px !important;
+        width: 25% !important; } }
   .tabs:after {
     content: "";
     position: absolute;
