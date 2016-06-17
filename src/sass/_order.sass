@@ -3,7 +3,7 @@
     +r(1024)    
         .radiobox_tab
             width: 33.3333%
-    +r(767)
+    +r(640)
         .input_textarea
             height: 64px
         .radiobox
@@ -74,7 +74,7 @@
             line-height: 1
 .table_order-mobile
     display: none
-    +r(767)
+    +r(640)
         display: table
         caption
             padding: 15px 10px 0
@@ -87,7 +87,7 @@
 .order-wrap
     padding: 45px 30px 30px
     background: #f3f3f3
-    +r(767)
+    +r(640)
         padding: 10px
 .order
     padding-top: 20px
@@ -116,6 +116,9 @@
         display: table
         width: 100%
         table-layout: fixed
+        +r(1024)
+            position: relative
+            font-size: 0
         +r(610)
             display: block
     &__cell
@@ -126,12 +129,34 @@
             padding-left: 0
         +r(1024)
             vertical-align: middle
-            padding: 0
+            padding: 0 30px 0 0
             .number-info_width
                 max-width: 56%
             .price
                 vertical-align: middle
-        +r(767)
+                width: 50%
+            .prod-simple__text
+                position: absolute
+                top: 20px
+                right: 20px
+            &:nth-of-type(1)
+                width: 15%
+            &:nth-of-type(2)
+                width: 30%
+            &:nth-of-type(3)
+                padding: 0 75px 8px 0
+        +r(820)
+            &:nth-of-type(1)
+                width: 100px
+            &:nth-of-type(2)
+                width: 210px
+        +r(720)
+            padding: 0 10px 0 0
+            &:nth-of-type(1)
+                width: 80px
+            &:nth-of-type(2)
+                width: 176px
+        +r(640)
             .prod-simple
                 .prod-simple__top
                     + .prod-simple__text
@@ -150,17 +175,6 @@
         +r(610)
             display: inline-block
             width: 100px !important
-    &__cell_first
-        +r(1024)
-            width: 100px
-    &__cell_second
-        +r(1024)
-            width: 225px
-        +r(767)
-            width: auto
-    &__cell_b-space
-        +r(1024)
-            padding: 0 0 8px
     &__cell_last
         +r(1024)
             padding: 0 22px 20px 0
@@ -191,7 +205,7 @@
     &__info_t-space
         +r(1024)
             padding: 28px 0 0
-        +r(767)
+        +r(640)
             padding: 0
             margin: 0 -10px
     &__prod
@@ -227,7 +241,7 @@
             color: #000
             margin: 0 0 -4px 3px
             font-weight: 600
-    +r(767)
+    +r(640)
         .container
             .row
                 [class^="col-xs-8"],
