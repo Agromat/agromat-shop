@@ -171,7 +171,27 @@
 .slider-mob
 	margin-top: 10px
 	.slick-slide
-		padding: 0 5px
+		padding: 0 10px 0 0
+	.slick-list
+		padding: 0 40px 0 0 !important
+	&__text
+		position: absolute
+		bottom: 0
+		left: 10px
+		right: 20px
+		background-color: #FFF
+		transform: translate3D(0, 0, 0)
+		padding: 5px 0
+	.title
+		margin-bottom: 0
+		span
+			text-align: center
+			span
+				&:before,
+				&:after
+					+r(640)
+						display: block
+						margin-top: -3px
 .logo
 	display: block
 	margin: 13px 0 0 
