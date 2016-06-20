@@ -94,6 +94,8 @@
     border-top: 1px solid #e6e6e6
     +r(1024)
         padding-top: 30px
+    +r(640)
+        display: none
     &:first-child
         border-top: 0
         +r(1024)
@@ -224,10 +226,80 @@
         &__img
             background: #fff 
             border: 1px solid #eaeaea
+.order-mob
+    padding:  0 0 30px 0
+    display: none
+    border-bottom: 1px solid #cdcdcd
+    margin-bottom: 30px
+    &_modif
+        border-bottom: 0
+        margin-bottom: 0
+    +r(640)
+        display: block
+    &__top,
+    &__bottom
+        position: relative
+        +clr
+    &__bottom
+        padding-top: 20px
+        font-size: 0
+    &__col
+        width: 33.3333%
+        display: inline-block
+        vertical-align: middle
+        text-align: center
+        &:nth-of-type(1)
+            text-align: left
+        &:nth-of-type(2)
+            padding-left: 16px
+        &:nth-of-type(3)
+            text-align: right
+    &__left
+        float: left
+        padding-right: 10px
+    &__right
+        overflow: hidden
+        padding-right: 10px
+    .prod-simple
+        margin-bottom: 0
+    .prod-simple__img
+        width: 100px
+        margin-bottom: 0
+    .order-mob__title
+        font: 14px Arial, Helvetica, sans-serif
+        color: #000
+        letter-spacing: -0.07em
+        word-spacing: 0.1em
+        display: inline-block
+        margin-bottom: 10px
+        span
+            color: #999
+    .btn-del
+        position: absolute
+        top: -4px
+        right: -9px
+    .number-info
+        display: none
+    .number
+        width: 58px
+        &__input
+            padding: 0 10px
+            text-align: center
+        button
+            display: none
+    &__art
+        display: inline-block
+        background-color: red
+        color: #fff
+        font: 12px Arial, Helvetica, sans-serif
+        padding: 5px 10px
 .order_delivery
     padding: 5px 0 
     border-top-color: #000
     text-align: right
+    +r(640)
+        display: block
+        background-color: #F3F3F3 
     .price
         font-weight: normal
         text-transform: none

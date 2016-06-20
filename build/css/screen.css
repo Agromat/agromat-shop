@@ -3712,12 +3712,6 @@ a {
     .tabs {
       margin: 20px -6px 35px 0;
       white-space: nowrap; } }
-  .tabs_mb {
-    margin-bottom: 0; }
-    @media screen and (max-width: 1024px) {
-      .tabs_mb li {
-        max-width: 172px !important;
-        width: 25% !important; } }
   .tabs:after {
     content: "";
     position: absolute;
@@ -3777,8 +3771,9 @@ a {
         background: #fff; }
       .tabs li.is-active a {
         color: #000; }
-    .tabs li:hover a:hover {
-      color: #000; }
+    @media screen and (min-width: 1025px) {
+      .tabs li a:hover {
+        color: #000; } }
   .tabs a {
     display: block;
     position: relative;
@@ -3858,6 +3853,13 @@ a {
     .tabs-content.js-tabs-content + [class^='col-xs-4'] {
       width: 100%; } }
 
+@media screen and (max-width: 1024px) {
+  .js-tabs-group .tabs_mb {
+    margin-bottom: 0; }
+    .js-tabs-group .tabs_mb li {
+      max-width: 172px;
+      width: 25%; } }
+
 @media screen and (max-width: 640px) {
   .js-tabs-group .tabs {
     white-space: normal;
@@ -3871,7 +3873,47 @@ a {
       border: 2px solid #dedede; }
       .js-tabs-group .tabs li.is-active {
         height: 48px;
-        border-color: #000; } }
+        border-color: #000; }
+  .js-tabs-group .tabs_mb li {
+    width: 100%;
+    max-width: none;
+    border: 1px solid #268cb6;
+    font: 13px Arial, Helvetica, sans-serif;
+    height: 40px;
+    line-height: 40px;
+    text-transform: capitalize;
+    padding: 0 20px; }
+    .js-tabs-group .tabs_mb li:after {
+      display: inline-block;
+      font: normal normal normal 13px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+      content: "\f105";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #268cb6; }
+    .js-tabs-group .tabs_mb li:first-of-type {
+      text-align: left; }
+    .js-tabs-group .tabs_mb li:last-of-type {
+      text-align: right; }
+      .js-tabs-group .tabs_mb li:last-of-type:after {
+        content: "\f104";
+        right: auto;
+        left: 12px; }
+    .js-tabs-group .tabs_mb li.is-active {
+      display: none; }
+    .js-tabs-group .tabs_mb li a {
+      color: #268cb6; } }
 
 @media screen and (max-width: 460px) {
   .js-tabs-group .tabs li {
@@ -9548,6 +9590,9 @@ a.link-comment:hover {
   @media screen and (max-width: 1024px) {
     .order {
       padding-top: 30px; } }
+  @media screen and (max-width: 640px) {
+    .order {
+      display: none; } }
   .order:first-child {
     border-top: 0; }
     @media screen and (max-width: 1024px) {
@@ -9686,10 +9731,86 @@ a.link-comment:hover {
     background: #fff;
     border: 1px solid #eaeaea; }
 
+.order-mob {
+  padding: 0 0 30px 0;
+  display: none;
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 30px; }
+  .order-mob_modif {
+    border-bottom: 0;
+    margin-bottom: 0; }
+  @media screen and (max-width: 640px) {
+    .order-mob {
+      display: block; } }
+  .order-mob__top, .order-mob__bottom {
+    position: relative;
+    *zoom: 1; }
+    .order-mob__top:after, .order-mob__bottom:after {
+      content: " ";
+      display: table;
+      clear: both; }
+  .order-mob__bottom {
+    padding-top: 20px;
+    font-size: 0; }
+  .order-mob__col {
+    width: 33.3333%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center; }
+    .order-mob__col:nth-of-type(1) {
+      text-align: left; }
+    .order-mob__col:nth-of-type(2) {
+      padding-left: 16px; }
+    .order-mob__col:nth-of-type(3) {
+      text-align: right; }
+  .order-mob__left {
+    float: left;
+    padding-right: 10px; }
+  .order-mob__right {
+    overflow: hidden;
+    padding-right: 10px; }
+  .order-mob .prod-simple {
+    margin-bottom: 0; }
+  .order-mob .prod-simple__img {
+    width: 100px;
+    margin-bottom: 0; }
+  .order-mob .order-mob__title {
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #000;
+    letter-spacing: -0.07em;
+    word-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 10px; }
+    .order-mob .order-mob__title span {
+      color: #999; }
+  .order-mob .btn-del {
+    position: absolute;
+    top: -4px;
+    right: -9px; }
+  .order-mob .number-info {
+    display: none; }
+  .order-mob .number {
+    width: 58px; }
+    .order-mob .number__input {
+      padding: 0 10px;
+      text-align: center; }
+    .order-mob .number button {
+      display: none; }
+  .order-mob__art {
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    font: 12px Arial, Helvetica, sans-serif;
+    padding: 5px 10px; }
+
 .order_delivery {
   padding: 5px 0;
   border-top-color: #000;
   text-align: right; }
+  @media screen and (max-width: 640px) {
+    .order_delivery {
+      display: block;
+      background-color: #F3F3F3; } }
   .order_delivery .price {
     font-weight: normal;
     text-transform: none; }

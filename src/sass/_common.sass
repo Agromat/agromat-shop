@@ -1020,12 +1020,6 @@ a
 	+r(1024)
 		margin: 20px -6px 35px 0
 		white-space: nowrap
-	&_mb
-		margin-bottom: 0
-		+r(1024)
-			li
-				max-width: 172px !important
-				width: 25% !important
 	&:after
 		content: ""
 		position: absolute
@@ -1080,10 +1074,11 @@ a
 				background: #fff
 			a
 				color: #000
-		&:hover
+		+rmin(1025)
+			&:hover
 			a
 				&:hover
-					color: #000 
+					color: #000
 	a
 		display: block
 		position: relative
@@ -1166,6 +1161,12 @@ a
 			+r(640)
 				width: 100%
 .js-tabs-group
+	+r(1024)
+		.tabs_mb
+			margin-bottom: 0
+			li
+				max-width: 172px
+				width: 25%
 	+r(640)
 		.tabs
 			white-space: normal
@@ -1180,6 +1181,37 @@ a
 				&.is-active
 					height: 48px
 					border-color: #000
+		.tabs_mb
+			li
+				width: 100%
+				max-width: none
+				border: 1px solid $blue
+				font: 13px Arial, Helvetica, sans-serif
+				height: 40px
+				line-height: 40px
+				text-transform: capitalize
+				padding: 0 20px
+				&:after
+					+fa-icon
+					content: "\f105"
+					position: absolute
+					right: 12px
+					top: 50%
+					transform: translateY(-50%)
+					font-size: 20px
+					color: $blue
+				&:first-of-type
+					text-align: left
+				&:last-of-type
+					text-align: right
+					&:after
+						content: "\f104"
+						right: auto
+						left: 12px
+				&.is-active
+					display: none
+				a
+					color: $blue
 	+r(460)
 		.tabs
 			li
