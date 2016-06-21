@@ -131,6 +131,15 @@
 				border: 0
 .page-head
 	position: relative
+	&.is-visible
+		+r(640)
+			display: block
+			text-align: center
+			.col-xs-8
+				width: 100%
+			.page-title
+				margin: 12px 0
+				font-size: 24px
 	+r(640)
 		display: none
 	.compare

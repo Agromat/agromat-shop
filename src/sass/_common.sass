@@ -132,10 +132,6 @@ a
 			display: inline-block
 			vertical-align: top
 			float: none
-	// &.js-tabs-group
-	// 	.tabs
-	// 		li
-	// 			width: 50%
 .l-layout
 	+rmin(1271)
 		display: table
@@ -568,6 +564,11 @@ a
 			margin-bottom: 10px
 			&:last-child
 				margin-bottom: 0
+	+r(640)
+		padding: 8px 20px 8px 30px !important
+		p
+			display: none
+			margin: 10px 0 0 0
 	&:first-child
 		width: 34%
 	&.is-inactive
@@ -604,7 +605,9 @@ a
 						display: block
 						background-color: $blue 
 					&:before
-						background-color: #FFF 
+						background-color: #FFF
+					~ p
+						display: block
 			+r(640)
 				+ .radiobox__border
 					background-color: $blue 
@@ -626,6 +629,8 @@ a
 		+r(1024)
 			display: block
 			margin-bottom: 12px
+		+r(640)
+			margin-bottom: 0
 		&:before
 			content: ""
 			position: absolute
@@ -636,6 +641,8 @@ a
 			-webkit-border-radius: 50% 
 			border-radius: 50% 
 			border: 1px solid #939393
+			+r(640)
+				top: 3px
 		&:after
 			display: none
 			content: ""
@@ -647,11 +654,15 @@ a
 			-webkit-border-radius: 50% 
 			border-radius: 50% 
 			background: $blue 
+			+r(640)
+				top: 7px
 .radiobox_tab
 	min-height: 66px
 	margin-bottom: -2px
 	+r(1024)
 		padding: 15px 20px 0 50px
+	+r(640)
+		min-height: auto
 	.radiobox__border
 		border-bottom: 0 
 	input
@@ -1123,6 +1134,9 @@ a
 					width: 100%
 					.btn
 						margin-top: 10px
+		.order-group
+			.title
+				margin-bottom: 8px
 		.comment
 			.avatar
 				display: none
@@ -1191,6 +1205,7 @@ a
 				line-height: 40px
 				text-transform: capitalize
 				padding: 0 20px
+				background-color: #F6F6F6 
 				&:after
 					+fa-icon
 					content: "\f105"
@@ -1201,13 +1216,13 @@ a
 					font-size: 20px
 					color: $blue
 				&:first-of-type
-					text-align: left
-				&:last-of-type
 					text-align: right
 					&:after
 						content: "\f104"
 						right: auto
 						left: 12px
+				&:last-of-type
+					text-align: left
 				&.is-active
 					display: none
 				a
@@ -1549,6 +1564,24 @@ a
 	&_success
 		.popup__window
 			width: 373px
+		+r(640)
+			.popup__close
+				right: 10px
+				top: 10px
+			.popup__window
+				width: 100%
+	.popup__mid
+		padding: 38px 0 82px
+		max-width: 140px
+		margin: auto
+		text-align: center
+	.popup__icon
+		margin: 96px 0 36px
+		font-size: 45px
+		color: $blue
+		line-height: 1
+	.popup__b-link
+		padding-top: 74px
 	&_big
 		.popup__window
 			width: 930px
@@ -1999,7 +2032,11 @@ a
 	color: $blue 
 	line-height: 1.4
 	letter-spacing: 1px 
-
+.p-link
+	display: inline-block
+	font: 18px Arial, Helvetica, sans-serif
+	color: $blue
+	text-decoration: underline
 .soc-enter
 	text-align: center
 	a
