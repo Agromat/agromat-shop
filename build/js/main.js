@@ -705,4 +705,20 @@ $(document).ready( function() {
     $('.a-category').click(function() {
         $(this).toggleClass('is-active');
     });
+    //sticky footer
+    function stickyFooter() {
+        var docHeight    = $(document).height(),
+            winHeight    = $(window).height(),
+            footerHeight = $('.footer').height();
+
+        if (docHeight <= winHeight) {
+            $('.out').height(
+                winHeight - footerHeight
+            );
+        }
+        console.log("высота футера " + footerHeight);
+        console.log("высота документа " + docHeight);
+        console.log("высота окна " + winHeight);
+    }
+    stickyFooter();
 });
