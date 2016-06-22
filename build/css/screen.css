@@ -7181,6 +7181,8 @@ a {
 .page-head-mob {
   display: none;
   margin-bottom: 30px; }
+  .page-head-mob_no-space {
+    margin-bottom: 0; }
   @media screen and (max-width: 640px) {
     .page-head-mob {
       display: block; }
