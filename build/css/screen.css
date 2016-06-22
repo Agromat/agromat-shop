@@ -4286,7 +4286,8 @@ a {
 .window {
   display: block;
   margin: 50px auto;
-  width: 740px;
+  max-width: 740px;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   border: 2px solid #ddd;
   color: #333;
@@ -4295,6 +4296,17 @@ a {
   text-align: center;
   font-size: 13px;
   background: #fff; }
+  @media screen and (max-width: 1024px) {
+    .window .title > span:before, .window .title > span:after {
+      background: #EDEDED; } }
+  @media screen and (max-width: 640px) {
+    .window .title > span {
+      display: inline-block;
+      padding: 0 15px; }
+      .window .title > span span {
+        padding: 0 12px; }
+    .window .title span:before, .window .title span:after {
+      display: block; } }
   .window__in {
     padding: 28px 28px 43px; }
   .window__text {
@@ -4342,17 +4354,25 @@ a {
   .popup .btn_large {
     padding: 14px 23px;
     font-size: 16px; }
-  .popup_success .popup__window {
+  .popup_success .popup__window, .popup_unsuccess .popup__window {
     width: 373px; }
   @media screen and (max-width: 640px) {
-    .popup_success .popup__close {
+    .popup_success .popup__close, .popup_unsuccess .popup__close {
       right: 10px;
       top: 10px; }
-    .popup_success .popup__window {
+    .popup_success .popup__window, .popup_unsuccess .popup__window {
       width: 100%; } }
+  @media screen and (max-width: 640px) {
+    .popup_success .popup__mid {
+      max-width: 140px; } }
+  .popup_unsuccess .popup__mid {
+    padding: 38px 20px 82px !important;
+    max-width: 310px; }
+  @media screen and (max-width: 640px) {
+    .popup_unsuccess .popup__mid {
+      padding: 38px 0 82px !important; } }
   .popup .popup__mid {
     padding: 38px 0 82px;
-    max-width: 140px;
     margin: auto;
     text-align: center; }
   .popup .popup__icon {

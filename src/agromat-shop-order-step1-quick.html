@@ -8,6 +8,8 @@
 <!-- BEGIN  out-->
 <div class="out">
 	//= includes/header_order.html
+	<!-- add ex-zy -->
+	//= includes/header-mob_no-cart.html
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -22,7 +24,7 @@
 						</li>
 					</ul>
 					
-					<div class="page-head">
+					<div class="page-head is-visible">
 						<div class="row">
 							<div class="col-xs-8">
 								<h1 class="page-title">Оформление заказа</h1>
@@ -510,6 +512,92 @@
 										</div>
 									</div>
 								</div>
+								<!-- add ex-zy -->
+								<div class="order-mob">
+									<div class="order-mob__сontainer">
+										<div class="order-mob__top">
+											<div class="order-mob__left">
+												<a class="prod-simple" href="#">
+													<div class="prod-simple__top">
+														<div class="prod-simple__img">
+															<img src="https://unsplash.it/53/68?image=651" alt="">
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="order-mob__right">
+												<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
+												<button class="btn-del js-del-parent" type="button"></button> <br>
+												<span class="order-mob__art">Артикул: 138996</span>
+											</div>
+										</div>
+										<div class="order-mob__bottom">
+											<div class="order-mob__col">
+												<div class="price">
+													642,<sup>00</sup> <sub>грн</sub>
+												</div>
+											</div>
+											<div class="order-mob__col">
+												<div class="number js-number" data-max-number="99">
+													<input type="text" class="number__input" value="1">
+													<button class="number__plus js-plus-number" type="button"></button>
+													<button class="number__minus js-minus-number" type="button"></button>
+												</div>
+												<div class="number-info number-info_width">
+													<span>шт </span>
+												</div>
+											</div>
+											<div class="order-mob__col">
+												<div class="price">
+													642,<sup>00</sup> <sub>грн</sub>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- add ex-zy -->
+								<div class="order-mob order-mob_modif">
+									<div class="order-mob__сontainer">
+										<div class="order-mob__top">
+											<div class="order-mob__left">
+												<a class="prod-simple" href="#">
+													<div class="prod-simple__top">
+														<div class="prod-simple__img">
+															<img src="https://unsplash.it/53/68?image=651" alt="">
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="order-mob__right">
+												<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
+												<button class="btn-del js-del-parent" type="button"></button> <br>
+												<span class="order-mob__art">Артикул: 138996</span>
+											</div>
+										</div>
+										<div class="order-mob__bottom">
+											<div class="order-mob__col">
+												<div class="price">
+													642,<sup>00</sup> <sub>грн</sub>
+												</div>
+											</div>
+											<div class="order-mob__col">
+												<div class="number js-number" data-max-number="99">
+													<input type="text" class="number__input" value="1">
+													<button class="number__plus js-plus-number" type="button"></button>
+													<button class="number__minus js-minus-number" type="button"></button>
+												</div>
+												<div class="number-info number-info_width">
+													<span>шт </span>
+												</div>
+											</div>
+											<div class="order-mob__col">
+												<div class="price">
+													642,<sup>00</sup> <sub>грн</sub>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 								<div class="order order_delivery">
 									<div class="order__delivery">
 										<div class="order__info">
@@ -535,7 +623,7 @@
 						</div>
 						<div class="col-xs-12 hidden-md hidden-lg">
 							<div class="btn-send-wrap btn-send-wrap_b-space">
-								<button type="button" class="btn btn_large">отправить заказ</button>
+								<button type="button" class="btn btn_large js-open-popup" data-link="success">отправить заказ</button>
 							</div>
 						</div>
 					</div>
@@ -551,6 +639,22 @@
 	<dib class="tip__in">
 		
 	</dib>
+</div>
+<div class="popup popup_success js-mob-popup" data-popup="success">
+	<div class="popup__overlay"></div>
+	<button class="popup__close js-close-popup" type="button"></button>
+	<div class="popup__window">
+		<div class="popup__mid">
+			<div class="logo-mob"><img src="img/logo-sm.png" alt=""></div>
+			<div class="popup__icon"><i class="fa fa-check-square-o"></i></div>
+			<div class="popup__text">
+				Спасибо за ваш заказ, мы свяжемся с вами в <br> ближайшее время
+			</div>
+			<div class="popup__b-link">
+				<a href="#" class="p-link">На главную</a>
+			</div>
+		</div>
+	</div>
 </div>
 //= includes/footer.html
 </body>

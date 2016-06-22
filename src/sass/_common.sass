@@ -1521,7 +1521,8 @@ a
 .window
 	display: block
 	margin: 50px auto 
-	width: 740px
+	max-width: 740px
+	width: 100%
 	+arial
 	border: 2px solid #ddd
 	color: $dark
@@ -1530,6 +1531,23 @@ a
 	text-align: center
 	font-size: 13px
 	background: #fff 
+	+r(1024)
+		.title
+			> span
+				&:before,
+				&:after
+					background: #EDEDED
+	+r(640)
+		.title
+			> span
+				display: inline-block
+				padding: 0 15px
+				span
+					padding: 0 12px
+			span
+				&:before,
+				&:after
+					display: block
 	&__in
 		padding: 28px 28px 43px
 	&__text
@@ -1563,7 +1581,8 @@ a
 	.btn_large
 		padding: 14px 23px
 		font-size: 16px
-	&_success
+	&_success,
+	&_unsuccess
 		.popup__window
 			width: 373px
 		+r(640)
@@ -1572,9 +1591,20 @@ a
 				top: 10px
 			.popup__window
 				width: 100%
+			
+	&_success
+		+r(640)
+			.popup__mid
+				max-width: 140px
+	&_unsuccess
+		.popup__mid
+			padding: 38px 20px 82px !important
+			max-width: 310px
+		+r(640)
+			.popup__mid
+				padding: 38px 0 82px !important
 	.popup__mid
 		padding: 38px 0 82px
-		max-width: 140px
 		margin: auto
 		text-align: center
 	.popup__icon

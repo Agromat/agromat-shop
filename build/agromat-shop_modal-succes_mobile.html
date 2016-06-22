@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>agromat-shop-order-1-quick</title>
+	<title>agromat-shop-order-1</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -192,7 +192,7 @@
 							<span> Оформление заказа</span>
 						</li>
 					</ul>
-					
+					<!-- add ex-zy -->
 					<div class="page-head is-visible">
 						<div class="row">
 							<div class="col-xs-8">
@@ -212,8 +212,8 @@
 					<div class="row js-tabs-group">
 						<div class="col-xs-12">
 							<ul class="tabs tabs_mb js-tabs">
-								<li><a href="#js-tab-order">обычный заказ</a></li>
-								<li class="is-active"><a href="#js-tab-quick-order">быстрый заказ</a></li>
+								<li class="is-active"><a href="#js-tab-order">обычный заказ</a></li>
+								<li><a href="#js-tab-quick-order">быстрый заказ</a></li>
 							</ul>
 						</div>
 						<div class="tabs-content js-tabs-content" data-id="#js-tab-order">
@@ -575,7 +575,7 @@
 										</div>
 										<div class="col-sm-6">
 											<div class="field field_holder">
-												
+
 											</div>
 											<div class="field">
 
@@ -589,7 +589,7 @@
 								</div>
 								
 								
-								<div class="btn-send-wrap hidden-sm">
+								<div class="btn-send-wrap">
 									<button type="button" class="btn btn_large">отправить заказ</button>
 								</div>
 								
@@ -779,13 +779,31 @@
 									</div>
 								</div>
 								<div class="order order_delivery order_total">
-									<div class="order__delivery">
+									<div class="order__delivery hidden-sm hidden-xs">
 										<div class="order__info">
 											ВСЕГО: <span>3 товара на общую сумму с доставкой</span>
 										</div>
 										<span class="price price_large">
 											116 805, <sup>51</sup> <sub>грн</sub>
 										</span>
+									</div>
+									<div class="order__delivery hidden-lg hidden-md">
+										<div class="container">
+											<div class="row">
+												<div class="col-xs-8">
+													<div class="order__info order__info_t-space">
+														ВСЕГО: <span>3 товара на общую сумму с доставкой</span>
+													</div>
+												</div>
+												<div class="col-xs-4">
+													<div class="row">
+														<span class="price price_large">
+															116 805, <sup>51</sup> <sub>грн</sub>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -809,7 +827,7 @@
 		
 	</dib>
 </div>
-<div class="popup popup_success js-mob-popup" data-popup="success">
+<div class="popup popup_success is-active js-mob-popup" data-popup="success">
 	<div class="popup__overlay"></div>
 	<button class="popup__close js-close-popup" type="button"></button>
 	<div class="popup__window">
