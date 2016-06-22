@@ -14,6 +14,26 @@
 		width: 100%
 		float: none
 		padding-left: 0
+	+r(640)
+		> .row
+			> .col-xs-12
+				.post-item__title
+					margin-bottom: 5px
+				.post-item__media
+					width: 90px
+					float: none
+					margin: 0 0 12px
+				.post-item
+					max-width: 90px
+				> .row_inline
+					> .col-xs-4
+						width: 25%
+	+r(460)
+		> .row
+			> .col-xs-12
+				> .row_inline
+					> .col-xs-4
+						width: 33.33333%
 	&__in
 		position: relative
 		padding-left: 53px
@@ -1090,6 +1110,9 @@
 	margin: 0 15px 10px
 	width: 95px
 	height: auto
+	+r(1024)
+		.badge
+			left: 5px
 	+r(640)
 		// margin: 0 20px 10px 
 		// width: 120px 

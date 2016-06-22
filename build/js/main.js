@@ -681,9 +681,11 @@ $(document).ready( function() {
             popup = $('.js-mob-popup[data-popup="' + link + '"]');
 
         popup.addClass('is-active');
+        $("body").addClass("is-hidden");
     });
     $(".js-close-popup").on("click",function (){
         $(this).parents(".js-mob-popup").removeClass('is-active');
+        $("body").removeClass("is-hidden");
         return false;
     });
     $('.js-show-text').click(function(e) {
