@@ -151,21 +151,20 @@
 				border: 0
 .page-head
 	position: relative
-	&.is-visible
-		+r(640)
-			display: block
-			text-align: center
+	+r(1024)
+		.row
 			.col-xs-8
-				width: 100%
-			.page-title
-				margin: 12px 0
-				font-size: 24px
+				&.col-xs-offset-4
+					margin-left: 0
+					width: 100%
+		.compare
+			max-width: 168px
+			width: 100%
+			float: right
 	+r(640)
 		display: none
 	.compare
 		margin-top: 6px
-		+r(1024)
-			display: none
 	+ .row_inline
 		> .col-xs-4
 			+r(768)
@@ -609,6 +608,9 @@
 	margin-bottom: 26px
 	+r(1024)
 		display: none
+		.col-xs-3
+			&:last-of-type
+				display: none
 	+r(640)
 		display: none
 	&_border
@@ -1770,25 +1772,25 @@ a.link-comment
 	display: none
 	+r(1024)
 		display: block
-.back-to
-	display: block
-	position: relative
-	height: 54px
-	background-color: #FFF
-	border: 1px solid #268cb6
-	padding: 8px 30px
-	font-size: 12px
-	color: #000
-	margin: 10px 0 26px
-	&:before
-		content: "\f104"
-		+fa-icon
-		position: absolute
-		left: 8px
-		top: 50%
-		transform: translateY(-50%)
-		color: #268cb6
-		font-size: 40px
-	.title-med
-		+ .title-med
-			margin-left: 5px
+// .back-to
+// 	display: block
+// 	position: relative
+// 	height: 54px
+// 	background-color: #FFF
+// 	border: 1px solid #268cb6
+// 	padding: 8px 30px
+// 	font-size: 12px
+// 	color: #000
+// 	margin: 10px 0 26px
+// 	&:before
+// 		content: "\f104"
+// 		+fa-icon
+// 		position: absolute
+// 		left: 8px
+// 		top: 50%
+// 		transform: translateY(-50%)
+// 		color: #268cb6
+// 		font-size: 40px
+// 	.title-med
+// 		+ .title-med
+// 			margin-left: 5px
