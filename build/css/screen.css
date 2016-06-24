@@ -5412,6 +5412,13 @@ a {
   color: #fff;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif; }
+  @media screen and (max-width: 1024px) {
+    .tooper .col-xs-2 {
+      display: none; }
+    .tooper .col-xs-8 {
+      width: 83.33333%; }
+      .tooper .col-xs-8 + .col-xs-2 {
+        display: block; } }
   @media screen and (max-width: 640px) {
     .tooper {
       display: none; } }
@@ -5465,6 +5472,24 @@ a {
   padding-top: 16px;
   padding-bottom: 16px; }
 
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .header .row_table > .col-xs-6:nth-of-type(1) {
+    width: 66.66667%; }
+  .header .row_table > .col-xs-6:nth-of-type(2) {
+    width: 33.33333%; } }
+
+@media screen and (max-width: 1024px) {
+  .header .row_table > .col-xs-6:nth-of-type(1) .col-xs-6 ~ .col-xs-6 {
+    text-align: center; } }
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .header .row_table > .col-xs-6 + .col-xs-6 .col-xs-8 {
+    width: 50%; } }
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .header .row_table > .col-xs-6 + .col-xs-6 .col-xs-4 {
+    width: 50%; } }
+
 .header .contact {
   float: left;
   margin-top: 7px; }
@@ -5478,6 +5503,9 @@ a {
   float: right;
   max-width: 40%;
   margin-top: 7px; }
+  @media screen and (max-width: 1024px) {
+    .header .shedule {
+      display: none; } }
 
 .header .compare {
   display: none;
@@ -5581,7 +5609,8 @@ a {
 .logo {
   display: block;
   margin: 13px 0 0;
-  width: 80%; }
+  width: 80%;
+  max-width: 216px; }
   @media screen and (min-width: 1025px) {
     .logo {
       max-width: 216px; } }
@@ -5969,6 +5998,10 @@ a {
   .nav-wrap__in {
     border-bottom: 1px solid #000;
     position: relative; }
+    @media screen and (max-width: 1024px) {
+      .nav-wrap__in .col-xs-10.col-md-offset-1 {
+        width: 100%;
+        margin-left: 0; } }
 
 .nav {
   display: table;
@@ -6485,7 +6518,7 @@ a {
   @media screen and (max-width: 1270px) {
     .l-sidebar {
       float: left;
-      width: 20.34188034188034%;
+      width: 20.34188034188034% !important;
       display: block; } }
   @media screen and (max-width: 1024px) {
     .l-sidebar {
@@ -7103,7 +7136,9 @@ a {
     .l-main {
       width: 100%;
       float: none;
-      padding-left: 0; } }
+      padding-left: 0; }
+      .l-main .filter-choice.filter-choice_nav {
+        display: block; } }
   @media screen and (max-width: 640px) {
     .l-main > .row > .col-xs-12 .post-item__title {
       margin-bottom: 5px; }
@@ -7114,7 +7149,9 @@ a {
     .l-main > .row > .col-xs-12 .post-item {
       max-width: 90px; }
     .l-main > .row > .col-xs-12 > .row_inline > .col-xs-4 {
-      width: 25%; } }
+      width: 25%; }
+    .l-main .filter-choice.filter-choice_nav {
+      display: none; } }
   @media screen and (max-width: 460px) {
     .l-main > .row > .col-xs-12 > .row_inline > .col-xs-4 {
       width: 33.33333%; } }
@@ -7139,6 +7176,8 @@ a {
       @media screen and (max-width: 1024px) {
         .l-main__in:before {
           display: none; } }
+  .l-main .filter-choice_nav {
+    display: none; }
 
 @media screen and (max-width: 1270px) {
   .l-main_fluid {
@@ -8264,6 +8303,9 @@ a {
     height: 170px; }
   .item_small .btn {
     padding: 9px 18px 7px; }
+  @media screen and (max-width: 1024px) {
+    .item_small .badge {
+      left: 5px; } }
 
 .item_no-border .item__action {
   border: 0; }
@@ -9357,11 +9399,35 @@ a.link-comment:hover {
 
 .server-error {
   margin: 0 0 20px; }
+  .server-error img {
+    width: 100%;
+    height: auto;
+    display: block; }
 
 .cat-nav-cols {
   -webkit-column-count: 6;
   -moz-column-count: 6;
   column-count: 6; }
+  @media screen and (max-width: 1024px) {
+    .cat-nav-cols {
+      -webkit-column-count: 5;
+      -moz-column-count: 5;
+      column-count: 5; } }
+  @media screen and (max-width: 900px) {
+    .cat-nav-cols {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4; } }
+  @media screen and (max-width: 700px) {
+    .cat-nav-cols {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3; } }
+  @media screen and (max-width: 400px) {
+    .cat-nav-cols {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
 
 .cat-nav {
   font-size: 12px;

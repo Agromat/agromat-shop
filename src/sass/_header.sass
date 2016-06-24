@@ -50,14 +50,21 @@
 	height: 30px
 	line-height: 30px
 	font-size: 11px
-	color: #fff 
+	color: #fff
 	overflow: hidden
 	+arial
+	+r(1024)
+		.col-xs-2
+			display: none
+		.col-xs-8
+			width: 83.33333% 
+			+ .col-xs-2
+				display: block
 	+r(640)
 		display: none
 	a
 		display: inline-block
-		color: #fff 
+		color: #fff
 		+tr_c
 		&:hover
 			color: $gray
@@ -98,6 +105,23 @@
 		> div
 			padding-top: 16px
 			padding-bottom: 16px
+		> .col-xs-6
+			@media screen and (min-width: 1025px) and (max-width: 1200px)
+				&:nth-of-type(1)
+					width: 66.66667%
+				&:nth-of-type(2)
+					width: 33.33333%
+			&:nth-of-type(1)
+				+r(1024)
+					.col-xs-6 ~ .col-xs-6
+						text-align: center
+			+ .col-xs-6
+				.col-xs-8
+					@media screen and (min-width: 1025px) and (max-width: 1200px)
+						width: 50%
+				.col-xs-4
+					@media screen and (min-width: 1025px) and (max-width: 1200px)
+						width: 50%
 	.contact
 		float: left
 		margin-top: 7px
@@ -110,6 +134,8 @@
 		float: right
 		max-width: 40%
 		margin-top: 7px
+		+r(1024)
+			display: none
 	.compare
 		display: none
 		position: absolute
@@ -203,6 +229,7 @@
 	display: block
 	margin: 13px 0 0 
 	width: 80%
+	max-width: 216px
 	+rmin(1025)
 		max-width: 216px
 	+r(1024)
@@ -516,6 +543,10 @@
 	&__in
 		border-bottom: 1px solid #000 
 		position: relative
+		+r(1024)
+			.col-xs-10.col-md-offset-1
+				width: 100%
+				margin-left: 0
 .nav
 	display: table
 	width: 100%
