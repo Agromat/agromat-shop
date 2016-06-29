@@ -94,6 +94,11 @@ body
 	.container
 		padding-left: 20px
 		padding-right: 20px
+		> .row
+			> .col-xs-3
+				display: none
+			> .col-xs-9
+				width: 100%
 	.row
 		margin-left: -20px
 		margin-right: -20px
@@ -110,6 +115,11 @@ body
 	.container
 		padding-left: 10px
 		padding-right: 10px
+		> .row
+			> .col-xs-9
+				width: 100%
+				+ .col-xs-3 + .col-xs-12
+					display: none
 a
 	text-decoration: none
 	color: $blue

@@ -2660,6 +2660,10 @@ body {
   .container {
     padding-left: 20px;
     padding-right: 20px; }
+    .container > .row > .col-xs-3 {
+      display: none; }
+    .container > .row > .col-xs-9 {
+      width: 100%; }
   .row {
     margin-left: -20px;
     margin-right: -20px; }
@@ -2676,7 +2680,11 @@ body {
     margin-right: -10px; }
   .container {
     padding-left: 10px;
-    padding-right: 10px; } }
+    padding-right: 10px; }
+    .container > .row > .col-xs-9 {
+      width: 100%; }
+      .container > .row > .col-xs-9 + .col-xs-3 + .col-xs-12 {
+        display: none; } }
 
 a {
   text-decoration: none;
@@ -6310,6 +6318,10 @@ a {
   padding-left: 15px; }
   .catalog-list .list + .list {
     margin-top: 22px; }
+
+@media screen and (max-width: 1024px) {
+  .catalog-list .col-xs-3 {
+    width: 33.3333%; } }
 
 .catalog-info {
   display: none;
