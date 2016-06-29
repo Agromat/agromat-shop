@@ -69,8 +69,6 @@
 .breadcrumbs
 	margin: 0 0 13px -7px
 	color: $gray
-	+r(640)
-		display: none
 	> li
 		display: inline-block
 		margin: 0 -6px 
@@ -129,7 +127,7 @@
 				color: $blue-h 
 		> span
 			padding: 0 15px
-			display: block 
+			display: block
 	&__drop
 		position: absolute
 		top: 100%
@@ -155,6 +153,78 @@
 				padding-left: 0
 			&:last-child
 				border: 0
+	+r(640)
+		margin: 0 0 10px
+		li
+			display: none
+			margin: 0
+			height: auto
+			line-height: 1
+			&:before
+				display: none
+			&:not(.has-drop)
+				>
+					a
+						text-align: center
+						padding-left: 30px
+						padding-right: 30px
+						background-color: #F6F6F6
+						&:before
+							content: "\f104"
+							left: 14px
+							font-size: 20px
+			a
+				border: 1px solid #CDCDCD
+				line-height: 1
+				font-size: 15px
+				color: #3a3a3a
+				padding: 12px 14px
+				text-transform: none
+				display: block
+				&:before
+					content: "\f107"
+					+fa-icon
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+
+			&:nth-last-of-type(2)
+				display: block
+			&.has-drop
+				margin: 0 -10px
+				a
+					&:before
+						content: "\f107"
+						right: 12px
+				&:before
+					display: none
+		.breadcrumbs__drop
+			right: 0
+			display: block
+			padding: 0
+			box-shadow: -0.9px 1.8px 4px rgba(0, 0, 0, 0.39)
+			&.is-show
+				opacity: 1
+				visibility: visible
+			.list
+				display: block
+				width: 100%
+				border: 0
+				padding: 0
+				li
+					margin: 0
+			a
+				border-top: 0
+				padding: 13px 32px
+				color: #268cb6
+				font-size: 13px
+				text-align: left
+				background-color: #FFF 
+				&:before
+					content: "\f105"
+					right: auto
+					left: 19px
+					font-size: inherit 
 .page-head
 	position: relative
 	+r(1024)
@@ -167,34 +237,34 @@
 			max-width: 168px
 			width: 100%
 			float: right
-	+r(640)
-		display: none
 	// +r(640)
-	// 	.row
-	// 		> .col-xs-8
-	// 			width: 100%
-	// 			text-align: center
-	// 	.page-title
-	// 		font-size: 24px
-	// 		margin: 12px 0 9px
-	// 		display: inline-block
-	// 		padding: 0 20px
-	// 		position: relative
-	// 		&:before,
-	// 		&:after
-	// 			content: ''
-	// 			display: block
-	// 			position: absolute
-	// 			top: 50%
-	// 			margin-top: -4px
-	// 			width: 4px
-	// 			height: 4px
-	// 			+rotate(45deg)
-	// 			background: #9ECBDC
-	// 		&:before
-	// 			left: 0
-	// 		&:after
-	// 			right: 0
+	// 	display: none
+	+r(640)
+		.row
+			> .col-xs-8
+				width: 100%
+				text-align: center
+		.page-title
+			font-size: 24px
+			margin: 12px 0 9px
+			display: inline-block
+			padding: 0 20px
+			position: relative
+			&:before,
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				margin-top: -4px
+				width: 4px
+				height: 4px
+				+rotate(45deg)
+				background: #9ECBDC
+			&:before
+				left: 0
+			&:after
+				right: 0
 	.compare
 		margin-top: 6px
 	+ .row_inline
