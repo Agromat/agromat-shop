@@ -154,7 +154,7 @@
 			&:last-child
 				border: 0
 	+r(640)
-		margin: 0 0 10px
+		margin: 0
 		> li
 			display: none
 			margin: 0
@@ -241,11 +241,16 @@
 			max-width: 168px
 			width: 100%
 			float: right
+		.filter
+			display: block
+			float: right
+			max-width: 228px
+			width: 100%
 	// +r(640)
 	// 	display: none
 	+r(640)
 		.row
-			> .col-xs-8
+			> .col-xs-8, .col-xs-4
 				width: 100%
 				text-align: center
 		.page-title
@@ -269,6 +274,14 @@
 				left: 0
 			&:after
 				right: 0
+			+ .page-subtitle
+				margin-top: 0
+		.compare
+			display: none
+		.filter
+			float: none
+			max-width: none
+			padding: 10px 0 15px
 	.compare
 		margin-top: 6px
 	+ .row_inline
@@ -398,6 +411,9 @@
 .compare
 	position: relative
 	z-index: 2
+	&.is-hidden-sm
+		+r(1024)
+			display: none
 	&:hover
 		.compare__drop
 			opacity: 1
@@ -451,8 +467,6 @@
 	position: relative
 	display: none
 	padding: 20px 0 15px
-	+r(1024)
-		display: block
 .filter-wrp
 	position: relative
 .filter-popup
@@ -623,43 +637,81 @@
 	height: 52px
 	line-height: 50px
 	border-bottom: 1px solid #000
-	color: $gray 
+	color: $gray
 	+r(640)
-		display: none
+		border: 1px solid #cdcdcd
+		appearance: none
+		height: 34px
+		line-height: 34px
+		cursor: pointer
+		margin: 0 0 30px
+		&:after
+			content: "\f107"
+			+fa-icon
+			top: 9px
+			right: 12px
+			font-size: 16px
+			position: absolute
+		&.is-show
+			.sort__list
+				visibility: visible
+				opacity: 1
 	+ .items-wrap
 		margin-top: 60px
 	+ .banners-wrap + .blocks-wrap
 		+r(1024)
 			margin-top: 0
-	> a, > span
-		display: inline-block
-		vertical-align: middle
-	> a
-		position: relative
-		padding: 0 10px 
-		color: #444
-		+tr_c
-		&:hover
-			color: $blue 
-		&.is-active
-			font-weight: bold
-			&:before
-				content: ""
-				position: absolute
-				bottom: -7px
-				left: 50%
-				margin-left: -10px
-				+arr(20,8,#000,b)
-			&:after
-				content: ""
-				position: absolute
-				bottom: -6px
-				z-index: 2
-				left: 50%
-				margin-left: -9px
-				+arr(18,8,#fff,b)
+	+rmin(641)
+		> a, > span
+			display: inline-block
+			vertical-align: middle
+		> a
+			position: relative
+			padding: 0 10px 
+			color: #444
+			+tr_c
+			&:hover
+				color: $blue 
+			&.is-active
+				font-weight: bold
+				&:before
+					content: ""
+					position: absolute
+					bottom: -7px
+					left: 50%
+					margin-left: -10px
+					+arr(20,8,#000,b)
+				&:after
+					content: ""
+					position: absolute
+					bottom: -6px
+					z-index: 2
+					left: 50%
+					margin-left: -9px
+					+arr(18,8,#fff,b)
+		> span
+			margin-right: 10px
 	> span
-		margin-right: 10px
+		+r(640)
+			display: block
+			margin: 0
+			padding: 0 10px
+.sort__list
+	visibility: hidden
+	opacity: 0
+	position: absolute
+	top: 100%
+	left: -1px
+	right: -1px
+	z-index: 10
+	margin-top: 1px
+	background-color: #FFF
+	+tr(opacity 0.3s)
+	a
+		padding: 0 10px
+		display: block
+		border: 1px solid #cdcdcd
+		border-top: 0
 .sort_mod
 	border-top-color: transparent
 .view
