@@ -155,7 +155,7 @@
 				border: 0
 	+r(640)
 		margin: 0 0 10px
-		li
+		> li
 			display: none
 			margin: 0
 			height: auto
@@ -173,6 +173,7 @@
 							content: "\f104"
 							left: 14px
 							font-size: 20px
+							margin-top: -12px
 			a
 				border: 1px solid #CDCDCD
 				line-height: 1
@@ -186,13 +187,17 @@
 					+fa-icon
 					position: absolute
 					top: 50%
-					transform: translateY(-50%)
+					margin-top: -7px
 
 			&:nth-last-of-type(2)
 				display: block
 			&.has-drop
 				margin: 0 -10px
-				a
+				&.is-active
+					> a
+						&:before
+							transform: rotate(-180deg)
+				> a
 					&:before
 						content: "\f107"
 						right: 12px
@@ -211,20 +216,19 @@
 				width: 100%
 				border: 0
 				padding: 0
-				li
-					margin: 0
 			a
 				border-top: 0
 				padding: 13px 32px
 				color: #268cb6
 				font-size: 13px
 				text-align: left
-				background-color: #FFF 
+				background-color: #FFF
+				position: relative
 				&:before
 					content: "\f105"
 					right: auto
 					left: 19px
-					font-size: inherit 
+					font-size: inherit
 .page-head
 	position: relative
 	+r(1024)

@@ -583,9 +583,12 @@ $(document).ready( function() {
     $('.breadcrumbs .has-drop > a').click(function(e) {
         e.preventDefault();
 
-        var that = $(this);
+        var that    = $(this),
+            el      = that.siblings('.breadcrumbs__drop'),
+            _parent = el.parent('.has-drop');
 
-        that.siblings('.breadcrumbs__drop').toggleClass('is-show');
+        el.toggleClass('is-show');
+        _parent.toggleClass('is-active');
     })
 
     //accordion
