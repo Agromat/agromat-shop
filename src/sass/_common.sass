@@ -129,6 +129,9 @@ a
 .wrap
 	font-size: 0
 	+clr
+.wrapper
+	+r(640)
+		overflow: hidden
 .row
 	&_table
 		display: table
@@ -839,8 +842,13 @@ a
 	color: #000 
 	font-size: 0
 	white-space: nowrap
+	+r(1024)
+		margin: 22px auto 58px
+		padding: 0 20px
+		display: table
 	+r(640)
-		margin: 30px 0 0
+		margin: 30px auto 0
+		padding: 0
 		&_no-marg
 			margin: 0
 	&:before,
@@ -2250,46 +2258,6 @@ a
 		background-color: #2782a8
 		border-color: #2782a8
 		color: #fff
-//go
-.go
-	position: relative
-	display: none
-	+r(640)
-		display: block
-	&_space
-		margin-bottom: 20px
-.go-item
-	background-color: #F6F6F6
-	border: 1px solid #cdcdcd
-	margin-bottom: 10px
-.go-link
-	font-size: 15px
-	color: #3a3a3a
-	padding: 8px 30px
-	text-align: center
-	display: block
-	position: relative
-.go-link_back
-	&:before
-		+fa-icon
-		content: "\f104"
-		position: absolute
-		top: 50%
-		left: 14px
-		font-size: 20px
-		transform: translateY(-50%)
-.go-link_next
-	font-size: 13px
-	text-align: left
-	padding: 10px 20px
-	&:before
-		+fa-icon
-		content: "\f105"
-		position: absolute
-		top: 50%
-		right: 14px
-		font-size: 15px
-		transform: translateY(-50%)
 .delivery-wrp
 	display: none
 	+r(1024)

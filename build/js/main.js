@@ -658,6 +658,7 @@ $(document).ready( function() {
 
         that.toggleClass('is-open');
         nav.toggleClass('is-visible');
+        $('body').toggleClass("is-hidden");
     });
 
     //popup 
