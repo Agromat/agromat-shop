@@ -4302,6 +4302,14 @@ a {
 .select_2 select {
   padding: 0 10px; }
 
+.select-wrp {
+  display: none;
+  margin-bottom: 19px;
+  clear: both; }
+  @media screen and (max-width: 640px) {
+    .select-wrp {
+      display: block; } }
+
 .window {
   display: block;
   margin: 50px auto;
@@ -4644,6 +4652,36 @@ a {
     margin-bottom: 13px; }
   .popup .soc-enter {
     margin-top: 10px; }
+
+.popup-sort {
+  position: relative;
+  text-align: center;
+  padding: 15px 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  .popup-sort .popup__close {
+    top: 13px;
+    right: 10px; }
+  .popup-sort .btn_large {
+    margin: 0 auto 30px;
+    display: block; }
+  .popup-sort .btn-more {
+    display: block;
+    margin: 0 auto; }
+  .popup-sort .filter-wrap {
+    display: block;
+    border: 0; }
+  .popup-sort .abc {
+    margin-left: -4px;
+    width: 264px;
+    margin: auto; }
+    .popup-sort .abc li {
+      width: 40px;
+      height: 50px;
+      border: 1px solid #cdcdcd;
+      margin: 4px 0 0 4px; }
+      .popup-sort .abc li:last-child {
+        display: none; }
 
 @media screen and (max-width: 640px) {
   .popup_cart {
@@ -7584,6 +7622,9 @@ a {
 
 .filter-wrp {
   position: relative; }
+  @media screen and (max-width: 640px) {
+    .filter-wrp {
+      display: none; } }
 
 .filter-popup {
   width: 100%;
@@ -9514,6 +9555,9 @@ a.link-comment:hover {
 
 .section {
   margin: 20px 0 47px; }
+  @media screen and (max-width: 1024px) {
+    .section .row .col-xs-3 {
+      display: block; } }
   @media screen and (max-width: 640px) {
     .section .title {
       margin-bottom: 8px; }
@@ -9707,6 +9751,9 @@ a.link-comment:hover {
     content: " ";
     display: table;
     clear: both; }
+  @media screen and (max-width: 640px) {
+    .filter-wrap {
+      display: none; } }
 
 .abc {
   display: table;
@@ -9891,15 +9938,15 @@ a.link-comment:hover {
 
 .figcaption {
   font-size: 20px;
+  font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
   text-align: center;
   display: none;
-  margin-bottom: 33px; }
+  margin-bottom: 22px; }
+  .figcaption a {
+    color: inherit; }
   @media screen and (max-width: 1024px) {
     .figcaption {
       display: block; } }
-  @media screen and (max-width: 767px) {
-    .figcaption {
-      letter-spacing: -0.07em; } }
 
 .a-category {
   position: relative;
