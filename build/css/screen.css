@@ -9385,6 +9385,8 @@ a.link-comment:hover {
 
 .table-characteristics {
   display: none; }
+  .table-characteristics .table-char {
+    table-layout: fixed; }
   @media screen and (max-width: 1024px) {
     .table-characteristics {
       display: block; } }
