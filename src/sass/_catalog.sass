@@ -298,6 +298,19 @@
 				width: 50%
 			+r(420)
 				width: 100%
+.page-head_decoration-mob
+	+r(640)
+		.page-title
+			font-size: 20px
+			display: block
+			&:before,
+			&:after
+				display: none
+		.page-subtitle
+			display: inline-block
+			background-color: #ED1C24
+			color: #fff
+			padding: 3px 17px
 .page-head-mob
 	display: none
 	margin-bottom: 30px
@@ -1785,8 +1798,6 @@ a.link-comment
 		position: absolute
 		right: 60px
 		bottom: -5px
-		
-
 .seo
 	margin: 30px 0 0 
 	padding: 27px 0 18px
@@ -1816,9 +1827,13 @@ a.link-comment
 			&.is-ready
 				opacity: 1
 				visibility: visible
+			+r(640)
+				height: 225px
 		.slick-slide
 			height: 370px
 			+vertical
+			+r(640)
+				height: 225px
 		img
 			display: inline-block
 			max-height: 100%

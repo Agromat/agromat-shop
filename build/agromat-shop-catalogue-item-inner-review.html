@@ -1000,7 +1000,8 @@
 									<span class="tag tag_simple">Таб 3</span>
 								</div>
 							</a>
-							<div class="page-head">
+							<!-- add class ex-zy -->
+							<div class="page-head page-head_decoration-mob">
 								<div class="row">
 									<div class="col-xs-8">
 										<h1 class="page-title">Душевая кабина Kludi GEO 6 GKPG90222003</h1>
@@ -1008,8 +1009,8 @@
 									</div>
 									<div class="col-xs-4">
 										<div class="row">
-											<div class="col-xs-9 col-xs-offset-3">
-												<div class="compare visible-sm">
+											<div class="col-xs-8 col-xs-offset-4">
+												<div class="compare">
 													<button class="compare-btn" type="button">
 														<span class="compare-btn__in">
 															<span class="compare-btn__text">сравнение (0)</span>
@@ -1052,11 +1053,11 @@
 							</div>
 							<div class="js-tabs-group">
 								<ul class="tabs js-tabs">
-									<li class="is-active"><a href="#js-tab-description">все о товаре</a></li>
-									<li class="hidden-xs hidden-sm"><a href="#js-tab-character">Характеристики</a></li>
+									<li class="is-active"><a href="#js-tab-description">Все о товаре</a></li>
+									<li><a href="#js-tab-character">Характеристики</a></li>
 									<li><a href="#js-tab-reviews">Отзывы</a></li>
-									<li><a href="#js-tab-video">видео</a></li>
-									<li><a href="#js-tab-same">сопутствующие товары</a></li>
+									<li><a href="#js-tab-video">Видео</a></li>
+									<li><a href="#js-tab-same">Сопутствующие товары</a></li>
 								</ul>
 
 								<!-- BEGIN tab1 -->
@@ -1445,13 +1446,13 @@
 								<!-- BEGIN tab3 -->
 								<div class="tabs-content js-tabs-content" data-id="#js-tab-reviews">
 									<div class="row">
-										<div class="col-xs-4 hidden-sm">
+										<div class="col-xs-4">
 											<div class="card">
 												<div class="card__in">
 													<div class="card__media">
 														<a href="#" class="card__img">
 															<img src="https://unsplash.it/125/155?image=651" alt="">
-															<span class="btn-zoom"><i class="fa fa-search-plus"></i></span>
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
 														</a>
 													</div>
 													<div class="card__name">
@@ -1476,7 +1477,7 @@
 															</div>
 														</div>
 														<div class="card__action">
-															<button type="button" class="btn btn_large is-width">В корзину</button>
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
 															<ul class="links-wrap">
 																<li><a href="#" class="link-credit">в кредит</a></li>
 																<li><a href="#" class="link-compare">сравнить</a></li>
@@ -1487,7 +1488,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-xs-8 col-sm-12 col-md-8">	
+										<div class="col-xs-8">	
 											
 											<div class="comment comment_no-border">
 												<div class="row">
@@ -1641,13 +1642,13 @@
 								<!-- BEGIN tab4 -->
 								<div class="tabs-content js-tabs-content" data-id="#js-tab-video">
 									<div class="row">
-										<div class="col-xs-4 hidden-sm">
+										<div class="col-xs-4">
 											<div class="card">
 												<div class="card__in">
 													<div class="card__media">
 														<a href="#" class="card__img">
 															<img src="https://unsplash.it/125/155?image=651" alt="">
-															<span class="btn-zoom"><i class="fa fa-search-plus"></i></span>
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
 														</a>
 													</div>
 													<div class="card__name">
@@ -1672,7 +1673,7 @@
 															</div>
 														</div>
 														<div class="card__action">
-															<button type="button" class="btn btn_large is-width">В корзину</button>
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
 															<ul class="links-wrap">
 																<li><a href="#" class="link-credit">в кредит</a></li>
 																<li><a href="#" class="link-compare">сравнить</a></li>
@@ -1683,7 +1684,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-xs-8 col-sm-12 col-md-8">
+										<div class="col-xs-8">
 											<div class="video">
 												<a href="#"><img src="img/slide.jpg" alt=""></a>
 												<a href="#" class="btn-play"></a>
@@ -1692,18 +1693,18 @@
 										</div>
 									</div>
 								</div>
-								<!-- END tab4 --
+								<!-- END tab4 -->
 									
 								<!-- BEGIN tab5 -->
 								<div class="tabs-content js-tabs-content" data-id="#js-tab-same">
 									<div class="row row_inline">
-										<div class="col-xs-4 hidden-sm">
+										<div class="col-xs-4">
 											<div class="card">
 												<div class="card__in">
 													<div class="card__media">
 														<a href="#" class="card__img">
 															<img src="https://unsplash.it/125/155?image=651" alt="">
-															<span class="btn-zoom"><i class="fa fa-search-plus"></i></span>
+															<button class="btn-zoom js-popup-trigger" data-popup="js-popup-item" type="button"><i class="fa fa-search-plus"></i></button>
 														</a>
 													</div>
 													<div class="card__name">
@@ -1728,7 +1729,7 @@
 															</div>
 														</div>
 														<div class="card__action">
-															<button type="button" class="btn btn_large is-width">В корзину</button>
+															<button type="button" class="btn btn_large is-width js-popup-trigger" data-popup="js-popup-cart">в корзину</button>
 															<ul class="links-wrap">
 																<li><a href="#" class="link-credit">в кредит</a></li>
 																<li><a href="#" class="link-compare">сравнить</a></li>
@@ -1739,9 +1740,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-xs-8 col-sm-12 col-md-8">
+										<div class="col-xs-8">
 											<div class="row">
-												<div class="col-xs-4 col-sm-3 col-md-4">
+												<div class="col-xs-4">
 													<div class="item item_small item_no-border">
 														<div class="item__head">
 															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
@@ -1760,13 +1761,13 @@
 																	74,<sup>03</sup> <sub>грн</sub>
 																</div>
 																
-																<div><button type="button" class="btn">в корзину</button></div>
+																<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
 																
 															</div>
 														</div>
 													</div>
 												</div>
-												<div class="col-xs-4 col-sm-3 col-md-4">
+												<div class="col-xs-4">
 													<div class="item item_small item_no-border">
 														<div class="item__head">
 															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
@@ -1783,14 +1784,14 @@
 																	74,<sup>03</sup> <sub>грн</sub>
 																</div>
 																
-																<div><button type="button" class="btn">в корзину</button></div>
+																<div><button type="button" class="btn js-popup-trigger" data-popup="js-popup-cart">в корзину</button></div>
 																
 															</div>
 														</div>
 													</div>
 												</div>
-												<div class="col-xs-4 col-sm-3 col-md-4">
-													<div class="item item_small item_no-border item_no-goods">
+												<div class="col-xs-4">
+													<div class="item item_small item_no-border">
 														<div class="item__head">
 															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
 														</div>
@@ -1810,29 +1811,6 @@
 																</div>
 																
 																<span class="btn-simple btn-simple_small is-inactive">нет на складе</span>
-																
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-4  col-sm-3 hidden-xs hidden-md hidden-lg">
-													<div class="item item_small item_no-border">
-														<div class="item__head">
-															<a href="#" class="item__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>2880-ET37</span></a>
-														</div>
-														<div class="item__media">
-															<a href="#" class="item__img">
-																<img src="http://placehold.it/270x180" alt="">
-															</a>
-														</div>
-														<div class="item__action">
-															<div class="item__price">
-																
-																<div class="price">
-																	74,<sup>03</sup> <sub>грн</sub>
-																</div>
-																
-																<div><button type="button" class="btn">в корзину</button></div>
 																
 															</div>
 														</div>

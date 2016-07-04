@@ -1133,28 +1133,31 @@ a
 				padding: 0
 				margin: 0
 	+r(640)
-		.col-xs-4.hidden-sm
-			width: 100%
-			.card
-				max-width: none
-				border: 0
-			.card__in
-				> div
-					display: none
-			.card__name
-				font-size: 20px
-				+med
-				display: block !important
-				text-transform: uppercase
-				max-width: 180px
-				margin: 8px auto
+		// .col-xs-4.hidden-sm
+		// 	width: 100%
+		// 	.card
+		// 		max-width: none
+		// 		border: 0
+		// 	.card__in
+		// 		> div
+		// 			display: none
+		// 	.card__name
+		// 		font-size: 20px
+		// 		+med
+		// 		display: block !important
+		// 		text-transform: uppercase
+		// 		max-width: 180px
+		// 		margin: 8px auto
 		.row
-			[class^="col-xs-8"]
+			.col-xs-8
 				width: 100%
 				.col-xs-4
 					width: 100%
 					.btn
 						margin-top: 10px
+			>.col-xs-4
+					width: 100%
+					display: none
 		.order-group
 			.title
 				margin-bottom: 8px
@@ -1202,6 +1205,12 @@ a
 			li
 				max-width: 172px
 				width: 25%
+		.tabs
+			&:not(.tabs_mb)
+				+r(1024)
+					li
+						&:nth-child(2)
+							display: none
 	+r(640)
 		.tabs
 			white-space: normal
@@ -1211,11 +1220,38 @@ a
 				display: none
 			li
 				width: 50%
-				margin: 0px 0 -2px -2px
+				margin: 0px 0 10px -2px
 				border: 2px solid #dedede
 				&.is-active
 					height: 48px
 					border-color: #000
+			&:not(.tabs_mb)
+				+r(640)
+					li
+						width: 100%
+						height: 40px
+						line-height: 38px
+						font-size: 15px
+						text-transform: none
+						+arial
+						&.is-active
+							height: 40px
+							// border-color: #dedede !important
+							&:after
+								display: none
+						&:nth-child(5)
+							display: none
+					a
+						background-color: #F6F6F6
+						color: #3a3a3a
+						&:before
+							content: ''
+							display: block
+							position: absolute
+							right: 14px
+							top: 50%
+							margin-top: -4px
+							+s($arrow-weight)
 		.tabs_mb
 			li
 				width: 100%
@@ -1308,8 +1344,12 @@ a
 					display: none
 				.meta
 					+hidetext
-				.meta__available
+				.meta__available,
+				.meta__not-available
 					font: bold 11px Arial, sans-serif
+					float: none
+				.meta_small
+					text-align: center
 	&__right
 		float: right
 		padding-left: 30px
