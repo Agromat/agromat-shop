@@ -1908,8 +1908,26 @@ a
 			&:last-child
 				display: none
 .popup_cart
+	+r(720)
+		.order_auto-width
+			.order__cell-number
+				width: 100px
+	+r(700)
+		.order-action
+			.row
+				display: flex
+				flex-direction: column-reverse
+			[class*="col-"]
+				width: 100%
+			.btn-back
+				float: right
+				margin: 20px 0 0 10px
+			.link-credit
+				margin: 10px 0 0
 	+r(640)
 		padding: 10px
+		.order_auto-width
+			display: none
 		.popup__close
 			top: 10px
 			right: 10px
@@ -1920,52 +1938,27 @@ a
 		.popup__main
 			margin: 0 0 20px
 			padding: 20px 0
-		.order-action
-			[class*="col-"] 
-				width: 100%
-			.btn-back
-				margin: 10px 0 20px 10px
-				float: right
-			.btn,
-			.btn-simple
-				margin-bottom: 20px
-			.btn-simple
-				margin-left: 0
-			.link-credit
-				margin-top: 0
 		.items-slider_small
 			.slick-prev,
 			.slick-next
 				display: none
 			.slick-slider
 				margin: 0
-	+r(720)
-		.order_auto-width
-			.order__cell-number
-				width: 100px
-	+r(620)
-		.popup__main
-			overflow: auto
-		.order_auto-width
-			width: 620px
-			overflow: auto
-		.order__table
-			.order__cell
-				padding-right: 20px
-				&:nth-of-type(2)
-					width: 230px !important
-				&:nth-last-of-type(1)
-					width: 170px !important
-		.order_total
-			width: 620px
-			.order__delivery
-				padding-right: 20px
-	+r(396)
+		.btn-del
+			right: 0
+	+r(440)
 		.order-action
-			.link-credit
-				margin: 0 28px 0 0
-				float: right
-				clear: both
+			.btn_large,
+			.btn-simple
+				width: 100%
+			.btn-simple
+				margin: 10px 0 0
+			.col-xs-9.text-right
+				text-align: center
+			.btn-back
+				width: 100%
+				margin: 25px 0 0
+				text-align: center
 .popup_no-vertical
 	&:before
 		display: none

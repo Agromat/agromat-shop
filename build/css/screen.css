@@ -4712,9 +4712,34 @@ a {
       .popup-sort .abc li:last-child {
         display: none; }
 
+@media screen and (max-width: 720px) {
+  .popup_cart .order_auto-width .order__cell-number {
+    width: 100px; } }
+
+@media screen and (max-width: 700px) {
+  .popup_cart .order-action .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .popup_cart .order-action [class*="col-"] {
+    width: 100%; }
+  .popup_cart .order-action .btn-back {
+    float: right;
+    margin: 20px 0 0 10px; }
+  .popup_cart .order-action .link-credit {
+    margin: 10px 0 0; } }
+
 @media screen and (max-width: 640px) {
   .popup_cart {
     padding: 10px; }
+    .popup_cart .order_auto-width {
+      display: none; }
     .popup_cart .popup__close {
       top: 10px;
       right: 10px; }
@@ -4725,50 +4750,26 @@ a {
     .popup_cart .popup__main {
       margin: 0 0 20px;
       padding: 20px 0; }
-    .popup_cart .order-action [class*="col-"] {
-      width: 100%; }
-    .popup_cart .order-action .btn-back {
-      margin: 10px 0 20px 10px;
-      float: right; }
-    .popup_cart .order-action .btn,
-    .popup_cart .order-action .btn-simple {
-      margin-bottom: 20px; }
-    .popup_cart .order-action .btn-simple {
-      margin-left: 0; }
-    .popup_cart .order-action .link-credit {
-      margin-top: 0; }
     .popup_cart .items-slider_small .slick-prev,
     .popup_cart .items-slider_small .slick-next {
       display: none; }
     .popup_cart .items-slider_small .slick-slider {
-      margin: 0; } }
+      margin: 0; }
+    .popup_cart .btn-del {
+      right: 0; } }
 
-@media screen and (max-width: 720px) {
-  .popup_cart .order_auto-width .order__cell-number {
-    width: 100px; } }
-
-@media screen and (max-width: 620px) {
-  .popup_cart .popup__main {
-    overflow: auto; }
-  .popup_cart .order_auto-width {
-    width: 620px;
-    overflow: auto; }
-  .popup_cart .order__table .order__cell {
-    padding-right: 20px; }
-    .popup_cart .order__table .order__cell:nth-of-type(2) {
-      width: 230px !important; }
-    .popup_cart .order__table .order__cell:nth-last-of-type(1) {
-      width: 170px !important; }
-  .popup_cart .order_total {
-    width: 620px; }
-    .popup_cart .order_total .order__delivery {
-      padding-right: 20px; } }
-
-@media screen and (max-width: 396px) {
-  .popup_cart .order-action .link-credit {
-    margin: 0 28px 0 0;
-    float: right;
-    clear: both; } }
+@media screen and (max-width: 440px) {
+  .popup_cart .order-action .btn_large,
+  .popup_cart .order-action .btn-simple {
+    width: 100%; }
+  .popup_cart .order-action .btn-simple {
+    margin: 10px 0 0; }
+  .popup_cart .order-action .col-xs-9.text-right {
+    text-align: center; }
+  .popup_cart .order-action .btn-back {
+    width: 100%;
+    margin: 25px 0 0;
+    text-align: center; } }
 
 .popup_no-vertical:before {
   display: none; }
@@ -8825,6 +8826,12 @@ a {
   @media screen and (max-width: 640px) {
     .items-slider_arr-top + .seo {
       display: none; } }
+  @media screen and (max-width: 1024px) {
+    .items-slider_visible {
+      display: block !important; } }
+  @media screen and (max-width: 640px) {
+    .items-slider_centered-text .title span {
+      text-align: center; } }
   .items-slider_small .title + div {
     opacity: 0;
     height: 0;
@@ -10372,7 +10379,7 @@ a.link-comment:hover {
     padding-right: 10px; }
   .order-mob__right {
     overflow: hidden;
-    padding-right: 10px; }
+    padding-right: 20px; }
   .order-mob .prod-simple {
     margin-bottom: 0; }
   .order-mob .prod-simple__img {
@@ -10390,7 +10397,7 @@ a.link-comment:hover {
   .order-mob .btn-del {
     position: absolute;
     top: -4px;
-    right: -9px; }
+    right: 0; }
   .order-mob .number-info {
     display: none; }
   .order-mob .number {
@@ -10402,8 +10409,9 @@ a.link-comment:hover {
       display: none; }
   .order-mob__art {
     display: inline-block;
+    vertical-align: middle;
     background-color: red;
-    color: #fff;
+    color: #fff !important;
     font: 12px Arial, Helvetica, sans-serif;
     padding: 5px 10px; }
 

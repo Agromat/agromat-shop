@@ -590,6 +590,7 @@ $(document).ready( function() {
 
     $(".js-popup-trigger").on("click", function(){
         var popup = $(this).attr("data-popup");
+        $('body').addClass('is-hidden');
         $(".js-popup").fadeOut(200);
         $("."+popup).fadeIn(200);
         $(window).trigger("resize");
