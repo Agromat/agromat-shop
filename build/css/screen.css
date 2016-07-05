@@ -3899,7 +3899,7 @@ a {
 @media screen and (max-width: 640px) {
   .js-tabs-group .tabs {
     white-space: normal;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     height: auto; }
     .js-tabs-group .tabs:after {
       display: none; }
@@ -4034,7 +4034,9 @@ a {
         .product-col__middle .box_action .box__more {
           display: none; }
         .product-col__middle .box_action .box__info {
+          font-size: 13px;
           color: #ed1c24;
+          font-family: Arial, Helvetica, sans-serif;
           text-decoration: underline; }
         .product-col__middle .product-action {
           text-align: center; }
@@ -7069,6 +7071,9 @@ a {
     width: 12px;
     height: 12px;
     display: inline-block; }
+  @media screen and (max-width: 640px) {
+    .countdown {
+      display: none; } }
 
 .countdown-section {
   display: inline-block;
@@ -9203,9 +9208,6 @@ a.link-comment:hover {
     .carousel__main .slick-slider.is-ready {
       opacity: 1;
       visibility: visible; }
-    @media screen and (max-width: 640px) {
-      .carousel__main .slick-slider {
-        height: 225px; } }
   .carousel__main .slick-slide {
     height: 370px;
     text-align: center;
@@ -9216,9 +9218,6 @@ a.link-comment:hover {
       vertical-align: middle;
       width: 0;
       height: 100%; }
-    @media screen and (max-width: 640px) {
-      .carousel__main .slick-slide {
-        height: 225px; } }
   .carousel__main img {
     display: inline-block;
     max-height: 100%;
@@ -9240,6 +9239,17 @@ a.link-comment:hover {
     right: -1px;
     bottom: -1px;
     z-index: 2; }
+  @media screen and (max-width: 640px) {
+    .carousel__main {
+      border: 0; }
+      .carousel__main .slick-list {
+        padding: 0 75px 0 0 !important; }
+      .carousel__main .slick-slide,
+      .carousel__main .slick-slider {
+        height: 225px; }
+      .carousel__main .slick-slide {
+        border: 1px solid #eee;
+        margin: 0 5px; } }
 
 .carousel__nav {
   margin: 23px 0 35px;
@@ -9312,6 +9322,17 @@ a.link-comment:hover {
 .product-action .btn,
 .product-action .btn-simple {
   margin: 15px 0; }
+
+@media screen and (max-width: 640px) {
+  .product-action .btn-simple.is-width {
+    display: block;
+    max-width: 100%; }
+  .product-action .links-wrap {
+    text-align: left; }
+    .product-action .links-wrap li:not(:first-child) {
+      margin-left: 55px; }
+    .product-action .links-wrap li:before {
+      display: none; } }
 
 .card {
   border: 1px solid #eee;

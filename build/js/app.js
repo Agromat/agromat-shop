@@ -290,6 +290,32 @@ $(document).ready( function() {
                     slidesToShow: 4,
                     slidesToScroll: 4,
                 }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    arrows: false,
+                },
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                    slidesToScroll: 2,
+                    arrows: false,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false,
+                },
             }
         ]
     });
@@ -414,7 +440,30 @@ $(document).ready( function() {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        asNavFor: '.js-carousel-nav'
+        asNavFor: '.js-carousel-nav',
+        responsive: [
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    fade: false,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    fade: false,
+                },
+            },
+        ],
+
     });
     $('.js-carousel-nav').slick({
         slidesToShow: 4,
@@ -423,7 +472,7 @@ $(document).ready( function() {
         dots: false,
         arrows: false,
         centerMode: false,
-        focusOnSelect: true
+        focusOnSelect: true,
     });
 
     $('.js-tip-trigger').on("click", function(event){

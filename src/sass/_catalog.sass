@@ -1827,13 +1827,9 @@ a.link-comment
 			&.is-ready
 				opacity: 1
 				visibility: visible
-			+r(640)
-				height: 225px
 		.slick-slide
 			height: 370px
 			+vertical
-			+r(640)
-				height: 225px
 		img
 			display: inline-block
 			max-height: 100%
@@ -1855,6 +1851,16 @@ a.link-comment
 			right: -1px
 			bottom: -1px
 			z-index: 2
+		+r(640)
+			border: 0
+			.slick-list
+				padding: 0 75px 0 0 !important
+			.slick-slide, 
+			.slick-slider
+				height: 225px
+			.slick-slide
+				border: 1px solid $border_d
+				margin: 0 5px
 	&__nav
 		margin: 23px 0 35px
 		overflow: hidden
@@ -1914,7 +1920,18 @@ a.link-comment
 			margin-bottom: 0
 	.btn,
 	.btn-simple
-		margin: 15px 0 
+		margin: 15px 0
+	+r(640)
+		.btn-simple.is-width
+			display: block
+			max-width: 100%
+		.links-wrap
+			text-align: left
+			li
+				&:not(:first-child)
+					margin-left: 55px
+				&:before
+					display: none
 		
 
 .card
