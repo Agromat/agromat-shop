@@ -1650,9 +1650,6 @@ a
 		.popup__window
 			width: 373px
 		+r(640)
-			.popup__close
-				right: 10px
-				top: 10px
 			.popup__window
 				width: 100%
 	&_success
@@ -1682,11 +1679,22 @@ a
 			width: 930px
 			+r(1024)
 				width: 100%
+		+r(640)
+			.popup__window
+				position: static
+			.popup__body
+				position: relative
+			.img-slider .slick-prev, 
+			.img-slider .slick-next
+				transform: translate3d(0, 0, 0)
 	&_small
 		.popup__window
 			width: 770px
 			+r(1024)
 				width: 100%
+		&:before
+			+r(640)
+				display: none
 	&_smaller
 		.popup__window
 			width: 435px
@@ -1714,7 +1722,7 @@ a
 			// min-height: 920px
 	&_no-pad-mob
 		+r(640)
-			padding: 10px 0 10px
+			padding: 0
 			.popup__body
 				padding: 0 10px
 				.btn-simple
@@ -1743,8 +1751,11 @@ a
 		color: #999
 		z-index: 1
 		+tr(color .3s)
+		transform: translate3d(0, 0, 0)
 		+r(640)
 			+s($close)
+			right: 10px
+			top: 10px
 		&:hover
 			color: #000
 		&:before
@@ -1861,13 +1872,13 @@ a
 		margin: 20px 30px 25px
 		padding-bottom: 10px 
 		+r(640)
-			margin: 20px 10px 5px
+			margin: 10px 10px 5px
 			font-size: 24px
 			border: 0
 			padding: 0
 		.popup__close
-			right: 0px
-			top: -20px
+			top: 0
+			right: 0
 	.meta
 		a
 			color: $gray
@@ -1928,9 +1939,6 @@ a
 		padding: 10px
 		.order_auto-width
 			display: none
-		.popup__close
-			top: 10px
-			right: 10px
 		.popup__head
 			padding: 0 20px 0 10px
 			.title_normal
@@ -1946,6 +1954,8 @@ a
 				margin: 0
 		.btn-del
 			right: 0
+		.popup__main
+			padding: 20px 0 0
 	+r(440)
 		.order-action
 			.btn_large,
