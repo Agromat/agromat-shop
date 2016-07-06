@@ -103,6 +103,10 @@ body
 	.row
 		margin-left: -20px
 		margin-right: -20px
+		&.js-tabs-group
+			.col-xs-4,
+			.tabs-content .col-xs-8
+				width: 100%
 	[class*="col-"]
 		padding-left: 20px
 		padding-right: 20px
@@ -1133,21 +1137,6 @@ a
 				padding: 0
 				margin: 0
 	+r(640)
-		// .col-xs-4.hidden-sm
-		// 	width: 100%
-		// 	.card
-		// 		max-width: none
-		// 		border: 0
-		// 	.card__in
-		// 		> div
-		// 			display: none
-		// 	.card__name
-		// 		font-size: 20px
-		// 		+med
-		// 		display: block !important
-		// 		text-transform: uppercase
-		// 		max-width: 180px
-		// 		margin: 8px auto
 		.row
 			.col-xs-8
 				width: 100%
@@ -1161,6 +1150,9 @@ a
 		.order-group
 			.title
 				margin-bottom: 8px
+			.col-xs-6
+				width: 100%
+					
 		.comment
 			.avatar
 				display: none
@@ -1194,10 +1186,10 @@ a
 				.col-xs-4
 					width: 33.33333% 
 
-	&.js-tabs-content
-		+ [class^='col-xs-4']
-			+r(640)
-				width: 100%
+	// &.js-tabs-content
+	// 	+ [class^='col-xs-4']
+	// 		+r(640)
+	// 			width: 100%
 .js-tabs-group
 	+r(1024)
 		.tabs_mb
@@ -1233,6 +1225,7 @@ a
 						line-height: 38px
 						font-size: 15px
 						text-transform: none
+						text-align: left
 						+arial
 						&.is-active
 							height: 40px
@@ -1244,6 +1237,7 @@ a
 					a
 						background-color: #F6F6F6
 						color: #3a3a3a
+						padding: 0 15px
 						&:before
 							content: ''
 							display: block
