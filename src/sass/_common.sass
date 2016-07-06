@@ -956,6 +956,19 @@ a
 	&_no-border
 		border: 0
 		padding-top: 0
+	+r(1024)
+		.row
+			.col-xs-9
+				width: 75%
+			.col-xs-3
+				width: 25%
+	+r(640)
+		.row
+			.col-xs-9
+				width: 100% !important
+			.col-xs-3
+				width: 100% !important
+				padding-left: 10px !important
 	.comment
 		&:first-child
 			border-top: 0

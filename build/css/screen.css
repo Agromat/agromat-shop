@@ -3632,6 +3632,17 @@ a {
   .comment_no-border {
     border: 0;
     padding-top: 0; }
+  @media screen and (max-width: 1024px) {
+    .comment .row .col-xs-9 {
+      width: 75%; }
+    .comment .row .col-xs-3 {
+      width: 25%; } }
+  @media screen and (max-width: 640px) {
+    .comment .row .col-xs-9 {
+      width: 100% !important; }
+    .comment .row .col-xs-3 {
+      width: 100% !important;
+      padding-left: 10px !important; } }
   .comment .comment:first-child {
     border-top: 0;
     padding-top: 0; }
@@ -7189,7 +7200,10 @@ a {
       .l-main .row .col-xs-4.col-xs-offset-4 {
         margin-left: 0;
         width: 100%;
-        text-align: center; } }
+        text-align: center; }
+      .l-main > .row:not(.row_inline) > .col-xs-8,
+      .l-main > .row:not(.row_inline) > .col-xs-4 {
+        width: 100%; } }
   @media screen and (max-width: 640px) {
     .l-main > .row > .col-xs-12 .post-item__title {
       margin-bottom: 5px; }
