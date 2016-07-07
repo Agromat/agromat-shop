@@ -264,9 +264,14 @@
 			width: 100%
 	+r(640)
 		.row
-			> .col-xs-8, .col-xs-4
+			// > .col-xs-8, .col-xs-4, .col-xs-12
+			// 	width: 100%
+			// 	text-align: center
+			[class^="col-"]
 				width: 100%
 				text-align: center
+			.col-xs-6
+				width: 50%
 		.page-title
 			font-size: 24px
 			margin: 12px 0 9px
@@ -296,6 +301,8 @@
 			float: none
 			max-width: none
 			padding: 0 0 15px
+		+ .text_mb
+			margin-bottom: 28px
 	.compare
 		margin-top: 6px
 	+ .row_inline
@@ -317,44 +324,44 @@
 			background-color: #ED1C24
 			color: #fff
 			padding: 3px 17px
-.page-head-mob
-	display: none
-	margin-bottom: 30px
-	&_no-space
-		margin-bottom: 0
-	+r(640)
-		display: block
-		.text
-			font-size: 13px
-	.title
-		font-size: 24px
-		margin: 12px 0 9px
-		span
-			text-align: inherit
-			&:before, &:after
-				display: block
-				margin-top: -3px
-			> span
-				padding: 0 20px
-	.filter
-		padding: 0
-		margin-bottom: 10px
-	.select
-		float: right
-		width: 50%
-		max-width: 44%
-		&_width
-			max-width: none
-			width: 100%
-			float: none 
-	.page-subtitle
-		float: left
-		margin: 0
-		padding: 7px 0
-		width: 50%
-		max-width: 48%
-	&_no-space
-		margin-bottom: 0
+// .page-head-mob
+// 	display: none
+// 	margin-bottom: 30px
+// 	&_no-space
+// 		margin-bottom: 0
+// 	+r(640)
+// 		display: block
+// 		.text
+// 			font-size: 13px
+// 	.title
+// 		font-size: 24px
+// 		margin: 12px 0 9px
+// 		span
+// 			text-align: inherit
+// 			&:before, &:after
+// 				display: block
+// 				margin-top: -3px
+// 			> span
+// 				padding: 0 20px
+// 	.filter
+// 		padding: 0
+// 		margin-bottom: 10px
+// 	.select
+// 		float: right
+// 		width: 50%
+// 		max-width: 44%
+// 		&_width
+// 			max-width: none
+// 			width: 100%
+// 			float: none 
+// 	.page-subtitle
+// 		float: left
+// 		margin: 0
+// 		padding: 7px 0
+// 		width: 50%
+// 		max-width: 48%
+// 	&_no-space
+// 		margin-bottom: 0
 .contact-mob
 	position: relative
 	&__table

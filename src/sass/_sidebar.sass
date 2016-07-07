@@ -365,6 +365,66 @@
 	.shedule
 		&:before
 			color: $red
+	+r(1024)
+		display: none
+		.contacts
+			display: inline-block
+			vertical-align: top
+			width: 32.3333%
+			padding-right: 40px
+			&:nth-of-type(3)
+				padding-right: 0
+	+r(767)
+		.contacts
+			padding-right: 20px
+			&:nth-of-type(2)
+				text-align: center
+				*
+					display: inline-block
+	+r(640)
+		border: 0
+		margin: 0 0 28px
+		.box__in
+			padding: 0
+		.contacts
+			display: block
+			width: 100%
+			padding-right: 0
+			margin-top: 20px
+			+clr
+			&:nth-of-type(2)
+				text-align: left
+				*
+					display: block
+			.fa
+				display: none
+		.contacts__title
+			float: left
+			width: 60px
+			margin: 0
+			color: #888888
+		.contacts__tel
+			font-size: 16px
+			sub
+				font-size: inherit
+		.contacts__text,
+		.contacts__tel,
+		.shedule,
+		.shedule__list
+			overflow: hidden
+		.shedule
+			.shedule__list
+				span
+					display: inline-block
+			br
+				display: none !important
+		.title
+			margin-bottom: 155px
+		
+.box_tablet
+	display: none
+	+r(1024)
+		display: block
 .box_col-mobile
 	+r(1024)
 		width: 230px
@@ -508,7 +568,6 @@
 	
 .contacts
 	margin-top: 14px
-	
 	&:first-child
 		margin-top: 0
 	&__title
