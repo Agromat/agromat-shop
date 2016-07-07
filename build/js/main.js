@@ -677,6 +677,31 @@ $(document).ready( function() {
         _parent.toggleClass('is-active');
     })
 
+    $('.js-clicker').click(function(e) {
+        e.preventDefault();
+
+        var that = $(this);
+        var el = that.parent('.js-item');
+        var trigger = $('.js-clicker');
+        var item = $('.js-item');
+        var inner = $('.js-inner');
+
+        if(!el.hasClass('is-dropdown')) {
+            item.removeClass('is-dropdown');
+            trigger.removeClass('is-active');
+            el.addClass('is-dropdown');
+            that.addClass('is-active');
+        }
+        else if(el.hasClass('is-dropdown')) {
+            el.removeClass('is-dropdown');
+            that.removeClass('is-active');
+        }
+        else {
+            item.removeClass('is-dropdown');
+            trigger.removeClass('is-active');
+        }
+    });
+
     //accordion
     $('.js-trigger').on('click', function(e) {
         e.preventDefault();
