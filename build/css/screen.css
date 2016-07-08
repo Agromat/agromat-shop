@@ -41,7 +41,7 @@
     display: table; }
   .container:after {
     clear: both; }
-  @media (min-width: 640px) {
+  @media (min-width: 641px) {
     .container {
       width: 750px; } }
   @media (min-width: 1025px) {
@@ -233,7 +233,7 @@
 .col-xs-offset-12 {
   margin-left: 100%; }
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
   .col-sm-1 {
@@ -580,7 +580,7 @@
 .visible-lg-inline-block {
   display: none !important; }
 
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .visible-xs {
     display: block !important; }
   table.visible-xs {
@@ -591,19 +591,19 @@
   td.visible-xs {
     display: table-cell !important; } }
 
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .visible-xs-block {
     display: block !important; } }
 
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .visible-xs-inline {
     display: inline !important; } }
 
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .visible-xs-inline-block {
     display: inline-block !important; } }
 
-@media (min-width: 640px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .visible-sm {
     display: block !important; }
   table.visible-sm {
@@ -614,15 +614,15 @@
   td.visible-sm {
     display: table-cell !important; } }
 
-@media (min-width: 640px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .visible-sm-block {
     display: block !important; } }
 
-@media (min-width: 640px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .visible-sm-inline {
     display: inline !important; } }
 
-@media (min-width: 640px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .visible-sm-inline-block {
     display: inline-block !important; } }
 
@@ -672,11 +672,11 @@
   .visible-lg-inline-block {
     display: inline-block !important; } }
 
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .hidden-xs {
     display: none !important; } }
 
-@media (min-width: 640px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .hidden-sm {
     display: none !important; } }
 
@@ -7054,13 +7054,18 @@ a {
     .box_tablet {
       display: block; } }
 
-@media screen and (max-width: 1024px) {
-  .box_col-mobile {
-    width: 230px;
-    clear: both;
-    margin: 0 20px 30px 0;
-    float: left;
-    padding: 0; } }
+.box_adaptive {
+  display: none; }
+  @media screen and (max-width: 1024px) {
+    .box_adaptive {
+      width: 230px;
+      clear: both;
+      margin: 0 20px 30px 0;
+      float: left;
+      padding: 0; } }
+  @media screen and (max-width: 640px) {
+    .box_adaptive {
+      display: none; } }
 
 .box__list {
   *zoom: 1; }
@@ -7659,6 +7664,44 @@ a {
   text-transform: uppercase;
   font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
   color: #000; }
+
+@media screen and (max-width: 640px) {
+  .page-title.page-title_strip {
+    display: block;
+    padding: 0 18px; }
+    .page-title.page-title_strip:before, .page-title.page-title_strip:after {
+      height: 1px;
+      width: 10px;
+      background-color: #000;
+      top: 50%;
+      margin: -3px 0 0;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
+    .page-title.page-title_strip:before {
+      left: 0; }
+    .page-title.page-title_strip:after {
+      right: 0; }
+    .page-title.page-title_strip span {
+      display: inline-block;
+      padding: 0 20px;
+      position: relative; }
+      .page-title.page-title_strip span:before, .page-title.page-title_strip span:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+        width: 4px;
+        height: 4px;
+        background-color: #9ECBDC;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .page-title.page-title_strip span:before {
+        left: 0; }
+      .page-title.page-title_strip span:after {
+        right: 0; } }
 
 .page-subtitle {
   margin-top: -10px;
