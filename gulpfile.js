@@ -67,8 +67,9 @@ gulp.task('clean', function (cb) {
 
 
 gulp.task('copycss', function() {
-    gulp.src(path.src.css)
-    .pipe(gulp.dest(path.build.css + 'css'));
+    //console.log(path.src.css,path.build.css);
+     gulp.src(path.src.sass)
+     .pipe(gulp.dest(path.build.css + 'css'));
 })
 
 gulp.task('js:build', function () {
