@@ -324,44 +324,6 @@
 			background-color: #ED1C24
 			color: #fff
 			padding: 3px 17px
-// .page-head-mob
-// 	display: none
-// 	margin-bottom: 30px
-// 	&_no-space
-// 		margin-bottom: 0
-// 	+r(640)
-// 		display: block
-// 		.text
-// 			font-size: 13px
-// 	.title
-// 		font-size: 24px
-// 		margin: 12px 0 9px
-// 		span
-// 			text-align: inherit
-// 			&:before, &:after
-// 				display: block
-// 				margin-top: -3px
-// 			> span
-// 				padding: 0 20px
-// 	.filter
-// 		padding: 0
-// 		margin-bottom: 10px
-// 	.select
-// 		float: right
-// 		width: 50%
-// 		max-width: 44%
-// 		&_width
-// 			max-width: none
-// 			width: 100%
-// 			float: none 
-// 	.page-subtitle
-// 		float: left
-// 		margin: 0
-// 		padding: 7px 0
-// 		width: 50%
-// 		max-width: 48%
-// 	&_no-space
-// 		margin-bottom: 0
 .contact-mob
 	position: relative
 	&__table
@@ -788,7 +750,10 @@
 		border: 1px solid #cdcdcd
 		border-top: 0
 .sort_mod
-	border-top-color: transparent
+	+rmin(641)
+		border-top-color: transparent
+	+r(640)
+		margin: 0 0 20px
 .view
 	position: absolute
 	top: 10px
@@ -841,9 +806,11 @@
 	margin-bottom: 26px
 	+r(1024)
 		display: none
-		.col-xs-3
-			&:last-of-type
-				display: none
+		.row
+			.col-xs-3
+				display: block
+				&:last-of-type
+					display: none
 	+r(640)
 		display: none
 	&_border
@@ -875,13 +842,21 @@
 		height: 120px
 		margin-bottom: 5px
 		+gpu
-		+vertical
 		+tr(opacity .2s)
+		+rmin(1025)
+			+vertical
+		+r(1024)
+			height: 100px
+			margin-bottom: 10px
 		img
 			display: inline-block
 			vertical-align: middle
 			max-width: 100%
 			max-height: 100%
+			+r(1024)
+				width: 100%
+				height: 100%
+				display: block
 	.title
 		margin-bottom: -5px
 
@@ -1066,6 +1041,7 @@
 			margin-bottom: 6px
 	.badge
 		left: 25px
+		+gpu
 		// +r(1250)
 		// 	left: 6px !important
 	&__links
@@ -1313,7 +1289,7 @@
 		height: 170px
 	.btn
 		padding: 9px 18px 7px 
-	+r(1024)
+	+r(1250)
 		.badge
 			left: 5px
 .item_no-border
@@ -1343,8 +1319,8 @@
 							width: 50% !important
 						.badge
 							left: 6px
-						.price_old
-							display: none
+						// .price_old
+						// 	display: none
 				+r(1024)
 					width: 33.3333%
 				+r(640)
@@ -1371,6 +1347,11 @@
 				width: 50%
 			+r(480)
 				width: 100%
+.items-wrap.items-wrap_five-items
+	.row_inline
+		> div
+			+r(1024)
+				display: inline-block
 .items-wrap_negative-space
 	+r(1024)
 		margin: 0 -15px
@@ -1452,6 +1433,13 @@
 	position: relative
 	overflow: hidden
 	margin: 55px 0 20px
+	+r(1024)
+		.title
+			margin-bottom: 0
+		margin: 55px 0
+	+r(767)
+		.slick-arrow
+			display: none !important
 	+r(640)
 		margin-bottom: 0
 		margin-top: 27px
@@ -1478,7 +1466,8 @@
 		margin-bottom: 0
 		+r(640)
 			padding-top: 0
-		&:hover
+		&:hover,
+		&:focus
 			&:after
 				border-color: $blue 
 				+r(640)
@@ -1509,7 +1498,8 @@
 		+r(1024)
 			width: auto !important
 	.slick-slider
-		padding: 0 50px
+		+rmin(768)
+			padding: 0 50px
 		+r(640)
 			padding: 0
 			img
@@ -1531,6 +1521,8 @@
 		right: 0
 	&_first
 		margin-top: 30px
+		+r(1024)
+			margin-top: 18px
 	&_arr-top
 		.slick-slider
 			margin-top: -45px

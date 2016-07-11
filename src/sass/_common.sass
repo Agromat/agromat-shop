@@ -1796,6 +1796,9 @@ a
 			padding: 30px
 		+r(640)
 			padding: 0
+			.title
+				> span
+					text-align: center
 	&__text
 		font-style: italic
 		font-size: 13px
@@ -1915,11 +1918,11 @@ a
 		margin-bottom: 13px
 	.soc-enter
 		margin-top: 10px
+		+gpu
 .popup-sort
 	position: relative
 	text-align: center
 	padding: 15px 10px
-	transform: translate3d(0, 0, 0)
 	.popup__close
 		top: 13px
 		right: 10px
@@ -2155,6 +2158,7 @@ a
 		.col-xs-9
 			width: 100%
 		.search_big
+			margin-bottom: 16px
 			.search__input
 				padding: 0 50px 0 10px
 				height: 30px
