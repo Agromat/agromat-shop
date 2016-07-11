@@ -500,8 +500,6 @@
 	padding: 20px 0 15px
 .filter-wrp
 	position: relative
-	+r(640)
-		display: none
 .filter-popup
 	width: 100%
 	font-size: 0
@@ -516,17 +514,17 @@
 	position: absolute
 	&.is-active
 		display: block
-		&:after, &:before
-			content: ''
-			display: block
-			position: absolute
-			bottom: 100%
-			right: 13.5%
-			+arr(20, 8, #000, t)
-		&:after
-			+arr(20, 8, #fff, t)
-			margin-bottom: -2px
-		
+		+rmin(641)
+			&:after, &:before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 100%
+				right: 13.5%
+				+arr(20, 8, #000, t)
+			&:after
+				+arr(20, 8, #fff, t)
+				margin-bottom: -2px
 	.accord
 		display: inline-block
 		width: 33.3333%
@@ -543,8 +541,76 @@
 		margin: 0 20px 5px 0
 	.btn-more
 		display: block
-		margin: 10px 0 12px 
-		
+		margin: 10px 0 12px
+	.filter-popup__bottom
+		margin-top: 8px
+		display: none
+		padding: 0 10px
+		+clr
+		.btn-more
+			float: left
+			margin-top: 7px
+			padding: 10px 10px 10px 22px
+			&:before
+				top: 10px
+		.btn_large
+			float: right
+	.title
+		display: none
+	+r(640)
+		padding: 0
+		border: 0
+		position: fixed
+		z-index: 100
+		box-shadow: -1.4px 2.6px 4px rgba(0, 0, 1, 0.4)
+		&.is-active
+			.checkbox
+				padding: 10px 25px
+		.checkbox
+			font-size: 13px
+			padding: 10px 0
+		.checkbox__text
+			&:before
+				width: 15px
+				height: 15px
+				background-color: #F6F6F6 
+			&:after
+				top: 2px
+		.accord
+			width: 100%
+			margin-bottom: 4px
+			background-color: #F6F6F6 
+			&.is-open
+				.accord__title
+					background-color: $blue 
+					color: #FFF
+		.accord__title
+			font-size: 13px
+			+arial
+			text-transform: none
+			padding: 11px 25px
+			line-height: 1
+			border: 1px solid #cdcdcd
+			+tr(all 0.3s)
+			span
+				width: 100%
+				&:before
+					top: -2px
+					font-size: 16px
+		.accord__scroll
+			padding: 0
+		.filter-popup__container
+			max-height: 376px
+			overflow-x: hidden
+			overflow-y: auto
+		.filter-popup__bottom, .title
+			display: block
+		.title
+			margin: 7px 0 15px
+	// @media screen and (max-width: 640px) and (max-height: 500px)
+	// 	overflow: auto
+	// 	.filter-popup__in
+	// 		height: 100%
 .el
 	display: inline-block
 	vertical-align: middle

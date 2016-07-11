@@ -6692,6 +6692,9 @@ a {
 
 .filter-choice {
   border-bottom: 1px solid #eee; }
+  @media screen and (max-width: 640px) {
+    .filter-choice {
+      display: none; } }
   .filter-choice_nav {
     position: relative;
     display: block;
@@ -7793,9 +7796,6 @@ a {
 
 .filter-wrp {
   position: relative; }
-  @media screen and (max-width: 640px) {
-    .filter-wrp {
-      display: none; } }
 
 .filter-popup {
   width: 100%;
@@ -7811,24 +7811,25 @@ a {
   position: absolute; }
   .filter-popup.is-active {
     display: block; }
-    .filter-popup.is-active:after, .filter-popup.is-active:before {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 100%;
-      right: 13.5%;
-      width: 0px;
-      height: 0px;
-      border-style: solid;
-      border-width: 0 10px 8px 10px;
-      border-color: transparent transparent #000 transparent; }
-    .filter-popup.is-active:after {
-      width: 0px;
-      height: 0px;
-      border-style: solid;
-      border-width: 0 10px 8px 10px;
-      border-color: transparent transparent #fff transparent;
-      margin-bottom: -2px; }
+    @media screen and (min-width: 641px) {
+      .filter-popup.is-active:after, .filter-popup.is-active:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        right: 13.5%;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 10px 8px 10px;
+        border-color: transparent transparent #000 transparent; }
+      .filter-popup.is-active:after {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 10px 8px 10px;
+        border-color: transparent transparent #fff transparent;
+        margin-bottom: -2px; } }
   .filter-popup .accord {
     display: inline-block;
     width: 33.3333%;
@@ -7846,6 +7847,74 @@ a {
   .filter-popup .btn-more {
     display: block;
     margin: 10px 0 12px; }
+  .filter-popup .filter-popup__bottom {
+    margin-top: 8px;
+    display: none;
+    padding: 0 10px;
+    *zoom: 1; }
+    .filter-popup .filter-popup__bottom:after {
+      content: " ";
+      display: table;
+      clear: both; }
+    .filter-popup .filter-popup__bottom .btn-more {
+      float: left;
+      margin-top: 7px;
+      padding: 10px 10px 10px 22px; }
+      .filter-popup .filter-popup__bottom .btn-more:before {
+        top: 10px; }
+    .filter-popup .filter-popup__bottom .btn_large {
+      float: right; }
+  .filter-popup .title {
+    display: none; }
+  @media screen and (max-width: 640px) {
+    .filter-popup {
+      padding: 0;
+      border: 0;
+      position: fixed;
+      z-index: 100;
+      box-shadow: -1.4px 2.6px 4px rgba(0, 0, 1, 0.4); }
+      .filter-popup.is-active .checkbox {
+        padding: 10px 25px; }
+      .filter-popup .checkbox {
+        font-size: 13px;
+        padding: 10px 0; }
+      .filter-popup .checkbox__text:before {
+        width: 15px;
+        height: 15px;
+        background-color: #F6F6F6; }
+      .filter-popup .checkbox__text:after {
+        top: 2px; }
+      .filter-popup .accord {
+        width: 100%;
+        margin-bottom: 4px;
+        background-color: #F6F6F6; }
+        .filter-popup .accord.is-open .accord__title {
+          background-color: #268cb6;
+          color: #FFF; }
+      .filter-popup .accord__title {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: none;
+        padding: 11px 25px;
+        line-height: 1;
+        border: 1px solid #cdcdcd;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+        .filter-popup .accord__title span {
+          width: 100%; }
+          .filter-popup .accord__title span:before {
+            top: -2px;
+            font-size: 16px; }
+      .filter-popup .accord__scroll {
+        padding: 0; }
+      .filter-popup .filter-popup__container {
+        max-height: 376px;
+        overflow-x: hidden;
+        overflow-y: auto; }
+      .filter-popup .filter-popup__bottom, .filter-popup .title {
+        display: block; }
+      .filter-popup .title {
+        margin: 7px 0 15px; } }
 
 .el {
   display: inline-block;

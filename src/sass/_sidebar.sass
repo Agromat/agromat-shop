@@ -93,6 +93,8 @@
 		text-transform: uppercase
 .filter-choice
 	border-bottom: 1px solid $border-d
+	+r(640)
+		display: none
 	&_nav
 		position: relative
 		display: block
@@ -140,8 +142,6 @@
 				text-transform: none
 			&:after
 				display: none
-
-
 		&:after
 			content: ""
 			position: absolute
