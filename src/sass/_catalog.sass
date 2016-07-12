@@ -509,7 +509,7 @@
 	display: none
 	top: 0
 	left: 0
-	z-index: 1
+	z-index: 10
 	background-color: #FFF
 	position: absolute
 	&.is-active
@@ -591,6 +591,10 @@
 					color: #FFF
 					&:after
 						+rotate(-180deg)
+		.accord__list
+			li
+				&:nth-child(n+11)
+					display: block
 		.accord__title
 			font-size: 13px
 			+arial
@@ -796,6 +800,8 @@
 			.sort__list
 				visibility: visible
 				opacity: 1
+		> a
+			
 	+ .items-wrap
 		margin-top: 60px
 	+ .banners-wrap + .blocks-wrap

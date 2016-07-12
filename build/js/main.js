@@ -260,6 +260,9 @@ $(document).ready( function() {
     $(".js-clear-filter").on("click", function(){
         $(this).parents(".js-filter").find("input").removeAttr("checked");
         $(this).parents(".js-filter-choice").remove();
+        if($('.filter-popup .accord__title').hasClass('is-show')) {
+            $('.filter-popup .accord__title').removeClass('is-show');
+        }
         return false;
     });
 
@@ -821,7 +824,15 @@ $(document).ready( function() {
 
     //select
     (function(){
-        var el =  $('.sort');
+        var el   =  $('.sort'),
+            flag = false;
+
+        el.click(function() {
+            if(!el.hasClass('is-show'))
+                $(this).addClass('is-show');
+            else
+                $(this).removeClass('is-show');
+        });
 
         function mobileSelect() {
             
@@ -832,17 +843,18 @@ $(document).ready( function() {
 
         function windowSize() {
             var width = $(window).width();
+                
 
-            if(width <= 640) {
+            if(width <= 640 && flag == false) {
+                flag = true;
+                console.log(flag);
                 mobileSelect();
 
-                el.click(function() {
-                    if(!el.hasClass('is-show'))
-                        $(this).addClass('is-show');
-                    else
-                        $(this).removeClass('is-show');
-                });
-            } 
+            } else if(width > 640 && flag == true) {
+                flag = false;
+                $('.sort__list a').unwrap().unwrap();
+                console.log(flag)
+            }
         }
 
         $(window).on('resize load', windowSize);
