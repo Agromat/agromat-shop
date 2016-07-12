@@ -108,11 +108,35 @@ $(document).ready( function() {
         return false;
     });
 
+    function findInputs(elem) {
+        elem.each(function() {
+            var el = $(this),
+                len = el.find('input:checked').length;
+
+            if (el.find('input').is(':checked') && $(window).width() <= 640  ) {
+                el.find('.js-accord-title span span').text(len);
+                el.find('.js-accord-title').addClass('is-show');
+            } 
+
+            else if (len === 0 && $(window).width() > 640) {
+                el.find('.js-accord-title').removeClass('is-show');
+            } else {
+                el.find('.js-accord-title').removeClass('is-show');
+            }
+        });
+    };
+
     $(".js-accord-title").on("click", function(){
-        var accord =  $(this).parents(".js-accord");
+        var accord    =  $(this).parents(".js-accord"),
+            len   = accord.find('input:checked').length,
+            el        = accord.find('.js-accord-title span span');
+
         if (accord.hasClass("is-open")) {
             accord.removeClass("is-open")
             accord.find(".js-accord-body").slideUp(200);
+
+            findInputs(accord);
+
         }
         else {
             accord.addClass("is-open")
@@ -125,9 +149,10 @@ $(document).ready( function() {
         var win        = $(window).width(),
             mobile     = win < 640,
             title      = $(".js-accord-title"),
-            accord     = title.parents(".js-accord"),
+            accord     = title.parents(".filter-popup .js-accord"),
             accordBody = accord.find(".js-accord-body"),
-            filter     = $('.js-filter');
+            filter     = $('.js-filter'),
+            that       = $(this);
 
         if(mobile) {
             accord.removeClass('is-open');
@@ -138,7 +163,10 @@ $(document).ready( function() {
         }
     }
 
-    $(window).on('load resize', mobileAccord);
+    $(window).on('load resize', function() {
+        mobileAccord();
+        findInputs($(".js-accord"));
+    });
 
     $(".js-item-slider").slick({
         slidesToShow: 1,
@@ -146,6 +174,7 @@ $(document).ready( function() {
         dots: false,
         arrows: true
     });
+
     $(".js-img-slider").on("init", function(){
         setTimeout(function(){
             $('.js-img-slider').parent().addClass("is-ready");
