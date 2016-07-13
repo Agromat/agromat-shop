@@ -911,14 +911,17 @@ $(document).ready( function() {
     $('.js-drop-down').click(function () {
         var that    = $(this),
             section = $(this).parents('.section'),
-            time    = 300;
+            time    = 300,
+            winMob  = ($(window).width() - scrollBarWidth) < 641
 
-         if(!(section.hasClass('is-drop'))) {
-            that.find('~ *').stop(true).slideDown(time).parents('.section').addClass('is-drop');
-            // section.addClass('is-drop');
-         } else {
-            that.find('~ *').stop(true).slideUp(time).parents('.section').removeClass('is-drop');
-            // section.removeClass('is-drop');
+         if(winMob) {
+            if(!(section.hasClass('is-drop'))) {
+               that.find('~ *').stop(true).slideDown(time).parents('.section').addClass('is-drop');
+               // section.addClass('is-drop');
+            } else {
+               that.find('~ *').stop(true).slideUp(time).parents('.section').removeClass('is-drop');
+               // section.removeClass('is-drop');
+            }
          }
 
     })

@@ -9694,9 +9694,11 @@ a.link-comment:hover {
         font-size: 16px;
         letter-spacing: -0.02em; }
       .article + .title {
-        margin-bottom: 0; } }
-  .article + .title {
-    margin-top: 14px; }
+        margin-bottom: 0;
+        margin-top: 30px; } }
+  @media screen and (min-width: 641px) {
+    .article + .title {
+      margin-top: 14px; } }
   .article a {
     color: #268cb6; }
     .article a:hover {
