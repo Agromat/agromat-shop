@@ -143,7 +143,7 @@ $(document).ready( function() {
 
     function mobileAccord() {
         var win        = $(window).width() + scrollBarWidth(),
-            mobile     = win < 640,
+            mobile     = win <= 640,
             title      = $(".js-accord-title"),
             accord     = title.parents(".filter-popup .js-accord"),
             accordBody = accord.find(".js-accord-body"),
@@ -805,7 +805,6 @@ $(document).ready( function() {
 
         function windowSize() {
             var width = $(window).width() + scrollBarWidth();
-                
 
             if(width <= 640 && flag == false) {
                 flag = true;
@@ -827,7 +826,6 @@ $(document).ready( function() {
 
     select();
 
-    
     $('.a-category').click(function() {
         $(this).toggleClass('is-active');
     });
@@ -847,4 +845,20 @@ $(document).ready( function() {
         console.log("высота окна " + winHeight);
     }
     stickyFooter();
+
+    //dropdown sections
+    $('.js-drop-down').click(function () {
+        var that    = $(this),
+            section = $(this).parents('.section'),
+            time    = 300;
+
+         if(!(section.hasClass('is-drop'))) {
+            that.find('~ *').stop(true).slideDown(time).parents('.section').addClass('is-drop');
+            // section.addClass('is-drop');
+         } else {
+            that.find('~ *').stop(true).slideUp(time).parents('.section').removeClass('is-drop');
+            // section.removeClass('is-drop');
+         }
+
+    })
 });

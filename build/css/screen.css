@@ -3348,6 +3348,46 @@ a {
     -webkit-transform: translate3d(0, 0, 0) rotate(180deg);
     transform: translate3d(0, 0, 0) rotate(180deg); }
 
+.btn-show-text {
+  display: inline-block;
+  border-bottom: 1px dashed;
+  line-height: 1.3;
+  padding-right: 20px;
+  position: relative;
+  font-size: 12px;
+  margin-top: 10px; }
+  .btn-show-text:active {
+    border-bottom-color: transparent; }
+  .btn-show-text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    width: 20px;
+    right: 0;
+    background-color: #FFF; }
+  .btn-show-text:before {
+    content: "\f107";
+    display: inline-block;
+    font: normal normal normal 13px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    right: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    color: #268cb6;
+    z-index: 1;
+    font-size: 14px; }
+
 .btn-more_simple {
   padding: 10px 0;
   color: #888; }
@@ -9740,51 +9780,13 @@ a.link-comment:hover {
     .article_no-space {
       padding: 0; } }
 
-.article__text a {
-  display: none; }
+@media screen and (min-width: 641px) {
+  .article__text .btn-show-text {
+    display: none; } }
 
 @media screen and (max-width: 640px) {
   .article__text p {
-    margin-bottom: 0; }
-  .article__text a {
-    display: inline-block;
-    border-bottom: 1px dashed;
-    line-height: 1.3;
-    padding-right: 20px;
-    position: relative;
-    font-size: 12px;
-    margin-top: 10px; }
-    .article__text a:active {
-      border-bottom-color: transparent; }
-    .article__text a:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: -1px;
-      width: 20px;
-      right: 0;
-      background-color: #FFF; }
-    .article__text a:before {
-      content: "\f107";
-      display: inline-block;
-      font: normal normal normal 13px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-      transform: translate(0, 0);
-      right: 5px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      position: absolute;
-      color: #268cb6;
-      z-index: 1;
-      font-size: 14px; } }
+    margin-bottom: 0; } }
 
 @media screen and (max-width: 640px) {
   .article__text.is-hidden-mob p {
@@ -9885,19 +9887,17 @@ a.link-comment:hover {
           right: 14px;
           top: 50%;
           font-size: 15px;
-          margin-top: -8px; }
+          margin-top: -8px;
+          -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s; }
         .section:not(.section_collections) .title span {
           text-align: left; }
         .section:not(.section_collections) .title ~ * {
           display: none; }
-      .section:not(.section_collections).is-open .title {
-        margin-bottom: 20px; }
-        .section:not(.section_collections).is-open .title:after {
-          -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-          transform: rotate(90deg); }
-        .section:not(.section_collections).is-open .title ~ * {
-          display: block; }
+    .section.is-drop .title:after {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
     .section .col-xs-3 {
       width: 50%; } }
 
@@ -9922,6 +9922,9 @@ a.link-comment:hover {
   margin-bottom: 7px;
   position: relative;
   background: #000; }
+  @media screen and (max-width: 640px) {
+    .video {
+      margin: 20px 0 10px; } }
   .video img {
     display: block;
     width: 100%;
@@ -9964,7 +9967,7 @@ a.link-comment:hover {
   line-height: 1.3; }
   .cat-list li {
     margin-bottom: 3px; }
-    @media screen and (max-width: 1024px) and (min-width: 640px) {
+    @media screen and (max-width: 1024px) and (min-width: 641px) {
       .cat-list li {
         border: 1px solid #cdcdcd;
         margin-bottom: 9px; } }
@@ -9975,7 +9978,7 @@ a.link-comment:hover {
     color: #000;
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
-    @media screen and (max-width: 1024px) and (min-width: 640px) {
+    @media screen and (max-width: 1024px) and (min-width: 641px) {
       .cat-list a {
         padding: 5px 10px;
         display: block; } }
