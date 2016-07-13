@@ -9516,7 +9516,9 @@ a.link-comment:hover {
         height: 225px; }
       .carousel__main .slick-slide {
         border: 1px solid #eee;
-        margin: 0 5px; } }
+        margin: 0 5px; }
+      .carousel__main .slick-arrow {
+        display: none !important; } }
 
 .carousel__nav {
   margin: 23px 0 35px;

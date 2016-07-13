@@ -357,7 +357,6 @@ $(document).ready( function() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    arrows: false,
                 },
             },
             {
@@ -366,7 +365,6 @@ $(document).ready( function() {
                     slidesToShow: 2,
                     centerMode: true,
                     slidesToScroll: 2,
-                    arrows: false,
                 },
             },
             {
@@ -375,7 +373,6 @@ $(document).ready( function() {
                     slidesToShow: 1,
                     centerMode: true,
                     slidesToScroll: 1,
-                    arrows: false,
                 },
             }
         ]
@@ -509,7 +506,6 @@ $(document).ready( function() {
                     slidesToShow: 2,
                     centerMode: true,
                     slidesToScroll: 1,
-                    arrows: false,
                     fade: false,
                 },
             },
@@ -519,7 +515,6 @@ $(document).ready( function() {
                     slidesToShow: 1,
                     centerMode: true,
                     slidesToScroll: 1,
-                    arrows: false,
                     fade: false,
                 },
             },
