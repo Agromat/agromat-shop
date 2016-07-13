@@ -37,13 +37,9 @@ $(document).ready( function() {
             $("body").removeClass("has-fixed-header");
         }
     }
-    // fixHeader();
-    $(window).scroll(function(){
-        fixHeader();
-    });
-    $(window).on('resize', function() {
-        fixHeader();
-    })
+    // fixheader()
+    $(window).on('scroll resize', fixHeader);
+
     // banned link click
     $(".js-nav li:not(.no-dropdown) a").on("click", function(){
         return false;
@@ -113,12 +109,12 @@ $(document).ready( function() {
             var el = $(this),
                 len = el.find('input:checked').length;
 
-            if (el.find('input').is(':checked') && $(window).width() <= 640  ) {
+            if (el.find('input').is(':checked') && ($(window).width() + scrollBarWidth()) <= 640  ) {
                 el.find('.js-accord-title span span').text(len);
                 el.find('.js-accord-title').addClass('is-show');
             } 
 
-            else if (len === 0 && $(window).width() > 640) {
+            else if (len === 0 && ($(window).width() + scrollBarWidth()) > 640) {
                 el.find('.js-accord-title').removeClass('is-show');
             } else {
                 el.find('.js-accord-title').removeClass('is-show');
@@ -146,7 +142,7 @@ $(document).ready( function() {
     });
 
     function mobileAccord() {
-        var win        = $(window).width(),
+        var win        = $(window).width() + scrollBarWidth(),
             mobile     = win < 640,
             title      = $(".js-accord-title"),
             accord     = title.parents(".filter-popup .js-accord"),
@@ -167,6 +163,23 @@ $(document).ready( function() {
         mobileAccord();
         findInputs($(".js-accord"));
     });
+
+    // width scroll
+    function scrollBarWidth() {
+        var block        = $('<div>').css({'width': '50px', 'height': '50px'}),
+            innerElement = $('<div>').css({'height': '300px'});
+
+        $('body').append(block.append(innerElement));
+
+        var width1 = $('div', block).innerWidth();
+
+        block.css('overflow-y', 'scroll');
+        var width2 = $('div', block).innerWidth();
+
+        $(block).remove();
+
+        return (width1 - width2);
+    }
 
     $(".js-item-slider").slick({
         slidesToShow: 1,
@@ -762,42 +775,58 @@ $(document).ready( function() {
     });
 
     //select
-    (function(){
-        var el   =  $('.sort'),
+
+    function select() {
+        var el   =  $('.sort > span'),
             flag = false;
 
         el.click(function() {
-            if(!el.hasClass('is-show'))
-                $(this).addClass('is-show');
+            if(!el.parents('.sort').hasClass('is-show'))
+                $(this).parents('.sort').addClass('is-show');
             else
-                $(this).removeClass('is-show');
+                $(this).parents('.sort').removeClass('is-show');
         });
 
         function mobileSelect() {
             
             var child    = $('.sort > a'),
                 list     = child.wrapAll("<ul class='sort__list'></ul>"),
-                listItem = list.wrap("<li></li>");
+                listLink = $('.sort__list').find('a');
+
+                listLink.click(function(e) {
+                    var contentLink = $(this).text(),
+                        link        = $(this)
+
+                    $('.sort > span').text(contentLink).parents('.sort').removeClass('is-show');
+                    e.stopPropagation()
+
+                });
         }
 
         function windowSize() {
-            var width = $(window).width();
+            var width = $(window).width() + scrollBarWidth();
                 
 
             if(width <= 640 && flag == false) {
                 flag = true;
-                console.log(flag);
+
                 mobileSelect();
 
             } else if(width > 640 && flag == true) {
                 flag = false;
-                $('.sort__list a').unwrap().unwrap();
-                console.log(flag)
+                $('.sort__list a').unwrap();
+
+                el.removeClass('is-show');
+                $('.sort > span').text('Сортировка:');
+
             }
         }
 
         $(window).on('resize load', windowSize);
-    })();
+    }
+
+    select();
+
     
     $('.a-category').click(function() {
         $(this).toggleClass('is-active');
