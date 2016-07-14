@@ -3760,12 +3760,12 @@ a {
   .comment_add .col-xs-8 {
     margin-right: -8.33333%; }
   @media screen and (max-width: 1024px) {
-    .comment_add > .row > .col-xs-3 {
+    .comment_add .row .col-xs-3 {
       padding-left: 0; } }
   @media screen and (max-width: 720px) {
-    .comment_add > .row > .col-xs-9 {
+    .comment_add .row .col-xs-9 {
       width: 66.66666666666667%; }
-    .comment_add > .row > .col-xs-3 {
+    .comment_add .row .col-xs-3 {
       width: 33.333333333333336%; } }
 
 .like {
