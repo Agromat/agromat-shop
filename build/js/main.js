@@ -882,9 +882,22 @@ $(document).ready( function() {
 
     select();
 
-    $('.a-category').click(function() {
-        $(this).toggleClass('is-active');
+    $('.a-category__trigger').click(function() {
+        // $(this).toggleClass('is-active');
+        if(!($(this).parents('.a-category').hasClass('is-active'))) {
+            $(this).parents('.a-category').addClass('is-active');
+        } else {
+            $(this).parents('.a-category').removeClass('is-active');
+        }
     });
+
+    $('.a-category .box a').click(function () {
+        var value = $(this).text(),
+            link  = $(this).parents('.a-category').find('.a-category__trigger');
+
+        link.text(value).parents('.a-category').removeClass('is-active');
+    })
+
     //sticky footer
     function stickyFooter() {
         var docHeight    = $(document).height(),
@@ -907,7 +920,9 @@ $(document).ready( function() {
         var that    = $(this),
             section = $(this).parents('.section'),
             time    = 300,
-            winMob  = ($(window).width() - scrollBarWidth) < 641
+            winMob  = ($(window).width() + scrollBarWidth()) < 641
+
+            console.log(($(window).width() + scrollBarWidth()));
 
          if(winMob) {
             if(!(section.hasClass('is-drop'))) {
@@ -918,6 +933,6 @@ $(document).ready( function() {
                // section.removeClass('is-drop');
             }
          }
+    });
 
-    })
 });

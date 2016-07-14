@@ -1010,7 +1010,7 @@
 										<div class="col-xs-8 col-xs-offset-4">
 											<!-- add ex-zy -->
 											<div class="filter hidden-sm">
-												<button type="button" class="btn-filter js-open-popup" data-link="popup-filter-mobile">
+												<button type="button" class="btn-filter js-open-popup" data-link="popup-sort">
 													<span class="name">фильтр A-Z:</span>
 													<span class="value">A</span>
 												</button>
@@ -1019,14 +1019,18 @@
 									</div>
 											
 								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
 								<!-- add ex-zy -->
-								<div class="col-xs-12">
+								<div class="a-category-wrp">
 									<ul class="a-category">
 										<li class="a-category__item">
 											<a href="#" class="a-category__trigger">все категории</a>
 											<div class="box">
 												<ul class="box__nav">
-													<li class="is-active"><a href="#">Плитка</a></li>
+													<li><a href="#">Плитка</a></li>
 													<li><a href="#">Мозаика</a></li>
 													<li><a href="#">Сантехника</a></li>
 													<li><a href="#">Бассейны и сауны </a></li>
@@ -1040,46 +1044,6 @@
 										</li>
 									</ul>
 								</div>
-								<!-- add ex-zy -->
-								<div class="select-wrp">
-									<div class="container">
-										<div class="row">
-											<div class="col-xs-6">
-												<div class="select select_2 select_width js-select">
-													<input type="text" class="input" readonly value="Все категории">
-													<select>
-														<option value="Все категории" selected>Все категории</option>
-														<option value="Item 2">Item 2</option>
-														<option value="Item 3">Item 3</option>
-														<option value="Item 4">Item 4</option>
-														<option value="Item 5">Item 5</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-xs-6">
-												<div class="select select_2 select_width js-select">
-													<input type="text" class="input" readonly value="Все страны">
-													<select>
-														<option value="все страны" selected>Все страны</option>
-														<option value="Украина">Украина</option>
-														<option value="Германия">Германия</option>
-														<option value="Испания">Испания</option>
-														<option value="Украина">Украина</option>
-														<option value="Германия">Германия</option>
-														<option value="Испания">Испания</option>
-														<option value="Украина">Украина</option>
-														<option value="Германия">Германия</option>
-														<option value="Испания">Испания</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12">
 								<div class="filter-wrap">
 									<ul class="abc">
 										<li class="is-active"><a href="#">a</a></li>
@@ -1517,5 +1481,56 @@
 <!-- load scripts -->
 <script src="js/main.js"></script>
 <!--end change ex-zy -->
+<!-- add ex-zy -->
+<!-- BEGIN popup -->
+<div class="popup popup_mobile popup_no-vertical js-mob-popup" data-popup="popup-sort">
+	<div class="popup__overlay"></div>
+	<div class="popup__inner">
+		<div class="popup-sort">
+			<button type="button" class="popup__close js-close-popup"></button>
+			<div class="popup-sort__top">
+				<h2 class="title title_big">выбрать производителя</h2>
+			</div>
+			<div class="popup-sort__main">
+				<div class="filter-wrap">
+					<ul class="abc">
+						<li><a href="#">a</a></li>
+						<li><a href="#">b</a></li>
+						<li><a href="#">c</a></li>
+						<li><a href="#">d</a></li>
+						<li><a href="#">e</a></li>
+						<li><a href="#">f</a></li>
+						<li><a href="#">g</a></li>
+						<li><a href="#">h</a></li>
+						<li><a href="#">i</a></li>
+						<li><a href="#">j</a></li>
+						<li><a href="#">k</a></li>
+						<li><a href="#">l</a></li>
+						<li><a href="#">m</a></li>
+						<li><a href="#">n</a></li>
+						<li><a href="#">o</a></li>
+						<li><a href="#">p</a></li>
+						<li class="is-inactive"><span>q</span></li>
+						<li><a href="#">r</a></li>
+						<li><a href="#">s</a></li>
+						<li><a href="#">t</a></li>
+						<li><a href="#">v</a></li>
+						<li><a href="#">u</a></li>
+						<li><a href="#">w</a></li>
+						<li class="is-inactive"><span>x</span></li>
+						<li class="is-inactive"><span>y</span></li>
+						<li><a href="#">Z</a></li>
+						<li><a href="#">Все</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="popup-sort__bottom">
+				<button class="btn btn_large" type="submit">Применить</button>
+				<button type="button" class="btn-more btn-more_reset js-clear-filter-mob">Сбросить фильтры</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END popup -->
 </body>
 </html>

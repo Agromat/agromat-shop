@@ -1609,24 +1609,6 @@ a
 		width: 100%
 		opacity: 0
 		-webkit-appearance: none
-.select_2
-	&:after
-		content: "\f107"
-		top: 9px
-		right: 12px
-		font-size: 16px
-	.input
-		border: 1px solid #cdcdcd
-		padding: 0 10px
-		height: 34px
-	select
-		padding: 0 10px
-.select-wrp
-	display: none
-	margin-bottom: 19px
-	clear: both
-	+r(640)
-		display: block
 .window
 	display: block
 	margin: 50px auto 
@@ -1967,6 +1949,11 @@ a
 	.filter-wrap
 		display: block
 		border: 0
+		width: 100%
+		float: none
+		+gpu
+		.abc
+			display: block
 	.abc
 		margin-left: -4px
 		width: 264px
@@ -1978,6 +1965,8 @@ a
 			margin: 4px 0 0 4px
 			&:last-child
 				display: none
+	&__bottom
+		+gpu
 .popup_cart
 	+r(720)
 		.order_auto-width
