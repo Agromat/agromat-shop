@@ -31,6 +31,17 @@
 			border: 0
 		.compare
 			display: block
+		+r(1200)
+			min-width: auto
+			z-index: 20
+			.row_table
+				width: 100%
+				.col-xs-6
+					width: 50% !important
+					.col-xs-4
+						width: 33.3333% !important
+						float: right
+				 
 	.nav-wrap
 		position: fixed
 		top: 65px
@@ -45,6 +56,9 @@
 		font-size: 18px
 		line-height: 38px
 		height: 38px
+		+r(1200)
+			height: auto
+			font-size: inherit 
 .tooper
 	background: #000
 	height: 30px

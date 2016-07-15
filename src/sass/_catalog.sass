@@ -264,9 +264,6 @@
 			width: 100%
 	+r(640)
 		.row
-			// > .col-xs-8, .col-xs-4, .col-xs-12
-			// 	width: 100%
-			// 	text-align: center
 			[class^="col-"]
 				width: 100%
 				text-align: center
@@ -347,8 +344,6 @@
 		&:before
 			display: none
 		p
-			br
-				// display: none
 			strong
 				font-size: 13px
 .catalog-wrp
@@ -800,15 +795,14 @@
 			.sort__list
 				visibility: visible
 				opacity: 1
-		> a
-			
 	+ .items-wrap
 		margin-top: 60px
 	+ .banners-wrap + .blocks-wrap
 		+r(1024)
 			margin-top: 0
 	+rmin(641)
-		> a, > span
+		> a,
+		> span
 			display: inline-block
 			vertical-align: middle
 		> a
@@ -1127,8 +1121,6 @@
 		width: 100%
 		font-size: 0
 		+vertical
-		// +r(640)
-		// 	height: auto
 		a
 			display: inline-block
 			width: 100%
@@ -1151,8 +1143,6 @@
 	.badge
 		left: 25px
 		+gpu
-		// +r(1250)
-		// 	left: 6px !important
 	&__links
 		display: table-cell
 		vertical-align: middle
@@ -1212,9 +1202,6 @@
 		> .row
 			> .col-xs-4
 				padding-right: 0
-				// .item__media
-				// 	margin: 0 0 0 -30px
-				// 	padding: 0 0 0 30px
 			> .col-xs-8
 				padding-left: 10px
 		.link-compare
@@ -1323,20 +1310,6 @@
 				&:before
 					left: -7px
 					right: -7px
-	.item__action_mob
-		display: none
-		border-top: 0
-		padding-top: 0
-		margin-top: 10px
-		+r(640)
-			display: block
-			.item__cell
-				width: 100%
-				padding: 0
-			.item__links
-				padding-bottom: 9px
-		td
-			vertical-align: bottom
 	.item__price
 		+r(1270)
 			display: inline-block
@@ -2091,7 +2064,6 @@ a.link-comment
 					margin-left: 55px
 				&:before
 					display: none
-		
 
 .card
 	border: 1px solid #eee

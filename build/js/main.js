@@ -81,9 +81,9 @@ $(document).ready( function() {
     //     scrollFixedElements()
     // });
     function fixHeader() {
-        var win = $(window).width();
+        var win = $(window).width() + scrollBarWidth();
 
-        if(win > 1024) {
+        if(win > 767) {
 
             var scroll = $(document).scrollTop();
             var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();
@@ -882,13 +882,16 @@ $(document).ready( function() {
 
     select();
 
-    $('.a-category__trigger').click(function() {
+    $('.a-category__trigger').click(function(e) {
+        e.stopPropagation()
         // $(this).toggleClass('is-active');
         if(!($(this).parents('.a-category').hasClass('is-active'))) {
             $(this).parents('.a-category').addClass('is-active');
         } else {
             $(this).parents('.a-category').removeClass('is-active');
         }
+
+        return false;
     });
 
     $('.a-category .box a').click(function () {

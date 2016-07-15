@@ -5422,6 +5422,17 @@ a {
     border: 0; }
   .has-fixed-header .header .compare {
     display: block; }
+  @media screen and (max-width: 1200px) {
+    .has-fixed-header .header {
+      min-width: auto;
+      z-index: 20; }
+      .has-fixed-header .header .row_table {
+        width: 100%; }
+        .has-fixed-header .header .row_table .col-xs-6 {
+          width: 50% !important; }
+          .has-fixed-header .header .row_table .col-xs-6 .col-xs-4 {
+            width: 33.3333% !important;
+            float: right; } }
 
 .has-fixed-header .nav-wrap {
   position: fixed;
@@ -5438,6 +5449,10 @@ a {
   font-size: 18px;
   line-height: 38px;
   height: 38px; }
+  @media screen and (max-width: 1200px) {
+    .has-fixed-header .nav {
+      height: auto;
+      font-size: inherit; } }
 
 .tooper {
   background: #000;
@@ -8126,7 +8141,8 @@ a {
     .sort + .banners-wrap + .blocks-wrap {
       margin-top: 0; } }
   @media screen and (min-width: 641px) {
-    .sort > a, .sort > span {
+    .sort > a,
+    .sort > span {
       display: inline-block;
       vertical-align: middle; }
     .sort > a {
@@ -8727,21 +8743,6 @@ a {
           .item_list .item__action .price_old:before {
             left: -7px;
             right: -7px; } }
-  .item_list .item__action_mob {
-    display: none;
-    border-top: 0;
-    padding-top: 0;
-    margin-top: 10px; }
-    @media screen and (max-width: 640px) {
-      .item_list .item__action_mob {
-        display: block; }
-        .item_list .item__action_mob .item__cell {
-          width: 100%;
-          padding: 0; }
-        .item_list .item__action_mob .item__links {
-          padding-bottom: 9px; } }
-    .item_list .item__action_mob td {
-      vertical-align: bottom; }
   @media screen and (max-width: 1270px) {
     .item_list .item__price {
       display: inline-block;
