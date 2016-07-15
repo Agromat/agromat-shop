@@ -205,9 +205,12 @@
 	color: #fff 
 	+tr(background .3s)
 	display: none
+	+r(1024)
+		right: 20px
+	+r(640)
+		right: 10px
 	&.is-visible
-		+rmin(1025)
-			display: block
+		display: block
 	&:hover
 		background: #000
 	span

@@ -6546,9 +6546,14 @@ a {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   display: none; }
-  @media screen and (min-width: 1025px) {
-    .scroll-top.is-visible {
-      display: block; } }
+  @media screen and (max-width: 1024px) {
+    .scroll-top {
+      right: 20px; } }
+  @media screen and (max-width: 640px) {
+    .scroll-top {
+      right: 10px; } }
+  .scroll-top.is-visible {
+    display: block; }
   .scroll-top:hover {
     background: #000; }
   .scroll-top span {
