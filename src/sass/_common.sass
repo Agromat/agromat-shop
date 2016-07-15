@@ -1186,18 +1186,29 @@ a
 			.item__media
 				padding: 0
 				margin: 0
+		.row
+			.col-xs-4
+				width: 100%
+				display: none
+			.col-xs-8
+				width: 100%
+				.col-xs-8
+					width: 66.66667% 
+				.col-xs-4
+					display: block
+					width: 33.3333%
+					padding-left: 0
 	+r(640)
 		.row
 			.col-xs-8
-				width: 100%
 				.col-xs-4
 					width: 100%
 					display: block
+					padding-left: 10px
 					.btn
 						margin-top: 10px
-			>.col-xs-4
+				.col-xs-8
 					width: 100%
-					display: none
 		.order-group
 			.title
 				margin-bottom: 8px

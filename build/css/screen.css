@@ -3897,18 +3897,27 @@ a {
         display: none; }
       .tabs-content .item_small .item__media {
         padding: 0;
-        margin: 0; } }
-  @media screen and (max-width: 640px) {
-    .tabs-content .row .col-xs-8 {
-      width: 100%; }
-      .tabs-content .row .col-xs-8 .col-xs-4 {
-        width: 100%;
-        display: block; }
-        .tabs-content .row .col-xs-8 .col-xs-4 .btn {
-          margin-top: 10px; }
-    .tabs-content .row > .col-xs-4 {
+        margin: 0; }
+    .tabs-content .row .col-xs-4 {
       width: 100%;
       display: none; }
+    .tabs-content .row .col-xs-8 {
+      width: 100%; }
+      .tabs-content .row .col-xs-8 .col-xs-8 {
+        width: 66.66667%; }
+      .tabs-content .row .col-xs-8 .col-xs-4 {
+        display: block;
+        width: 33.3333%;
+        padding-left: 0; } }
+  @media screen and (max-width: 640px) {
+    .tabs-content .row .col-xs-8 .col-xs-4 {
+      width: 100%;
+      display: block;
+      padding-left: 10px; }
+      .tabs-content .row .col-xs-8 .col-xs-4 .btn {
+        margin-top: 10px; }
+    .tabs-content .row .col-xs-8 .col-xs-8 {
+      width: 100%; }
     .tabs-content .order-group .title {
       margin-bottom: 8px; }
     .tabs-content .order-group .col-xs-6 {
@@ -5428,11 +5437,12 @@ a {
       z-index: 20; }
       .has-fixed-header .header .row_table {
         width: 100%; }
-        .has-fixed-header .header .row_table .col-xs-6 {
-          width: 50% !important; }
-          .has-fixed-header .header .row_table .col-xs-6 .col-xs-4 {
-            width: 33.3333% !important;
-            float: right; } }
+      .has-fixed-header .header .header__in .row_table .col-xs-6 {
+        width: 50%; }
+        .has-fixed-header .header .header__in .row_table .col-xs-6 .col-xs-8 {
+          width: 66.66667%; }
+        .has-fixed-header .header .header__in .row_table .col-xs-6 .col-xs-4 {
+          width: 33.3333%; } }
 
 .has-fixed-header .nav-wrap {
   position: fixed;
@@ -9583,7 +9593,9 @@ a.link-comment:hover {
 
 .product-action .btn,
 .product-action .btn-simple {
-  margin: 15px 0; }
+  margin: 15px 0;
+  max-width: none;
+  min-width: auto; }
 
 @media screen and (max-width: 640px) {
   .product-action .btn-simple.is-width {
