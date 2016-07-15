@@ -1008,6 +1008,48 @@ a
 			.col-xs-3
 				width: 100% !important
 				padding-left: 10px !important
+			.col-xs-8
+				width: 100% !important
+				.col-xs-4
+					width: 100%
+					display: block
+					padding-left: 10px
+					.btn
+						margin-top: 10px
+				.col-xs-8
+					width: 100%
+			.col-xs-4
+				width: 100% !important
+				padding: 0 10px !important
+				.btn.is-width
+					margin-top: 10px
+			.col-xs-2
+				display: none
+			.col-xs-10
+				width: 100%
+				.col-xs-2
+					display: block
+					width: 16.66667%
+				.col-xs-10
+					width: 83.33333%
+					padding-left: 0
+			.avatar
+				display: none
+		.comment__head
+			+clr
+			.comment__user
+				float: left
+			.meta
+				float: right
+				&:before
+					display: none
+		.comment__footer
+			text-align: right
+			.meta
+				display: none
+		.comment__answer
+			float: left
+
 	.comment
 		&:first-child
 			border-top: 0
@@ -1174,13 +1216,15 @@ a
 		+tr(color .3s)
 .tabs-content
 	display: none
-	+r(1024)
+	+r(1200)
 		.item_small
 			width: 100%
 			height: auto
 			img
 				display: block
 				width: 100%
+	+r(1024)
+		.item_small
 			.item__price
 				width: auto !important
 			.price_old
@@ -1194,61 +1238,42 @@ a
 				display: none
 			.col-xs-8
 				width: 100%
-				.col-xs-8
-					width: 66.66667% 
+				.row
+					margin: 0 -15px
 				.col-xs-4
+					width: 25%
 					display: block
-					width: 33.3333%
-					padding-left: 0
-	+r(640)
+					padding: 0 15px
+				.comment
+					.col-xs-4
+						width: 33.33333%
+						padding-left: 0
+						padding-right: 20px
+					.row
+						margin: 0 -20px
+		.comment
+			.col-xs-8
+				width: 66.66667%
+			
+	+r(766)
 		.row
 			.col-xs-8
 				.col-xs-4
-					width: 100%
-					display: block
-					padding-left: 10px
-					.btn
-						margin-top: 10px
-				.col-xs-8
-					width: 100%
+					width: 33.3333%
+				.row
+
+	+r(640)
 		.order-group
 			.title
 				margin-bottom: 8px
 			.col-xs-6
 				width: 100%
-					
-		.comment
-			.avatar
-				display: none
-			.col-xs-12
-				.row
-					> .col-xs-2
-						display: none
-					> .col-xs-10
-						width: 100%
-						.col-xs-2
-							display: block
-							width: 16.66667% 
-						.col-xs-10
-							width: 83.33333% 
-		.comment__head
-			+clr
-			.comment__user
-				float: left
-			.meta
-				float: right
-				&:before
-					display: none
-		.comment__footer
-			text-align: right
-			.meta
-				display: none
-		.comment__answer
-			float: left
-		&[data-id^="#js-tab-same"]
-			[class^="col-xs-8"]
-				.col-xs-4
-					width: 33.33333% 
+		.row
+			.col-xs-8
+				.comment
+					.row
+						margin: 0 -10px
+
 .js-tabs-group
 	+r(1024)
 		.tabs_mb
