@@ -2719,6 +2719,9 @@ a {
     display: table-cell;
     vertical-align: middle;
     float: none; }
+  @media screen and (max-width: 1024px) {
+    .row_table {
+      min-width: calc(100% + 40px); } }
 
 .row_inline {
   font-size: 0; }
