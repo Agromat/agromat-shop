@@ -50,15 +50,26 @@
 				border: 0
 				.list
 					padding-left: 0
-	.list
-		padding-left: 15px
-		+ .list
-			margin-top: 22px
+	+rmin(1025)
+		.list
+			padding-left: 15px
+			+ .list
+				margin-top: 22px
 	+r(1024)
 		.row
+			columns: 3
 			.col-xs-3
-				width: 33.3333%
+				width: 100%
 				display: block
+		.list_small
+			a
+				display: block
+			+ .list_small
+				margin-bottom: 45px
+		.list_space
+			margin: 45px 0
+		.list_top-space
+			margin-top: 45px
 .catalog-info
 	display: none
 	border-top: 1px solid #999999
@@ -73,12 +84,6 @@
 	+r(640)
 		column-gap: 0
 		column-count: 1
-.catalog-list_visible-tab
-	display: none
-	a
-		width: 100%
-	+r(1024)
-		display: block
 .footer__middle
 	display: none
 	line-height: 1

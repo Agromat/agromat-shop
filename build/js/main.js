@@ -863,11 +863,13 @@ $(document).ready( function() {
             var width = $(window).width() + scrollBarWidth();
 
             if(width <= 640 && flag == false) {
+                console.log('flag = ' + flag)
                 flag = true;
+                console.log('flag = ' + flag)
 
                 mobileSelect();
 
-            } else if(width > 640 && flag == true) {
+            } else if(width > 640) {
                 flag = false;
                 $('.sort__list a').unwrap();
 
