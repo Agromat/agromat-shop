@@ -263,7 +263,8 @@ $(document).ready( function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
-        arrows: true
+        arrows: true,
+        adaptiveHeight: true,
     });
     $('.js-img-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
       $(".js-slide-index").text(nextSlide+1);
@@ -863,10 +864,7 @@ $(document).ready( function() {
             var width = $(window).width() + scrollBarWidth();
 
             if(width <= 640 && flag == false) {
-                console.log('flag = ' + flag)
                 flag = true;
-                console.log('flag = ' + flag)
-
                 mobileSelect();
 
             } else if(width > 640) {
