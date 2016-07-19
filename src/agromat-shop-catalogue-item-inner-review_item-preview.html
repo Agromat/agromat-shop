@@ -56,17 +56,14 @@
 								<li class="has-drop">
 									<a href="#">Сантехника </a>
 									<div class="breadcrumbs__drop">
+										<!-- из 3-х ul.list сделал 1 ex-zy  -->
 										<ul class="list">
 											<li><a href="#">Плитка для ванной</a></li>
 											<li><a href="#">Плитка для ванной</a></li>
 											<li><a href="#">Керамогранит</a></li>
-										</ul>
-										<ul class="list">
 											<li><a href="#">Напольная плитка </a></li>
 											<li><a href="#">Напольная плитка </a></li>
 											<li><a href="#">Керамогранит</a></li>
-										</ul>
-										<ul class="list">
 											<li><a href="#">Плитка для кухни</a></li>
 											<li><a href="#">Плитка для кухни</a></li>
 										</ul>
@@ -147,11 +144,15 @@
 							</div>
 							<div class="js-tabs-group">
 								<ul class="tabs js-tabs">
-									<li class="is-active"><a href="#js-tab-description">все о товаре</a></li>
-									<li><a href="#js-tab-character">Характеристики</a></li>
-									<li><a href="#js-tab-reviews">Отзывы</a></li>
-									<li><a href="#js-tab-video">видео</a></li>
-									<li><a href="#js-tab-same">сопутствующие товары</a></li>
+									<ul class="tabs js-tabs">
+										<li class="is-active"><a href="#js-tab-description">Все о товаре</a></li>
+										<!-- для скрытия элемента используется классы hidden-xs(мобила), hidden-sm(планшет) ex-zy -->
+										<li class="hidden-xs hidden-sm"><a href="#js-tab-character">Характеристики</a></li>
+										<li><a href="#js-tab-reviews">Отзывы</a></li>
+										<li><a href="#js-tab-video">Видео</a></li>
+										<!-- для скрытия элемента используется классы hidden-xs(мобила) ex-zy -->
+										<li class="hidden-xs"><a href="#js-tab-same">Сопутствующие товары</a></li>
+									</ul>
 								</ul>
 
 								<!-- BEGIN tab1 -->

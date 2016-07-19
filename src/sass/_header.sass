@@ -198,6 +198,9 @@
 		img
 			max-width: 100%
 			height: auto
+	.btn-action
+		margin-left: 20px
+		top: -1px
 .header-mob__top
 	padding: 9px 0
 	border-bottom: 1px solid #000
@@ -299,6 +302,16 @@
 				left: -30px
 				background: #fff 
 				z-index: 0
+.contact_left
+	.contact__popup
+		left: auto
+		right: -25px
+	.btn-action
+		position: relative
+		z-index: 6
+		&.is-active
+			&:after
+				right: -25px
 .contact__tel
 	margin-bottom: 2px
 	font-size: 17px
@@ -467,10 +480,18 @@
 	+tr(opacity .3s)
 	padding: 18px 30px 15px
 	box-shadow: 0 0 5px rgba(#000,.3)
+	.prod-simple__top
+		+clr
 	+r(1200)
 		width: 290px
 		right: auto
 		padding: 20px
+	+r(640)
+		width: 100%
+		.prod-simple__main
+			text-align: left
+		.price
+			display: block
 .search__all
 	font-size: 14px
 	text-transform: uppercase
@@ -750,6 +771,24 @@
 		margin-top: 0
 	.shedule
 		margin-top: 0
+	+r(1024)
+		.col-xs-6
+			width: 70% !important
+			&:nth-of-type(2)
+				width: 30% !important
+		.shedule
+			display: none !important
+		.contact
+			margin-right: 23px
+		.logo
+			margin-right: 10%
+		.order-box
+			padding-left: 4.5%
+	+r(680)
+		.logo
+			margin-right: 4%
+
+
 
 .navigation
 	display: none

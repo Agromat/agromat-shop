@@ -85,6 +85,8 @@
 .breadcrumbs
 	margin: 0 0 13px -7px
 	color: $gray
+	position: relative
+	z-index: 3
 	> li
 		display: inline-block
 		margin: 0 -6px 
@@ -105,14 +107,13 @@
 			&:before
 				display: none
 		&.has-drop
-			+rmin(1025)
-				&:hover
+			&:hover
+				+rmin(641)
 					z-index: 2
 					> a
-						background: #fff
-						position: relative
-						z-index: 3
 						box-shadow: 0 -4px 11px -5px rgba(21, 13, 2, 0.3)
+						background: #fff
+						z-index: 3
 						&:before
 							bottom: -5px
 						&:before
@@ -137,10 +138,10 @@
 			display: block
 			position: relative
 			padding: 0 15px
-			color: $blue  
+			color: $blue
 			+tr_c
 			&:hover
-				color: $blue-h 
+				color: $blue-h
 		> span
 			padding: 0 15px
 			display: block
@@ -151,24 +152,29 @@
 		visibility: hidden
 		left: 0
 		z-index: 2
-		padding: 20px 30px 
-		background: #fff 
+		padding: 20px 30px
+		background: #fff
 		box-shadow: 0 5px 15px rgba(21, 13, 2, 0.3)
 		white-space: nowrap
 		font-size: 0
 		+tr(opacity .2s)
-		+r(1024)
-			display: none
 		.list
 			display: inline-block
 			vertical-align: top
-			padding-left: 28px
-			width: 190px
-			border-right: 1px solid $border
-			&:first-child
-				padding-left: 0
-			&:last-child
-				border: 0
+			// padding-left: 28px
+			// width: 190px
+			// border-right: 1px solid $border
+			column-count: 3
+			column-gap: 56px
+			column-rule: 1px solid $border
+			// &:first-child
+			// 	padding-left: 0
+			// &:last-child
+			// 	border: 0
+	+r(1024)
+		&__drop
+			.list
+				columns: 2
 	+r(640)
 		margin: 0
 		> li
@@ -232,6 +238,7 @@
 				width: 100%
 				border: 0
 				padding: 0
+				columns: 1 auto
 			a
 				border-top: 0
 				padding: 13px 32px
@@ -1531,10 +1538,15 @@
 				text-align: left
 		.btn-simple.btn-simple_small.btn-simple_blue
 			display: none
+		.slick-list
+			padding-left: 0 !important
+			margin: 0 -10px !important
+		.slick-slide
+			padding: 0 10px !important
 	.btn-simple
 		min-width: 130px
 	.post-item_small
-		margin: 0 auto 
+		margin: 0 auto
 	+ .seo
 		margin-top: 20px
 	+ .post-slider
