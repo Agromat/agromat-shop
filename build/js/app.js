@@ -655,7 +655,7 @@ $(document).ready( function() {
     });
 
     $(".js-show-callback").on("click", function(){
-        $(".js-callback").toggleClass("is-active");
+        $(this).parents(".contact").find(".js-callback").toggleClass("is-active");
         $(this).toggleClass("is-active");
         return false;
     });

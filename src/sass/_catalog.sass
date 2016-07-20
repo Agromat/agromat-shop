@@ -2067,10 +2067,6 @@ a.link-comment
 		margin: 15px 0
 		max-width: none
 		min-width: auto
-	// +r(1250)
-	// 	.btn-simple
-	// 		max-width: none
-	// 		min-width: auto
 	+r(640)
 		.btn-simple.is-width
 			display: block
@@ -2082,7 +2078,54 @@ a.link-comment
 					margin-left: 55px
 				&:before
 					display: none
-
+.product-action_call
+	> .btn
+		background: #E6790E
+		&:hover
+			background: darken(#E6790E, 4%)
+	.number-info
+		vertical-align: bottom
+		span
+			display: block
+	> .meta
+		background: #E6790E
+		color: #fff
+		padding: 5px 10px
+		font: 700 12px Arial, Helvetica, sans-serif
+		letter-spacing: 0.01em
+	.btn-action
+		span
+			font: 700 12px Arial, Helvetica, sans-serif
+			color: #282828
+		&.is-active
+			&:before
+				right: -35px
+	.price
+		font: 18px/1.4 Arial, Helvetica, sans-serif
+		white-space: normal
+		// padding-right: 15px
+	.contact
+		margin-bottom: 20px
+		display: table
+		&:before
+			font-size: 13px
+			left: 0
+			top: 8px
+			color: $blue
+		.btn
+			margin: 0
+		.btn-action
+			position: relative
+			padding-left: 17px
+	.number-info_width
+		max-width: calc(100% - 80px)
+	+r(1024)
+		.contact__popup
+			left: auto
+			right: -34px
+	+r(640)
+		.contact
+			margin: auto
 .card
 	border: 1px solid #eee
 	max-width: 270px
