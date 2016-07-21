@@ -83,7 +83,7 @@ $(document).ready( function() {
     function fixHeader() {
         var win = $(window).width() + scrollBarWidth();
 
-        if(win > 767) {
+        if(win > 640) {
 
             var scroll = $(document).scrollTop();
             var top = +$(".header").outerHeight()+$(".nav-wrap").outerHeight();

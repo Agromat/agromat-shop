@@ -95,8 +95,8 @@
     border-top: 1px solid #e6e6e6
     +r(1024)
         padding-top: 30px
-    +r(640)
-        display: none
+    // +r(640)
+    //     display: none
     &:first-child
         border-top: 0
         +r(1024)
@@ -373,3 +373,99 @@
     .btn-back
         margin: 10px 0 0 10px
         white-space: nowrap
+.order__row
+    position: relative
+    padding-left: 100px
+    +clr
+    .order__prod
+        width: 41.14114114114115%
+        float: left
+        margin-bottom: 50px
+    .price
+        float: left
+    > .price
+        width: 100%
+        margin-top: -50px
+        padding-right: 58.85885885885885%
+    .order__cell
+        width: 50%
+        float: left
+        display: block
+        padding: 0 30px 10px 0
+    .btn-del
+        top: 20px
+        right: 0
+    .number-info
+        max-width: 70px
+    +r(1024)
+        .order__cell
+            padding-right: 30px
+    +r(640)
+        padding: 0 0 30px 0
+        .order__prod
+            overflow: auto
+            width: calc(100% - 110px)
+            padding-right: 15px
+            margin-bottom: 20px
+        .order__right
+            width: 66.6666%
+            margin-left: 33.3333%
+        .price
+            width: 33.3333%
+            display: block
+            padding: 6px 16px 0 0
+            font-size: 20px
+            sub
+                font-size: 14px
+            sup
+                position: relative
+                top: -4px
+                font-size: 16px
+        > .price
+                margin-top: 0
+                float: none
+                clear: left
+        .order__cell
+            display: inline-block
+            width: 50% !important
+            position: static
+            padding: 0
+            &:nth-child(1)
+                text-align: center
+            &:nth-child(2)
+                text-align: right
+            .price
+                width: 100%
+        .order__label
+            display: none
+        .number-info
+            display: none
+        .btn-del
+            top: -4px
+            right: 0
+        .prod-simple
+            padding-right: 10px
+        .prod-simple__img
+            width: 100px
+        .number
+            width: 58px
+    +r(380)
+        .vendor-code
+            margin-top: 6px
+.order__left
+    +rmin(641)
+        position: absolute
+        top: 0
+        left: 0
+    +r(640)
+        float: left
+.order__right
+    float: right
+    width: 58.85885885885885%
+.vendor-code
+    display: inline-block
+    vertical-align: middle
+    background-color: red
+    color: #fff !important
+    font: 12px Arial, Helvetica, sans-serif
+    padding: 5px 10px
