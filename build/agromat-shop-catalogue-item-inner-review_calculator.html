@@ -962,17 +962,19 @@
 								</li>
 								<li class="has-drop">
 									<a href="#">Сантехника </a>
-									<!-- из 3-х ul.list сделал 1 ex-zy  -->
-									<ul class="list">
-										<li><a href="#">Плитка для ванной</a></li>
-										<li><a href="#">Плитка для ванной</a></li>
-										<li><a href="#">Керамогранит</a></li>
-										<li><a href="#">Напольная плитка </a></li>
-										<li><a href="#">Напольная плитка </a></li>
-										<li><a href="#">Керамогранит</a></li>
-										<li><a href="#">Плитка для кухни</a></li>
-										<li><a href="#">Плитка для кухни</a></li>
-									</ul>
+									<div class="breadcrumbs__drop">
+										<!-- из 3-х ul.list сделал 1 ex-zy  -->
+										<ul class="list">
+											<li><a href="#">Плитка для ванной</a></li>
+											<li><a href="#">Плитка для ванной</a></li>
+											<li><a href="#">Керамогранит</a></li>
+											<li><a href="#">Напольная плитка </a></li>
+											<li><a href="#">Напольная плитка </a></li>
+											<li><a href="#">Керамогранит</a></li>
+											<li><a href="#">Плитка для кухни</a></li>
+											<li><a href="#">Плитка для кухни</a></li>
+										</ul>
+									</div>
 								</li>
 								<li>
 									<a href="#">Душевые кабины </a>
@@ -1048,15 +1050,14 @@
 							</div>
 							<div class="js-tabs-group">
 								<ul class="tabs js-tabs">
-									<ul class="tabs js-tabs">
-										<li class="is-active"><a href="#js-tab-description">Все о товаре</a></li>
-										<!-- для скрытия элемента используется классы hidden-xs(мобила), hidden-sm(планшет) ex-zy -->
-										<li class="hidden-xs hidden-sm"><a href="#js-tab-character">Характеристики</a></li>
-										<li><a href="#js-tab-reviews">Отзывы</a></li>
-										<li><a href="#js-tab-video">Видео</a></li>
-										<!-- для скрытия элемента используется классы hidden-xs(мобила) ex-zy -->
-										<li class="hidden-xs"><a href="#js-tab-same">Сопутствующие товары</a></li>
-									</ul>
+									<li class="is-active"><a href="#js-tab-description">Все о товаре</a></li>
+									<!-- для скрытия элемента используется классы hidden-xs(мобила), hidden-sm(планшет) ex-zy -->
+									<li class="hidden-xs hidden-sm"><a href="#js-tab-character">Характеристики</a></li>
+									<li><a href="#js-tab-reviews">Отзывы</a></li>
+									<li><a href="#js-tab-video">Видео</a></li>
+									<!-- для скрытия элемента используется классы hidden-xs(мобила) ex-zy -->
+									<li class="hidden-xs"><a href="#js-tab-same">Сопутствующие товары</a></li>
+								</ul>
 
 								<!-- BEGIN tab1 -->
 								<div class="tabs-content js-tabs-content" data-id="#js-tab-description">
@@ -2631,7 +2632,7 @@
 	</dib>
 </div>
 <!-- change ex-zy -->
-<div class="popup popup_cart js-popup js-popup-cart">	
+<div class="popup popup_cart js-popup js-popup-cart" style="display: block;">	
 	<div class="popup__overlay js-popup-overlay"></div>
 	<div class="popup__window">
 		<div class="popup__head">
@@ -2677,10 +2678,9 @@
 							<button class="btn-del js-del-parent" type="button"></button>
 						</div>
 					</div>
-				</div>
-				<div class="order order_auto-width js-parent">
-					<div class="order__table">
-						<div class="order__cell">
+					<!-- заменить .order__table на order__row в этом popup, переписывалась структура ex-zy -->
+					<div class="order__row">
+						<div class="order__left">
 							<a class="prod-simple" href="#">
 								<div class="prod-simple__top">
 									<div class="prod-simple__img">
@@ -2689,36 +2689,37 @@
 								</div>
 							</a>
 						</div>
-						<div class="order__cell">
-							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
-							<div class="price"> 
-								642,<sup>03</sup> <sub>грн</sub>
+						<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> <span class="vendor-code">Артикул: 138996</span></div>
+						<div class="order__right">
+							<div class="order__cell">
+								<div class="order__label">Количество</div>
+								<div class="number js-number" data-max-number="99">
+									<input type="text" class="number__input" value="17.5">
+									<button class="number__plus js-plus-number" type="button"></button>
+									<button class="number__minus js-minus-number" type="button"></button>
+								</div>
+								<div class="number-info">
+									<span>М² </span>
+									<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+								</div>
+							</div>
+							<div class="order__cell">
+								<div class="order__label">стоимость</div>
+								<div class="price price_big">
+									116 163,<sup>00</sup> <sub>грн</sub>
+								</div>
+								<button class="btn-del js-del-parent" type="button"></button>
 							</div>
 						</div>
-						<div class="order__cell order__cell-number">
-							<div class="order__label">Количество</div>
-							<div class="number js-number" data-max-number="99">
-								<input type="text" class="number__input" value="17.5">
-								<button class="number__plus js-plus-number" type="button"></button>
-								<button class="number__minus js-minus-number" type="button"></button>
-							</div>
-							<div class="number-info">
-								<span>М² </span>
-								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
-							</div>
-						</div>
-						<div class="order__cell order__cell-price">
-							<div class="order__label">стоимость</div>
-							<div class="price price_big">
-								116 163,<sup>00</sup> <sub>грн</sub>
-							</div>
-							<button class="btn-del js-del-parent" type="button"></button>
+						<div class="price"> 
+							642,<sup>03</sup> <sub>грн</sub>
 						</div>
 					</div>
 				</div>
 				<div class="order order_auto-width js-parent">
-					<div class="order__table">
-						<div class="order__cell">
+					<!-- заменить .order__table на order__row в этом popup, переписывалась структура ex-zy -->
+					<div class="order__row">
+						<div class="order__left">
 							<a class="prod-simple" href="#">
 								<div class="prod-simple__top">
 									<div class="prod-simple__img">
@@ -2727,36 +2728,37 @@
 								</div>
 							</a>
 						</div>
-						<div class="order__cell">
-							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
-							<div class="price"> 
-								642,<sup>03</sup> <sub>грн</sub>
+						<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> <span class="vendor-code">Артикул: 138996</span></div>
+						<div class="order__right">
+							<div class="order__cell">
+								<div class="order__label">Количество</div>
+								<div class="number js-number" data-max-number="99">
+									<input type="text" class="number__input" value="17.5">
+									<button class="number__plus js-plus-number" type="button"></button>
+									<button class="number__minus js-minus-number" type="button"></button>
+								</div>
+								<div class="number-info">
+									<span>М² </span>
+									<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
+								</div>
+							</div>
+							<div class="order__cell">
+								<div class="order__label">стоимость</div>
+								<div class="price price_big">
+									116 163,<sup>00</sup> <sub>грн</sub>
+								</div>
+								<button class="btn-del js-del-parent" type="button"></button>
 							</div>
 						</div>
-						<div class="order__cell order__cell-number">
-							<div class="order__label">Количество</div>
-							<div class="number js-number" data-max-number="99">
-								<input type="text" class="number__input" value="17.5">
-								<button class="number__plus js-plus-number" type="button"></button>
-								<button class="number__minus js-minus-number" type="button"></button>
-							</div>
-							<div class="number-info">
-								<span>М² </span>
-								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
-							</div>
-						</div>
-						<div class="order__cell order__cell-price">
-							<div class="order__label">стоимость</div>
-							<div class="price price_big">
-								116 163,<sup>00</sup> <sub>грн</sub>
-							</div>
-							<button class="btn-del js-del-parent" type="button"></button>
+						<div class="price"> 
+							642,<sup>03</sup> <sub>грн</sub>
 						</div>
 					</div>
 				</div>
 				<div class="order order_auto-width js-parent">
-					<div class="order__table">
-						<div class="order__cell">
+					<!-- заменить .order__table на order__row в этом popup, переписывалась структура ex-zy -->
+					<div class="order__row">
+						<div class="order__left">
 							<a class="prod-simple" href="#">
 								<div class="prod-simple__top">
 									<div class="prod-simple__img">
@@ -2765,245 +2767,69 @@
 								</div>
 							</a>
 						</div>
-						<div class="order__cell">
-							<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> </div>
-							<div class="price"> 
-								642,<sup>03</sup> <sub>грн</sub>
-							</div>
-						</div>
-						<div class="order__cell order__cell-number">
-							<div class="order__label">Количество</div>
-							<div class="number js-number" data-max-number="99">
-								<input type="text" class="number__input" value="17.5">
-								<button class="number__plus js-plus-number" type="button"></button>
-								<button class="number__minus js-minus-number" type="button"></button>
-							</div>
-							<div class="number-info">
-								<span>М² </span>
-								<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
-							</div>
-						</div>
-						<div class="order__cell order__cell-price">
-							<div class="order__label">стоимость</div>
-							<div class="price price_big">
-								116 163,<sup>00</sup> <sub>грн</sub>
-							</div>
-							<button class="btn-del js-del-parent" type="button"></button>
-						</div>
-					</div>
-				</div>
-				<!-- add ex-zy -->
-				<div class="order-mob">
-					<div class="order-mob__сontainer">
-						<div class="order-mob__top">
-							<div class="order-mob__left">
-								<a class="prod-simple" href="#">
-									<div class="prod-simple__top">
-										<div class="prod-simple__img">
-											<img src="https://unsplash.it/53/68?image=651" alt="">
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="order-mob__right">
-								<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
-								<button class="btn-del js-del-parent" type="button"></button> <br>
-								<span class="order-mob__art">Артикул: 138996</span>
-							</div>
-						</div>
-						<div class="order-mob__bottom">
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
-							<div class="order-mob__col">
+						<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> <span class="vendor-code">Артикул: 138996</span></div>
+						<div class="order__right">
+							<div class="order__cell">
+								<div class="order__label">Количество</div>
 								<div class="number js-number" data-max-number="99">
-									<input type="text" class="number__input" value="1">
+									<input type="text" class="number__input" value="17.5">
 									<button class="number__plus js-plus-number" type="button"></button>
 									<button class="number__minus js-minus-number" type="button"></button>
 								</div>
-								<div class="number-info number-info_width">
-									<span>шт </span>
+								<div class="number-info">
+									<span>М² </span>
+									<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
 								</div>
 							</div>
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
+							<div class="order__cell">
+								<div class="order__label">стоимость</div>
+								<div class="price price_big">
+									116 163,<sup>00</sup> <sub>грн</sub>
 								</div>
+								<button class="btn-del js-del-parent" type="button"></button>
 							</div>
+						</div>
+						<div class="price"> 
+							642,<sup>03</sup> <sub>грн</sub>
 						</div>
 					</div>
 				</div>
-				<!-- add ex-zy -->
-				<div class="order-mob">
-					<div class="order-mob__сontainer">
-						<div class="order-mob__top">
-							<div class="order-mob__left">
-								<a class="prod-simple" href="#">
-									<div class="prod-simple__top">
-										<div class="prod-simple__img">
-											<img src="https://unsplash.it/53/68?image=651" alt="">
-										</div>
+				<div class="order order_auto-width js-parent">
+					<!-- заменить .order__table на order__row в этом popup, переписывалась структура ex-zy -->
+					<div class="order__row">
+						<div class="order__left">
+							<a class="prod-simple" href="#">
+								<div class="prod-simple__top">
+									<div class="prod-simple__img">
+										<img src="https://unsplash.it/53/68?image=651" alt="">
 									</div>
-								</a>
-							</div>
-							<div class="order-mob__right">
-								<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
-								<button class="btn-del js-del-parent" type="button"></button> <br>
-								<span class="order-mob__art">Артикул: 138996</span>
-							</div>
-						</div>
-						<div class="order-mob__bottom">
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
 								</div>
-							</div>
-							<div class="order-mob__col">
+							</a>
+						</div>
+						<div class="order__prod">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span>ADNE8094</span> <span class="vendor-code">Артикул: 138996</span></div>
+						<div class="order__right">
+							<div class="order__cell">
+								<div class="order__label">Количество</div>
 								<div class="number js-number" data-max-number="99">
-									<input type="text" class="number__input" value="1">
+									<input type="text" class="number__input" value="17.5">
 									<button class="number__plus js-plus-number" type="button"></button>
 									<button class="number__minus js-minus-number" type="button"></button>
 								</div>
-								<div class="number-info number-info_width">
-									<span>шт </span>
+								<div class="number-info">
+									<span>М² </span>
+									<div class="meta meta_small">реальная площадь 1,0230 м² <i class="fa fa-info-circle js-tip-trigger" data-text="Немного описания о том, что значит это значение. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></i></div>
 								</div>
 							</div>
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
+							<div class="order__cell">
+								<div class="order__label">стоимость</div>
+								<div class="price price_big">
+									116 163,<sup>00</sup> <sub>грн</sub>
 								</div>
+								<button class="btn-del js-del-parent" type="button"></button>
 							</div>
 						</div>
-					</div>
-				</div>
-				<!-- add ex-zy -->
-				<div class="order-mob">
-					<div class="order-mob__сontainer">
-						<div class="order-mob__top">
-							<div class="order-mob__left">
-								<a class="prod-simple" href="#">
-									<div class="prod-simple__top">
-										<div class="prod-simple__img">
-											<img src="https://unsplash.it/53/68?image=651" alt="">
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="order-mob__right">
-								<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
-								<button class="btn-del js-del-parent" type="button"></button> <br>
-								<span class="order-mob__art">Артикул: 138996</span>
-							</div>
-						</div>
-						<div class="order-mob__bottom">
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
-							<div class="order-mob__col">
-								<div class="number js-number" data-max-number="99">
-									<input type="text" class="number__input" value="1">
-									<button class="number__plus js-plus-number" type="button"></button>
-									<button class="number__minus js-minus-number" type="button"></button>
-								</div>
-								<div class="number-info number-info_width">
-									<span>шт </span>
-								</div>
-							</div>
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- add ex-zy -->
-				<div class="order-mob">
-					<div class="order-mob__сontainer">
-						<div class="order-mob__top">
-							<div class="order-mob__left">
-								<a class="prod-simple" href="#">
-									<div class="prod-simple__top">
-										<div class="prod-simple__img">
-											<img src="https://unsplash.it/53/68?image=651" alt="">
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="order-mob__right">
-								<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
-								<button class="btn-del js-del-parent" type="button"></button> <br>
-								<span class="order-mob__art">Артикул: 138996</span>
-							</div>
-						</div>
-						<div class="order-mob__bottom">
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
-							<div class="order-mob__col">
-								<div class="number js-number" data-max-number="99">
-									<input type="text" class="number__input" value="1">
-									<button class="number__plus js-plus-number" type="button"></button>
-									<button class="number__minus js-minus-number" type="button"></button>
-								</div>
-								<div class="number-info number-info_width">
-									<span>шт </span>
-								</div>
-							</div>
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- add ex-zy -->
-				<div class="order-mob">
-					<div class="order-mob__сontainer">
-						<div class="order-mob__top">
-							<div class="order-mob__left">
-								<a class="prod-simple" href="#">
-									<div class="prod-simple__top">
-										<div class="prod-simple__img">
-											<img src="https://unsplash.it/53/68?image=651" alt="">
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="order-mob__right">
-								<a href="#" class="order-mob__title">Adex Rombo ROMBO ACOLCHADO MICRO PLATA фриз <span> ADNE8094</span></a>
-								<button class="btn-del js-del-parent" type="button"></button> <br>
-								<span class="order-mob__art">Артикул: 138996</span>
-							</div>
-						</div>
-						<div class="order-mob__bottom">
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
-							<div class="order-mob__col">
-								<div class="number js-number" data-max-number="99">
-									<input type="text" class="number__input" value="1">
-									<button class="number__plus js-plus-number" type="button"></button>
-									<button class="number__minus js-minus-number" type="button"></button>
-								</div>
-								<div class="number-info number-info_width">
-									<span>шт </span>
-								</div>
-							</div>
-							<div class="order-mob__col">
-								<div class="price">
-									642,<sup>00</sup> <sub>грн</sub>
-								</div>
-							</div>
+						<div class="price"> 
+							642,<sup>03</sup> <sub>грн</sub>
 						</div>
 					</div>
 				</div>
