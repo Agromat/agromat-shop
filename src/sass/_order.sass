@@ -143,6 +143,8 @@
                     position: absolute
                     right: 20px
                     bottom: 40px
+                .number-info_width
+                    max-width: 56%
         +r(720)
             .order__cell
                 &:nth-child(3)
@@ -191,14 +193,6 @@
                 margin-bottom: 20px
             .prod-simple__img
                 width: 100%
-            .number__plus,
-            .number__minus
-                display: none
-            .number
-                width: 60px
-            .number__input
-                padding: 0 5px
-                text-align: center
             .number-info
                 .meta
                     display: none
@@ -215,6 +209,15 @@
         +r(1024)
             vertical-align: middle
             padding: 0 30px 0 0
+        +r(640)
+            .number__plus,
+            .number__minus
+                display: none
+            .number
+                width: 60px
+            .number__input
+                padding: 0 5px
+                text-align: center
     &__cell_last
         +r(1024)
             padding: 0 22px 20px 0
