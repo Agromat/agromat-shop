@@ -119,51 +119,78 @@
         display: table
         width: 100%
         table-layout: fixed
+        .order__title
+            display: table-caption
+        .order__cell
+            +rmin(1025)
+                &:nth-child(2)
+                    padding-left: 0
         +r(1024)
             position: relative
             font-size: 0
-        +r(610)
-            display: block
-    &__cell
-        display: table-cell
-        vertical-align: top
-        padding: 0 0 25px 5px
-        &:first-child
-            padding-left: 0
-        +r(1024)
-            vertical-align: middle
-            padding: 0 30px 0 0
-            .number-info_width
-                max-width: 56%
-            .price
-                vertical-align: middle
-                width: 50%
-            .prod-simple__text
-                position: absolute
-                top: 20px
-                right: 20px
-            &:nth-of-type(1)
-                width: 15%
-            &:nth-of-type(2)
-                width: 30%
-            &:nth-of-type(3)
-                padding: 0 75px 8px 0
-        +r(820)
-            &:nth-of-type(1)
-                width: 100px
-            &:nth-of-type(2)
-                width: 210px
+            .order__cell
+                padding: 0 10px 0 0
+                &:nth-of-type(2)
+                    width: 15%
+                &:nth-of-type(3)
+                    width: 30%
+                &:nth-of-type(4)
+                    padding: 0 75px 8px 0
+                .price
+                    width: 50%
+                    display: inline-block
+                .prod-simple__text
+                    position: absolute
+                    right: 20px
+                    bottom: 40px
         +r(720)
-            padding: 0 10px 0 0
-            &:nth-of-type(1)
-                width: 80px
-            &:nth-of-type(2)
-                width: 176px
+            .order__cell
+                &:nth-child(3)
+                    width: 35%
         +r(640)
+            display: block
+            +clr
+            padding: 0 0 30px
+            .order__title
+                display: block
+                float: right
+                width: calc(100% - 110px)
+                font-size: 14px
+                +arial
+                padding-right: 20px
+                div
+                    margin-top: 6px
+                
+            .order__cell
+                display: block
+                float: left
+                width: 33.3333%
+                &:nth-child(2)
+                    width: 110px
+                    float: left
+                &:nth-child(3)
+                    clear: both
+                    padding: 0
+                    width: 33.3333%
+                    padding: 0 !important
+                &:nth-child(4)
+                    width: 66.6666%
+                    padding: 0
+                    text-align: center
+                    .price
+                        &:last-child
+                            text-align: right
+                .prod-simple__text
+                    top: 0
+                    bottom: auto
+            .price
+                padding: 3px 0
+                span
+                    display: none
             .prod-simple
-                .prod-simple__top
-                    + .prod-simple__text
-                        display: none
+                margin-bottom: 20px
+            .prod-simple__img
+                width: 100%
             .number__plus,
             .number__minus
                 display: none
@@ -175,9 +202,19 @@
             .number-info
                 .meta
                     display: none
-        +r(610)
-            display: inline-block
-            width: 100px !important
+            .prod-simple__del
+                +hide-text
+                .btn-del
+                    top: -16px
+    &__cell
+        display: table-cell
+        vertical-align: top
+        padding: 0 0 25px 5px
+        &:first-child
+            padding-left: 0
+        +r(1024)
+            vertical-align: middle
+            padding: 0 30px 0 0
     &__cell_last
         +r(1024)
             padding: 0 22px 20px 0
@@ -227,74 +264,6 @@
         &__img
             background: #fff 
             border: 1px solid #eaeaea
-.order-mob
-    padding:  0 0 30px 0
-    display: none
-    border-bottom: 1px solid #cdcdcd
-    margin-bottom: 30px
-    &_modif
-        border-bottom: 0
-        margin-bottom: 0
-    +r(640)
-        display: block
-    &__top,
-    &__bottom
-        position: relative
-        +clr
-    &__bottom
-        padding-top: 20px
-        font-size: 0
-    &__col
-        width: 33.3333%
-        display: inline-block
-        vertical-align: middle
-        text-align: center
-        &:nth-of-type(1)
-            text-align: left
-        &:nth-of-type(2)
-            padding-left: 16px
-        &:nth-of-type(3)
-            text-align: right
-    &__left
-        float: left
-        padding-right: 10px
-    &__right
-        overflow: hidden
-        padding-right: 20px
-    .prod-simple
-        margin-bottom: 0
-    .prod-simple__img
-        width: 100px
-        margin-bottom: 0
-    .order-mob__title
-        font: 14px Arial, Helvetica, sans-serif
-        color: #000
-        letter-spacing: -0.07em
-        word-spacing: 0.1em
-        display: inline-block
-        margin-bottom: 10px
-        span
-            color: #999
-    .btn-del
-        position: absolute
-        top: -4px
-        right: 0
-    .number-info
-        display: none
-    .number
-        width: 58px
-        &__input
-            padding: 0 10px
-            text-align: center
-        button
-            display: none
-    &__art
-        display: inline-block
-        vertical-align: middle
-        background-color: red
-        color: #fff !important
-        font: 12px Arial, Helvetica, sans-serif
-        padding: 5px 10px
 .order_delivery
     padding: 5px 0 
     border-top-color: #000
