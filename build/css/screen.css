@@ -4350,6 +4350,11 @@ a {
   .field__body {
     display: block;
     position: relative; }
+    @media screen and (max-width: 640px) {
+      .field__body img {
+        width: auto;
+        max-width: 100%;
+        display: block; } }
   .field_holder {
     min-height: 54px; }
     @media screen and (max-width: 640px) {
@@ -7415,7 +7420,7 @@ a {
   margin: 0 0 13px -7px;
   color: #888;
   position: relative;
-  z-index: 3; }
+  z-index: 13; }
   .breadcrumbs > li {
     display: inline-block;
     margin: 0 -6px;
@@ -8138,6 +8143,16 @@ a {
       right: 3px;
       bottom: 3px;
       border: 1px solid rgba(255, 255, 255, 0.5); }
+
+.btn_orange {
+  background: #E6790E;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s; }
+  .btn_orange:hover {
+    background: #d36f0d; }
+
+.btn_dash {
+  padding: 8px 34px; }
 
 .btn-simple {
   display: inline-block;

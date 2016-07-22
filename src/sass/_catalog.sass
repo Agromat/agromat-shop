@@ -86,7 +86,7 @@
 	margin: 0 0 13px -7px
 	color: $gray
 	position: relative
-	z-index: 3
+	z-index: 13
 	> li
 		display: inline-block
 		margin: 0 -6px 
@@ -704,21 +704,21 @@
 	+med
 	color: #fff
 	text-align: center
-	letter-spacing: .75px 
+	letter-spacing: .75px
 	background: $blue
 	+tr(background .2s)
 	cursor: pointer
 	&:hover
-		background: $blue-h 
+		background: $blue-h
 	&_normal
-		letter-spacing: 0   
+		letter-spacing: 0
 	&.is-width
 		display: block
 		width: 100%
 	&_large
 		position: relative
 		font-size: 18px
-		padding: 16px 30px 13px 
+		padding: 16px 30px 13px
 		&:before
 			content: ""
 			position: absolute
@@ -726,7 +726,14 @@
 			top: 3px
 			right: 3px
 			bottom: 3px
-			border: 1px solid rgba(#fff, .5) 
+			border: 1px solid rgba(#fff, .5)
+.btn_orange
+	background: #E6790E
+	+tr(background 0.3s)
+	&:hover
+		background: darken(#E6790E, 4%)
+.btn_dash
+	padding: 8px 34px
 .btn-simple
 	display: inline-block
 	min-width: 255px
