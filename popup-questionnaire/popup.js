@@ -1,11 +1,11 @@
 $(function (){
-	$('button.js-questionnaire').on('click', function() {
-		$('div.js-popup').show();
+	$('.js-questionnaire').on('click', function() {
+		$('.js-popup').show();
 	});
-	$('div.js-popup-overlay').on('click', function(){
-		$('div.js-popup').hide();
+	$('.js-popup-overlay').on('click', function(){
+		$('.js-popup').hide();
 	});
-	$('button.js-close-popup').on('click', function(){
-		$('div.js-popup').hide();
+	$('.js-close-popup').on('click', function(){
+		$('.js-popup').hide();
 	});
 });

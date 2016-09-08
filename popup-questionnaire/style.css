@@ -53,3 +53,38 @@ button{
   transform: translate(0, 0);
   vertical-align: middle;
 }
+.popup__close:hover{
+	cursor: pointer;
+}
+.btn{
+	display: inline-block;
+  vertical-align: middle;
+  padding: 9px 10px 7px;
+  line-height: 1;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+  letter-spacing: .75px;
+  background: #268cb6;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+.btn_large{
+	position: relative;
+    font-size: 18px;
+    padding: 16px 30px 13px;
+}
+.btn_large:before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
