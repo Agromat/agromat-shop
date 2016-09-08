@@ -1,90 +1,10 @@
-body{
-	box-sizing: border-box;
-}
-.popup__overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
- }
 .popup__window {
-  position: relative;
-  display: block;
-  background: #fff;
-  text-align: left;
-	width: 1000px;
-	margin:100px auto;
+	height: 500px;
 }
 iframe{
 	width: 100%;
-	height: 4550px;
+	height: 400px;
 }
-.wrap{
-	margin: 50px;
+.popup__main{
+  max-height: 400px; 
 }
-button{
-	height: 30px;
-}
-.popup__close{
-	position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  background: none;
-  font-size: 14px;
-  color: #999;
-  -webkit-transition: color .3s;
-  transition: color .3s;
-  border: 0;
-}
-.popup__close:before{
-	content: "\f00d";
-  display: inline-block;
-  font: normal normal normal 13px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-  vertical-align: middle;
-}
-.popup__close:hover{
-	cursor: pointer;
-}
-.btn{
-	display: inline-block;
-  vertical-align: middle;
-  padding: 9px 10px 7px;
-  line-height: 1;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
-  color: #fff;
-  text-align: center;
-  letter-spacing: .75px;
-  background: #268cb6;
-  -webkit-transition: background .2s;
-  transition: background .2s;
-  cursor: pointer;
-}
-a{
-	text-decoration: none;
-}
-.btn_large{
-	position: relative;
-    font-size: 18px;
-    padding: 16px 30px 13px;
-}
-.btn_large:before {
-    content: "";
-    position: absolute;
-    left: 3px;
-    top: 3px;
-    right: 3px;
-    bottom: 3px;
-    border: 1px solid rgba(255, 255, 255, 0.5);

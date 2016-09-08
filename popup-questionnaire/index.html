@@ -9,22 +9,28 @@
 	<link rel="icon" type="image/x-icon" href="http://shop.agromat.ua/frontend/img/favicon.ico" />
 	<meta name="viewport" content="width=display-width">
 	<!-- theme color for android 5.0 -->
+	<link rel="stylesheet" media="all" href="http://shop.agromat.ua/frontend/css/screen.css">
 	<link rel="stylesheet" media="all" href="style.css" >
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<script src="http://shop.agromat.ua/frontend/js/lib/jquery.min.js"></script>
 </head>
 <body>
-	<div class="wrap">
-		<a href="#" class="btn btn_large js-questionnaire" style="background-color:red; margin-right:10px">Получить скидку 10%</a>
+	<a href="#" class="btn btn_large js-questionnaire"  style="background-color:red; margin-right:10px">Получить скидку 10%</a>
 	<div class="popup js-popup" style="display: none;" id="cartPopupWrap">
 		<div class="popup__overlay js-popup-overlay"></div>
 		<div class="popup__window">
 			<div class="popup__head">
-        <button class="popup__close js-close-popup" type="button"></button>
-       </div>
-			<iframe src="https://insights.hotjar.com/s?siteId=280079&surveyId=13327"></iframe>
+				<div class="title title_normal">Анкета для скидки 10%</div>
+				<button class="popup__close js-close-popup" type="button"></button>
+			</div>
+			<div class="popup__body">
+				<div class="popup__main">    
+					<iframe src="https://insights.hotjar.com/s?siteId=280079&surveyId=13327"></iframe>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script type="text/javascript" src="popup.js"></script>
+	<script type="text/javascript" src="http://shop.agromat.ua/frontend/js/main.js"></script>
 </body>
 </html>
