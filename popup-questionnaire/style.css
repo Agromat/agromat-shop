@@ -1,7 +1,7 @@
 .popup__questionnaire {
 	height: 500px;
 }
-iframe{
+.popup__main-questionnaire iframe{
 	width: 100%;
 	height: 400px;
 }
