@@ -73,7 +73,6 @@ $border: #f4f4f4
 $border-d: #eee
 $green: #248932
 html
-	min-width: auto
 	+selection
 		background: rgba($blue, .8)
 		color: #fff
@@ -86,25 +85,20 @@ body
 	&.is-hidden
 		+r(640)
 			overflow: hidden
-		
 .container
-	// min-width: 1200px !important
-	// width: 1200px !important
-	min-width: auto !important
 	width: 100% !important
 	max-width: 1200px !important
 +r(1024)
 	.container
 		padding-left: 20px
 		padding-right: 20px
-		.row
-			.col-xs-3
-				display: none
-			.col-xs-9
-				width: 100%
 	.row
 		margin-left: -20px
 		margin-right: -20px
+		.col-xs-3
+			display: none
+		.col-xs-9
+			width: 100%
 		&.js-tabs-group
 			.col-xs-4,
 			.tabs-content .col-xs-8
@@ -113,22 +107,19 @@ body
 		padding-left: 20px
 		padding-right: 20px
 +r(640)
-	[class*="col-"]
+	[class*="col-"],
+	.container
 		padding-left: 10px
 		padding-right: 10px
 	.row
 		margin-left: - 10px
 		margin-right: -10px
-	.container
-		padding-left: 10px
-		padding-right: 10px
-		.row
-			.col-xs-9
-				width: 100%
-				+ .col-xs-3 + .col-xs-12
-					display: none
-			.col-xs-6
-				width: 100%
+		.col-xs-9
+			width: 100%
+			+ .col-xs-3 + .col-xs-12
+				display: none
+		.col-xs-6
+			width: 100%
 a
 	text-decoration: none
 	color: $blue
@@ -195,7 +186,6 @@ a
 	color: $gray
 	a
 		color: $gray 
-
 .row
 	+ .title
 		margin-top: 12px
@@ -261,9 +251,6 @@ a
 		font-size: 48px 
 	.fa-check-square-o
 		margin-left: 7px
-.title_no-space
-	+r(640)
-		margin: 0
 .title_big
 	font-size: 18px
 	+bold
@@ -451,7 +438,6 @@ a
 .text_mob
 	font-size: 13px
 	margin-bottom: 12px
-
 .checkbox
 	display: block
 	padding: 3px 0 
@@ -578,8 +564,6 @@ a
 				height: 26px
 				padding: 5px
 				text-align: center
-			
-
 .radiobox
 	float: left
 	position: relative
@@ -667,7 +651,6 @@ a
 			top: 1px
 			width: 13px
 			height: 13px
-			-webkit-border-radius: 50% 
 			border-radius: 50% 
 			border: 1px solid #939393
 			+r(640)
@@ -680,7 +663,6 @@ a
 			top: 5px
 			width: 5px
 			height: 5px
-			-webkit-border-radius: 50% 
 			border-radius: 50% 
 			background: $blue 
 			+r(640)
@@ -764,12 +746,9 @@ a
 		color: #268cb6
 		z-index: 1
 		font-size: 14px
-
-
-
 .btn-more_simple
-	padding: 10px 0 
-	color: $gray 
+	padding: 10px 0
+	color: $gray
 	&:before
 		display: none
 .btn-back
@@ -871,7 +850,6 @@ a
 			height: 4px
 			+rotate(45deg)
 			background: $blue-l 
-			
 	a
 		display: inline-block
 		margin: -2px 0 -2px -20px 
@@ -880,7 +858,6 @@ a
 		+tr_c
 		&:hover
 			color: $blue 
-	
 .pager
 	position: relative
 	text-align: center
@@ -889,14 +866,12 @@ a
 	font-size: 0
 	white-space: nowrap
 	+r(1024)
-		margin: 22px auto 58px
 		padding: 0 20px
+		margin: 22px auto 58px
 		display: table
 	+r(640)
 		margin: 30px auto 0
 		padding: 0
-		&_no-marg
-			margin: 0
 	&:before,
 	&:after
 		content: "" 
@@ -966,8 +941,6 @@ a
 				+arr(4,8,$blue,r)
 				+r(640)
 					+arr(10,18,$blue-h,r)
-
-
 .textarea
 	display: block
 	border: 1px solid $border-d
@@ -1005,10 +978,12 @@ a
 				width: 25%
 	+r(640)
 		.row
-			.col-xs-9
+			.col-xs-3,
+			.col-xs-4,
+			.col-xs-8,
+			.col-xs-9,
 				width: 100% !important
 			.col-xs-3
-				width: 100% !important
 				padding-left: 10px !important
 			.col-xs-8
 				width: 100% !important
@@ -1021,7 +996,6 @@ a
 				.col-xs-8
 					width: 100%
 			.col-xs-4
-				width: 100% !important
 				padding: 0 10px !important
 				.btn.is-width
 					margin-top: 10px
@@ -1053,7 +1027,6 @@ a
 				display: none
 		.comment__answer
 			float: left
-
 	.comment
 		&:first-child
 			border-top: 0
@@ -1111,6 +1084,8 @@ a
 		margin-left: 12px
 	.btn
 		margin-top: 35px
+	.btn.is-width
+		white-space: nowrap
 .comment_add
 	border: 0
 	.col-xs-8
@@ -1124,13 +1099,12 @@ a
 			.col-xs-9
 				width: 66.66666666666667%
 			.col-xs-3
-				width: 33.333333333333336% 
-		
+				width: 33.333333333333336%
 .like
 	display: inline-block
 	color: $green 
 	&:before
-		content: "\f087" 
+		content: "\f087"
 		+fa-icon
 		display: inline-block
 		margin-right: 5px
@@ -1144,8 +1118,6 @@ a
 		display: inline-block
 		margin-right: 5px
 		font-size: 14px
-
-
 .tabs
 	position: relative
 	margin: 20px -9px 35px 0
@@ -1253,14 +1225,11 @@ a
 		.comment
 			.col-xs-8
 				width: 66.66667%
-			
 	+r(766)
 		.row
 			.col-xs-8
 				.col-xs-4
 					width: 33.3333%
-				.row
-
 	+r(640)
 		.order-group
 			.title
@@ -1272,7 +1241,6 @@ a
 				.comment
 					.row
 						margin: 0 -10px
-
 .js-tabs-group
 	+r(1024)
 		.tabs_mb
@@ -1304,7 +1272,6 @@ a
 						text-align: left
 						+arial
 						&.is-active
-							// border-color: #dedede !important
 							&:after
 								display: none
 					a
@@ -1359,7 +1326,6 @@ a
 	+clr
 	margin-bottom: 55px
 	&__main
-		// overflow: hidden
 		width: 77.2%
 		+r(1024)
 			width: 100%
@@ -1426,7 +1392,6 @@ a
 		width: 22.8%
 		+r(1024)
 			display: none
-
 .tip
 	position: absolute
 	padding-top: 7px
@@ -1673,7 +1638,6 @@ a
 		padding: 28px 28px 43px
 	&__text
 		font-style: italic
-
 .feedback-form
 	margin-bottom: 35px
 	+clr
@@ -1714,6 +1678,17 @@ a
 	.btn_large
 		padding: 14px 23px
 		font-size: 16px
+	.popup__mid
+		padding: 38px 0 82px
+		margin: auto
+		text-align: center
+	.popup__icon
+		margin: 96px 0 36px
+		font-size: 45px
+		color: $blue
+		line-height: 1
+	.popup__b-link
+		padding-top: 74px
 	&_success,
 	&_unsuccess
 		.popup__window
@@ -1727,22 +1702,9 @@ a
 				max-width: 140px
 	&_unsuccess
 		.popup__mid
-			padding: 38px 20px 82px !important
 			max-width: 310px
-		+r(640)
-			.popup__mid
-				padding: 38px 0 82px !important
-	.popup__mid
-		padding: 38px 0 82px
-		margin: auto
-		text-align: center
-	.popup__icon
-		margin: 96px 0 36px
-		font-size: 45px
-		color: $blue
-		line-height: 1
-	.popup__b-link
-		padding-top: 74px
+			+rmin(641)
+				padding: 38px 20px 82px
 	&_big
 		.popup__window
 			width: 930px
@@ -1788,7 +1750,6 @@ a
 		+r(1024)
 			width: 100%
 			max-width: 730px
-			// min-height: 920px
 	&_no-pad-mob
 		+r(640)
 			padding: 0
@@ -1907,7 +1868,6 @@ a
 				font-size: 20px
 			.slick-slide
 				height: auto
-				// padding: 0 41px
 				padding: 0
 	&__prod
 		overflow: hidden
@@ -2021,8 +1981,6 @@ a
 				margin: 10px 0 0
 	+r(640)
 		padding: 10px
-		// .order_auto-width
-		// 	display: none
 		.popup__head
 			padding: 0 40px 0 10px
 			.title_normal
@@ -2086,24 +2044,6 @@ a
 	display: block
 	&:before
 		+vcenter
-	// &:before,
-	// &:after
-	// 	+hide-text
-	// 	content: ''
-	// 	position: absolute
-	// 	left: 0
-	// 	right: 0
-	// 	top: 0
-	// 	height: 3px
-	// 	background-color: #000
-	// &:before
-	// 	+rotate(45deg)
-	// 	transform-origin: 0px 8px
-	// &:after
-	// 	bottom: 0
-	// 	top: auto
-	// 	+rotate(-45deg)
-	// 	transform-origin: 0px -8px
 .img-slider
 	visibility: hidden
 	height: 470px
@@ -2134,16 +2074,15 @@ a
 	.slick-prev
 		left: -1px
 		&:before
-			content: "\f104" 
+			content: "\f104"
 	.slick-next
 		right: -1px
 		&:before
-			content: "\f105" 
+			content: "\f105"
 	&__info
 		font-size: 11px
 		color: $gray
-		text-align: center 
-		
+		text-align: center
 .post
 	margin-bottom: 35px
 	font-size: 13px
@@ -2168,7 +2107,7 @@ a
 		position: absolute
 		left: -1px
 		bottom: -1px
-		padding: 7px 12px 6px 12px
+		padding: 7px 12px 6px
 		background: #fff
 		color: #000
 		+tr(color .3s)
@@ -2191,8 +2130,7 @@ a
 			&:hover
 				color: $blue 
 	&__text
-		margin: 10px 0 0 
-
+		margin: 10px 0 0
 .total
 	border-bottom: 2px solid #000
 	font-size: 30px
@@ -2284,7 +2222,6 @@ a
 	left: 50%
 	transform: translate3d(-50%,-50%,0)
 	perspective: 1200
-
 .flipper
 	position: relative
 	display: block
@@ -2292,7 +2229,6 @@ a
 	width: inherit
 	animation: flip 1.2s infinite ease-in-out
 	transform-style: preserve-3d
-
 .loader-front,
 .loader-back
 	position: absolute
@@ -2303,28 +2239,26 @@ a
 	background-color: $blue
 	height: 100%
 	width: 100%
-
 .loader-back
 	background-color: #fff
 	z-index: 800
 	transform: rotateY(-180deg)
-
-.category-mob
+.accordion-nav
 	position: relative
 	display: none
 	+r(640)
 		display: block
-.category-mob__list
+.accordion-nav__list
 	border-left: 1px solid #cdcdcd
 	border-right: 1px solid #cdcdcd
 	border-bottom: 1px solid #cdcdcd
 	a
 		border-top: 1px solid #cdcdcd
-.category-mob__list-item
+.accordion-nav__list-item
 	&.is-dropdown
-		.category-mob__i
+		.accordion-nav__i
 			display: block
-.category-mob__link
+.accordion-nav__link
 	color: #3a3a3a
 	background-color: #f6f6f6
 	position: relative
@@ -2343,27 +2277,25 @@ a
 		transform: translateY(-50%) rotate(0deg)
 		color: #3a3a3a
 		font-size: 9px
-.category-mob__i
+.accordion-nav__i
 	display: none
-.category-mob__i-item
+.accordion-nav__i-item
 	position: relative
 	.fa
 		position: absolute
 		left: 22px
 		top: 50%
 		transform: translateY(-50%)
-.category-mob__i-link
+.accordion-nav__i-link
 	color: $blue
 	background-color: #FFF 
 	display: block
 	padding: 10px 22px 10px 37px
-
 //drop-down
 .js-item
 	&.is-dropdown
 		.js-inner
 			display: block
-			
 .delivery-wrp
 	display: none
 	+r(1024)
@@ -2391,3 +2323,8 @@ a
   	
 .page-subtitle, .suitable-for-collections
 	display: inline-block;
+
+//state
+.is-no-margin-mobile
+	+r(640)
+		margin: 0
