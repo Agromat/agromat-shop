@@ -1798,7 +1798,16 @@
 				background: $blue  
 		.badge__bottom
 			+arr(11,8,$blue,bl)
-			
+	&_red
+		span
+			color: #fff
+			background: $red
+		.badge__top
+			+arr(8,11,$red,tl)
+			&:before
+				background: $red  
+		.badge__bottom
+			+arr(11,8,$red,bl)
 	span
 		display: block
 		padding: 0 9px 
