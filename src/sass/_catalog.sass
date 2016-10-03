@@ -30,27 +30,27 @@
 				
 	+r(640)
 		> .row
-			> .col-xs-12
+			.col-xs-12
 				.post-item__title
 					margin-bottom: 5px
 				.post-item__media
-					width: 90px
+					width: 100%
 					float: none
 					margin: 0 0 12px
 				.post-item
 					max-width: 90px
-				> .row_inline
-					> .col-xs-4
+				.row_inline
+					.col-xs-4
 						width: 25%
 			> .col-xs-4
 				width: 50%
 		.filter-choice.filter-choice_nav
 			display: none
 	+r(460)
-		> .row
-			> .col-xs-12
-				> .row_inline
-					> .col-xs-4
+		.row
+			.col-xs-12
+				.row_inline
+					.col-xs-4
 						width: 33.33333%
 	&__in
 		position: relative
@@ -69,7 +69,6 @@
 					display: none
 					+ .post-slider
 						display: none
-						
 		&:before
 			content: ""
 			position: absolute
@@ -161,16 +160,9 @@
 		.list
 			display: inline-block
 			vertical-align: top
-			// padding-left: 28px
-			// width: 190px
-			// border-right: 1px solid $border
 			column-count: 3
 			column-gap: 56px
 			column-rule: 1px solid $border
-			// &:first-child
-			// 	padding-left: 0
-			// &:last-child
-			// 	border: 0
 	+r(1024)
 		&__drop
 			.list
@@ -210,7 +202,6 @@
 					position: absolute
 					top: 50%
 					margin-top: -7px
-
 			&:nth-last-of-type(2)
 				display: block
 			&.has-drop
@@ -1807,7 +1798,16 @@
 				background: $blue  
 		.badge__bottom
 			+arr(11,8,$blue,bl)
-			
+	&_red
+		span
+			color: #fff
+			background: $red
+		.badge__top
+			+arr(8,11,$red,tl)
+			&:before
+				background: $red  
+		.badge__bottom
+			+arr(11,8,$red,bl)
 	span
 		display: block
 		padding: 0 9px 
