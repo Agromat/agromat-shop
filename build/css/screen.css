@@ -4976,6 +4976,8 @@ a {
     position: relative; }
     .post__img:hover img {
       opacity: 0.8; }
+    .post.action .post__img:hover .badge img{
+      opacity: 1; } 
     .post__img img {
       display: block;
       margin: 0 auto;
@@ -5015,7 +5017,8 @@ a {
         color: #268cb6; }
   .post__text {
     margin: 10px 0 0; }
-
+.actions {
+  position: relative; }
 .total {
   border-bottom: 2px solid #000;
   font-size: 30px;
