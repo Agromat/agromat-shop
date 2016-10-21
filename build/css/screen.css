@@ -5022,7 +5022,7 @@ a {
 .post.action .post__img {
   border: none;
 }
-.post.action.post__img img {
+.post.action .post__img img {
   margin: 0;
 }
 .total {
