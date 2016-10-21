@@ -5019,6 +5019,12 @@ a {
     margin: 10px 0 0; }
 .actions {
   position: relative; }
+.post.action .post__img {
+  border: none;
+}
+.post.action.post__img img {
+  margin: 0;
+}
 .total {
   border-bottom: 2px solid #000;
   font-size: 30px;
