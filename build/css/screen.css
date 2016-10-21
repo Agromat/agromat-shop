@@ -9914,6 +9914,9 @@ a.link-comment:hover {
       vertical-align: middle;
       width: 0;
       height: 100%; }
+  .arcticle.actions .badge{
+    max-height: none;
+  }
     @media screen and (max-width: 1024px) {
       .article figure {
         width: 230px;
