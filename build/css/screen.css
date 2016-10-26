@@ -6393,6 +6393,9 @@ a {
   padding: 8px 30px 8px 47px;
   display: block; }
 
+#widgetFullCart {
+  cursor: pointer; }
+
 .footer {
   margin: 50px 0 0; }
   @media screen and (max-width: 1024px) {
