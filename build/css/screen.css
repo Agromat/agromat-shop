@@ -5186,20 +5186,21 @@ a {
 .accordion-nav__list-item.is-dropdown .accordion-nav__i {
   display: block; }
 
+.accordion-nav__list-item.is-dropdown .accordion-nav__link {
+  background-color: #268cb6;
+  color: #fff; }
+  .accordion-nav__list-item.is-dropdown .accordion-nav__link .fa {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+    color: #fff; }
+
 .accordion-nav__link {
   color: #3a3a3a;
   background-color: #f6f6f6;
   position: relative;
   display: block;
   padding: 10px 22px; }
-  .accordion-nav__link.is-active {
-    background-color: #268cb6;
-    color: #fff; }
-    .accordion-nav__link.is-active .fa {
-      -webkit-transform: translateY(-50%) rotate(180deg);
-      -ms-transform: translateY(-50%) rotate(180deg);
-      transform: translateY(-50%) rotate(180deg);
-      color: #fff; }
   .accordion-nav__link .fa {
     position: absolute;
     right: 12px;

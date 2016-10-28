@@ -737,24 +737,16 @@ $(document).ready( function() {
 
         var that = $(this);
         var el = that.parent('.js-item');
-        var trigger = $('.js-clicker');
+        var noClass = !el.hasClass('is-dropdown')
         var item = $('.js-item');
-        var inner = $('.js-inner');
 
-        if(!el.hasClass('is-dropdown')) {
-            item.removeClass('is-dropdown');
-            trigger.removeClass('is-active');
-            el.addClass('is-dropdown');
-            that.addClass('is-active');
-        }
-        else if(el.hasClass('is-dropdown')) {
-            el.removeClass('is-dropdown');
-            that.removeClass('is-active');
-        }
-        else {
-            item.removeClass('is-dropdown');
-            trigger.removeClass('is-active');
-        }
+        if(noClass) {
+            el.addClass('is-dropdown')
+              .siblings()
+              .removeClass('is-dropdown')
+          } else {
+            item.removeClass('is-dropdown')
+          }
     });
     
     //mobile-menu
