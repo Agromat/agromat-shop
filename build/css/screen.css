@@ -5690,6 +5690,8 @@ a {
   margin-top: 10px; }
   .slider-shares .slick-slide {
     padding: 0 10px 0 0; }
+    .slider-shares .slick-slide img {
+      margin: auto; }
   .slider-shares .slick-list {
     padding: 0 40px 0 0 !important; }
   .slider-shares__text {
