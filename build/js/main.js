@@ -904,3 +904,16 @@ $(document).ready( function() {
     });
 
 });
+
+// код для отображения попапа с iframe, подтягивающим опросник с HotJar
+$(function (){
+    $('.js-questionnaire').on('click', function() {
+        $('.js-popup').show();
+    });
+    $('.js-popup-overlay').on('click', function(){
+        $('.js-popup').hide();
+    });
+    $('.js-close-popup').on('click', function(){
+        $('.js-popup').hide();
+    });
+});
