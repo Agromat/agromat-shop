@@ -587,14 +587,17 @@
 	&__in
 		border-bottom: 1px solid #000 
 		position: relative
-		+r(1024)
-			.col-xs-10.col-md-offset-1
-				width: 100%
-				margin-left: 0
+	.col-xs-10.col-md-offset-1
+		width: 92%
+		float: none
+		margin: auto
+	+r(1024)
+		.col-xs-10.col-md-offset-1
+			width: 100%
 .nav
 	display: table
 	width: 100%
-	table-layout: fixed
+	// table-layout: fixed
 	font-size: 0
 	text-transform: uppercase
 	+med
@@ -618,13 +621,16 @@
 		+r(1024)
 			display: inline-block
 			width: 25%
+			&:nth-of-type(4n + 1)
+				&:before
+					display: none
 		&:before
 			content: ""
 			position: absolute
 			left: 0
 			top: 50%
 			z-index: 3
-			margin-top: -2px
+			margin: -2px 0 0 -2px
 			width: 4px
 			height: 4px
 			+rotate(45deg)
@@ -672,7 +678,7 @@
 						&:after
 							display: none
 		a
-			display: inline-block
+			display: block
 			color: #000 
 			+tr_c
 			background: #fff 
@@ -684,6 +690,8 @@
 				z-index: 2
 				padding: 0 30px
 				background: #fff 
+				+r(1200)
+					padding: 0 20px
 				span
 					position: relative
 					display: inline-block
