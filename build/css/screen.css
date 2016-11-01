@@ -6137,7 +6137,7 @@ a {
     float: none;
     margin: auto; }
   @media screen and (max-width: 1024px) {
-    .nav-wrap .col-xs-10.col-md-offset-1 {
+    .nav-wrap .col-xs-10.col-xs-offset-1 {
       width: 100%; } }
 
 .nav {
@@ -8934,7 +8934,8 @@ a {
     height: 55px; }
     @media screen and (max-width: 640px) {
       .item_small .item__head {
-        height: 36px; } }
+        height: 36px;
+        text-align: left; } }
   .item_small .item__title {
     font-size: 15px;
     line-height: 1.25; }
