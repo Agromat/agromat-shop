@@ -116,16 +116,19 @@ $(document).ready( function() {
             parentNodropdown = !parent.hasClass("no-dropdown"),
             index = parent.attr('data-item'),
             el = $('[data-index="'+index+'"]'),
-            subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
+            fixedHeader = $('body.has-fixed-header');
 
-            el.css({top: subnavPosition});
+            $(window).on('load scroll resize', function() {
+              var subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
+              el.css({top: subnavPosition});
+            })
+
             if(!isTouch) {
               $('body').addClass('is-no-touch');
               link.hover(function() {
-                if(parentNodropdown) {
-                  el.addClass("is-visible");
-                  parent.removeClass("is-open");
-                  overlay.removeClass("is-visible");
+                if(parentNodropdown && !el.hasClass('is-visible')) {
+                  el.add(overlay).addClass("is-visible");
+                  parent.addClass("is-open");
                 }
               }, function() {
                 el.add(overlay).removeClass("is-visible");
@@ -160,7 +163,7 @@ $(document).ready( function() {
       });
     }());
 
-    $(document).click(function(e) {
+    $(document).on('click touchstart', function(e) {
         var element = $('.js-subnav'),
             navLi = $(".js-nav li"),
             overlay = $('.js-overlay');

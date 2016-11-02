@@ -6155,6 +6155,8 @@ a {
   line-height: 48px;
   color: #000;
   text-align: center; }
+  .nav li.is-open {
+    z-index: 16; }
   @media screen and (max-width: 1024px) {
     .nav {
       display: block;
