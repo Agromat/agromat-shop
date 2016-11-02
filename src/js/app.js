@@ -58,6 +58,7 @@ $(document).ready( function() {
             fixedHeader = $('body.has-fixed-header');
 
             $(window).on('load scroll resize', function() {
+              console.log($('[data-item="'+index+'"]'), index);
               var subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
               el.css({top: subnavPosition});
             })
