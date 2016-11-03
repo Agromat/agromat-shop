@@ -6,6 +6,13 @@
 	display: table-cell
 	vertical-align: top
 	padding-left: 30px
+	.row
+		.col-xs-4
+			&.col-xs-offset-4
+				width: auto
+				float: none
+				display: table
+				margin: 0 auto
 	+r(1270)
 		float: left
 		width: 79.65811965811966% 
@@ -16,12 +23,12 @@
 		padding-left: 0
 		.filter-choice.filter-choice_nav
 			display: block
-		.row
-			.col-xs-4
-				&.col-xs-offset-4
-					margin-left: 0
-					width: 100%
-					text-align: center
+		// .row
+		// 	.col-xs-4
+		// 		&.col-xs-offset-4
+		// 			margin-left: 0
+		// 			width: 100%
+		// 			text-align: center
 		> .row
 			&:not(.row_inline)
 				> .col-xs-8,

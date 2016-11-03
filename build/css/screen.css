@@ -7413,6 +7413,11 @@ a {
   display: table-cell;
   vertical-align: top;
   padding-left: 30px; }
+  .l-main .row .col-xs-4.col-xs-offset-4 {
+    width: auto;
+    float: none;
+    display: table;
+    margin: 0 auto; }
   @media screen and (max-width: 1270px) {
     .l-main {
       float: left;
@@ -7425,10 +7430,6 @@ a {
       padding-left: 0; }
       .l-main .filter-choice.filter-choice_nav {
         display: block; }
-      .l-main .row .col-xs-4.col-xs-offset-4 {
-        margin-left: 0;
-        width: 100%;
-        text-align: center; }
       .l-main > .row:not(.row_inline) > .col-xs-8,
       .l-main > .row:not(.row_inline) > .col-xs-4 {
         width: 100%; } }
