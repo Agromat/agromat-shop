@@ -3642,6 +3642,13 @@ a {
         border-width: 9px 0 9px 10px;
         border-color: transparent transparent transparent #1d769b; } }
 
+.trademark__name {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block; }
+
 .textarea {
   display: block;
   border: 1px solid #eee;
@@ -6254,6 +6261,7 @@ a {
   left: 0;
   top: 100%;
   box-shadow: 0 5px 15px rgba(21, 13, 2, 0.3);
+  background: #fff;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s; }
   .subnav.is-visible {
@@ -6275,8 +6283,7 @@ a {
   padding: 20px 30px;
   display: table-cell;
   vertical-align: top;
-  width: 600px;
-  background: #fff; }
+  width: 600px; }
   .subnav__main .list a {
     display: block;
     -ms-word-break: break-all;

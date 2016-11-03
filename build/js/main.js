@@ -118,11 +118,12 @@ $(document).ready( function() {
             el = $('[data-index="'+index+'"]'),
             fixedHeader = $('body.has-fixed-header');
 
-            $(window).on('load scroll resize', function() {
-              console.log($('[data-item="'+index+'"]'), index);
-              var subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
-              el.css({top: subnavPosition});
-            })
+            if(!!index) {
+                $(window).on('load scroll resize', function() {
+                  var subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
+                  el.css({top: subnavPosition});
+                })
+            }
 
             if(!isTouch) {
               $('body').addClass('is-no-touch');
