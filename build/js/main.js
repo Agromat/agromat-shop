@@ -106,32 +106,32 @@ $(document).ready( function() {
         return false;
     });
 
-    $(".js-nav a").hover( function(){
-        if (!$(this).parent().hasClass("no-dropdown")) {
-            var parent = $(this).parent();
-            var index = parent.attr('data-item');
-            $('[data-index="'+index+'"]').addClass("is-visible");
-            parent.removeClass("is-open");
-            $(".js-overlay").removeClass("is-visible");
-        }
+    $('.js-nav a').hover( function(){
+    	if (!$(this).parent().hasClass('no-dropdown')) {
+        var parent = $(this).parent();
+        var index = parent.attr('data-item');
+        $('[data-index="'+index+'"]').addClass('is-visible');
+        parent.removeClass('is-open');
+        $('.js-overlay').removeClass('is-visible');
+    	}
     }, function() {
             var parent = $(this).parent();
             var index = parent.attr('data-item');
-            $('[data-index="'+index+'"]').removeClass("is-visible");
-            parent.removeClass("is-open");
-            $(".js-overlay").removeClass("is-visible");
+            $('[data-index="'+index+'"]').removeClass('is-visible');
+            parent.removeClass('is-open');
+            $('.js-overlay').removeClass('is-visible');
     });
-    $(".js-subnav").hover( function(){
-            var index = +$(this).attr("data-index")-1;
-            $(this).addClass("is-visible");
-            $(".js-nav li").eq(index).addClass("is-open");
-            $(".js-overlay").addClass("is-visible");
+    $('.js-subnav').hover( function(){
+            var index = +$(this).attr('data-index');
+            $(this).addClass('is-visible');
+            $('[data-item="'+index+'"]').addClass('is-open');
+            $('.js-overlay').addClass('is-visible');
         },
         function(){
-            var index = +$(this).attr("data-index")-1;
-            $(this).removeClass("is-visible");
-            $(".js-nav li").eq(index).removeClass("is-open");
-            $(".js-overlay").removeClass("is-visible");
+            var index = +$(this).attr('data-index');
+            $(this).removeClass('is-visible');
+            $('[data-item="'+index+'"]').removeClass('is-open');
+            $('.js-overlay').removeClass('is-visible');
         }
     );
 
