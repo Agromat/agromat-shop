@@ -106,34 +106,32 @@ $(document).ready( function() {
         return false;
     });
 
-    $('.js-nav a').hover( function(){
-    	if (!$(this).parent().hasClass('no-dropdown')) {
-        var parent = $(this).parent();
-        var index = parent.attr('data-item');
-        $('[data-index="'+index+'"]').addClass('is-visible');
-        parent.removeClass('is-open');
-        $('.js-overlay').removeClass('is-visible');
-    	}
-    }, function() {
-            var parent = $(this).parent();
-            var index = parent.attr('data-item');
-            $('[data-index="'+index+'"]').removeClass('is-visible');
-            parent.removeClass('is-open');
-            $('.js-overlay').removeClass('is-visible');
+    var parent, index; 
+    $(".js-nav a").hover( function(){
+      if (!$(this).parent().hasClass("no-dropdown")) {
+        parent = $(this).parent();
+        index = +parent.attr("data-item");
+        $("[data-index='"+index+"']").addClass("is-visible");
+        parent.removeClass("is-open");
+        $(".js-overlay").removeClass("is-visible");
+      }
+    }, 
+    function() {
+      $("[data-index='"+index+"']").removeClass("is-visible");
+      parent.removeClass("is-open");
+      $(".js-overlay").removeClass("is-visible");
     });
     $('.js-subnav').hover( function(){
-            var index = +$(this).attr('data-index');
-            $(this).addClass('is-visible');
-            $('[data-item="'+index+'"]').addClass('is-open');
-            $('.js-overlay').addClass('is-visible');
-        },
-        function(){
-            var index = +$(this).attr('data-index');
-            $(this).removeClass('is-visible');
-            $('[data-item="'+index+'"]').removeClass('is-open');
-            $('.js-overlay').removeClass('is-visible');
-        }
-    );
+      index = +$(this).attr('data-index');
+      $(this).addClass("is-visible");
+      $("[data-item='"+index+"']").addClass("is-open");
+      $(".js-overlay").addClass("is-visible");
+    },
+    function() {
+      $(this).removeClass("is-visible");
+      $("[data-item='"+index+"']").removeClass("is-open");
+      $(".js-overlay").removeClass("is-visible");
+    });
 
     // var timeout;
     // $(".js-overlay").hover(
