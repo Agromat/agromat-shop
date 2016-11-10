@@ -1,19 +1,18 @@
 .footer
 	margin: 50px 0 0 
 	+r(1024)
-			margin: 0
+		display: none
 	&__in
 		position: relative
 		border-top: 3px solid #000 
-		+r(1024)
-			border-top: 0
+		// +r(1024)
+		// 	border-top: 0
 	.soc
 		margin-top: 33px
+		
 .footer__top
 	padding: 52px 0 28px 
 	position: relative
-	+r(1024)
-		padding-bottom: 0
 	&:before
 		content: ""
 		position: absolute
@@ -50,11 +49,6 @@
 				border: 0
 				.list
 					padding-left: 0
-	+rmin(1025)
-		.list
-			padding-left: 15px
-			+ .list
-				margin-top: 22px
 	+r(1024)
 		.row
 			columns: 3
@@ -71,72 +65,14 @@
 			margin: 45px 0
 		.list_top-space
 			margin-top: 45px
-.catalog-info
-	display: none
-	border-top: 1px solid #999999
-	padding: 18px 0 0
-	p
-		color: #6e6e6e
-		font-size: 12px
-	+r(1024)
-		display: block
-		column-gap: 30px
-		column-count: 2
-	+r(640)
-		column-gap: 0
-		column-count: 1
-.footer__middle
-	display: none
-	line-height: 1
-	padding: 20px 0 23px
-	border-top: 1px solid #999999
-	margin: 18px 0 0
-	font-size: 12px
-	+r(1024)
-		display: block
-.footer__nav
-	float: right
-.footer__nav-link
-	margin: 0 0 0 16px
-	text-decoration: underline
-	+r(640)
-		display: block
-		margin: 0 26px 10px
-		&:last-child
-			margin-bottom: 0 
-	&:hover
-		text-decoration: none
-.footer-link__wrp
-	text-align: right
-	+r(640)
-		text-align: center
-.footer-link
-	display: inline-block
-	color: #fff
-	text-decoration: underline
-	+r(640)
-		margin-top: 10px
-.footer__schedule
-	color: #000
-	float: left
-	span
-		color: #888
-		padding-right: 6px
-		font-weight: 400
-	li
-		margin-bottom: 6px
-		font-weight: 600
-		&:last-child
-			margin-bottom: 0
+		.list
+			padding-left: 0
+			+ .list
+				margin-top: 0
 .footer__bottom
 	position: relative
 	border-top: 1px solid #dcecf2
 	padding: 28px 0 15px
-	+r(1024)
-		border-top: 0
-		border-bottom: 1px solid #fff
-		background-color: #000 
-		padding: 22px 0
 	&:before,
 	&:after
 		content: ""
@@ -191,9 +127,9 @@
 			color: #fff
 			font-size: 14px 
 			vertical-align: middle
-.copyright-wrp
-	+r(640)
-		text-align: center
+// .copyright-wrp
+// 	+r(640)
+// 		text-align: center
 .copyright
 	color: #fff
 	font-size: 11px
@@ -225,4 +161,66 @@
 		content: "\f077"
 		+fa-icon
 		font-size: 14px 
-	
+.footer-sm
+	position: relative
+	margin-top: 70px
+	display: none
+	+r(1024)
+		display: block
+	&__top
+		line-height: 1
+		padding: 20px 20px 23px
+		border-top: 1px solid #999999
+		font-size: 12px
+		+clr
+		+r(640)
+			padding: 20px 10px 23px
+	&__bottom
+		position: relative
+		border-bottom: 1px solid #fff
+		padding: 22px 20px
+		background-color: #000
+		+clr
+		+r(640)
+			padding: 22px 10px
+	.copyright
+		width: 66.66667%
+		float: left
+		+r(640)
+			width: 100%
+			float: none
+			text-align: center
+	.footer-sm-link
+		width: 33.33333%
+		float: right
+		text-align: right
+		color: #fff
+		text-decoration: underline
+		+r(640)
+			margin-top: 10px
+			text-align: center
+			width: 100%
+	&__schedule
+		color: #000
+		float: left
+		span
+			color: #888
+			padding-right: 6px
+			font-weight: 400
+		li
+			margin-bottom: 6px
+			font-weight: 600
+			&:last-child
+				margin-bottom: 0
+	&__nav
+		float: right
+	&__nav-link
+		margin: 0 0 0 16px
+		text-decoration: underline
+		+r(640)
+			display: block
+			margin: 0 26px 10px
+			&:last-child
+				margin-bottom: 0 
+		&:hover
+			text-decoration: none
