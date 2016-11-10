@@ -88,14 +88,11 @@ body
 .container
 	width: 100% !important
 	max-width: 1200px !important
-	+r(1024)
++r(1024)
+	.container
 		padding-left: 20px
 		padding-right: 20px
-	+r(640)
-		padding-left: 10px
-		padding-right: 10px
-.row
-	+r(1024)
+	.row
 		margin-left: -20px
 		margin-right: -20px
 		.col-xs-3
@@ -106,16 +103,17 @@ body
 			.col-xs-4,
 			.tabs-content .col-xs-8
 				width: 100%
-	+r(640)
-		margin-left: - 10px
-		margin-right: -10px
-[class*="col-"]
-	+r(1024)
+	[class*="col-"]
 		padding-left: 20px
 		padding-right: 20px
-	+r(640)
++r(640)
+	[class*="col-"],
+	.container
 		padding-left: 10px
 		padding-right: 10px
+	.row
+		margin-left: - 10px
+		margin-right: -10px
 		.col-xs-9
 			width: 100%
 			+ .col-xs-3 + .col-xs-12
@@ -152,13 +150,10 @@ a
 			vertical-align: top
 			float: none
 .l-layout
-	display: table
-	width: 100%
-	table-layout: fixed
-	+r(1270)
-		display: block
-		width: auto
-		table-layout: auto
+	+rmin(1271)
+		display: table
+		width: 100%
+		table-layout: fixed
 .list-title
 	font-weight: bold
 	font-size: 14px
@@ -1174,9 +1169,6 @@ a
 			border-color: #000
 			z-index: 2
 			height: 50px
-			padding: 0 10px
-			+r(640)
-				padding: 0
 			&:after
 				content: ""
 				position: absolute
@@ -1187,8 +1179,13 @@ a
 				background: #fff
 			a
 				color: #000
+		+rmin(1025)
+			&:hover
+			a
 				&:hover
 					color: #000
+		+rmin(641)
+			padding: 0 10px
 	a
 		display: block
 		position: relative
@@ -1713,6 +1710,8 @@ a
 	&_unsuccess
 		.popup__mid
 			max-width: 310px
+			+rmin(641)
+				padding: 38px 20px 82px
 	&_big
 		.popup__window
 			width: 930px

@@ -14,8 +14,9 @@
 		+ .title
 			margin-bottom: 0
 			margin-top: 30px
-	+ .title
-		margin-top: 14px
+	+rmin(641)
+		+ .title
+			margin-top: 14px
 	a
 		color: $blue
 		&:hover
@@ -87,11 +88,9 @@
 		+r(1024)
 			padding: 0
 .article__text
-	.btn-show-text
-		display: none
-		+r(640)
-			display: block
-			
+	+rmin(641)
+		.btn-show-text
+			display: none
 	+r(640)
 		p
 			margin-bottom: 0
