@@ -23,12 +23,6 @@
 		padding-left: 0
 		.filter-choice.filter-choice_nav
 			display: block
-		// .row
-		// 	.col-xs-4
-		// 		&.col-xs-offset-4
-		// 			margin-left: 0
-		// 			width: 100%
-		// 			text-align: center
 		> .row
 			&:not(.row_inline)
 				> .col-xs-8,
@@ -1538,7 +1532,8 @@
 			display: none !important
 	+r(640)
 		margin-bottom: 0
-		margin-top: 27px
+		// margin-top: 27px
+		margin-top: 0
 		.title
 			margin-bottom: 10px
 			span
@@ -1959,20 +1954,33 @@ a.link-comment
 .seo
 	margin: 30px 0 0 
 	padding: 27px 0 18px
-	border-top: 1px solid #000 
+	border-top: 1px solid #000
+	&.is-visible
+		display: block !important
+	&.is-hidden-title
+		+r(1024)
+			.text__title
+				display: none
 	+r(1024)
 		display: none
+		padding: 14px 0
 	.text
 		line-height: 1.5
+		+r(1024)
+			color: #6e6e6e
+			font-size: 12px
 		&__title
 			margin-bottom: 10px
 			font-size: 30px
 			+med
 			font-weight: normal
-			color: #000 
+			color: #000
+			+r(1024)
+				line-height: 1
 	p
 		margin-bottom: 20px
-
+		+r(1024)
+			margin-bottom: 0
 .carousel
 	&__main
 		position: relative

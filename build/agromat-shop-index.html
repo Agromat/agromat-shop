@@ -2161,8 +2161,10 @@
 				
 			</div>
 			<div class="col-xs-12">
-				<div class="title title_big title_dark title_width"><span><span>все товары каталога</span></span></div>
+				<!-- перенёс блок .title в .catalog-list ex-zy -->
 				<div class="catalog-list">
+					<!-- сюда ex-zy-->
+					<div class="title title_big title_dark title_width"><span><span>все товары каталога</span></span></div>
 					<div class="row">
 						<div class="col-xs-3">
 							<ul class="list list_small list_gray">
@@ -2239,7 +2241,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="seo">
+				<!-- добавил классы is-visible is-hidden-title ex-zy -->
+				<!-- этот блок должен быть только на главной -->
+				<div class="seo is-visible is-hidden-title">
 					<div class="text text_gray">
 						<div class="text__title">Керамическая плитка и сантехника от компании «Агромат»</div>
 						<div class="text__cols">
@@ -2347,6 +2351,7 @@
 	</div>
 </div>
 <!-- BEGIN footer-sm -->
+<!-- на стр index.html, на планшете и мобиле добавлять класс is-no-space ex-zy -->
 <div class="footer-sm">
 	<div class="footer-sm__top">
 		<ul class="footer-sm__schedule">
@@ -2366,7 +2371,7 @@
 	</div>
 
 </div>
-<!-- END footer-sm -->
+<!-- END footer-sm
 <button class="scroll-top js-scroll-top" type="button"><span>наверх</span></button>
 <!-- load scripts -->
 <script src="js/main.js"></script>

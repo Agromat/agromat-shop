@@ -114,10 +114,10 @@ body
 	.row
 		margin-left: - 10px
 		margin-right: -10px
-		.col-xs-9
-			width: 100%
-			+ .col-xs-3 + .col-xs-12
-				display: none
+		// .col-xs-9
+		// 	width: 100%
+		// 	+ .col-xs-3 + .col-xs-12
+		// 		display: none
 		.col-xs-6
 			width: 100%
 a
@@ -418,6 +418,9 @@ a
 	&__cols
 		column-count: 2
 		column-gap: 30px
+		+r(640)
+			column-count: 1
+			column-gap: 0
 	h3
 		margin-bottom: 8px
 		font-size: 22px
