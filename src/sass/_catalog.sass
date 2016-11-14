@@ -914,13 +914,15 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
+	+clr
 	+r(1024)
 		display: none
-		.row
-			.col-xs-3
-				display: block
-				&:last-of-type
-					display: none
+	.col-xs-3
+		+r(1024)
+			display: block
+			width: 33.3333%
+			&:nth-of-type(4)
+				display: none
 	+r(640)
 		display: none
 	&_border
@@ -1431,8 +1433,8 @@
 	&.items-wrap_no-space
 		+r(640)
 			margin: 0
-	> .row_inline
-		> .col-xs-4
+	.row_inline
+		.col-xs-4
 			+r(640)
 				width: 50%
 			+r(480)
@@ -1956,11 +1958,7 @@ a.link-comment
 	padding: 27px 0 18px
 	border-top: 1px solid #000
 	&.is-visible
-		display: block !important
-	&.is-hidden-title
-		+r(1024)
-			.text__title
-				display: none
+		display: block
 	+r(1024)
 		display: none
 		padding: 14px 0
