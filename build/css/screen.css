@@ -7393,11 +7393,6 @@ a {
   display: table-cell;
   vertical-align: top;
   padding-left: 30px; }
-  .l-main .row .col-xs-4.col-xs-offset-4 {
-    width: auto;
-    float: none;
-    display: table;
-    margin: 0 auto; }
   @media screen and (max-width: 1270px) {
     .l-main {
       float: left;
@@ -7409,10 +7404,7 @@ a {
       float: none;
       padding-left: 0; }
       .l-main .filter-choice.filter-choice_nav {
-        display: block; }
-      .l-main > .row:not(.row_inline) > .col-xs-8,
-      .l-main > .row:not(.row_inline) > .col-xs-4 {
-        width: 100%; } }
+        display: block; } }
   @media screen and (max-width: 640px) {
     .l-main > .row .col-xs-12 .post-item__title {
       margin-bottom: 5px; }
@@ -7457,6 +7449,21 @@ a {
       @media screen and (max-width: 1024px) {
         .l-main__in:before {
           display: none; } }
+  .l-main__side-1 {
+    float: left;
+    width: 66.66667%;
+    padding: 0 15px; }
+    @media screen and (max-width: 1024px) {
+      .l-main__side-1 {
+        width: 100%;
+        padding: 0 20px; } }
+  .l-main__side-2 {
+    float: left;
+    width: 33.33333%;
+    padding: 0 15px; }
+    @media screen and (max-width: 1024px) {
+      .l-main__side-2 {
+        display: none; } }
   .l-main .filter-choice_nav {
     display: none; }
 
@@ -7643,7 +7650,7 @@ a {
 .page-head {
   position: relative; }
   @media screen and (max-width: 1024px) {
-    .page-head .row .col-xs-8.col-xs-offset-4 {
+    .page-head .col-xs-8.col-xs-offset-4 {
       margin-left: 0;
       width: 100%; }
     .page-head .compare {
@@ -8239,9 +8246,7 @@ a {
     padding: 12px 10px 10px; }
     @media screen and (max-width: 1024px) {
       .btn-simple.is-width {
-        max-width: 270px;
-        margin: auto;
-        display: block; } }
+        max-width: 270px; } }
     @media screen and (max-width: 640px) {
       .btn-simple.is-width {
         display: none; } }
@@ -9921,6 +9926,15 @@ a.link-comment:hover {
   @media screen and (max-width: 1024px) {
     .table-characteristics {
       display: block; } }
+
+.secondary-wrp {
+  display: table;
+  margin: auto;
+  *zoom: 1; }
+  .secondary-wrp:after {
+    content: " ";
+    display: table;
+    clear: both; }
 
 .article {
   padding: 0 0 35px;

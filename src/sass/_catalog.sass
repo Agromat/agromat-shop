@@ -6,13 +6,6 @@
 	display: table-cell
 	vertical-align: top
 	padding-left: 30px
-	.row
-		.col-xs-4
-			&.col-xs-offset-4
-				width: auto
-				float: none
-				display: table
-				margin: 0 auto
 	+r(1270)
 		float: left
 		width: 79.65811965811966% 
@@ -23,12 +16,6 @@
 		padding-left: 0
 		.filter-choice.filter-choice_nav
 			display: block
-		> .row
-			&:not(.row_inline)
-				> .col-xs-8,
-				> .col-xs-4
-					width: 100%
-				
 	+r(640)
 		> .row
 			.col-xs-12
@@ -80,6 +67,19 @@
 			background: #000
 			+r(1024)
 				display: none
+	&__side-1
+		float: left
+		width: 66.66667%
+		padding: 0 15px
+		+r(1024)
+			width: 100%
+			padding: 0 20px
+	&__side-2
+		float: left
+		width: 33.33333%
+		padding: 0 15px
+		+r(1024)
+			display: none
 	.filter-choice_nav
 		display: none
 .breadcrumbs
@@ -247,11 +247,10 @@
 .page-head
 	position: relative
 	+r(1024)
-		.row
-			.col-xs-8
-				&.col-xs-offset-4
-					margin-left: 0
-					width: 100%
+		.col-xs-8
+			&.col-xs-offset-4
+				margin-left: 0
+				width: 100%
 		.compare
 			max-width: 168px
 			width: 100%
@@ -766,8 +765,8 @@
 		padding: 12px 10px 10px
 		+r(1024)
 			max-width: 270px
-			margin: auto
-			display: block
+			// margin: auto
+			// display: block
 		+r(640)
 			display: none
 	&_blue
@@ -2228,3 +2227,7 @@ a.link-comment
 		table-layout: fixed
 	+r(1024)
 		display: block
+.secondary-wrp
+	display: table
+	margin: auto
+	+clr
