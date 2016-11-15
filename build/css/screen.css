@@ -7406,23 +7406,8 @@ a {
       .l-main .filter-choice.filter-choice_nav {
         display: block; } }
   @media screen and (max-width: 640px) {
-    .l-main > .row .col-xs-12 .post-item__title {
-      margin-bottom: 5px; }
-    .l-main > .row .col-xs-12 .post-item__media {
-      width: 100%;
-      float: none;
-      margin: 0 0 12px; }
-    .l-main > .row .col-xs-12 .post-item {
-      max-width: 90px; }
-    .l-main > .row .col-xs-12 .row_inline .col-xs-4 {
-      width: 25%; }
-    .l-main > .row > .col-xs-4 {
-      width: 50%; }
     .l-main .filter-choice.filter-choice_nav {
       display: none; } }
-  @media screen and (max-width: 460px) {
-    .l-main .row .col-xs-12 .row_inline .col-xs-4 {
-      width: 33.33333%; } }
   .l-main__in {
     position: relative;
     padding-left: 53px;
@@ -8971,6 +8956,8 @@ a {
     line-height: 1.25; }
   .item_small .item__img {
     height: 170px; }
+    .item_small .item__img img {
+      width: 100%; }
   .item_small .btn {
     padding: 9px 18px 7px; }
   @media screen and (max-width: 1250px) {
@@ -9935,6 +9922,40 @@ a.link-comment:hover {
     content: " ";
     display: table;
     clear: both; }
+
+.unit-list {
+  position: relative;
+  *zoom: 1; }
+  .unit-list:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 768px) {
+    .unit-list [class="col-xs-4"] {
+      width: 50%; } }
+  @media screen and (max-width: 420px) {
+    .unit-list [class="col-xs-4"] {
+      width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .unit-list_small [class="col-xs-4"] {
+    width: 33.33333%; } }
+
+@media screen and (max-width: 640px) {
+  .unit-list_small [class="col-xs-4"] {
+    width: 25%; }
+  .unit-list_small .post-item__title {
+    margin-bottom: 5px; }
+  .unit-list_small .post-item__media {
+    width: 100%;
+    float: none;
+    margin: 0 0 12px; }
+  .unit-list_small .post-item {
+    max-width: 90px; } }
+
+@media screen and (max-width: 460px) {
+  .unit-list_small [class="col-xs-4"] {
+    width: 33.33333%; } }
 
 .article {
   padding: 0 0 35px;
