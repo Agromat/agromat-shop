@@ -3355,13 +3355,16 @@ a {
     transform: translate3d(0, 0, 0) rotate(180deg); }
 
 .btn-show-text {
-  display: inline-block;
+  display: none;
   border-bottom: 1px dashed;
   line-height: 1.3;
   padding-right: 20px;
   position: relative;
   font-size: 12px;
   margin-top: 10px; }
+  @media screen and (max-width: 640px) {
+    .btn-show-text {
+      display: inline-block; } }
   .btn-show-text:active {
     border-bottom-color: transparent; }
   .btn-show-text:after {
@@ -3386,13 +3389,17 @@ a {
     transform: translate(0, 0);
     right: 5px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: rotate(0deg) translateY(-50%);
+    -ms-transform: rotate(0deg) translateY(-50%);
+    transform: rotate(0deg) translateY(-50%);
     position: absolute;
     color: #268cb6;
     z-index: 1;
     font-size: 14px; }
+  .btn-show-text.is-changed:before {
+    -webkit-transform: rotate(180deg) translateY(50%);
+    -ms-transform: rotate(180deg) translateY(50%);
+    transform: rotate(180deg) translateY(50%); }
 
 .btn-more_simple {
   padding: 10px 0;
@@ -7415,14 +7422,7 @@ a {
     @media screen and (max-width: 1024px) {
       .l-main__in {
         padding-left: 0;
-        margin-left: 0; }
-        .l-main__in + .row + .title + .post-slider {
-          display: block; } }
-    @media screen and (max-width: 640px) {
-      .l-main__in + .row + .title {
-        display: none; }
-        .l-main__in + .row + .title + .post-slider {
-          display: none; } }
+        margin-left: 0; } }
     .l-main__in:before {
       content: "";
       position: absolute;
@@ -7688,12 +7688,6 @@ a {
       margin-bottom: 28px; } }
   .page-head .compare {
     margin-top: 6px; }
-  @media screen and (max-width: 768px) {
-    .page-head + .row_inline > .col-xs-4 {
-      width: 50%; } }
-  @media screen and (max-width: 420px) {
-    .page-head + .row_inline > .col-xs-4 {
-      width: 100%; } }
 
 @media screen and (max-width: 640px) {
   .page-head_decoration-mob .page-title {
@@ -7706,6 +7700,10 @@ a {
     background-color: #ED1C24;
     color: #fff;
     padding: 3px 17px; } }
+
+@media screen and (max-width: 1024px) {
+  .page-head_show-filter-tab .compare {
+    display: none; } }
 
 .contact-mob {
   position: relative; }
@@ -8747,10 +8745,16 @@ a {
       padding: 30px 30px 30px 0;
       margin-bottom: 17px; } }
   @media screen and (max-width: 1024px) {
-    .item_list > .row > .col-xs-4 {
-      padding-right: 0; }
+    .item_list .row {
+      margin: 0 -10px; }
+    .item_list [class^="col"] {
+      padding: 0 10px; }
     .item_list .number-info {
-      max-width: 70px; } }
+      max-width: 70px; }
+    .item_list .item__slider {
+      height: 155px; }
+    .item_list .item__slide {
+      height: 155px; } }
   @media screen and (max-width: 640px) {
     .item_list {
       margin-bottom: 0;
@@ -8759,9 +8763,13 @@ a {
         padding: 0 0 30px;
         margin-bottom: 30px;
         border-bottom: 1px solid #cdcdcd; }
-      .item_list > .row > .col-xs-4 {
+      .item_list .item__slider {
+        height: 70px; }
+      .item_list .item__slide {
+        height: 70px; }
+      .item_list .col-xs-4 {
         padding-right: 0; }
-      .item_list > .row > .col-xs-8 {
+      .item_list .col-xs-8 {
         padding-left: 10px; }
       .item_list .link-compare:before {
         position: absolute;
@@ -9580,7 +9588,7 @@ a.link-comment:hover {
 .post-slider {
   position: relative;
   overflow: hidden; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 640px) {
     .post-slider {
       display: none; } }
   .post-slider .slick-slider {
@@ -10060,18 +10068,14 @@ a.link-comment:hover {
     .article_no-space {
       padding: 0; } }
 
-@media screen and (min-width: 641px) {
-  .article__text .btn-show-text {
-    display: none; } }
-
 @media screen and (max-width: 640px) {
-  .article__text p {
-    margin-bottom: 0; } }
+  .article__text {
+    overflow: hidden;
+    height: 56px; } }
 
-@media screen and (max-width: 640px) {
-  .article__text.is-hidden-mob p {
-    height: 56px;
-    overflow: hidden; } }
+.article__text.is-show {
+  height: auto;
+  overflow: visible; }
 
 .slider {
   margin: 0 0 20px;

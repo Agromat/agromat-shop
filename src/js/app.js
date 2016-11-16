@@ -764,17 +764,18 @@ $(document).ready( function() {
     });
 
     $('.js-show-text').click(function(e) {
+        var txt = $('.article__text'),
+            that = $(this);
         e.preventDefault();
 
-        var that   = $(this),
-            content = that.parent('.article__text');
-
-        that.css({
-            "display" : "none",
-        });
-
-        content.removeClass("is-hidden-mob");
-
+        if(!txt.hasClass('is-show')) {
+            txt.addClass('is-show');
+            that.text('Свернуть текст').addClass('is-changed');
+        } else {
+            txt.removeClass('is-show');
+            that.text('Развернуть текст').removeClass('is-changed');
+        }
+ 
     });
 
     //select
