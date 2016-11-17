@@ -82,6 +82,9 @@ body
 	color: $dark
 	+arial
 	min-width: auto
+	display: flex
+	flex-direction: column
+	min-height: 100vh
 	&.is-hidden
 		+r(640)
 			overflow: hidden
@@ -122,6 +125,7 @@ a
 // common blocks
 .out
 	min-width: 300px
+	flex: auto
 .wrap
 	font-size: 0
 	+clr
@@ -278,7 +282,6 @@ a
 			padding: 0 12px
 			+r(640)
 				padding: 0
-
 .title_dark
 	span
 		&:before,
