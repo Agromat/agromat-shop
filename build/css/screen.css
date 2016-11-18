@@ -11259,3 +11259,12 @@ a.link-comment:hover {
 
 .l-bottom {
   clear: both; }
+
+.columns {
+  position: relative; }
+  @media screen and (min-width: 1025px) {
+    .columns__left {
+      width: 66.66667%; } }
+  @media screen and (min-width: 1025px) {
+    .columns__right {
+      width: 33.33333%; } }
