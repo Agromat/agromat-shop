@@ -1,11 +1,24 @@
 $(document).ready( function() {
 
-    $(document).on("click", function(){
-        if($(".js-tip").hasClass("is-active")) {
-            $(".js-tip").removeClass("is-active")
+    $(document).on("click", function(e){
+        var tip = $(".js-tip");
+        var selectList = $(".js-select-list");
+        var popupFilter = $('.js-show-filter');
+        var btnFilter = $('.js-popup-filter');
+        var body = !$(e.target).closest(btnFilter).length && !$(e.target).closest(popupFilter).length;
+        var selectCustom = $('.js-select-custom');
+
+        if(tip.hasClass("is-active")) {
+            tip.removeClass("is-active");
         }
-        if($(".js-select-list").hasClass("is-active")) {
-            $(".js-select-list").removeClass("is-active")
+        if(selectList.hasClass("is-active")) {
+            selectList.removeClass("is-active");
+        }
+        if(body && popupFilter.hasClass('is-active')) {
+            popupFilter.removeClass('is-active');
+        }
+        if(!$(e.target).closest(selectCustom).length ) {
+            selectCustom.removeClass('is-active');
         }
     });
 
@@ -655,7 +668,7 @@ $(document).ready( function() {
     });
 
     $('.js-popup-filter').click(function() {
-        $('.js-show-filter').addClass('is-active');
+        $('.js-show-filter').toggleClass('is-active');
     });
     $('.js-close-filter').click(function() {
         $(this).parent('.js-show-filter').removeClass('is-active');
@@ -674,73 +687,35 @@ $(document).ready( function() {
             that.text('Развернуть текст').removeClass('is-changed');
         }
     });
-
-    //select
+    //select sort
     function select() {
-        var el   =  $('.sort > span'),
-            flag = false;
+        var select = $('.sort');
+        var selectLink = $('.sort > a');
+        var placeholder = $('.sort > span');
+        var winMob = $(window).width() + scrollBarWidth();
 
-        el.click(function() {
-            if(!el.parents('.sort').hasClass('is-show'))
-                $(this).parents('.sort').addClass('is-show');
-            else
-                $(this).parents('.sort').removeClass('is-show');
-        });
+        if(winMob <= 640) {
+            selectLink.wrapAll('<ul class="sort__list"></ul>')
+                      .wrap('<li></li>');
 
-        function mobileSelect() {
+            select.click(function() {
+                $(this).toggleClass('is-show');
+            });
 
-            var child    = $('.sort > a'),
-                list     = child.wrapAll("<ul class='sort__list'></ul>"),
-                listLink = $('.sort__list').find('a');
-
-                listLink.click(function(e) {
-                    var contentLink = $(this).text(),
-                        link        = $(this)
-
-                    $('.sort > span').text(contentLink).parents('.sort').removeClass('is-show');
-                    e.stopPropagation()
-                });
+            selectLink.click(function() {
+               placeholder.text($(this).text());
+            })
         }
-
-        function windowSize() {
-            var width = $(window).width() + scrollBarWidth();
-
-            if(width <= 640 && flag == false) {
-                flag = true;
-                mobileSelect();
-
-            } else if(width > 640) {
-                flag = false;
-                $('.sort__list a').unwrap();
-
-                el.removeClass('is-show');
-                $('.sort > span').text('Сортировка:');
-
-            }
-        }
-        windowSize();
     }
+    select();
 
-    $(window).on('resize load', select);
-
-    $('.a-category__trigger').click(function(e) {
-        e.stopPropagation()
-        // $(this).toggleClass('is-active');
-        if(!($(this).parents('.a-category').hasClass('is-active'))) {
-            $(this).parents('.a-category').addClass('is-active');
-        } else {
-            $(this).parents('.a-category').removeClass('is-active');
-        }
-
-        return false;
+    //select categories
+    $('.js-select-custom').click(function() {
+        $(this).toggleClass('is-active');
     });
-
-    $('.a-category .box a').click(function () {
-        var value = $(this).text(),
-            link  = $(this).parents('.a-category').find('.a-category__trigger');
-
-        link.text(value).parents('.a-category').removeClass('is-active');
-    })
+    $('.js-select-custom .box__nav a').click(function() {
+        $('.js-select-custom-text').text($(this).text());
+    });
 
     //dropdown sections
     $('.js-drop-down').click(function () {
