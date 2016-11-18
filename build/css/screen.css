@@ -10578,10 +10578,9 @@ a.link-comment:hover {
   text-align: center;
   margin-bottom: 22px; }
   .figcaption a {
-    color: inherit; }
-  @media screen and (max-width: 1024px) {
-    .figcaption {
-      display: block; } }
+    color: inherit;
+    width: auto;
+    display: block; }
 
 @media screen and (max-width: 1024px) {
   .wrap-container {
