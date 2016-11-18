@@ -3953,6 +3953,9 @@ a {
     @media screen and (max-width: 640px) {
       .tabs a {
         padding: 0 10px; } }
+  @media screen and (max-width: 640px) {
+    .tabs.tabs_mb li {
+      width: 50%; } }
 
 .tabs-content {
   display: none; }
@@ -3972,8 +3975,7 @@ a {
       padding: 0;
       margin: 0; }
     .tabs-content .row .col-xs-4 {
-      width: 100%;
-      display: none; }
+      width: 50%; }
     .tabs-content .row .col-xs-8 {
       width: 100%; }
       .tabs-content .row .col-xs-8 .row {
@@ -3989,7 +3991,9 @@ a {
       .tabs-content .row .col-xs-8 .comment .row {
         margin: 0 -20px; }
     .tabs-content .comment .col-xs-8 {
-      width: 66.66667%; } }
+      width: 66.66667%; }
+    .tabs-content .card {
+      max-width: none; } }
   @media screen and (max-width: 766px) {
     .tabs-content .row .col-xs-8 .col-xs-4 {
       width: 33.3333%; } }
@@ -3999,7 +4003,10 @@ a {
     .tabs-content .order-group .col-xs-6 {
       width: 100%; }
     .tabs-content .row .col-xs-8 .comment .row {
-      margin: 0 -10px; } }
+      margin: 0 -10px; }
+    .tabs-content .row .col-xs-4 {
+      width: 100%;
+      margin-bottom: 20px; } }
 
 @media screen and (max-width: 1024px) {
   .js-tabs-group .tabs_mb {
@@ -5726,7 +5733,10 @@ a {
   .slider-shares .slick-slide {
     padding: 0 10px 0 0; }
     .slider-shares .slick-slide img {
-      margin: auto; }
+      height: auto;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .slider-shares .slick-list {
     padding: 0 40px 0 0 !important; }
   .slider-shares__text {
@@ -10040,7 +10050,8 @@ a.link-comment:hover {
           margin-left: 0; } }
     .article figure[align="left"] {
       float: left;
-      margin-right: 25px; }
+      margin-right: 25px;
+      position: relative; }
       @media screen and (max-width: 640px) {
         .article figure[align="left"] {
           float: none;

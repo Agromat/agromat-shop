@@ -1200,6 +1200,10 @@ a
 		+text-overflow
 		+r(640)
 			padding: 0 10px
+	&.tabs_mb
+		+r(640)
+			li
+				width: 50%
 .tabs-content
 	display: none
 	+r(1200)
@@ -1220,8 +1224,9 @@ a
 				margin: 0
 		.row
 			.col-xs-4
-				width: 100%
-				display: none
+				// width: 100%
+				// display: none
+				width: 50%
 			.col-xs-8
 				width: 100%
 				.row
@@ -1240,6 +1245,8 @@ a
 		.comment
 			.col-xs-8
 				width: 66.66667%
+		.card
+			max-width: none
 	+r(766)
 		.row
 			.col-xs-8
@@ -1256,6 +1263,9 @@ a
 				.comment
 					.row
 						margin: 0 -10px
+			.col-xs-4
+				width: 100%
+				margin-bottom: 20px
 .js-tabs-group
 	+r(1024)
 		.tabs_mb
