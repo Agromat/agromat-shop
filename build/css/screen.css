@@ -3950,6 +3950,9 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+    @media screen and (max-width: 640px) {
+      .tabs a {
+        padding: 0 10px; } }
 
 .tabs-content {
   display: none; }
@@ -11264,7 +11267,9 @@ a.link-comment:hover {
   position: relative; }
   @media screen and (min-width: 1025px) {
     .columns__left {
-      width: 66.66667%; } }
+      width: 66.66667%;
+      float: left; } }
   @media screen and (min-width: 1025px) {
     .columns__right {
-      width: 33.33333%; } }
+      width: 33.33333%;
+      float: left; } }
