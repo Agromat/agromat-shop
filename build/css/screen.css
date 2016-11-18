@@ -3557,8 +3557,7 @@ a {
   text-align: center;
   margin: 22px 0 58px;
   color: #000;
-  font-size: 0;
-  white-space: nowrap; }
+  font-size: 0; }
   @media screen and (max-width: 1024px) {
     .pager {
       padding: 0 20px;
