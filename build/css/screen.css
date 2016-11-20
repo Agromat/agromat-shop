@@ -6533,6 +6533,9 @@ a {
       .catalog-list .row > div:first-child .list {
         padding-left: 0; }
 
+.catalog-list .list a {
+  display: block; }
+
 @media screen and (min-width: 1025px) {
   .catalog-list .list {
     padding-left: 15px; }
