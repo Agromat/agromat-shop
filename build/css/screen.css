@@ -11257,7 +11257,11 @@ a.link-comment:hover {
     clear: both; }
   @media screen and (max-width: 1024px) {
     .l-primary {
-      width: 100%; } }
+      width: 100%;
+      padding: 20px; } }
+  @media screen and (max-width: 640px) {
+    .l-primary {
+      padding: 0 10px; } }
 
 .l-side {
   float: left;
