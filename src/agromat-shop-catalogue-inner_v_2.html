@@ -43,7 +43,8 @@
 									<span>Плитка для ванной</span>
 								</li>
 							</ul>
-							<div class="page-head">
+							<!-- добавил класс ex-zy -->
+							<div class="page-head page-head_show-filter-tab">
 								<div class="row">
 									<div class="col-xs-8">
 										<h1 class="page-title">Плитка</h1>
@@ -86,6 +87,13 @@
 														</div>
 														<button type="button" class="btn-simple btn-simple_small">Сравнить</button>
 													</div>
+												</div>
+												<!-- добавил блок ex-zy -->
+												<div class="filter">
+													<button type="button" class="btn-filter js-popup-filter">
+														<span class="name">фильтр:</span>
+														<span class="value">выбрано 40</span>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -1151,14 +1159,18 @@
 								</div>
 							</div>
 							<!-- END items -->
-							<div class="row">
-								<div class="col-xs-4 col-xs-offset-4">
-									<button type="button" class="btn-simple is-width">Загрузить еще 35 моделей</button>
+							<!-- был .row>.col-xs-4.col-xs-offset-4 ex-zy -->
+							<!-- стал .secondary-wrp>.col-xs-12 -->
+							<div class="secondary-wrp">
+								<div class="col-xs-12">
+									<button type="button" class="btn-simple btn-simple_mt is-width">Загрузить еще</button>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-4 col-xs-offset-4">
+						<!-- был .row>.col-xs-4.col-xs-offset-4 ex-zy -->
+						<!-- стал .secondary-wrp>.col-xs-12 -->
+						<div class="secondary-wrp">
+							<div class="col-xs-12">
 								<div class="pager">
 									<a class="pager__prev" href="#"></a>
 									<a class="pager__link is-active" href="#">1</a>
@@ -1172,8 +1184,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="title"><span><span>Популярные обзоры</span></span></div>
 						<div class="post-slider">
+							<!-- .title занёс в блок ex-zy -->
+							<div class="title"><span><span>Популярные обзоры</span></span></div>
 							<div class="js-post-slider">
 								<div>
 									<div class="post-item post-item_inline">
@@ -1259,6 +1272,6 @@
 		
 </div>
 <!-- END out-->
-//= includes/footer_hidden-catalog-info.html
+//= includes/footer.html
 </body>
 </html>

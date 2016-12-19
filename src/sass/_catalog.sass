@@ -16,42 +16,9 @@
 		padding-left: 0
 		.filter-choice.filter-choice_nav
 			display: block
-		.row
-			.col-xs-4
-				&.col-xs-offset-4
-					margin-left: 0
-					width: 100%
-					text-align: center
-		> .row
-			&:not(.row_inline)
-				> .col-xs-8,
-				> .col-xs-4
-					width: 100%
-				
 	+r(640)
-		> .row
-			.col-xs-12
-				.post-item__title
-					margin-bottom: 5px
-				.post-item__media
-					width: 100%
-					float: none
-					margin: 0 0 12px
-				.post-item
-					max-width: 90px
-				.row_inline
-					.col-xs-4
-						width: 25%
-			> .col-xs-4
-				width: 50%
 		.filter-choice.filter-choice_nav
 			display: none
-	+r(460)
-		.row
-			.col-xs-12
-				.row_inline
-					.col-xs-4
-						width: 33.33333%
 	&__in
 		position: relative
 		padding-left: 53px
@@ -59,16 +26,6 @@
 		+r(1024)
 			padding-left: 0
 			margin-left: 0
-			+ .row 
-				+ .title
-					+ .post-slider
-						display: block
-		+r(640)
-			+ .row 
-				+ .title
-					display: none
-					+ .post-slider
-						display: none
 		&:before
 			content: ""
 			position: absolute
@@ -79,13 +36,26 @@
 			background: #000
 			+r(1024)
 				display: none
+	&__side-1
+		float: left
+		width: 66.66667%
+		padding: 0 15px
+		+r(1024)
+			width: 100%
+			padding: 0 20px
+	&__side-2
+		float: left
+		width: 33.33333%
+		padding: 0 15px
+		+r(1024)
+			display: none
 	.filter-choice_nav
 		display: none
 .breadcrumbs
 	margin: 0 0 13px -7px
 	color: $gray
 	position: relative
-	z-index: 13
+	z-index: 4
 	> li
 		display: inline-block
 		margin: 0 -6px 
@@ -246,11 +216,10 @@
 .page-head
 	position: relative
 	+r(1024)
-		.row
-			.col-xs-8
-				&.col-xs-offset-4
-					margin-left: 0
-					width: 100%
+		.col-xs-8
+			&.col-xs-offset-4
+				margin-left: 0
+				width: 100%
 		.compare
 			max-width: 168px
 			width: 100%
@@ -290,6 +259,7 @@
 				right: 0
 			+ .page-subtitle
 				margin: 0 0 10px
+				display: block
 		.compare
 			display: none
 		.filter
@@ -300,12 +270,6 @@
 			margin-bottom: 28px
 	.compare
 		margin-top: 6px
-	+ .row_inline
-		> .col-xs-4
-			+r(768)
-				width: 50%
-			+r(420)
-				width: 100%
 .page-head_decoration-mob
 	+r(640)
 		.page-title
@@ -319,6 +283,10 @@
 			background-color: #ED1C24
 			color: #fff
 			padding: 3px 17px
+.page-head_show-filter-tab
+	+r(1024)
+		.compare
+			display: none
 .contact-mob
 	position: relative
 	&__table
@@ -764,8 +732,6 @@
 		padding: 12px 10px 10px
 		+r(1024)
 			max-width: 270px
-			margin: auto
-			display: block
 		+r(640)
 			display: none
 	&_blue
@@ -912,13 +878,15 @@
 .banners-wrap
 	margin-top: 26px
 	margin-bottom: 26px
+	+clr
 	+r(1024)
 		display: none
-		.row
-			.col-xs-3
-				display: block
-				&:last-of-type
-					display: none
+	.col-xs-3
+		+r(1024)
+			display: block
+			width: 33.3333%
+			&:nth-of-type(4)
+				display: none
 	+r(640)
 		display: none
 	&_border
@@ -930,7 +898,6 @@
 			display: block
 		+r(640)
 			display: none
-		
 	+ .box
 		margin-top: 50px
 .banners-wrap_index
@@ -1192,11 +1159,16 @@
 		padding: 30px 30px 30px 0
 		margin-bottom: 17px
 	+r(1024)
-		> .row
-			> .col-xs-4
-				padding-right: 0
+		.row
+			margin: 0 -10px
+		[class^="col"]
+			padding: 0 10px
 		.number-info
 			max-width: 70px
+		// .item__slider
+		// 	height: 155px
+		// .item__slide
+		// 	height: 155px
 	+r(640)
 		margin-bottom: 0
 		min-height: auto
@@ -1204,11 +1176,14 @@
 			padding: 0 0 30px
 			margin-bottom: 30px
 			border-bottom: 1px solid #cdcdcd
-		> .row
-			> .col-xs-4
-				padding-right: 0
-			> .col-xs-8
-				padding-left: 10px
+		// .item__slider
+		// 	height: 70px
+		// .item__slide
+		// 	height: 70px
+		.col-xs-4
+			padding-right: 0
+		.col-xs-8
+			padding-left: 10px
 		.link-compare
 			&:before
 				position: absolute
@@ -1353,12 +1328,9 @@
 		display: inline-block
 	.btn
 		min-width: 170px
-		// +r(1200)
-		// 	min-width: 100px
 		+r(1270)
 			min-width: auto
 			width: 100%
-	
 	.badge
 		left: 26px
 		+r(1024)
@@ -1369,11 +1341,14 @@
 		height: 55px
 		+r(640)
 			height: 36px
+			text-align: left
 	.item__title
 		font-size: 15px
 		line-height: 1.25
 	.item__img
 		height: 170px
+		img
+			width: 100%
 	.btn
 		padding: 9px 18px 7px 
 	+r(1250)
@@ -1384,7 +1359,6 @@
 		border: 0
 .items-wrap
 	font-size: 0
-	// margin: 0 -15px 0 0
 	+rmin(1025)
 		padding: 0 3px
 	&_five-items
@@ -1406,8 +1380,6 @@
 							width: 50% !important
 						.badge
 							left: 6px
-						// .price_old
-						// 	display: none
 				+r(1024)
 					width: 33.3333%
 				+r(640)
@@ -1428,8 +1400,8 @@
 	&.items-wrap_no-space
 		+r(640)
 			margin: 0
-	> .row_inline
-		> .col-xs-4
+	.row_inline
+		.col-xs-4
 			+r(640)
 				width: 50%
 			+r(480)
@@ -1455,11 +1427,8 @@
 		.badge
 			left: 5px
 	+r(640)
-		// margin: 0 20px 10px 
-		// width: 120px 
 		width: 25%
 		margin: 0
-		// padding: 0 20px 10px
 		padding: 0 10px 10px
 		.btn
 			max-width: 100px
@@ -1529,7 +1498,8 @@
 			display: none !important
 	+r(640)
 		margin-bottom: 0
-		margin-top: 27px
+		// margin-top: 27px
+		margin-top: 0
 		.title
 			margin-bottom: 10px
 			span
@@ -1921,7 +1891,7 @@ a.link-comment
 .post-slider
 	position: relative
 	overflow: hidden
-	+r(1024)
+	+r(640)
 		display: none
 	.slick-slider
 		padding-bottom: 40px
@@ -1950,20 +1920,29 @@ a.link-comment
 .seo
 	margin: 30px 0 0 
 	padding: 27px 0 18px
-	border-top: 1px solid #000 
+	border-top: 1px solid #000
+	&.is-visible
+		display: block
 	+r(1024)
 		display: none
+		padding: 14px 0
 	.text
 		line-height: 1.5
+		+r(1024)
+			color: #6e6e6e
+			font-size: 12px
 		&__title
 			margin-bottom: 10px
 			font-size: 30px
 			+med
 			font-weight: normal
-			color: #000 
+			color: #000
+			+r(1024)
+				line-height: 1
 	p
 		margin-bottom: 20px
-
+		+r(1024)
+			margin-bottom: 0
 .carousel
 	&__main
 		position: relative
@@ -2213,3 +2192,34 @@ a.link-comment
 		table-layout: fixed
 	+r(1024)
 		display: block
+.secondary-wrp
+	display: table
+	margin: auto
+	+clr
+.unit-list
+	position: relative
+	+clr
+	+r(768)
+		[class="col-xs-4"]
+			width: 50%
+	+r(420)
+		[class="col-xs-4"]
+			width: 100%
+.unit-list_small
+	+r(768)
+		[class="col-xs-4"]
+			width: 33.33333%
+	+r(640)
+		[class="col-xs-4"]
+			width: 25%
+		.post-item__title
+			margin-bottom: 5px
+		.post-item__media
+			width: 100%
+			float: none
+			margin: 0 0 12px
+		.post-item
+			max-width: 90px
+	+r(460)
+		[class="col-xs-4"]
+			width: 33.33333%

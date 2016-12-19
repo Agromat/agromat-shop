@@ -22,7 +22,7 @@
 						<div class="prod-simple prod-simple_left-img">
 							<div class="prod-simple__top">
 								<a class="prod-simple__img" href="#">
-									<img src="https://unsplash.it/53/68?image=651" alt="">
+									<img src="http://placehold.it/270x180" alt="">
 								</a>
 								<div class="prod-simple__main">
 									<div class="prod-simple__name">
@@ -270,8 +270,8 @@
 						</li>
 					</ul>
 				</li>
-				<li class="accordion-nav__list-item js-item is-dropdown">
-					<a href="#" class="accordion-nav__link js-clicker is-active">Мебель <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+				<li class="accordion-nav__list-item js-item">
+					<a href="#" class="accordion-nav__link js-clicker">Мебель <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 					<ul class="accordion-nav__i js-inner">
 						<li class="accordion-nav__i-item">
 							<a href="#" class="accordion-nav__i-link">Вся мебель для ванной</a>
@@ -373,55 +373,52 @@
 		</div>
 	</div>
 	<!-- end add ex-zy -->
+	<!-- изменял структуру блоков ex-zy -->
+	<!-- был .container>.row>.col-xs-12+.col-xs-9+.col-xs-3+.col-xs-12 ex-zy -->
+	<!-- стал .container>.row(.banners-wrap+.l-primary+.l-side)+.l-bottom -->
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
-
-				<div class="banners-wrap banners-wrap_index">
-					<div class="row">
-						<div class="col-xs-3">
-							<a class="banner" href="#">
-								<div class="banner__img">
-									<img src="img/banner.jpg" alt="">
-								</div>
-								<div class="title title_big"><span><span>все для плитки</span></span></div>
-								<span class="meta">245 товаров</span>
-							</a>
+			<div class="banners-wrap banners-wrap_index">
+				<div class="col-xs-3">
+					<a class="banner" href="#">
+						<div class="banner__img">
+							<img src="img/banner.jpg" alt="">
 						</div>
-						<div class="col-xs-3">
-							<a class="banner" href="#">
-								<div class="banner__img">
-									<img src="img/banner.jpg" alt="">
-								</div>
-								<div class="title title_big"><span><span>все для плитки</span></span></div>
-								<span class="meta">245 товаров</span>
-							</a>
-						</div>
-						<div class="col-xs-3">
-							<a class="banner" href="#">
-								<div class="banner__img">
-									<img src="img/banner.jpg" alt="">
-								</div>
-								<div class="title title_big"><span><span>все для плитки</span></span></div>
-								<span class="meta">245 товаров</span>
-							</a>
-						</div>
-						<div class="col-xs-3">
-							<a class="banner" href="#">
-								<div class="banner__img">
-									<img src="img/banner.jpg" alt="">
-								</div>
-								<div class="title title_big"><span><span>все для плитки</span></span></div>
-								<span class="meta">245 товаров</span>
-							</a>
-						</div>
-					</div>
+						<div class="title title_big"><span><span>все для плитки</span></span></div>
+						<span class="meta">245 товаров</span>
+					</a>
 				</div>
-
+				<div class="col-xs-3">
+					<a class="banner" href="#">
+						<div class="banner__img">
+							<img src="img/banner.jpg" alt="">
+						</div>
+						<div class="title title_big"><span><span>все для плитки</span></span></div>
+						<span class="meta">245 товаров</span>
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a class="banner" href="#">
+						<div class="banner__img">
+							<img src="img/banner.jpg" alt="">
+						</div>
+						<div class="title title_big"><span><span>все для плитки</span></span></div>
+						<span class="meta">245 товаров</span>
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a class="banner" href="#">
+						<div class="banner__img">
+							<img src="img/banner.jpg" alt="">
+						</div>
+						<div class="title title_big"><span><span>все для плитки</span></span></div>
+						<span class="meta">245 товаров</span>
+					</a>
+				</div>
 			</div>
-
-			<div class="col-xs-9">
-				<div class="slider slider_index js-slider-index" style="height: 400px">
+			<!-- заменил обёртку ex-zy -->
+			<div class="l-primary">
+				<div class="slider slider_index js-slider-index">
 					<div style="height: 400px">
 						<img src="img/slide.jpg" alt="">
 						<div class="slider__title">
@@ -1188,7 +1185,8 @@
 					<!-- <button type="button" class="btn-more js-btn-more" data-text="Свернуть">показать все (56)</button> -->
 				</div>
 			</div>
-			<div class="col-xs-3">
+			<!-- заменил обёртку ex-zy -->
+			<div class="l-side">
 				<div class="banners-wrap">
 					<!-- <a class="banner banner_mb" href="#">
 						<div class="banner__img">
@@ -1253,103 +1251,106 @@
 						<a href="#">показать все</a>
 					</div>
 				</div>
-				
 			</div>
-			<div class="col-xs-12">
+		</div>
+		<!-- заменил обёртку ex-zy -->
+		<div class="l-bottom">
+			<!-- перенёс блок .title в .catalog-list ex-zy -->
+			<div class="catalog-list">
+				<!-- сюда ex-zy-->
 				<div class="title title_big title_dark title_width"><span><span>все товары каталога</span></span></div>
-				<div class="catalog-list">
-					<div class="row">
-						<div class="col-xs-3">
-							<ul class="list list_small list_gray">
-								<li><a href="#"><strong>Плитка</strong></a></li>
-								<li><a href="#">Плитка для кухни</a></li>
-								<li><a href="#">Плитка для ванной</a></li>
-								<li><a href="#">Керамогранит</a></li>
-								<li><a href="#">Клинкер</a></li>
-								<li><a href="#">Напольная плитка</a></li>
-							</ul>
-							<!-- add class ex-zy -->
-							<ul class="list list_small list_gray list_space">
-								<li><a href="#"><strong>Мозаика</strong></a></li>
-							</ul>
-						</div>
-						<div class="col-xs-3">
-							<ul class="list list_small list_gray">
-								<li><a href="#"><strong>Сантехника</strong></a></li>
-								<li><a href="#">Аксессуары</a></li>
-								<li><a href="#">Биде</a></li>
-								<li><a href="#">Ванны</a></li>
-								<li><a href="#">Гидромассажные боксы</a></li>
-								<li><a href="#">Гидромассажные ванны</a></li>
-								<li><a href="#">Душевые кабины</a></li>
-								<li><a href="#">Душевые наборы и панели</a></li>
-								<li><a href="#">Инсталляции</a></li>
-								<li><a href="#">Паровые боксы</a></li>
-								<li><a href="#">Поддоны</a></li>
-								<li><a href="#">Полотенцесушители</a></li>
-								<li><a href="#">Раковины и ножки</a></li>
-								<li><a href="#">Сантех. для инвалидов</a></li>
-								<li><a href="#">Сантех. освещение</a></li>
-								<li><a href="#">Сифоны</a></li>
-								<li><a href="#">Унитазы и компакты</a></li>
-								<li><a href="#">Уриналы</a></li>
-							</ul>
-						</div>
-						<div class="col-xs-3">
-							<!-- add class ex-zy -->
-							<ul class="list list_small list_gray list_top-space">
-								<li><a href="#"><strong>Смесители</strong></a></li>
-								<li><a href="#">Смесители для кухни</a></li>
-								<li><a href="#">Смесители для раковины</a></li>
-								<li><a href="#">Смесители для душа</a></li>
-								<li><a href="#">Смесители для ванны</a></li>
-								<li><a href="#">Смесители для биде</a></li>
-								<li><a href="#">Наружные части</a></li>
-								<li><a href="#">Встраиваемые части</a></li>
-							</ul>
-						</div>
-						<div class="col-xs-3">
-							<ul class="list list_small list_gray">
-								<li><a href="#"><strong>Мебель</strong></a></li>
-								<li><a href="#">Доставка и оплата</a></li>
-								<li><a href="#">Гарантия и возврат</a></li>
-								<li><a href="#">Программа лояльности</a></li>
-								<li><a href="#">Статьи</a></li>
-								<li><a href="#">Обзоры</a></li>
-								<li><a href="#">Вопросы и ответы</a></li>
-								<li><a href="#">О магазине</a></li>
-								<li><a href="#">Контакты</a></li>
-								<li><a href="#">Обратная связь</a></li>
-							</ul>
-							<!-- add class ex-zy -->
-							<ul class="list list_small list_gray list_space">
-								<li><a href="#"><strong>Бассейны и сауны</strong></a></li>
-							</ul>
-							<ul class="list list_small list_gray">
-								<li><a href="#"><strong>Стройхимия</strong></a></li>
-								<li><a href="#">Краски и штукатурки</a></li>
-								<li><a href="#">Средства по уходу</a></li>
-								<li><a href="#">Строительная химия</a></li>
-							</ul>
-						</div>
+				<div class="row">
+					<div class="col-xs-3">
+						<ul class="list list_small list_gray">
+							<li><a href="#"><strong>Плитка</strong></a></li>
+							<li><a href="#">Плитка для кухни</a></li>
+							<li><a href="#">Плитка для ванной</a></li>
+							<li><a href="#">Керамогранит</a></li>
+							<li><a href="#">Клинкер</a></li>
+							<li><a href="#">Напольная плитка</a></li>
+						</ul>
+						<!-- add class ex-zy -->
+						<ul class="list list_small list_gray list_space">
+							<li><a href="#"><strong>Мозаика</strong></a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<ul class="list list_small list_gray">
+							<li><a href="#"><strong>Сантехника</strong></a></li>
+							<li><a href="#">Аксессуары</a></li>
+							<li><a href="#">Биде</a></li>
+							<li><a href="#">Ванны</a></li>
+							<li><a href="#">Гидромассажные боксы</a></li>
+							<li><a href="#">Гидромассажные ванны</a></li>
+							<li><a href="#">Душевые кабины</a></li>
+							<li><a href="#">Душевые наборы и панели</a></li>
+							<li><a href="#">Инсталляции</a></li>
+							<li><a href="#">Паровые боксы</a></li>
+							<li><a href="#">Поддоны</a></li>
+							<li><a href="#">Полотенцесушители</a></li>
+							<li><a href="#">Раковины и ножки</a></li>
+							<li><a href="#">Сантех. для инвалидов</a></li>
+							<li><a href="#">Сантех. освещение</a></li>
+							<li><a href="#">Сифоны</a></li>
+							<li><a href="#">Унитазы и компакты</a></li>
+							<li><a href="#">Уриналы</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<!-- add class ex-zy -->
+						<ul class="list list_small list_gray list_top-space">
+							<li><a href="#"><strong>Смесители</strong></a></li>
+							<li><a href="#">Смесители для кухни</a></li>
+							<li><a href="#">Смесители для раковины</a></li>
+							<li><a href="#">Смесители для душа</a></li>
+							<li><a href="#">Смесители для ванны</a></li>
+							<li><a href="#">Смесители для биде</a></li>
+							<li><a href="#">Наружные части</a></li>
+							<li><a href="#">Встраиваемые части</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<ul class="list list_small list_gray">
+							<li><a href="#"><strong>Мебель</strong></a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Гарантия и возврат</a></li>
+							<li><a href="#">Программа лояльности</a></li>
+							<li><a href="#">Статьи</a></li>
+							<li><a href="#">Обзоры</a></li>
+							<li><a href="#">Вопросы и ответы</a></li>
+							<li><a href="#">О магазине</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Обратная связь</a></li>
+						</ul>
+						<!-- add class ex-zy -->
+						<ul class="list list_small list_gray list_space">
+							<li><a href="#"><strong>Бассейны и сауны</strong></a></li>
+						</ul>
+						<ul class="list list_small list_gray">
+							<li><a href="#"><strong>Стройхимия</strong></a></li>
+							<li><a href="#">Краски и штукатурки</a></li>
+							<li><a href="#">Средства по уходу</a></li>
+							<li><a href="#">Строительная химия</a></li>
+						</ul>
 					</div>
 				</div>
-				<div class="seo">
-					<div class="text text_gray">
-						<div class="text__title">Керамическая плитка и сантехника от компании «Агромат»</div>
-						<div class="text__cols">
-							<p>Компания «Агромат» импортирует в Украину напольную и облицовочную плитку таких широко известных брендов, как <a href="#">Aparici</a>, Rocersa, Impronta, Porcelanite Dos и многих других. Керамическая плитка, <a href="#">мозаика</a> и керамогранит, представленные в магазинах «Агромат», позволят удачно обыграть преимущества любого помещения.</p>
-							<p>Помимо этого, у нас вы найдете и широкий ассортимент сантехники для ванной комнаты.</p>
-							<p><a href="#">Смесители</a>, <a href="#">душевые кабины</a>, гидромассажные, акриловые и чугунные ванны, раковины от производителей с мировым именем, таких как: Althea, Axor, Devit, Laufen, Jacuzzi, Villeroy&Boch ждут своих покупателей.</p>
-							<p>Огромный выбор сантехники, плитки, мебели для ванной, освещения, строительной химии и профессиональный подход к каждому клиенту сделают Ваши покупки в магазинах компании просто незабываемыми.</p>
-						</div>
-						
+			</div>
+			<!-- добавил классы is-visible ex-zy -->
+			<div class="seo is-visible">
+				<div class="text text_gray">
+					<!-- закоментировал ex-zy-->
+					<!-- <div class="text__title">Керамическая плитка и сантехника от компании «Агромат»</div> -->
+					<div class="text__cols">
+						<p>Компания «Агромат» импортирует в Украину напольную и облицовочную плитку таких широко известных брендов, как <a href="#">Aparici</a>, Rocersa, Impronta, Porcelanite Dos и многих других. Керамическая плитка, <a href="#">мозаика</a> и керамогранит, представленные в магазинах «Агромат», позволят удачно обыграть преимущества любого помещения.</p>
+						<p>Помимо этого, у нас вы найдете и широкий ассортимент сантехники для ванной комнаты.</p>
+						<p><a href="#">Смесители</a>, <a href="#">душевые кабины</a>, гидромассажные, акриловые и чугунные ванны, раковины от производителей с мировым именем, таких как: Althea, Axor, Devit, Laufen, Jacuzzi, Villeroy&Boch ждут своих покупателей.</p>
+						<p>Огромный выбор сантехники, плитки, мебели для ванной, освещения, строительной химии и профессиональный подход к каждому клиенту сделают Ваши покупки в магазинах компании просто незабываемыми.</p>
 					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
-		
 </div>
 <!-- END out-->
 //= includes/footer.html

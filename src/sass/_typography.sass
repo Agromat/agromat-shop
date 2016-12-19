@@ -47,6 +47,7 @@
 		&[align="left"]
 			float: left
 			margin-right: 25px
+			position: relative
 			+r(640)
 				float: none
 				margin-right: 0
@@ -87,18 +88,17 @@
 	&_no-space
 		+r(1024)
 			padding: 0
+	&.actions
+		figure
+			img
+				max-height: none
 .article__text
-	+rmin(641)
-		.btn-show-text
-			display: none
 	+r(640)
-		p
-			margin-bottom: 0
-	&.is-hidden-mob
-		p
-			+r(640)
-				height: 56px
-				overflow: hidden
+		overflow: hidden
+		height: 56px
+	&.is-show
+		height: auto
+		overflow: visible
 .slider
 	margin: 0 0 20px
 	opacity: 0
@@ -142,6 +142,7 @@
 		color: #fff
 		+reg 
 		font-size: 30px
+		+gpu
 	&_index
 		margin-top: 26px
 		img
@@ -154,9 +155,6 @@
 			display: none !important
 .section
 	margin: 20px 0 47px
-	// &:not(.section_collections)
-	// 	+r(640)
-	// 		display: none
 	+r(1024)
 		.row
 			.col-xs-3
@@ -191,19 +189,10 @@
 					text-align: left
 				~ *
 						display: none
-			// &.is-open
-			// 	.title
-			// 		margin-bottom: 20px
-			// 		&:after
-			// 			+rotate(90deg)
-			// 		~ *
-			// 			display: block
 		&.is-drop
 			.title
 				&:after
 					+rotate(90deg)
-				// ~ *
-				// 	display: block
 		.col-xs-3
 			width: 50%
 .section-wrapper
@@ -311,5 +300,3 @@
 		span
 			display: block 
 			color: #999 
-// .col-xs-3
-// 	width: 20% !important

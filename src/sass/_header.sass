@@ -9,8 +9,8 @@
 		top: 0
 		left: 0
 		right: 0
-		z-index: 10
-		background: #fff 
+		z-index: 20
+		background: #fff
 		height: 65px
 		border-bottom: 3px solid #000
 		box-shadow: 0 3px 6px rgba(#000, .3)
@@ -31,26 +31,24 @@
 			border: 0
 		.compare
 			display: block
+			+r(1200)
+				right: 50%
+				width: 50%
+			+r(1024)
+				right: 33.33333% 
+				width: 33.33333% 
 		+r(1200)
 			min-width: auto
 			z-index: 20
 			.row_table
 				width: 100%
-			.header__in
-				.row_table
-					.col-xs-6
-						width: 50%
-						.col-xs-8
-							width: 66.66667%
-						.col-xs-4
-							width: 33.3333%
 	.nav-wrap
 		position: fixed
 		top: 65px
 		left: 0
 		right: 0
-		z-index: 10
-		background: #fff 
+		z-index: 19
+		background: #fff
 		border-bottom: 1px solid #000
 		&__in
 			border: 0
@@ -60,7 +58,7 @@
 		height: 38px
 		+r(1200)
 			height: auto
-			font-size: inherit 
+			font-size: inherit
 .tooper
 	background: #000
 	height: 30px
@@ -73,7 +71,7 @@
 		.col-xs-2
 			display: none
 		.col-xs-8
-			width: 83.33333% 
+			width: 83.33333%
 			+ .col-xs-2
 				display: block
 	+r(640)
@@ -97,12 +95,12 @@
 		left: 0
 		height: 10px
 		width: 1px
-		background: #1a1a1a   
+		background: #1a1a1a
 	li
 		display: inline-block
 		vertical-align: middle
 	a
-		padding: 0 10px 
+		padding: 0 10px
 .tooper__login
 	text-align: center
 	+text-overflow
@@ -110,7 +108,7 @@
 		margin-right: 8px
 	a
 		display: block
-		background: #1a1a1a 
+		background: #1a1a1a
 .header
 	//+tr(background .3s)
 	+r(640)
@@ -118,7 +116,7 @@
 		&.is-visible
 			display: block
 	&__in
-		border-bottom: 3px solid #000 
+		border-bottom: 3px solid #000
 	.row_table
 		> div
 			padding-top: 16px
@@ -162,7 +160,7 @@
 		bottom: 0
 		width: 33.3%
 		&__drop
-			box-shadow: 0 9px 9px rgba(#000,.3) 
+			box-shadow: 0 9px 9px rgba(#000,.3)
 	.compare-btn
 		height: 62px
 	.centr-text
@@ -185,10 +183,11 @@
 		bottom: 0
 		right: 10px
 		margin: auto
-		max-width: 39px
+		min-width: 39px
+		width: auto
 		height: 24px
 		padding: 0 4px
-	.cart__details 
+	.cart__details
 		.fa
 			margin-right: 5px
 	.logo-mob
@@ -209,7 +208,7 @@
 	right: 0
 	top: 0
 	z-index: 100
-	background-color: #FFF 
+	background-color: #FFF
 .header-mob__bottom
 	padding: 8px 0
 	text-align: center
@@ -226,6 +225,10 @@
 	margin-top: 10px
 	.slick-slide
 		padding: 0 10px 0 0
+		img
+			height: auto
+			width: 100%
+			object-fit: cover
 	.slick-list
 		padding: 0 40px 0 0 !important
 	&__text
@@ -248,7 +251,7 @@
 						margin-top: -3px
 .logo
 	display: block
-	margin: 13px 0 0 
+	margin: 13px 0 0
 	width: 80%
 	max-width: 216px
 	+rmin(1025)
@@ -259,7 +262,7 @@
 		display: block
 		width: 100%
 	&_small
-		margin: 28px auto 
+		margin: 28px auto
 		width: 203px
 .contact
 	position: relative
@@ -284,14 +287,14 @@
 		&.is-active
 			+rmin(641)
 				&:before
-					content: "" 
+					content: ""
 					position: absolute
 					top: -10px
 					right: -25px
 					bottom: -6px
 					left: -30px
 					z-index: -1
-					background: #fff 
+					background: #fff
 					box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2)
 				&:after
 					content: ""
@@ -300,7 +303,7 @@
 					bottom: -20px
 					right: -35px
 					left: -30px
-					background: #fff 
+					background: #fff
 					z-index: 0
 	+r(640)
 		.contact__popup.js-callback
@@ -325,7 +328,7 @@
 		color: #000
 		+tr_c
 		&:hover
-			color: $blue 
+			color: $blue
 .contact__popup
 	position: absolute
 	top: 100%
@@ -343,7 +346,7 @@
 		margin-bottom: 12px
 		font-size: 12px
 		line-height: 1.2
-		font-style: italic 
+		font-style: italic
 	.btn
 		width: 100px
 	.popup__close
@@ -397,7 +400,7 @@
 	position: relative
 	font-size: 12px
 	+arial
-	color: $red 
+	color: $red
 	&:before
 		content: "\f017"
 		position: absolute
@@ -405,15 +408,15 @@
 		top: 2px
 		font-size: 12px
 		+fa-icon
-		color: $black 
+		color: $black
 .shedule__list
-	color: $black 
+	color: $black
 	font-weight: bold
 	span
 		display: inline-block
 		width: 35px
 		font-weight: normal
-		color: $gray 
+		color: $gray
 .search
 	position: relative
 	z-index: 4
@@ -427,7 +430,7 @@
 			color: #fff
 		.search__input
 			height: 30px
-			padding: 0 40px 0 10px 
+			padding: 0 40px 0 10px
 	&.is-active
 		.search__drop
 			opacity: 1
@@ -437,18 +440,18 @@
 	position: relative
 	z-index: 2
 	border: 1px solid #cdcdcd
-	padding: 0 10px 0 40px 
+	padding: 0 10px 0 40px
 	width: 100%
 	height: 31px
 	+arial
 	font-size: 13px
 	+tr(border .3s)
 	&:focus
-		border-color: $blue 
+		border-color: $blue
 		+ .search__btn
 			color: $blue
 			+r(640)
-				color: #FFF 
+				color: #FFF
 .search__btn
 	position: absolute
 	left: 0
@@ -459,7 +462,7 @@
 	background: none
 	font-size: 14px
 	+tr(color .3s)
-	color: #000 
+	color: #000
 	&:before
 		content: "\f002"
 		position: absolute
@@ -501,15 +504,15 @@
 	+med
 	color: $blue
 	+tr(color .3s)
-	letter-spacing: 1px 
+	letter-spacing: 1px
 	&:hover
-		color: $blue-h 
+		color: $blue-h
 .search_big
 	.search__input
 		height: 41px
 		border: 2px solid #000
 		&:focus
-			border-color: $blue 
+			border-color: $blue
 	.search__btn
 		height: 41px
 		&:before
@@ -524,24 +527,24 @@
 .cart
 	display: block
 	width: 100%
-	padding: 10px 
+	padding: 10px
 	height: 62px
 	+vertical
 	+transition(background, border, .3s)
 	border: 1px solid #cdcdcd
-	color: $gray 
+	color: $gray
 	.fa
-		color: #000 
+		color: #000
 	&.is-full
 		border-color: $blue
-		background: $blue  
-		color: #fff 
+		background: $blue
+		color: #fff
 		&:hover
-			background: $blue-h 
-			border-color: $blue-h 
+			background: $blue-h
+			border-color: $blue-h
 		.fa
-			color: #fff 
-			
+			color: #fff
+
 .cart__in
 	display: inline-block
 	vertical-align: middle
@@ -567,12 +570,12 @@
 	font-weight: bold
 	&:hover
 		span
-			border-color: transparent 
+			border-color: transparent
 	span
 		display: inline-block
 		position: relative
 		z-index: 2
-		border-bottom: 1px dashed 
+		border-bottom: 1px dashed
 		+tr(border .3s)
 		@media screen and (min-width: 640px) and (max-width: 650px)
 			letter-spacing: -0.01em
@@ -583,16 +586,18 @@
 	+r(640)
 		display: none
 	&__in
-		border-bottom: 1px solid #000 
+		border-bottom: 1px solid #000
 		position: relative
-		+r(1024)
-			.col-xs-10.col-md-offset-1
-				width: 100%
-				margin-left: 0
+	.col-xs-10.col-xs-offset-1
+		width: 92%
+		float: none
+		margin: auto
+	+r(1024)
+		.col-xs-10.col-xs-offset-1
+			width: 100%
 .nav
 	display: table
 	width: 100%
-	table-layout: fixed
 	font-size: 0
 	text-transform: uppercase
 	+med
@@ -600,10 +605,13 @@
 	line-height: 48px
 	color: #000
 	text-align: center
+	li
+		&.is-open
+			z-index: 16
 	+r(1024)
 		display: block
 		height: auto
-		// line-height: 48px 
+		line-height: 36px
 	li
 		display: table-cell
 		position: relative
@@ -616,24 +624,27 @@
 		+r(1024)
 			display: inline-block
 			width: 25%
+			&:nth-of-type(4n + 1)
+				&:before
+					display: none
 		&:before
 			content: ""
 			position: absolute
 			left: 0
 			top: 50%
 			z-index: 3
-			margin-top: -2px
+			margin: -2px 0 0 -2px
 			width: 4px
 			height: 4px
 			+rotate(45deg)
-			background: $blue-l 
+			background: $blue-l
 		&:first-child
 			&:before
 				display: none
 		&.is-active
-			color: $blue 
+			color: $blue
 			a
-				color: $blue 
+				color: $blue
 				> span
 					span
 						&:after
@@ -643,7 +654,7 @@
 							height: 3px
 							left: 0
 							right: 0
-							background: $blue  
+							background: $blue
 		&.is-open
 			> a
 				position: relative
@@ -670,10 +681,10 @@
 						&:after
 							display: none
 		a
-			display: inline-block
-			color: #000 
+			display: block
+			color: #000
 			+tr_c
-			background: #fff 
+			background: #fff
 			// &:hover
 			// 	color: $blue
 			> span
@@ -681,7 +692,9 @@
 				position: relative
 				z-index: 2
 				padding: 0 30px
-				background: #fff 
+				background: #fff
+				+r(1200)
+					padding: 0 20px
 				span
 					position: relative
 					display: inline-block
@@ -697,46 +710,58 @@
 	left: 0
 	top: 100%
 	box-shadow: 0 5px 15px rgba(21, 13, 2, 0.3)
+	background: #fff
 	+tr(opacity .2s)
 	&.is-visible
 		opacity: 1
-		visibility: visible 
+		visibility: visible
 	&.is-right
 		left: auto
 		right: 0
+	.wrap
+		+r(870)
+				margin-left: -10px
+	+r(1024)
+		&[data-index="3"]
+			left: auto
+			right: 0
+		&[data-index="5"]
+			right: auto
 .subnav__in
 	display: table
 	table-layout: fixed
-.subnav__main	
-	position: relative 
-	padding: 20px 30px 
+.subnav__main
+	position: relative
+	padding: 20px 30px
 	display: table-cell
 	vertical-align: top
 	width: 600px
-	background: #fff
-	// &:before
-	// 	content: ""
-	// 	position: absolute
-	// 	top: 0
-	// 	left: 0
-	// 	right: 0
-	// 	height: 15px 
-	// 	background: #fff 
-	// 	pointer-events: none
+	.list
+		a
+			display: block
+			+prevent-text
+	+r(870)
+		padding: 20px
+		.col-xs-4
+			width: 50%
+			&:not(:last-of-type)
+				margin-bottom: 10px
 	.title_width
 		margin: 5px 0 13px
 .subnav__banners
 	display: table-cell
 	vertical-align: top
 	width: 380px
-	padding: 20px 30px 
-	background: #f1f1f1 
+	padding: 20px 30px
+	background: #f1f1f1
+	+r(870)
+			padding: 20px
 	.title
 		margin-bottom: 17px
 		> span
 			&:before,
 			&:after
-				background: #e5e5e5 
+				background: #e5e5e5
 .overlay
 	opacity: 0
 	visibility: hidden
@@ -796,7 +821,7 @@
 .navigation
 	display: none
 	position: fixed
-	background-color: #fff 
+	background-color: #fff
 	top: 42px
 	left: 0
 	right: 0
@@ -827,7 +852,7 @@
 	padding: 6px 18px
 	text-transform: uppercase
 	font-size: 11px
-	background-color: #F6F6F6 
+	background-color: #F6F6F6
 .navigation__link
 	padding: 8px 30px
 	color: #3a3a3a
@@ -837,7 +862,7 @@
 	+tr(all 0.2s)
 	&.is-active
 		background-color: $blue
-		color: #fff 
+		color: #fff
 		.fa
 			transform: translateY(-50%) rotate(90deg)
 .navigation__i
@@ -847,5 +872,5 @@
 .navigation__i-link
 	padding: 8px 30px 8px 47px
 	display: block
-
-
+#widgetFullCart
+	cursor: pointer
