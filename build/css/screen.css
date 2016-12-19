@@ -5054,6 +5054,14 @@ a {
         color: #268cb6; }
   .post__text {
     margin: 10px 0 0; }
+  .post.action .post__img {
+    border: none; }
+    .post.action .post__img img {
+      margin: 0; }
+    .post.action .post__img:hover .badge img {
+      opacity: 1; }
+  .post .actions {
+    position: relative; }
 
 .total {
   border-bottom: 2px solid #000;
@@ -10097,6 +10105,8 @@ a.link-comment:hover {
   @media screen and (max-width: 1024px) {
     .article_no-space {
       padding: 0; } }
+  .article.actions figure img {
+    max-height: none; }
 
 @media screen and (max-width: 640px) {
   .article__text {
