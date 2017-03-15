@@ -3041,7 +3041,7 @@ a {
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
     .text a:hover {
-      color: #1d769b; }
+      color: #006db7; }
   .text_gray {
     color: #888; }
     .text_gray strong {
@@ -3119,7 +3119,7 @@ a {
     .checkbox__text em {
       color: #888; }
   .checkbox:hover {
-    color: #1d769b; }
+    color: #006db7; }
 
 .checkbox_med {
   font-size: 13px;
@@ -3357,7 +3357,7 @@ a {
     transform: translate(0, 0);
     font-size: 10px; }
   .btn-more:hover {
-    color: #1d769b; }
+    color: #006db7; }
   .btn-more.is-active:before {
     content: "\f068"; }
   .btn-more_reset:before {
@@ -3638,7 +3638,7 @@ a {
       height: 0px;
       border-style: solid;
       border-width: 9px 10px 9px 0;
-      border-color: transparent #1d769b transparent transparent; } }
+      border-color: transparent #006db7 transparent transparent; } }
   .pager__next:before {
     width: 0px;
     height: 0px;
@@ -3664,7 +3664,7 @@ a {
         height: 0px;
         border-style: solid;
         border-width: 9px 0 9px 10px;
-        border-color: transparent transparent transparent #1d769b; } }
+        border-color: transparent transparent transparent #006db7; } }
 
 .textarea {
   display: block;
@@ -3818,7 +3818,7 @@ a {
       margin: 0 6px 0 2px;
       font-size: 10px; }
     .comment__answer:hover {
-      color: #1d769b; }
+      color: #006db7; }
   .comment__footer {
     color: #888; }
   .comment .like,
@@ -5939,6 +5939,21 @@ a {
       float: none;
       padding: 14px 10px; } }
 
+.waitlist-popup {
+  position: relative; }
+  .waitlist-popup .field {
+    float: left;
+    width: 232px; }
+  .waitlist-popup .js-waitlist .btn {
+    float: right;
+    margin-top: 21px; }
+  .waitlist-popup .form-error {
+    display: none;
+    color: red; }
+  .waitlist-popup .success-message {
+    font-size: 18px;
+    color: #000; }
+
 .shedule {
   position: relative;
   font-size: 12px;
@@ -6085,7 +6100,7 @@ a {
   transition: color 0.3s;
   letter-spacing: 1px; }
   .search__all:hover {
-    color: #1d769b; }
+    color: #006db7; }
 
 .search_big .search__input {
   height: 41px;
@@ -6130,8 +6145,8 @@ a {
     background: #004c91;
     color: #fff; }
     .cart.is-full:hover {
-      background: #1d769b;
-      border-color: #1d769b; }
+      background: #006db7;
+      border-color: #006db7; }
     .cart.is-full .fa {
       color: #fff; }
 
@@ -6806,7 +6821,7 @@ a {
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
     .accord__title:hover {
-      color: #1d769b; }
+      color: #006db7; }
     .accord__title span {
       display: inline-block;
       position: relative; }
@@ -6922,7 +6937,7 @@ a {
       height: 1px;
       background: #eee; }
     .filter-choice_nav:hover {
-      border-color: #1d769b; }
+      border-color: #006db7; }
   .filter-choice__title {
     font-size: 16px;
     font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif;
@@ -7557,7 +7572,7 @@ a {
       -webkit-transition: color 0.3s;
       transition: color 0.3s; }
       .breadcrumbs > li > a:hover {
-        color: #1d769b; }
+        color: #006db7; }
     .breadcrumbs > li > span {
       padding: 0 15px;
       display: block; }
@@ -8205,7 +8220,7 @@ a {
   transition: background 0.2s;
   cursor: pointer; }
   .btn:hover {
-    background: #1d769b; }
+    background: #006db7; }
   .btn_normal {
     letter-spacing: 0; }
   .btn.is-width {
@@ -9410,7 +9425,7 @@ a {
     font-size: 12px;
     cursor: pointer; }
     .number-info .fa:hover {
-      color: #1d769b; }
+      color: #006db7; }
 
 .badge {
   position: absolute;
@@ -9555,7 +9570,7 @@ a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
   .link-compare:hover {
-    color: #1d769b; }
+    color: #006db7; }
   .link-compare:before {
     content: "";
     display: inline-block;
@@ -9606,7 +9621,7 @@ a.link-comment:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
   .link-credit:hover {
-    color: #1d769b; }
+    color: #006db7; }
   .link-credit:before {
     content: "\f1ec";
     display: inline-block;
@@ -10025,7 +10040,7 @@ a.link-comment:hover {
   .article a {
     color: #004c91; }
     .article a:hover {
-      color: #1d769b; }
+      color: #006db7; }
   .article p {
     margin-bottom: 20px; }
     .article p:last-child {
