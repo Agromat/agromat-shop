@@ -2650,12 +2650,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-width: auto;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh; }
@@ -2703,7 +2701,6 @@ a {
 .out {
   min-width: 300px;
   -webkit-box-flex: 1;
-  -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto; }
 
@@ -4860,12 +4857,10 @@ a {
 @media screen and (max-width: 700px) {
   .popup_cart .order-action .row {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; }
   .popup_cart .order-action [class*="col-"] {
@@ -6186,12 +6181,9 @@ a {
     border-bottom: 1px solid #000;
     position: relative; }
   .nav-wrap .col-xs-10.col-xs-offset-1 {
-    width: 92%;
+    width: 100%;
     float: none;
     margin: auto; }
-  @media screen and (max-width: 1024px) {
-    .nav-wrap .col-xs-10.col-xs-offset-1 {
-      width: 100%; } }
 
 .nav {
   display: table;
@@ -6283,7 +6275,7 @@ a {
         display: block;
         position: relative;
         z-index: 2;
-        padding: 0 30px;
+        padding: 0 25px;
         background: #fff; }
         @media screen and (max-width: 1200px) {
           .nav li a > span {
@@ -7555,7 +7547,8 @@ a {
       padding: 0 15px;
       color: #268cb6;
       -webkit-transition: color 0.3s;
-      transition: color 0.3s; }
+      transition: color 0.3s;
+      font-size: 13px; }
       .breadcrumbs > li > a:hover {
         color: #1d769b; }
     .breadcrumbs > li > span {
@@ -8483,7 +8476,7 @@ a {
       .banners-wrap_index {
         display: none; } }
   .banners-wrap + .box {
-    margin-top: 50px; }
+    margin-top: 0; }
 
 @media screen and (max-width: 1024px) {
   .banners-wrap_index .row .col-xs-3 {
@@ -8889,18 +8882,14 @@ a {
     @media screen and (max-width: 640px) {
       .item_list .item__action {
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-align: end;
-        -webkit-align-items: flex-end;
         -ms-flex-align: end;
         align-items: flex-end;
         -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between;
         bottom: 0;
@@ -8909,7 +8898,6 @@ a {
         .item_list .item__action .item__price {
           width: auto;
           -webkit-box-ordinal-group: 2;
-          -webkit-order: 1;
           -ms-flex-order: 1;
           order: 1; }
           .item_list .item__action .item__price + .item__cell {
@@ -8917,13 +8905,11 @@ a {
             .item_list .item__action .item__price + .item__cell + .item__cell {
               padding-left: 0;
               -webkit-box-ordinal-group: 4;
-              -webkit-order: 3;
               -ms-flex-order: 3;
               order: 3;
               width: 100%; }
         .item_list .item__action .item__links {
           -webkit-box-ordinal-group: 3;
-          -webkit-order: 2;
           -ms-flex-order: 2;
           order: 2;
           display: block;
@@ -10230,17 +10216,14 @@ a.link-comment:hover {
 @media screen and (max-width: 640px) {
   .section-wrapper {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
     .section-wrapper .section_collections {
       -webkit-box-ordinal-group: 4;
-      -webkit-order: 3;
       -ms-flex-order: 3;
       order: 3; } }
 
@@ -11285,8 +11268,6 @@ a.link-comment:hover {
   @media screen and (max-width: 1024px) {
     .l-side {
       display: none; } }
-  .l-side .box {
-    margin-top: 0; }
 
 .l-bottom {
   clear: both; }
