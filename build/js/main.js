@@ -404,7 +404,9 @@ $(document).ready( function() {
                 }
             ],
         });
-        initSlider(sliderIndex, {});
+        initSlider(sliderIndex, {
+            dots: true
+        });
         initSlider(sliderSix, {
             slidesToShow: 6,
             slidesToScroll: 6,
@@ -511,6 +513,7 @@ $(document).ready( function() {
         initSlider(carouselNav, {
             slidesToShow: 4,
             slidesToScroll: 1,
+            variableWidth: true,
             asNavFor: '.js-carousel-main',
             arrows: false,
             focusOnSelect: true,

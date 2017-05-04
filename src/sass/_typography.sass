@@ -104,8 +104,8 @@
 	opacity: 0
 	visibility: hidden
 	+tr(opacity .2s)
-	+r(1024)
-		display: none
+	// +r(1024)
+	// 	display: none
 	&.is-ready
 		opacity: 1
 		visibility: visible
@@ -145,14 +145,59 @@
 		+gpu
 	&_index
 		margin-top: 26px
+		&_mt_mid
+			margin-top: 13px
 		img
-			width: auto
-			margin: 0 auto 
-			max-width: none
+			max-width: 100%
+			width: 100%
 			height: 100%
+			margin: 0 auto 
+			object-fit: cover
+		.slick-slide 
+			max-height: 310px 
+			+r(640)
+				max-height: 180px 
+				height: 180px 
+		.slider__title
+			+r(640)
+				display: none
+		.slick-dots 
+			text-align: right
+			right: 20px 
+			bottom: 15px 
+			button
+				width: 20px 
+				height: 20px 
+				transform: rotate(0)
+				background: transparent
+				border: 1px solid #fff
+			li
+				&.slick-active 
+					button
+						background: #FFF 
 	+r(640)
 		.slick-dots, .slick-arrow
 			display: none !important
+	&_arr_trans
+		.slick-next,
+		.slick-prev
+			width: 50px 
+			border: 1px solid rgba(255, 255, 255, 0.5)
+			background-color: transparent 
+			&:before
+				content: "" 
+				width: 20px
+				height: 30px
+				background-image: url(../img/icons/arrow-bold.png)
+				background-repeat: no-repeat
+				background-position: 50% 50%
+		.slick-next
+			&:before
+				margin-left: 5px
+				transform: rotate(-180deg)
+		.slick-prev
+			&:before
+				margin-right: 5px
 .section
 	margin: 20px 0 47px
 	+r(1024)
