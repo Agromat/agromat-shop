@@ -175,6 +175,35 @@
 				&.slick-active 
 					button
 						background: #FFF 
+	&_action
+		margin-bottom: 30px
+		padding-bottom: 20px
+		border-bottom: 2px solid #e5ecf6 
+		+r(640)
+			margin-top: 20px
+		.slick-next,
+		.slick-prev
+			width: 50px 
+			height: 50px
+		.slick-next
+		    box-shadow: -2px 0 6px rgba(0,0,0, 0.7)
+		.slick-prev
+		    box-shadow: 2px 0 6px rgba(0,0,0, 0.7)
+	&_arr_blue
+		.slick-next,
+		.slick-prev
+			background-color: #014b92
+			border-color: #014b92
+			&:before
+				content: "" 
+				width: 20px
+				height: 30px
+				background-image: url(../img/icons/arrow-bold.png)
+				background-repeat: no-repeat
+				background-position: 50% 50%
+		.slick-next
+			&:before
+				transform: rotate(-180deg)
 	+r(640)
 		.slick-dots, .slick-arrow
 			display: none !important

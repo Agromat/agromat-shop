@@ -60,12 +60,12 @@ $(document).ready( function() {
             el = $('[data-index="'+index+'"]'),
             fixedHeader = $('body.has-fixed-header');
 
-            if(!!index) {
-                $(window).on('load scroll resize', function() {
-                  var subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
-                  el.css({top: subnavPosition});
-                })
-            }
+            // if(!!index) {
+            //     $(window).on('load scroll resize', function() {
+            //       var subnavPosition = $('[data-item="'+index+'"]').position().top + $('[data-item="'+index+'"]').height();
+            //       el.css({top: subnavPosition});
+            //     })
+            // }
 
             if(!isTouch) {
               $('body').addClass('is-no-touch');
@@ -301,6 +301,7 @@ $(document).ready( function() {
     (function () {
         var slider = $(".js-slider");
         var sliderIndex = $('.js-slider-index');
+        var sliderAction = $('.js-slider-action');
         var sliderSix = $(".js-slider-six");
         var sliderSixSmall = $(".js-slider-six_small");
         var sliderShares= $('.js-slider-shares');
@@ -345,6 +346,10 @@ $(document).ready( function() {
         });
         initSlider(sliderIndex, {
             dots: true
+        });
+
+        initSlider(sliderAction, {
+            dots: false
         });
         initSlider(sliderSix, {
             slidesToShow: 6,

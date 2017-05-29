@@ -258,6 +258,16 @@
 			vertical-align: middle
 			padding: 0 5px 
 			background: #fff 
+	&__title_rel
+		position: relative
+		left: auto
+		top: auto
+		right: auto
+		transform: translateY(0)
+		font-size: 26px
+		text-align: left
+		text-transform: uppercase
+		margin-bottom: 10px
 	&__more
 		position: absolute
 		bottom: 0
@@ -316,6 +326,12 @@
 				background: $blue-l 
 			&:hover
 				color: $blue 
+	&__nav_mod
+		li
+			&.is-active
+				a
+					color: #888
+					cursor: default 
 	&__text
 		p
 			margin-bottom: 15px
@@ -425,6 +441,10 @@
 	display: none
 	+r(1024)
 		display: block
+
+.box_no_border
+	border: none
+	margin-top: 0 
 .box_adaptive
 	display: none
 	+r(1024)
