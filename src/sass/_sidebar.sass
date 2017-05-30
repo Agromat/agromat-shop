@@ -497,10 +497,7 @@
 				color: $blue 
 	&__main
 		overflow: hidden
-		// +r(767)
-		// 	width: 95px
-		// 	.post-item__title
-		// 		// padding: 13px 0 4px
+
 	&__info
 		clear: both
 		.meta
@@ -524,13 +521,24 @@
 		sub
 			font-size: 14px
 .post-item_inline
-	+clr
-	padding: 18px 20px 18px 15px
+	// +clr
+	height: 100%
+	padding: 15px 42px 
 	background: #f6f6f6 
+	+r(1024)
+		padding: 15px 25px
+		
 	.post-item__title
 		margin-bottom: 6px
 	.post-item__media
-		margin-bottom: 0
+		overflow: hidden
+		max-height: 210px
+		// height: 100%
+		margin: 0 0 15px
+		width: auto
+		float: none
+		
+
 +keyframes(dots)
 	0%
 		opacity: 0
