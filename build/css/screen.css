@@ -5504,14 +5504,10 @@ a {
   right: 0;
   z-index: 20;
   background: #fff;
-  height: 65px;
+  height: 75px;
   border-bottom: 3px solid #000;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   min-width: 1200px; }
-  .has-fixed-header .header .contact,
-  .has-fixed-header .header .shedule,
-  .has-fixed-header .header .search {
-    display: none; }
   .has-fixed-header .header .row_table > div {
     padding-top: 0;
     padding-bottom: 0; }
@@ -5520,6 +5516,7 @@ a {
   .has-fixed-header .header .logo_small {
     margin: 10px auto; }
   .has-fixed-header .header .header__in {
+    padding: 5px 0;
     border: 0; }
   .has-fixed-header .header .compare {
     display: block; }
@@ -5540,7 +5537,7 @@ a {
 
 .has-fixed-header .nav-wrap {
   position: fixed;
-  top: 65px;
+  top: 75px;
   left: 0;
   right: 0;
   z-index: 19;
