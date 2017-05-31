@@ -325,18 +325,25 @@ a
 	&__img
 		overflow: hidden
 		margin-bottom: 6px
-		// border: 1px solid #e4e1d9
 		height: 95px
-		// width: 95px
+		width: 95px
 		text-align: center
-	
-	&__img-link
-		display: block
-		height: 100%
-		background-position: 0 100%
-		background-size: cover
-		background-repeat: no-repeat
-
+		a
+			position: relative
+			display: block
+			height: 100% 
+			text-align: left
+			font-size: 0
+			&:before
+				content: ""
+				display: inline-block
+				vertical-align: bottom
+				width: 0
+				height: 100% 
+			img
+				max-width: 100% 
+				max-height: 100% 
+				vertical-align: bottom
 	&__title
 		margin-bottom: 5px
 		color: #000
