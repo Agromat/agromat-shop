@@ -7334,14 +7334,9 @@ a {
       font-size: 14px; }
 
 .post-item_inline {
-  *zoom: 1;
   height: 100%;
   padding: 15px 42px;
   background: #f6f6f6; }
-  .post-item_inline:after {
-    content: " ";
-    display: table;
-    clear: both; }
   @media screen and (max-width: 1024px) {
     .post-item_inline {
       padding: 15px 25px; } }
