@@ -9758,7 +9758,8 @@ a.link-comment:hover {
   .carousel__main .slick-slide {
     height: 370px;
     text-align: center;
-    font-size: 0; }
+    font-size: 0;
+    cursor: pointer; }
     .carousel__main .slick-slide:before {
       content: "";
       display: inline-block;

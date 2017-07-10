@@ -212,18 +212,42 @@ $(document).ready( function() {
         if (counter == 0) {
             counter = 1;
         }
+
         $(".js-slides-counter").text(counter);
     });
-    $(".js-img-slider").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        adaptiveHeight: true,
-    });
+
     $('.js-img-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
       $(".js-slide-index").text(nextSlide+1);
     });
+
+    $(".js-popup-trigger").on("click", function(){
+
+        var popup = $(this).attr("data-popup");
+        $('body').addClass('is-hidden');
+        $(".js-popup").fadeOut(200);
+        $("."+popup).fadeIn(200);
+        $(window).trigger("resize");
+
+        if ($(this).data('slide-index')) {
+            var currentSlideIndex = $(this).data('slide-index');
+            initPopupSlick(currentSlideIndex);
+        }
+        return false;
+    });
+
+    function initPopupSlick(currentSlideIndex){
+        var option = {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            adaptiveHeight: true,
+            initialSlide: currentSlideIndex - 1
+        };
+
+        $(".js-img-slider").slick(option);
+        $(".js-slide-index").text(currentSlideIndex);
+    };
 
 
     $(".js-clear-filter").on("click", function(){
@@ -532,6 +556,7 @@ $(document).ready( function() {
         $(this).parents(".js-select").find(".input").val(text);
     });
 
+
     $(".js-radio-trigger").on("change", function() {
         var parent = $(this).parents(".js-radio-parent");
         var name = $(this).attr("name");
@@ -596,22 +621,15 @@ $(document).ready( function() {
 
     $(".js-close-popup").on("click",function (){
         $(this).parents(".js-popup").fadeOut(200)
+        $('.js-img-slider').slick('unslick');
         return false;
     });
     $(".js-popup-overlay").on("click",function (){
-        $(".js-popup").fadeOut(200)
-        return false;
-    });
-
-    $(".js-popup-trigger").on("click", function(){
-
-        var popup = $(this).attr("data-popup");
-        $('body').addClass('is-hidden');
         $(".js-popup").fadeOut(200);
-        $("."+popup).fadeIn(200);
-        $(window).trigger("resize");
+        $('.js-img-slider').slick('unslick');
         return false;
     });
+
 
     $(".js-show-callback").on("click", function(){
         $(this).parents(".contact").find(".js-callback").toggleClass("is-active");
