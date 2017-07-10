@@ -4231,29 +4231,56 @@ a {
   .info-box_benefits {
     margin: 28px 0;
     padding: 25px; }
+    @media screen and (max-width: 768px) {
+      .info-box_benefits {
+        padding: 25px 15px; } }
     @media screen and (max-width: 640px) {
       .info-box_benefits {
         display: none; }
         .info-box_benefits ~ .items-slider_arr-top {
           display: none; } }
   .info-box__table {
-    display: table;
-    width: 100%;
-    table-layout: fixed; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%; }
   .info-box__cell {
-    display: table-cell;
-    vertical-align: middle; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
     @media screen and (max-width: 1024px) {
       .info-box__cell {
-        vertical-align: top;
-        padding: 0 28px;
-        text-align: center; } }
-    .info-box__cell i {
-      vertical-align: middle; }
-      @media screen and (max-width: 1024px) {
+        padding: 0 10px; } }
+    @media screen and (max-width: 768px) {
+      .info-box__cell {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-align: center; }
         .info-box__cell i {
           display: block;
-          margin: auto; } }
+          margin-bottom: 5px; } }
+    .info-box__cell span {
+      display: inline-block;
+      margin-left: 5px; }
 
 .title-icon {
   font-size: 24px;
@@ -4972,7 +4999,7 @@ a {
       display: inline-block;
       vertical-align: middle;
       max-width: 100%;
-      height: auto; }
+      height: 100%; }
   .img-slider .slick-prev,
   .img-slider .slick-next {
     z-index: 2;
@@ -11339,6 +11366,13 @@ a.link-comment:hover {
   width: 45px;
   height: 37px;
   display: inline-block; }
+
+.i-benefit1,
+.i-benefit2,
+.i-benefit3,
+.i-benefit4 {
+  background-position: 50% 50%;
+  background-size: 100%; }
 
 .l {
   position: relative; }
