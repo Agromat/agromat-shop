@@ -283,14 +283,22 @@ $(document).ready( function() {
 
     $(".js-popup-trigger").on("click", function(){
 
-        var popup = $(this).attr("data-popup");
+        var popup = $(this).attr("data-popup"),
+            currentSlideIndex = null;
+
         $('body').addClass('is-hidden');
         $(".js-popup").fadeOut(200);
         $("."+popup).fadeIn(200);
         $(window).trigger("resize");
 
         if ($(this).data('slide-index')) {
-            var currentSlideIndex = $(this).data('slide-index');
+            currentSlideIndex = $(this).data('slide-index');
+            initPopupSlick(currentSlideIndex);
+        } else{
+            var wrapper = ($(this).closest('.js-carousel-wrap'));
+                slide = wrapper.find('.js-carousel-main').find('.slick-current');
+
+            currentSlideIndex = slide.data('slide-index');
             initPopupSlick(currentSlideIndex);
         }
         return false;
