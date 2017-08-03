@@ -7298,10 +7298,9 @@ a {
 .box__info {
   margin: -7px 0 5px;
   font-size: 22px;
+  color: #000;
   line-height: 1.2;
   font-family: "pfdintextcomppro-medium", "Helvetica Narrow", "Arial Narrow", Arial, Helvetica, sans-serif; }
-  .box__info a {
-    color: #000; }
 
 .post-item {
   margin-bottom: 32px;
