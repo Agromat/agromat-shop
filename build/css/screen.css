@@ -11020,6 +11020,8 @@ a.link-comment:hover {
     .table-wrap.payment-card img {
       float: left;
       margin-right: 20px; }
+  .table-wrap caption {
+    padding: 20px 28px; }
   .table-wrap .btn-simple {
     margin: 28px 38px 38px 0; }
 
