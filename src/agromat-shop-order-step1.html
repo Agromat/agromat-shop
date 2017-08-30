@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html>
 <head>
 	<title>agromat-shop-order-1</title>
@@ -152,106 +152,32 @@
 										</div>
 									</div>
 								</div>
+
 								<div class="order-group">
 									<div class="row">
 										<div class="col-xs-12">
 											<div class="title title_big title_dark title_width"><span><span>Способ оплаты   </span></span></div>
 											<div class="wrap">
-												<div class="radiobox radiobox_tab js-radiobox-tab">
+												<div class="radiobox radiobox_tab js-radiobox-tab payment-tab">
 													<label class="radiobox__label" for="payment1"></label>
 													<input type="radio" id="payment1" name="payment">
 													<span class="radiobox__border"></span>
 													<span class="radiobox__title">Наличными, при получении</span>
 												</div>
-												<div class="radiobox radiobox_tab js-radiobox-tab">
+												<div class="radiobox radiobox_tab js-radiobox-tab payment-tab">
 													<label class="radiobox__label" for="payment2"></label>
 													<input type="radio" id="payment2" name="payment">
 													<span class="radiobox__border"></span>
-													<span class="radiobox__title">Карточный счет</span>
-												</div>
-												<div class="radiobox radiobox_tab js-radiobox-tab">
-													<label class="radiobox__label" for="payment3"></label>
-													<input type="radio" id="payment3" name="payment" checked>
-													<span class="radiobox__border"></span>
-													<span class="radiobox__title">Кредит</span>
+													<span class="radiobox__title">
+														<img src="img/checkout-cards-logo.png" />
+														<span>Онлайн оплата картой Visa/Mastercard</span>
+													</span>
 												</div>
 											</div>
 											<div class="js-radiobox-content" data-id="payment1" style="display: none;">
 												<div class="table-wrap">
 													<table class="table table_order">
 														<caption>Оплата наличными куръеру, при получении</caption>
-														<!-- <thead>
-															<tr>
-																<th>Пакет</th>
-																<th>Первый взнос</th>
-																<th>Количество месяцев и сумма платежа</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr class="js-radio-parent">
-																<td>
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="bank">
-																		<span class="radio__text">Оплата частями ПАО КБ «ПриватБанк»</span>
-																	</label>
-																</td>
-																<td>
-																	0 грн. (0%)
-																</td>
-																<td>
-																	<div class="number js-number" data-max-number="100">
-																		<input type="text" class="number__input" value="10">
-																		<button class="number__plus js-plus-number" type="button"></button>
-																		<button class="number__minus js-minus-number" type="button"></button>
-																	</div>
-																	<div class="price"> <sub>по</sub>
-																		117,<sup>51</sup> <sub>грн</sub>
-																	</div>
-																</td>
-															</tr>
-															<tr class="js-radio-parent">
-																<td>
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="bank">
-																		<span class="radio__text">Супер-рассрочка АО «УкрсСибБанк»</span>
-																	</label>
-																</td>
-																<td>
-																	0 грн. (0%)
-																</td>
-																<td>
-																	<div class="number js-number" data-max-number="100">
-																		<input type="text" class="number__input" value="10">
-																		<button class="number__plus js-plus-number" type="button"></button>
-																		<button class="number__minus js-minus-number" type="button"></button>
-																	</div>
-																	<div class="price"> <sub>по</sub>
-																		117,<sup>51</sup> <sub>грн</sub>
-																	</div>
-																</td>
-															</tr>
-															<tr class="js-radio-parent">
-																<td>
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="bank">
-																		<span class="radio__text">Оплата частями ПАО «ОТП Банк»</span>
-																	</label>
-																</td>
-																<td>
-																	0 грн. (0%)
-																</td>
-																<td>
-																	<div class="number js-number" data-max-number="100">
-																		<input type="text" class="number__input" value="10">
-																		<button class="number__plus js-plus-number" type="button"></button>
-																		<button class="number__minus js-minus-number" type="button"></button>
-																	</div>
-																	<div class="price"> <sub>по</sub>
-																		117,<sup>51</sup> <sub>грн</sub>
-																	</div>
-																</td>
-															</tr>
-														</tbody> -->
 													</table>
 													<div class="text-right">
 														<button type="button" class="btn-simple btn-simple_big">продолжить</button>
@@ -259,125 +185,18 @@
 												</div>
 											</div>
 											<div class="js-radiobox-content" data-id="payment2" style="display: none;">
-												<div class="table-wrap">
+												<div class="table-wrap payment-card">
 													<table class="table table_order">
-														<caption>Карточный счет</caption>
-														<thead>
-															<tr>
-																<th>Банк</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr class="js-radio-parent">
-																<td>
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="card">
-																		<span class="radio__text">Карточный счет ПАО КБ «ПриватБанк»</span>
-																	</label>
-																</td>
-																
-															</tr>
-															<tr class="js-radio-parent">
-																<td>
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="card">
-																		<span class="radio__text">Карточный счет другого банка</span>
-																	</label>
-																</td>
-																
-															</tr>
-														</tbody>
+													<img src="img/checkout-cards-platon-logo.png" />
+													<span>Процессинг платежей с помощью банковских платежных карт осуществляется компанией Platon</span>
 													</table>
-													<div class="text-right">
-														<button type="button" class="btn-simple btn-simple_big">продолжить</button>
-													</div>
 												</div>
 											</div>
-											<div class="js-radiobox-content" data-id="payment3">
-												<div class="table-wrap">
-													<table class="table table_order">
-														<caption>Выберите кредитный пакет</caption>
-														<thead>
-															<tr>
-																<th class="paсkage">Пакет</th>
-																<th class="d-payment">Первый взнос</th>
-																<th class="sum">Количество месяцев и сумма платежа</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr class="js-radio-parent">
-																<td class="paсkage">
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="bank">
-																		<span class="radio__text">Оплата частями ПАО КБ «ПриватБанк»</span>
-																	</label>
-																</td>
-																<td class="d-payment">
-																	0 грн. (0%)
-																</td>
-																<td class="sum">
-																	<div class="number number_small js-number" data-max-number="100">
-																		<input type="text" class="number__input" value="10">
-																		<button class="number__plus js-plus-number" type="button"></button>
-																		<button class="number__minus js-minus-number" type="button"></button>
-																	</div>
-																	<div class="price"> <sub>по</sub>
-																		117,<sup>51</sup> <sub>грн</sub>
-																	</div>
-																</td>
-															</tr>
-															<tr class="js-radio-parent">
-																<td class="paсkage">
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="bank">
-																		<span class="radio__text">Супер-рассрочка АО «УкрсСибБанк»</span>
-																	</label>
-																</td>
-																<td class="d-payment">
-																	0 грн. (0%)
-																</td>
-																<td class="sum">
-																	<div class="number number_small js-number" data-max-number="100">
-																		<input type="text" class="number__input" value="10">
-																		<button class="number__plus js-plus-number" type="button"></button>
-																		<button class="number__minus js-minus-number" type="button"></button>
-																	</div>
-																	<div class="price"> <sub>по</sub>
-																		117,<sup>51</sup> <sub>грн</sub>
-																	</div>
-																</td>
-															</tr>
-															<tr class="js-radio-parent">
-																<td class="paсkage">
-																	<label class="radio radio_small" >
-																		<input class="js-radio-trigger" type="radio" name="bank">
-																		<span class="radio__text">Оплата частями ПАО «ОТП Банк»</span>
-																	</label>
-																</td>
-																<td class="d-payment">
-																	0 грн. (0%)
-																</td>
-																<td class="sum">
-																	<div class="number number_small js-number" data-max-number="100">
-																		<input type="text" class="number__input" value="10">
-																		<button class="number__plus js-plus-number" type="button"></button>
-																		<button class="number__minus js-minus-number" type="button"></button>
-																	</div>
-																	<div class="price"> <sub>по</sub>
-																		117,<sup>51</sup> <sub>грн</sub>
-																	</div>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-													<div class="text-right">
-														<button type="button" class="btn-simple btn-simple_big">продолжить</button>
-													</div>
-												</div>
-											</div>
+
 										</div>
 									</div>
 								</div>
+
 								<!-- добавил классы hidden чтобы скрыть на планшете и мобиле ex-zy -->
 								<div class="btn-send-wrap hidden-xs hidden-sm">
 									<button type="button" class="btn btn_large">отправить заказ</button>
